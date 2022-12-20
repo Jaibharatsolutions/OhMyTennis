@@ -1,0 +1,129 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+  <!-- Banner starts --> 
+  <div class="innerbanner" style="background-color:#000">
+    <img src="../assets/images/cours-particuliers-de-tennis.jpg" style="width:100%;opacity:0.8" alt="Los Angeles">
+    <div class="inner_carousel">
+        <h3>RECRUTEMENT COURS DE TENNIS</h3>
+    </div>
+</div>
+<!-- Banner ends --> 
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+    <div class="banner_container">
+        <h3>Réservez un cours avec un coach</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input class="form-control" id="" maxlength="6" placeholder="Code Postal" [(ngModel)]="Ville"
+                            type="text" />
+                        <label><img src="./assets/images/ville_icon.png" /></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input type="text" style="text-align:left!important;" [min]="min" class="form-control" id=""
+                            placeholder="Date" [(ngModel)]="Date" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" />
+                        <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+                        <label><img src="./assets/images/date_icon.png" /> </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+                <button (click)="handleClick($event)" class="btn black_btn">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inner Search area ends --> 
+
+<!-- section1 starts -->
+<div class="sec_news section1 des_concept_list haspadd">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="page_title_div">            
+                    <h1 class="page_title">RECRUTEMENT COURS DE TENNIS</h1>				
+                    <img src="../assets/images/title_border.png" alt="title_border" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Cours particuliers de tennis</h3>	
+                    <p>Réserver votre professeur de tennis près de chez vous afin de bénéficier de conseils personnalisés. Formule à a la carte pour joueur souhaitant prendre des cours de tennis soit intensivement soit un peu plus ponctuellement.</p>
+                    <p><strong><a class="content_link" href="">Devenez coach de tennis sur notre site</a></strong></p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Club de tennis</h3>	
+                    <p>Nous vous proposons de faire partie de notre catalogue pour vous permettre de constituer des groupes homogènes d’élèves ou de les remplir si vous avez déjà constituer des groupes à l’année. En effet vous allez pouvoir bénéficier de notre visibilité pour communiquer auprès de vos futurs adhérents de club de tennis.</p>
+                    <p><strong><a class="content_link" href="">Souhaitez-vous connaître l’offre pour les clubs de tennis avec les cours collectifs ?</a></strong></p>
+              </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Sparring partner tennis</h3>	
+                    <p>Vous avez un niveau de jeu de 3ème série (au minimum de 30) et vous souhaitez vous faire un complément de salaire. Le rôle du sparring au sein de notre site est simple : il vient uniquement pour jouer au tennis sous forme d’échanges ou sous forme de match si c’est souhaité. Pas besoin de seau de balle , ni d’exercices pour êtes la pour mettre de l’intensité physique dans les échanges et faire courir votre adversaire sur le terrain. Il doit terminer content d’être fatigué une fois la rencontre terminée ! Attention cela nécessite de votre part une bonne condition physique car le volume de jeu est important et les temps morts peu nombreux.</p>
+                    <p><strong><a class="content_link" href="">Connaissez-vous l’offre des sparring partners tennis ?</a></strong></p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Rédacteurs sur le tennis</h3>	
+                    <p>Vous êtes passionnés par le tennis et vous souhaitez rejoindre notre team de rédacteurs. N’hésitez pas à nous contacter dès maintenant pour parler de nombreux thèmes autour du tennis que cela soit concernant l’actualité du circuit professionnel ou encore  la pratique des joueurs de club.</p>
+         
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Cadrage/Montage vidéos sur le tennis</h3>	
+                    <p>Nous recherchons des cadreurs et monteurs vidéos pour nous aider sur notre contenu e-learning. Si vous êtes passionné par le tennis et désireux d’avoir une première expérience grâce à nous n’hésitez pas , nous serons heureux de travailler avec vous pour développer notre offre.</p>
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Modérateurs sur le forum tennis</h3>	
+                    <p>Vous aimez animer , être actif sur les forums et aussi faire respecter la charte éditée alors cette fonction est faite pour vous.  En effet il faut être impliqué , diplomate , ouvert à la discussion pour permettre à la communauté de s’exprimer librement sur différents sujets. Vos fonctions vous permettront de déplacer des discussions , supprimer ou modifier des sujets ou des messages</p>
+     
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	   
+    </div>
+</div>   
+<app-footer></app-footer>
+

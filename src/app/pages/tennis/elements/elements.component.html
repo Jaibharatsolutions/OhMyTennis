@@ -1,0 +1,246 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Recherche
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<div class="section1 regle_content">
+  <div class="container">
+    <div class="row">
+      <div class="license">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Eléments d’un terrain de tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="license_section">
+          <!-- section -->
+          <div class="col-xs-12">
+            <h5>Le filet sur le court de tennis</h5>
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <p class="license_txt">
+              <b
+                >Le filet d’un terrain de tennis est constitué de plusieurs
+                éléments comme :</b
+              >
+            </p>
+            <p class="license_txt">
+              <b>La bande du filet de tennis :</b> Située dans la partie
+              supérieure du filet , c’est un câble en acier recouvert de
+              polyester qui permet le fameux « let » durant un point (balle qui
+              heurte le filet).
+            </p>
+            <p class="license_txt">
+              <b>Les mailles du filet de tennis :</b> Elles donnent cette allure
+              de petits carrés et sont tréssés (format 45x45 mm). Elles sont
+              souvent constituées de polyéthylène à haute densité.
+            </p>
+            <p class="license_txt">
+              <b>La sangle du filet de tennis :</b> Elément situé au milieu du
+              filet permettant d’en régler la hauteur (0,914m).
+            </p>
+            <p class="license_txt">
+              <b>Les poteaux du filet de tennis :</b> De forme ovoide, ils sont
+              faits en aluminium et possède un treuil avec crochet pour régler
+              la tension de la bande du filet.
+            </p>
+            <p class="license_txt">
+              <b>Les piquets du filet de tennis :</b> Ils permettent de régler
+              la hauteur de filet pour jouer en simple (à disposer dans le
+              couloir vers l’intérieur).
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img
+              src="./assets/images/taille-filet-tennis.jpg"
+              class="center-block"
+              alt="titre_img1"
+            />
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <p class="license_txt">
+              <strong
+                ><a class="content_link" href=""
+                  >Vous souhaitez savoir quelle sont les dimensions d’un terrain
+                  de tennis ?</a
+                ></strong
+              >
+            </p>
+          </div>
+
+          <div class="clearfix"></div>
+          <!-- section -->
+
+          <!-- section -->
+          <div class="regles_section_2" style="margin-top: 18px;">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <img
+                src="./assets/images/ligne-tennis.jpg"
+                class="center-block"
+                alt="titre_img1"
+              />
+            </div>
+
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <h5><strong>Les lignes d’un terrain de tennis</strong></h5>
+              <p class="license_txt">
+                <b
+                  >On peut distinguer 4 types de lignes sur le terrain que nous
+                  allons détaillées en partant du du filet situé au milieu :</b
+                >
+              </p>
+
+              <p class="license_txt">
+                <b>Lignes du carré de service :</b> Ces lignes déterminent
+                l’endroit où peut rebondir la balle lorsque votre adversaire va
+                servir et forment deux carrés disposés l’un à côté de l’autre.
+                Elles sont séparées en deux par la ligne médiane pour jouer un
+                point dans la diagonale a droite et pour jouer un point dans la
+                diagonale a gauche. On peut noter également que l’intersection
+                avec la médiane forme ce qu’on appelle le « T ».
+              </p>
+              <p class="license_txt">
+                <b>Lignes du couloir :</b> Ces deux lignes parallèles situés à
+                droite et à gauche du terrain sont réservées pour jouer en
+                double sur le terrain (4 personnes). Le court s’agrandit en
+                quelque sorte et chaque joueur se placera sur une moitié.
+              </p>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <p class="license_txt">
+                <b>Ligne de fond de court :</b> Ces lignes situées à quelques
+                mètres du grillage ou du mur du fond sont la limite en longueur
+                du terrain de jeu. On peut noter qu’il y a un séparateur au
+                milieu afin de se répérer pour servir dans la diagonale droite
+                ou gauche.
+              </p>
+              <p class="license_txt para_nomargin">
+                <strong
+                  ><a class="content_link" href=""
+                    >Vous souhaitez savoir quelle est la hauteur d’un filet de
+                    tennis ?</a
+                  ></strong
+                >
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <!-- section -->
+
+          <!-- section -->
+          <div class="regles_section_3" style="margin-top: 18px;">
+          
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <h5><strong>Surface du court de tennis</strong></h5>       
+            <p class="license_txt">
+              La surface d’un terrain de tennis peut être en dur, terre battue,
+              quick ou même gazon et qui aura une grosse incidence sur votre
+              jeu. On distingue les surfaces lentes (terre battue) des surfaces
+              rapides (quick,dur) voire très rapides (gazon).
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="./assets/images/grillage-terrain-tennis.jpg" />
+          </div>
+
+          <div class="clearfix"></div>
+          </div>
+          <!-- section -->
+
+          <!-- section -->
+          <div class="regles_section_3" style="margin-top: 18px;">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="./assets/images/taille-filet-tennis.jpg" />
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <h5><strong>Autres éléments sur un terrain de tennis</strong></h5>
+            <p class="license_txt">
+              Vous pouvez trouver une chaise d’arbitre séparant les espaces
+              consacrés aux joueurs pour se reposer.
+            </p>
+            <p class="license_txt">
+              Elle surplombe le terrain pour permettre de mieux voir et juger
+              une balle qui rebondit. Ce sont souvent des bancs qui sont
+              installés pour permettre aux joueurs de s’asseoire (on peu déposer
+              ses affaires dessus à côté c’est plus pratique) mais cela peut
+              être également des chaises. Le grillage ou le mur délimite votre
+              terrain en longueur et il est possible de trouver des filets
+              séparateurs entre plusieurs terrains mitoyens.
+            </p>
+            <p class="license_txt">
+              <strong
+                ><a class="content_link" href=""
+                  >Connaissez-vous tout le vocabulaire du tennis ?</a
+                ></strong
+              >
+            </p>
+          </div>
+          <!-- section -->
+          <div class="clearfix"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section3 ends -->
+
+<app-footer></app-footer>

@@ -1,0 +1,522 @@
+.no_leftpadd {
+  padding-left: 0px;
+}
+.no_rightpadd {
+  padding-right: 0px;
+}
+.no_leftright {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.navbar .navbar-brand {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.formarea.content {
+  padding: 30px 15px;
+}
+.form_devarea {
+  border-radius: 5px;
+  color: #333333;
+  background: #fff;
+  padding: 30px 15px;
+  width: 100%;
+  margin-top: 66px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.form_section {
+  max-width: 750px;
+  width: 100%;
+  margin: 0px auto;
+}
+.form_section .radio_texts {
+  margin-left: 16px;
+  display: inline-block;
+  margin-bottom: 0px;
+  line-height: 26px;
+}
+.cours_individualsec .radio input:checked ~ .checkround,
+#available .radio input:checked ~ .checkround {
+  background-color: #fff;
+}
+.clubedit_page .box-body .form-control {
+  max-width: 460px;
+}
+.admin_tempstyle.super_admintop .form_devarea {
+  margin-top: 10px;
+}
+
+.modal-body .cours_individualsec .checkround,
+#available .checkround {
+  position: absolute;
+  top: -2px !important;
+  left: -10px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-color: #e75b00;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+}
+.cours_individualsec .checkround,
+#available .checkround {
+  position: absolute;
+  top: 2px;
+  left: -10px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-color: #e75b00;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+}
+#available .radio {
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.cours_individualsec .radio input,
+#available .radio input {
+  position: absolute;
+  opacity: 0;
+}
+.cours_individualsec .radio input:checked ~ .checkround:after,
+#available .radio input:checked ~ .checkround:after {
+  display: block;
+}
+.cours_individualsec .radio .checkround:after,
+#available .radio .checkround:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e75b00;
+}
+
+.cours_individualsec .checkround:after,
+#available .checkround:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.cours_individualsec .form-group {
+  margin-bottom: 15px;
+}
+label.radio {
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.btn.btn-info {
+  color: #ffffff !important;
+}
+.form_devarea .form-control {
+  border: 1px solid #b8b8b8 !important;
+  background-image: none;
+  padding-left: 10px;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.form_devarea .form-check .form-check-label span {
+  display: block;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  transition-duration: 0.2s;
+}
+.form_devarea .form-check .form-check-sign {
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  float: left;
+  padding-right: 10px;
+  display: inline-block;
+}
+.form_devarea
+  .form-check
+  .form-check-input[disabled]
+  ~ .form-check-sign
+  .check {
+  border-color: #000000;
+  opacity: 0.26;
+}
+.form_devarea .form-check .form-check-sign .check {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 3px;
+  vertical-align: bottom;
+}
+.form_devarea .form-check .form-check-label span {
+  display: block;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  transition-duration: 0.2s;
+}
+.form_devarea .form-group.bmd-form-group {
+  margin-bottom: 24px;
+}
+.form_devarea .btn {
+  box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14),
+    0 3px 1px -2px rgba(153, 153, 153, 0.2),
+    0 1px 5px 0 rgba(153, 153, 153, 0.12);
+}
+.form_devarea .btn.btn-info:hover {
+  box-shadow: 0 14px 26px -12px rgba(0, 188, 212, 0.42),
+    0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2);
+}
+/** Booked Course Pending Starts **/
+
+.book_coursetable th {
+  color: #e75b00;
+  padding-top: 10px;
+  padding: 12px 0px 7px;
+  font-size: 14px;
+  font-weight: bold !important;
+  line-height: 37px !important;
+  text-align: center !important;
+  padding: 18px 0px 7px;
+}
+.book_coursetable tr td {
+  text-align: center !important;
+  border-top: 1px solid #c0bebe;
+  text-align: center !important;
+  padding: 12px 0px 7px;
+  line-height: 37px !important;
+  font-size: 15px;
+  color: #333;
+  font-weight: 400;
+}
+.completed_status {
+  color: #00751f !important;
+}
+.card-icon a {
+  color: #ffffff !important;
+}
+.book_coursetable .fa-eye {
+  color: #333;
+}
+.des_cancel_btn {
+  background-color: #c6c6c6 !important;
+  color: #000;
+}
+.content .card .card-body .form-group {
+  margin: 8px 0 10px;
+}
+.card .upload-btn-wrapper .btn {
+  font-size: 14px;
+}
+.bookedcours_pend .form_devarea {
+  padding: 10px 15px;
+}
+.d-block {
+  display: block;
+}
+.box-body {
+  padding: 10px 20px 11px;
+}
+.box-body span.input-group-addon {
+  right: 18px;
+  top: 3px;
+  position: absolute;
+}
+.box-body .form-group {
+  width: 100%;
+  margin: 2px 0 0;
+}
+.box-body label {
+  line-height: 35px !important;
+}
+.box-body .form-control {
+  border-radius: 3px;
+  box-shadow: none;
+  border-color: #d2d6de;
+  display: block;
+  width: 100%;
+  height: 35px !important;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s,
+    -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.completed_status,
+.cancel_status,
+.yet_status {
+  font-weight: bold !important;
+  text-transform: capitalize;
+}
+.completed_status {
+  color: #00751f !important;
+}
+.cancel_status {
+  color: #f00 !important;
+}
+.yet_status {
+  color: #e75b00 !important;
+}
+/** Booked Course Pending Ends **/
+
+/** Animation page starts **/
+.select_Control {
+  background: url(../images/down_arrow1.png) no-repeat 92% 55% #ffffff;
+  -webkit-appearance: none;
+}
+.form_uploadfile {
+  width: 100%;
+}
+
+.form_uploadfile .file-upload-wrapper {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+.form_uploadfile .file-upload-wrapper:after {
+  content: attr(data-text);
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background: #fff;
+  padding: 10px 10px;
+  display: block;
+  width: calc(100% - 40px);
+  pointer-events: none;
+  z-index: 20;
+  height: 40px;
+  line-height: 18px;
+  color: #999;
+  border-radius: 5px 10px 10px 5px;
+  font-weight: 300;
+  border: 1px solid #b8b8b8;
+}
+
+.form_uploadfile .file-upload-wrapper:before {
+  content: "Télécharger";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 40px;
+  color: #fff;
+  background: #086997;
+  border-color: #086997;
+  font-weight: 700;
+  z-index: 21;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.form_uploadfile .file-upload-wrapper:hover,
+.form_uploadfile .file-upload-wrapper:before {
+  background: darken(#4daf7c, 10%);
+}
+
+.form_uploadfile input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+.btn.btn-info.course_edit_btn,
+.btn.btn-default.des_cancel_btn {
+  margin-top: 20px;
+  height: 40px;
+  width: 26px;
+  text-align: center;
+  display: inline;
+  max-width: 20px;
+  padding: 10px 16px;
+  line-height: 40px;
+  margin-left: 4px;
+}
+.box-body select.form-control {
+  padding: 6px 2px;
+}
+.btn.btn-defauly {
+  min-width: 95px;
+}
+
+.fc-toolbar {
+  text-transform: capitalize;
+}
+span {
+  text-transform: none;
+}
+.fc-today-button {
+  text-transform: capitalize;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 14px;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 14px;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 14px;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 14px;
+}
+
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog {
+  left: -320px;
+  -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+  transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog {
+  left: 0;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -320px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+  right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom-color: #eeeeee;
+  background-color: #fafafa;
+}
+.admin_tempstyle table .btn.btn-success {
+  margin-right: 0px;
+}
+.admin_leftpanel .fa.fa-th-large {
+  background: url(../../../assets/images/dashboard_icons/admin/Dashboard.png)
+    top left no-repeat;
+}
+.admin_tempstyle .form_devarea .card-body {
+  margin-top: 10px;
+}
+.admin_tempstyle.super_admintop table.dataTable tbody th,
+table.dataTable tbody td {
+  text-align: center;
+}
+.admin_tempstyle.super_admintop .dropdown-menu li > a {
+  font-size: 14px !important;
+}
+.admin_tempstyle.super_admintop .clublist_content .form_devarea {
+  position: relative;
+}
+.admin_tempstyle.super_admintop .clublist_content .box-body {
+  position: absolute;
+  right: 0px;
+  top: 18px;
+}
+.admin_tempstyle.super_admintop .clublist_content .box-body .fa {
+  font-size: 28px !important;
+  color: green;
+}
+.info-box-icon .fa {
+  font-size: 32px !important;
+  display: block;
+  margin-top: 30px;
+}
+.coach_listable.table > tbody > tr > td,
+.coach_listable.table > tbody > tr > th,
+.coach_listable.table > tfoot > tr > td,
+.coach_listable.table > tfoot > tr > th,
+.coach_listable.table > thead > tr > td,
+.coach_listable.table > thead > tr > th {
+  vertical-align: middle;
+}
+.payment_table {
+  font-size: 14px;
+}
+.payment_table.table > thead > tr > th {
+  border-top: 2px solid #ddd !important;
+}
+.card.card-profile {
+  font-size: 14px;
+}
+.admin_tempstyle .table > thead:first-child > tr:first-child > th,
+.admin_tempstyle .table > thead:first-child > tr > td {
+  text-align: center;
+}
+.admin_tempstyle .payment_page .card-profile .card-avatar img {
+  width: 100%;
+  max-width: 160px;
+  max-height: 180px;
+  height: 160px;
+}

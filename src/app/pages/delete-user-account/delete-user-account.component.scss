@@ -1,0 +1,28 @@
+.nav > li {
+  position: relative;
+  display: block !important;
+}
+.nav-sub-title {
+  display: inline-block !important;
+  line-height: 18px !important;
+}
+.tour_mainmenu:hover .tour_submenu {
+  display: block;
+}
+.tour_submenu {
+  display: none;
+}
+.stage_mainmenu:hover .stage_submenu {
+  display: block;
+}
+.stage_submenu {
+  display: none;
+}
+
+.animation_mainmenu:hover .animation_submenu {
+  display: block;
+}
+.animation_submenu {
+  display: none;
+}
+

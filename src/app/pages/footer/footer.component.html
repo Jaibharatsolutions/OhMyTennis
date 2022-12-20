@@ -1,0 +1,277 @@
+<!-- client slider starts-->
+<div class="client_logo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="center-block" align="center">
+          <h3>Espace Affiliés / Partenaires</h3>
+        </div>
+        <br />
+        <ngx-slick-carousel
+          class="carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img style="height:100%;" src="{{ slide.img }}" alt="" />
+          </div>
+        </ngx-slick-carousel>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- client slider ends-->
+
+<!-- footer starts-->
+<div class="footer">
+  <div class="container">
+    <div class="form_sec">
+      <div class="col-md-9 col-sm-12 col-xs-12 input_area_footer">
+        <p style="display: inline-block;">Abonnez-vous à notre newsletter</p>
+        <input
+          type="text"
+          class="form-control footer_input email_input"
+          placeholder="Email"
+        />
+
+        <input
+          type="text"
+          class="form-control footer_input"
+          placeholder="Code Postal"
+        />
+
+        <button class="btn footer_go_btn">
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="social_icons_footer">
+          <ul>
+            <li>
+              <a
+                class="twitter"
+                href="https://twitter.com/JulienMilgram"
+                target="_blank"
+                ><i class="fa fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a class="linked" target="_blank" href="https://www.linkedin.com/in/julien-milgram-4461823a/?locale=en_US"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="facebook"
+                href="https://www.facebook.com/julienmilgram/"
+                target="_blank"
+                ><i class="fa fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a class="insta" target="_blank" href="https://www.instagram.com/julien_milgram/"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="footer_section">
+    <div class="container">
+      <img
+        src="./assets/images/footer_logo.png"
+        class="img-responsive center-block"
+      /><br />
+      <div align="center" style="margin: 10px 0px 30px;">
+        <img
+        src="./assets/images/tecnifibre_logo.png"
+        class="img-responsive center-block" style="width:180px;"
+      />
+      </div>
+     
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <p>Linked In</p>
+        <!-- <img
+          src="./assets/images/gallery.png"
+          class="img-responsive center-block"
+        /> -->
+        <div style="border-radius: 3px;"
+          class="LI-profile-badge"
+          data-version="v1"
+          data-size="small"
+          data-locale="en_US"
+          data-height="370"
+          data-width="250"
+          data-type="vertical"
+          data-theme="light"
+          data-vanity="julien-milgram-4461823a"
+        >
+          <a target="_blank"
+            class="LI-simple-link"
+            href="https://www.linkedin.com/in/julien-milgram-4461823a/?locale=en_US"
+            >Julienmilgram</a>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <p>Suivez-nous sur facebook</p>
+        <!-- <img src="./assets/images/fb.png" class="img-responsive center-block" /> -->
+      <a target="_blank" href="https://www.facebook.com/julienmilgram/">  <iframe style="border-radius: 3px;"
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fjulienmilgram&tabs=timeline&width=250&height=330&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+          width="250"
+          height="340"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowTransparency="true"
+          allow="encrypted-media"
+        ></iframe></a>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <p>Les tweets</p>
+        <a target="_blank"
+          class="twitter-timeline"
+          data-width="250"
+          data-height="330"
+          href="https://twitter.com/JulienMilgram"
+          >Tweets by JulienMilgram</a
+        >
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <p>Instagram</p>
+        <a><img
+          src="./assets/images/insta.png"
+          class="img-responsive center-block"
+        />
+        </a>
+        <!-- <iframe
+          src="https://www.instagram.com/p/B726N3IDtcu/"
+          width="250"
+          height="340"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowTransparency="true"
+          allow="encrypted-media"
+        ></iframe> -->
+      </div>
+
+      <div class="clearfix"></div>
+      <div>
+        <div class="link_lists" align="center">
+          <ul class="menu_list_footer">
+            <li>
+              <a
+                href="javascript:;"
+                routerLink="{{ '/' + this._const('PATH.CGV') }}"
+                >C.G.V</a
+              >
+            </li>
+            <li>
+              <a
+                href="javascript:;"
+                routerLink="{{ '/' + this._const('PATH.CGU') }}"
+                >C.G.U</a
+              >
+            </li>
+            <li>
+              <a
+                href="javascript:;"
+                routerLink="{{ '/' + this._const('PATH.MENTIONS_LEGALES') }}"
+                >Mentions légales</a
+              >
+            </li>
+            <li>             
+              <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.COURDETENNIS') }}">Services</a>
+              </li>
+             
+            <li>
+              <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.RECRUTEMENT') }}">Recrutement</a>
+            </li>
+            <li>             
+              <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.CONTACT') }}">Contact</a>
+              </li>
+            <li>
+              <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.NEWSLETTERS') }}">Newsletters</a>
+            </li>
+            <li>
+              <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.QUISOMMENOUS') }}">Qui somme nous ?</a>
+            
+          </li>
+            <li><a href="#">Plan du site</a></li>
+            <li>
+              <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.FAQ') }}">F.A.Q</a>              
+            </li>
+            <li>
+              <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.ENSAVIORPLUS') }}">En savoir plus</a> 
+             </li>
+            <li><a href="#">Liens</a></li>
+          </ul>
+        </div>
+        <div align="center">
+          <p class="list_city_footer">
+            <a
+              *ngFor="let tree of treeData"
+              (click)="goToCms($event, tree.path)"
+              >{{ tree.main_name }}</a
+            >
+            <!-- <a href="#">Cours de tennis Aubervilliers</a>
+            <a href="#">Cours de tennis Aulnay sous bois </a>
+            <a href="#">Cours de tennis Bagneux </a>
+            <a href="#">Cours de tennis Bagnolet </a>
+            <a href="#">Cours de tennis Bobigny </a>
+            <a href="#">Cours de tennis </a>
+            <a href="#">Bougival </a>
+            <a href="#">Cours de tennis Bry sur Marne </a>
+            <a href="#">Cours de tennis Carrieres sur Seine </a>
+            <a href="#">Cours de tennis Champigny sur Marne </a>
+            <a href="#">Cours de tennis Charenton le Pont</a>
+            <a href="#">Cours de tennis Chatillon </a>
+            <a href="#">Cours de tennis Chatou </a>
+            <a href="#">Cours de tennis Clamart </a>
+            <a href="#">Cours de tennis Clichy </a>
+            <a href="#">Cours de tennis Colombes</a>
+            <a href="#">Cours de tennis Creteil </a>
+            <a href="#">Cours de tennis Croissy sur seine </a>
+            <a href="#">Cours de tennis Deuil-la-barre </a>
+            <a href="#">Cours de tennis Enghiens les Bains </a>
+            <a href="#">Cours de tennis Epinay sur Seine </a>
+            <a href="#">Cours de tennis Fontenay aux roses</a>
+            <a href="#">Cours de tennis Fontenay sous bois</a>
+            <a href="#">Cours de tennis Gennevilliers </a>
+            <a href="#">Cours de tennis Gentilly </a>
+            <a href="#">Cours de tennis Gonesse </a>
+            <a href="#">Cours de tennis Issy Les Moulineaux </a>
+            <a href="#">Cours de tennis Ivry sur seine </a>
+            <a href="#">Cours de tennis Joinville le Pont </a>
+            <a href="#">Cours de tennis La Celle Saint Cloud</a>
+            <a href="#">Cours de tennis La Courneuve </a>
+            <a href="#">Cours de tennis Le Kremlin Bicetre </a>
+            <a href="#">Cours de tennis Le Perreux sur Marne </a>
+            <a href="#">Cours de </a> -->
+          </p>
+        </div>
+        <div class="clearfix"></div>
+        <div align="center">
+          <p class="copyrights">
+            Ohmytennis. Tous droits réservés <a href="http://www.aryvart.com" target="_blank">aryvart.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a
+    id="back-to-top"
+    (click)="gotoTop()"
+    class="btn btn-primary btn-lg back-to-top"
+    role="button"
+    title="Click to return on the top page"
+    data-toggle="tooltip"
+    data-placement="left"
+    ><span class="fa fa-angle-up"></span
+  ></a>
+</div>
+<!-- footer ends -->

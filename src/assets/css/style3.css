@@ -1,0 +1,1665 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (min-width: 320px) {
+  .haspadd {
+    padding: 35px 0px;
+  }
+}
+@media (min-width: 768px) {
+  .haspadd {
+    padding: 35px 0px;
+  }
+}
+@media (min-width: 992px) {
+  .haspadd {
+    padding: 55px 0px;
+  }
+}
+
+/** Titre page starts **/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li {
+  font-family: "Open Sans", sans-serif !important;
+}
+.text_underline {
+}
+.fa {
+  font-family: FontAwesome !important;
+}
+.font_bold {
+  font-weight: bold;
+}
+.search_area .black_btn,
+body .inner_searcharea .black_btn {
+  background-color: #6f6f6f !important;
+  color: #ffffff !important;
+}
+body .search_area .black_btn:hover,
+body .inner_searcharea .black_btn:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.page_title_div {
+  padding-bottom: 6px;
+}
+.page_title {
+  font-size: 30px;
+  color: #080808;
+  font-family: "ComfortaaBold";
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.section1.des_titre_list p,
+.section1.des_concept_list p,
+.section1.des_conseils_list p {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: justify;
+}
+.section1.des_titre_list ul,
+.section1.des_concept_list ul,
+.section1.des_conseils_list ul {
+  font-size: 14px;
+  text-align: justify;
+  padding-left: 35px;
+}
+.section1.des_titre_list ul li,
+.section1.des_concept_list ul li,
+.section1.des_conseils_list ul li {
+  font-size: 14px;
+  display: block;
+  list-style-type: disc;
+  line-height: 24px;
+  list-style: disc;
+  display: list-item;
+}
+.section1.des_titre_list h5,
+.section1.des_concept_list h5,
+.section1.des_conseils_list h5,
+.section1 h5 {
+  margin-top: 0px;
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: bold;
+}
+.section1.des_titre_list h4,
+.section1.des_concept_list h4,
+.section1.des_conseils_list h4,
+.section1 h4 {
+  font-size: 15px;
+  line-height: 22px;
+}
+.section1.des_titre_list h3,
+.section1.des_concept_list h3,
+.section1.des_conseils_list h3,
+.section1 h3 {
+  font-size: 19px;
+}
+.section1.des_titre_list h1,
+.section1.des_concept_list h1,
+.section1.des_conseils_list h1,
+.section1 h1 {
+  font-size: 23px;
+}
+.section2.des_titre_backtext {
+  background: #1b1800 url(../images/titre_secbg.jpg) top center no-repeat;
+  background-size: 100%;
+}
+.section2 .des_back_content,
+.section2 .des_back_content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+.des_back_content h4 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "ComfortaaBold";
+}
+.des_titre_list .center-block,
+.des_concept_list .center-block,
+.des_conseils_list .center-block {
+  margin-bottom: 13px;
+}
+@media (min-width: 320px) and (max-width: 385px) {
+  body .des_back_content h4 {
+    font-size: 14px;
+  }
+  body .section2 .des_back_content {
+    padding: 20px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .des_back_content h4,
+  .des_back_content h4 {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .section2 .des_back_content {
+    padding: 40px 0px;
+  }
+  .inner_carousel h3 {
+    font-size: 17px !important;
+  }
+  .conseils_table th,
+  .conseils_table td {
+    font-size: 10px;
+  }
+  .section1.des_titre_list p,
+  .section1.des_concept_list p,
+  .section1.des_conseils_list p,
+  .section1 ul li,
+  .section1 p {
+    font-size: 13px !important;
+  }
+  .section1.des_titre_list ul,
+  .section1.des_concept_list ul,
+  .section1.des_conseils_list ul,
+  .section1 ul {
+    padding-left: 15px;
+  }
+  .page_title {
+    font-size: 25px;
+  }
+  .link_lists,
+  .footer_logos_list {
+    margin: 30px 0px 15px;
+  }
+  .menu_list_footer li,
+  .footer p.content_footer {
+    font-size: 13px !important;
+  }
+}
+@media (min-width: 992px) {
+  .section2.des_titre_backtext {
+    background: #1b1800 url(../images/titre_secbg.jpg) top left no-repeat;
+    background-size: 100%;
+  }
+  .section2 .des_back_content {
+    padding: 130px 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .des_back_content h4 {
+    font-size: 35px;
+  }
+  .section2 .des_back_content {
+    padding: 150px 0px;
+  }
+  .section2.des_conseils_backtext {
+    margin-bottom: 70px !important;
+  }
+  .footer {
+    margin-top: 50px;
+  }
+}
+/** Titre page ends **/
+
+/** Concept page starts **/
+.menuarea .navbar-nav > li > a {
+  font-weight: bold;
+}
+.section2.des_concept_backtext {
+  background: #1b1800 url(../images/concept_secbg.jpg) top left no-repeat;
+  background-size: 100%;
+}
+.des_concept_circletext {
+  color: #e75b00;
+  background: #f3f3f3;
+}
+.des_orange_circle {
+  border-radius: 50%;
+  background: #e75b00;
+  position: relative;
+  height: 130px;
+  width: 130px;
+  margin: 0px auto 12px;
+  text-align: center;
+}
+.des_orange_circle img {
+  margin-top: 30px;
+}
+.des_concept_circletext h5,
+.des_conseils_circletext h5,
+.des_concept_circletext h5 a,
+.des_conseils_circletext h5 a {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0px 0px;
+}
+.section1.des_titre_list h3,
+.section1.des_concept_list h3,
+.section1.des_conseils_list h3,
+.section1 h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.section1.des_titre_list h2,
+.section1.des_concept_list h2,
+.section1.des_conseils_list h2,
+.section1 h32 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.des_concept_circletext h5 a:hover,
+.des_conseils_circletext h5 a:hover,
+.des_concept_circletext h5 a:focus,
+.des_conseils_circletext h5 a:focus {
+  color: #e75b00;
+  text-decoration: none;
+}
+@media (max-width: 991px) {
+  .des_concept_circletext h5,
+  .des_conseils_circletext h5 {
+    margin: 20px 0px 30px;
+  }
+}
+@media (min-width: 992px) {
+  .des_concept_list .center-block,
+  .des_concept_circletext .center-block,
+  .des_conseils_list .center-block,
+  .des_conseils_circletext .center-block {
+    margin: 0px 0px 30px;
+    width: 100%;
+  }
+  .section1.content_secs .split_marginbot {
+    margin-bottom: 30px;
+  }
+  .section1.des_titre_list h5,
+  .section1.des_concept_list h5,
+  .section1.des_conseils_list h5,
+  .section1 h5 {
+    font-size: 19px;
+  }
+  .des_titre_list .center-block,
+  .des_concept_list .center-block,
+  .des_conseils_list .center-block {
+    margin: 0px 0px 0px;
+    width: 100%;
+  }
+  .section1.des_titre_list h4,
+  .section1.des_concept_list h4,
+  .section1.des_conseils_list h4,
+  .section1 h4 {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .section1.des_titre_list h3,
+  .section1.des_concept_list h3,
+  .section1.des_conseils_list h3,
+  .section1 h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .section1.des_titre_list h2,
+  .section1.des_concept_list h2,
+  .section1.des_conseils_list h2,
+  .section1 h32 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .split_marginbot {
+    margin-bottom: 18px;
+  }
+  .section1.des_titre_list h1,
+  .section1.des_concept_list h1,
+  .section1.des_conseils_list h1,
+  .section1 h1 {
+    font-size: 27px;
+    color: #080808;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .para_nomargin {
+    margin-bottom: 0px;
+  }
+}
+.middle_contents {
+  display: flex;
+}
+.mid_contentdiv {
+  height: 100%;
+  display: flex;
+  margin-top: 4px;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+/** Concept page ends **/
+
+/** Conseils page ends **/
+.section2.des_conseils_backtext {
+  background: #1b1800 url(../images/conseils_secbg.jpg) top left no-repeat;
+  background-size: 100%;
+  margin-bottom: 55px;
+}
+.des_conseils_circletext a.orange_text:hover {
+  color: #010b39 !important;
+}
+.conseils_table {
+  width: 100%;
+}
+.conseils_table th,
+.conseils_table td {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.section1 ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  text-align: justify;
+  line-height: 24px;
+}
+.section1 ul li span,
+.section1 p span {
+  padding-right: 5px;
+  font-weight: bold;
+}
+.section1.des_titre_list h6,
+.section1.des_concept_list h6,
+.section1.des_conseils_list h6,
+.section1 h6 {
+  font-size: 15px;
+}
+
+.des_grey_overlay {
+  display: none;
+}
+.conseils_round_sec .des_grey_overlay {
+  display: none;
+}
+.conseils_round_sec:hover .des_grey_overlay {
+  display: block;
+}
+.conseils_round_sec .des_grey_overlay .btn {
+  line-height: 28px;
+  min-width: 150px;
+  padding: 3px;
+  text-transform: uppercase;
+  white-space: inherit;
+  max-width: 150px;
+  font-size: 11px;
+}
+.toggle_links_open {
+  padding: 5px 0px;
+  border: 1px solid #e75b00;
+  max-width: 165px;
+  margin: 20px auto;
+}
+.toggle_links_open a {
+  display: block;
+  font-size: 11px;
+  padding: 5px 20px;
+  line-height: 20px;
+  color: #111010;
+}
+.toggle_links_open a:first-child {
+  border-bottom: 1px solid #b3a2a2;
+}
+/** Conseils page ends **/
+
+/** Coach page dropdown style starts **/
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  height: 45px;
+}
+.select-styled,
+.coach_cityselect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #423b3b !important;
+  font-size: 13px;
+  text-align: left;
+  font-family: "Open Sans", sans-serif !important;
+  min-height: 45px;
+  text-align: left;
+  line-height: 29px;
+  border-radius: 30px !important;
+  background: url(../images/down_arrow1.png) no-repeat 90% 52% #ffffff;
+  padding: 8px 15px;
+  background-size: 13px;
+}
+.des_coachform_bg input.form-control {
+  color: #423b3b !important;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif !important;
+}
+.coach_datepicker {
+  background: #ffffff;
+}
+.select-styled:hover {
+}
+.select-styled:active,
+.select-styled.active {
+}
+.select-styled:after {
+  top: 9px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0px 15px;
+  padding: 0;
+  list-style: none;
+  background-color: #f3f3f3;
+  border: none;
+}
+ul.select-options li {
+  margin: 0;
+  padding: 9px 0;
+  text-indent: 15px;
+  display: block;
+  font-size: 13px;
+  color: #423b3b;
+}
+ul.select-options li:hover {
+  color: #ffffff;
+  background: #e75b00;
+}
+ul.select-options li[rel="hide"] {
+  display: none;
+}
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
+  background-color: #e75b00 !important;
+  color: white !important;
+}
+.select2-results__option {
+  display: block;
+  padding: 8px !important;
+}
+.select2-container--default .select2-selection--single {
+  border-radius: 30px !important;
+  padding: 8px 14px !important;
+  height: 45px !important;
+}
+.select2-container--open .select2-dropdown {
+  top: -8px;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  display: none;
+}
+.code_postal
+  .select2-container--default
+  .code_postal
+  .select2-selection--single,
+.code_postal
+  .select2.select2-container.select2-container--default.select2-container--below {
+  width: auto !important;
+}
+.code_postal
+  .select2.select2-container.select2-container--default.select2-container--above,
+.code_postal .select2-container {
+  width: auto !important;
+}
+.des_coachform_bg .dropdown-menu > .active > a,
+.des_coachform_bg.dropdown-menu > .active > a:focus,
+.des_coachform_bg.dropdown-menu > .active > a:hover,
+.des_related_coach .dropdown-menu > .active > a,
+.des_related_coach.dropdown-menu > .active > a:focus,
+.des_related_coach.dropdown-menu > .active > a:hover {
+  color: #423b3b;
+  text-decoration: none;
+  background-color: #d0c9c9;
+  outline: 0;
+  padding: 0px 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+}
+.des_coachform_bg .bootstrap-select.btn-group .dropdown-toggle .caret,
+.des_related_coach .bootstrap-select.btn-group .dropdown-toggle .caret {
+  display: none;
+}
+.des_coachform_bg .dropdown-menu a,
+.des_related_coach .dropdown-menu a {
+  color: #423b3b;
+  text-decoration: none;
+  outline: 0;
+  padding: 0px 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+}
+.des_coachform_bg .bootstrap-select.btn-group .dropdown-menu li,
+.des_related_coach .bootstrap-select.btn-group .dropdown-menu li {
+  position: relative;
+  display: block;
+}
+.bs-searchbox input.form-control {
+  margin-bottom: 0;
+  width: 100%;
+  border: 1px solid #b7acac;
+  border-radius: 2px !important;
+  height: 36px;
+}
+.select2-container--default .select2-selection--single,
+.select2.select2-container.select2-container--default.select2-container--below {
+  width: 100% !important;
+}
+.select2.select2-container.select2-container--default.select2-container--above,
+.select2-container {
+  width: 100% !important;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: #444;
+  line-height: 28px;
+  font-size: 14px;
+  padding-left: 0px !important;
+}
+.bootstrap-select > .dropdown-toggle,
+.select2-container--default .select2-selection--single {
+  background: url(../images/down_arrow1.png) no-repeat 90% 50% #ffffff !important;
+  color: #423b3b;
+  background-size: 13px;
+  height: 45px;
+  border-radius: 30px;
+  border: 1px solid #d9d1d1 !important;
+  font-size: 14px;
+  outline: none !important;
+  box-shadow: none !important;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.bootstrap-select.form-control {
+  background-color: transparent;
+}
+.select.open > .dropdown-menu,
+.select.open > .dropdown-menu {
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  padding: 0px 1px;
+}
+.des_coachform_bg .dropdown-menu > li > a:hover,
+.des_related_coach .dropdown-menu > li > a:hover {
+  background-color: #e75b00;
+  color: white;
+}
+body .innsec.coach_page {
+  overflow: hidden;
+}
+.des_coachform_bg .open > .dropdown-menu,
+.des_related_coach .open > .dropdown-menu {
+  padding: 0px;
+  max-height: 200px !important;
+  max-width: 190px !important;
+  border: none !important;
+  top: 43px;
+  min-width: 150px !important;
+  left: 12px;
+}
+.des_coachform_bg .btn-group.open .dropdown-toggle,
+.des_related_coach .btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+.des_coachform_bg .open > .dropdown-toggle.btn-default,
+.des_related_coach .open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #f3f3f3;
+  border-color: transparent;
+  outline: none;
+}
+.des_coachform_bg .bootstrap-select .dropdown-toggle:focus,
+.des_related_coach .bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+.des_related_coach .bootstrap-select dropup {
+  float: right;
+  width: auto;
+  max-width: 200px;
+}
+.des_related_coach
+  .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: auto;
+  min-width: 170px;
+}
+
+.datepicker_ch::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #423b3b;
+  font-size: 13px;
+}
+
+.datepicker_ch:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #423b3b;
+}
+
+.datepicker_ch::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #423b3b;
+}
+.dropdown-scroll .dropdown-menu li {
+  display: block;
+}
+.dropdown-scroll .search-control {
+  padding: 9px 5px 9px;
+  width: 100%;
+}
+.dropdown-scroll .search_input_box {
+  border: 1px solid #cac0c0;
+  height: 36px;
+  text-indent: 10px;
+  border-radius: 30px;
+  font-size: 13px;
+  width: 100%;
+  box-shadow: none !important;
+  font-weight: 600;
+  outline: none;
+  font-family: "Open Sans", sans-serif !important;
+}
+.menuarea .navbar-nav > li > a {
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+}
+.coach_cityselect {
+}
+
+/** Header Submenu starts **/
+.menuarea .navbar-inverse .navbar-nav > li > a:focus {
+  color: #000000;
+}
+.menuarea .navbar-nav > li {
+  position: relative;
+}
+ul.first_submenu {
+  display: none;
+}
+.menuarea .navbar-nav > li:hover > ul.first_submenu {
+  display: block;
+}
+.menuarea .navbar-nav > li ul.first_submenu {
+  position: absolute;
+  top: 48px;
+  padding: 0px 0px;
+  text-align: left;
+  font-family: "ComfortaaBold";
+  border-top: 1px solid #b3a8a8;
+  z-index: 5;
+  min-width: 140px;
+}
+.menuarea .navbar-nav > li ul.first_submenu li {
+  display: block;
+  padding: 0px 0px;
+  border: 1px solid #b3a8a8;
+  white-space: nowrap;
+  font-family: "ComfortaaBold";
+  border-top: 0px;
+  min-width: 100px;
+}
+.menuarea .navbar-nav > li ul.first_submenu > li,
+.menuarea .navbar-nav > li ul.first_submenu > li > a {
+  position: relative;
+  cursor: pointer;
+}
+.menuarea .navbar-nav > li ul.first_submenu li a {
+  padding: 9px 10px;
+  background: #f2f2f2;
+  display: block;
+  font-size: 13px;
+}
+.menuarea .navbar-nav > li ul.first_submenu li a:hover {
+  background: #e75b00;
+  color: #ffffff;
+}
+ul.second_submenu {
+  position: absolute;
+  left: 101%;
+  top: 0px;
+  min-width: 150px;
+  display: none;
+}
+.menuarea .navbar-nav > li ul.first_submenu li ul.second_submenu li a {
+  background: #000000;
+  color: #ffffff;
+  position: relative;
+}
+.menuarea .navbar-nav > li ul.first_submenu li ul.second_submenu li a:hover {
+  background: #e75b00;
+  color: #fff;
+}
+.menuarea .navbar-nav ul.first_submenu li:hover > ul.second_submenu {
+  display: block;
+}
+ul.second_submenu li,
+ul.second_submenu li a {
+  position: relative;
+  font-family: "ComfortaaBold";
+}
+.conseils_round_sec {
+  max-width: 180px;
+  margin: 0px auto;
+  padding: 20px 0px;
+  position: relative;
+}
+.padd_botspace {
+  padding-bottom: 30px;
+}
+@media (max-width: 991px) {
+  .menuarea .navbar-nav > li ul.first_submenu {
+    position: relative !important;
+    top: 0px;
+  }
+  .menuarea ul.second_submenu {
+    position: relative !important;
+    top: 0px;
+    left: 0px;
+  }
+  .menuarea .navbar-inverse .navbar-collapse,
+  .menuarea .navbar-inverse .navbar-form {
+    padding-left: 15px;
+  }
+  .menuarea .navbar-nav > li ul.first_submenu li ul.second_submenu li a {
+    background: #e75b00;
+    color: #ffffff;
+    position: relative;
+  }
+  .menuarea .navbar-nav > li ul.first_submenu li ul.second_submenu li a:hover {
+    background: #e75b00;
+    color: #fff;
+  }
+  .right_sidecontent .col-md-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .sm_noleftpadd {
+    padding-left: 0px;
+  }
+  .sm_norightpadd {
+    padding-right: 0px;
+  }
+  .sm_nopadding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .right_sidecontent {
+    padding-top: 12px;
+  }
+}
+@media (min-width: 992px) {
+  .md_noleftpadd {
+    padding-left: 0px;
+  }
+  .md_norightpadd {
+    padding-right: 0px;
+  }
+  .md_nopadding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .menuarea .right_menu {
+    margin: 10px 0px 0px;
+    padding: 0px;
+  }
+  .menuarea .right_menu .nav-item-img img {
+    max-width: 85px;
+    margin-top: -18px;
+  }
+}
+/** Header Submenu ends **/
+
+ul.image-gallery {
+  list-style: none outside none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.image-gallery li {
+  display: block;
+  float: left;
+  text-align: center;
+  margin-right: 0px;
+  cursor: pointer;
+}
+#image-gallery img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.lexique_page p.lexique_section_title a{
+  margin-bottom: 20px;
+  margin-top: 12px;
+
+}
+.image-gallery .caption {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: white;
+  width: 100%;
+}
+.image-gallery .caption p {
+  margin: 0;
+}
+#image-gallery li img {
+}
+@media (max-width: 399px) {
+  .slideControls li img {
+    position: relative;
+  }
+  #image-gallery li {
+    float: none !important;
+  }
+}
+
+.left_menutitle {
+  background: #323232;
+  color: #fff;
+  font-size: 18px;
+  font-family: "MontserratMedium";
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 14px 25px;
+}
+.black_sidemenu {
+  background: #f1f1f1;
+  font-family: "MontserratMedium";
+  padding-bottom: 18px;
+}
+.black_sidemenu > ul {
+  margin-bottom: 0px;
+}
+.innerbanner img {
+  width: 100%;
+  max-height: 485px;
+}
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img,
+.img-responsive,
+.thumbnail a > img,
+.thumbnail > img {
+  max-height: 550px !important;
+}
+.black_sidemenu > ul > li {
+  color: #150d0d;
+  font-size: 16px;
+  display: block;
+  line-height: 35px;
+  background: url(../images/leftside_liicon.png) 18px 12px no-repeat;
+  padding-left: 48px;
+}
+.black_sidemenu > ul > li > a:hover,
+.black_sidemenu > ul > li > a:focus {
+  color: #e75b00;
+  background: none !important;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.black_sidemenu > ul > li {
+  position: relative;
+}
+.black_sidemenu > ul > li:hover .black_sidesubmenu,
+.black_sidemenu > ul > li > a {
+  display: block;
+}
+.black_sidemenu > ul > li > a span {
+  position: absolute;
+  right: 10px;
+  font-size: 19px;
+}
+.black_sidesubmenu {
+  background: #323232;
+  color: #ffffff;
+  padding: 7px 0px;
+  font-size: 13px;
+  display: none;
+}
+.black_sidesubmenu li {
+  display: block;
+  line-height: 25px;
+}
+.black_sidesubmenu li a {
+  color: #ffffff;
+  display: block;
+  text-indent: 15px;
+}
+.black_sidesubmenu li a:hover {
+  background: #e75b00;
+}
+@media (max-width: 767px) {
+  .black_sidesubmenu {
+  }
+  .two_equalsides img.center-block,
+  .two_equalsides img {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  .section1.des_titre_list h5,
+  .section1.des_concept_list h5,
+  .section1.des_conseils_list h5 {
+    margin-top: 20px;
+  }
+  .events_page {
+    padding: 40px 0px 30px;
+  }
+}
+@media (min-width: 768px) {
+  .black_sidesubmenu {
+    position: absolute;
+    left: 101%;
+    display: none;
+    min-width: 130px;
+    z-index: 5;
+    top: 0px;
+  }
+  .two_equalsides {
+    margin-bottom: 20px;
+  }
+}
+.right_sidecontent p {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 24px;
+}
+.regles_points li {
+  font-family: "MontserratMedium";
+}
+.license_txt {
+  text-align: justify;
+}
+/** Coach Detail page **/
+
+.carousel-control > a > span {
+  color: #555;
+  padding: 5px;
+  border: 1px solid #555;
+  background-color: #fff;
+  padding: 1px 10px;
+  border-radius: 50%;
+}
+.des_coach_abt .timeslot {
+  border: 1px solid #f5984d;
+  padding: 10px;
+}
+.des_coach_abt .des_notification {
+  float: right;
+}
+.des_coach_abt .des_not_box1 {
+  margin: 10px;
+  display: inline;
+  float: left;
+}
+.des_coach_abt .des_time_box1 {
+  padding: 10px;
+  height: 5px;
+  width: 5px;
+  background-color: green;
+  float: left;
+  margin-right: 5px;
+}
+.des_coach_abt .des_time_box2 {
+  padding: 10px;
+  height: 5px;
+  width: 5px;
+  background-color: red;
+  float: left;
+  margin-right: 5px;
+}
+.des_coach_abt .des_time_box3 {
+  padding: 10px;
+  height: 5px;
+  width: 5px;
+  background-color: #ffa800;
+  float: left;
+  margin-right: 5px;
+}
+.des_coach_abt .des_time_box4 {
+  padding: 10px;
+  height: 5px;
+  width: 5px;
+  background-color: #dbdbdb;
+  float: left;
+  margin-right: 5px;
+}
+.des_coach_abt .demo {
+  margin-top: 5px;
+  width: 100%;
+  height: 15px;
+  background-color: #ccc;
+}
+.des_coach_abt .demo.bg_div {
+  background-color: green;
+}
+.des_coach_abt .col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.des_coach_abt .carousel-control {
+  width: 8%;
+  width: 0px;
+}
+.des_coach_abt .carousel-control.left,
+.des_coach_abt .carousel-control.right {
+  height: 30px;
+  width: 40px;
+  background: none;
+  margin: auto -35px;
+}
+.des_coach_abt .carousel-control > a > span {
+  color: white;
+  font-size: 29px !important;
+}
+.des_coach_abt .carousel-col {
+  position: relative;
+  min-height: 1px;
+  padding: 5px;
+  float: left;
+}
+
+.coach_detail_team_slider .active > div {
+  display: none;
+}
+.coach_detail_team_slider .active > div:first-child {
+  display: block;
+}
+.coach_detail_team_slider .left.carousel-control,
+.coach_detail_team_slider .right.carousel-control {
+  background-image: none;
+}
+/*xs*/
+@media (max-width: 579px) {
+  .coach_detail_team_slider .carousel-inner .active.left {
+    left: -100%;
+  }
+  .coach_detail_team_slider .carousel-inner .active.right {
+    left: 100%;
+  }
+  .coach_detail_team_slider .carousel-inner .next {
+    left: 100%;
+  }
+  .coach_detail_team_slider .carousel-inner .prev {
+    left: -100%;
+  }
+  .coach_detail_team_slider .carousel-col {
+    width: 100%;
+  }
+  .coach_detail_team_slider .active > div:first-child {
+    display: block;
+  }
+  .coach_detail_team_slider .carousel-control.left,
+  .coach_detail_team_slider .carousel-control.right {
+    margin: auto -30px;
+  }
+}
+
+/*sm*/
+@media (min-width: 580px) and (max-width: 639px) {
+  .coach_detail_team_slider .carousel-inner .active.left {
+    left: -50%;
+  }
+  .coach_detail_team_slider .carousel-inner .active.right {
+    left: 50%;
+  }
+  .coach_detail_team_slider .carousel-inner .next {
+    left: 50%;
+  }
+  .coach_detail_team_slider .carousel-inner .prev {
+    left: -50%;
+  }
+  .coach_detail_team_slider .carousel-col {
+    width: 50%;
+    float: left;
+  }
+  .coach_detail_team_slider .active > div:first-child + div {
+    display: block;
+  }
+  .coach_detail_team_slider .active > div:first-child + div {
+    display: block;
+  }
+
+  .coach_detail_team_slider .carousel-control.left,
+  .coach_detail_team_slider .carousel-control.right {
+    margin: auto -30px;
+  }
+}
+@media (min-width: 640px) and (max-width: 991px) {
+  .coach_detail_team_slider .carousel-inner .active.left {
+    left: -33%;
+  }
+  .coach_detail_team_slider .carousel-inner .active.right {
+    left: 33%;
+  }
+  .coach_detail_team_slider .carousel-inner .next {
+    left: 33%;
+  }
+  .coach_detail_team_slider .carousel-inner .prev {
+    left: -33%;
+  }
+  .coach_detail_team_slider .carousel-col {
+    width: 33%;
+    float: left;
+  }
+  .coach_detail_team_slider .active > div:first-child + div {
+    display: block;
+  }
+  .coach_detail_team_slider .active > div:first-child + div + div {
+    display: block;
+  }
+  #carousel_detail_page {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .coach_detail_team_slider .carousel-control.left,
+  .coach_detail_team_slider .carousel-control.right {
+    margin: auto -51px;
+  }
+}
+
+/*md*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .coach_detail_team_slider .carousel-inner .active.left {
+    left: -25%;
+  }
+  .coach_detail_team_slider .carousel-inner .active.right {
+    left: 25%;
+  }
+  .coach_detail_team_slider .carousel-inner .next {
+    left: 25%;
+  }
+  .coach_detail_team_slider .carousel-inner .prev {
+    left: -25%;
+  }
+  .coach_detail_team_slider .carousel-col {
+    width: 25%;
+    float: left;
+  }
+  .coach_detail_team_slider .active > div:first-child + div {
+    display: block;
+  }
+  .coach_detail_team_slider .active > div:first-child + div + div {
+    display: block;
+  }
+  .coach_detail_team_slider .active > div:first-child + div + div + div {
+    display: block;
+  }
+}
+
+/*lg*/
+@media (min-width: 1200px) {
+  .coach_detail_team_slider .carousel-inner .active.left {
+    left: -20%;
+  }
+  .coach_detail_team_slider .carousel-inner .active.right {
+    left: 20%;
+  }
+  .coach_detail_team_slider .carousel-inner .next {
+    left: 20%;
+  }
+  .coach_detail_team_slider .carousel-inner .prev {
+    left: -20%;
+  }
+  .coach_detail_team_slider .carousel-col {
+    width: 20%;
+    float: left;
+  }
+  .coach_detail_team_slider .active > div:first-child + div {
+    display: block;
+  }
+  .coach_detail_team_slider .active > div:first-child + div + div {
+    display: block;
+  }
+  .coach_detail_team_slider .active > div:first-child + div + div + div {
+    display: block;
+  }
+  .coach_detail_team_slider .active > div:first-child + div + div + div + div {
+    display: block;
+  }
+}
+.des_coach_abt .timeslot {
+  margin: 25px 0px 0px;
+}
+.coach_detail_team_slider .carousel-control.left,
+.coach_detail_team_slider .carousel-control.right {
+  margin: auto -65px;
+}
+@media (max-width: 579px) {
+  .des_coach_abt_heading {
+    margin-bottom: 15px;
+    font-size: 25px;
+  }
+  .des_coach_abt_sec {
+    float: none;
+  }
+  .des_coach_abt_price a {
+    padding: 5px 15px;
+    font-size: 14px;
+    float: none;
+    margin: 2px;
+  }
+  .des_coach_abt_price {
+    text-align: center;
+    margin: 20px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .des_coach_abt {
+    margin: 30px 0px;
+  }
+  .des_coach_abt_heading {
+    margin-bottom: 15px;
+  }
+  .chip1,
+  .chip {
+    padding: 15px 10px;
+  }
+  p.ng-binding {
+    font-size: 14px;
+  }
+  .des_coach_abt.timeslotpage .table-responsive {
+    padding: 20px 10px;
+  }
+  .des_coach_abt .timeslot {
+    padding: 12px 0px;
+  }
+  .des_coach_abt.timeslotpage {
+    margin: 40px 0px 15px !important;
+  }
+  .slotpage_mod .modal-body {
+    padding: 20px 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .des_social_icons_footer1 ul li a {
+    width: 38px;
+    height: 38px;
+    margin-right: 7px;
+  }
+  .chip1,
+  .chip {
+    padding: 15px 10px;
+  }
+  .chip img,
+  .chip1 img {
+    height: 45px;
+    width: 45px;
+  }
+  .chip1 span,
+  .chip span {
+    font-size: 11px;
+  }
+  .des_coach_abt_price a {
+    font-size: 12px;
+    padding: 5px 11px;
+  }
+  .coach_detail_team_slider .carousel-control.left,
+  .coach_detail_team_slider .carousel-control.right {
+    margin: auto -62px;
+  }
+  .des_detail_sec p {
+    font-size: 11px;
+  }
+  .inner_searcharea .form-group {
+    margin-bottom: 24px !important;
+  }
+}
+.chip1,
+.chip {
+  padding: 15px 10px;
+}
+
+/** Time Slotpage starts **/
+.des_coach_abt.timeslotpage .timeslot {
+  max-width: 740px;
+  margin: 0px auto;
+}
+/* Hide the browser's default radio button */
+.slotpage_mod .radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Create a custom radio button */
+.slotpage_mod .checkround {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-color: #e75b00;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+}
+
+.modal-backdrop {
+  background-color: transparent;
+}
+/* When the radio button is checked, add a blue background */
+.slotpage_mod .radio input:checked ~ .checkround {
+  background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.slotpage_mod .checkround:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.slotpage_mod .radio input:checked ~ .checkround:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.slotpage_mod .radio .checkround:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e75b00;
+}
+.slotpage_mod .radio_box {
+  box-shadow: 0 0 15px #999999 !important;
+  margin: 30px auto;
+  width: 85%;
+}
+.slotpage_mod .radio_box p {
+  background-color: #e75b00;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 7px 0px;
+}
+.slotpage_mod .des_event_btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 20px 10px 0px;
+}
+.slotpage_mod .frb-group {
+  margin: 15px 0;
+}
+
+.slotpage_mod .frb ~ .frb {
+  margin-top: 15px;
+}
+
+.slotpage_mod .frb input[type="radio"]:empty,
+.slotpage_mod .frb input[type="checkbox"]:empty {
+  display: none;
+}
+
+.slotpage_mod .frb input[type="radio"] ~ label:before,
+.slotpage_mod .frb input[type="checkbox"] ~ label:before {
+  font-family: FontAwesome;
+  content: "\f096";
+  position: absolute;
+  top: 17px;
+  margin-top: 0px;
+  left: 15px;
+  font-size: 22px;
+}
+
+.slotpage_mod .frb input[type="radio"]:checked ~ label:before,
+.slotpage_mod .frb input[type="checkbox"]:checked ~ label:before {
+  content: "\f046";
+}
+
+.slotpage_mod .frb input[type="radio"] ~ label,
+.slotpage_mod .frb input[type="checkbox"] ~ label {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.slotpage_mod .frb input[type="radio"] ~ label:focus,
+.slotpage_mod .frb input[type="radio"] ~ label:hover,
+.slotpage_mod .frb input[type="checkbox"] ~ label:focus,
+.slotpage_mod .frb input[type="checkbox"] ~ label:hover {
+  box-shadow: 0px 0px 3px #333;
+}
+
+.slotpage_mod .frb input[type="radio"]:checked ~ label,
+.slotpage_mod .frb input[type="checkbox"]:checked ~ label {
+  color: #fafafa;
+}
+
+.slotpage_mod .frb input[type="radio"]:checked ~ label,
+.slotpage_mod .frb input[type="checkbox"]:checked ~ label {
+  background-color: #f2f2f2;
+}
+
+.slotpage_mod .frb.frb-default input[type="radio"]:checked ~ label,
+.frb.frb-default input[type="checkbox"]:checked ~ label {
+  color: #333;
+}
+
+.slotpage_mod .frb.frb-primary input[type="radio"]:checked ~ label,
+.slotpage_mod .frb.frb-primary input[type="checkbox"]:checked ~ label {
+  background-color: #337ab7;
+}
+
+.slotpage_mod .frb.frb-success input[type="radio"]:checked ~ label,
+.slotpage_mod .frb.frb-success input[type="checkbox"]:checked ~ label {
+  background-color: #5cb85c;
+}
+
+.slotpage_mod .frb.frb-info input[type="radio"]:checked ~ label,
+.slotpage_mod .frb.frb-info input[type="checkbox"]:checked ~ label {
+  background-color: #5bc0de;
+}
+
+.slotpage_mod .frb.frb-warning input[type="radio"]:checked ~ label,
+.slotpage_mod .frb.frb-warning input[type="checkbox"]:checked ~ label {
+  background-color: #f0ad4e;
+}
+
+.slotpage_mod .frb.frb-danger input[type="radio"]:checked ~ label,
+.slotpage_mod .frb.frb-danger input[type="checkbox"]:checked ~ label {
+  background-color: #d9534f;
+}
+
+.slotpage_mod .frb input[type="radio"]:empty ~ label span,
+.slotpage_mod .frb input[type="checkbox"]:empty ~ label span {
+  display: inline-block;
+}
+
+.slotpage_mod .frb input[type="radio"]:empty ~ label span.frb-title,
+.slotpage_mod .frb input[type="checkbox"]:empty ~ label span.frb-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px 5px 5px 50px;
+}
+
+.slotpage_mod .frb input[type="radio"]:empty ~ label span.frb-description,
+.slotpage_mod .frb input[type="checkbox"]:empty ~ label span.frb-description {
+  font-weight: normal;
+  font-style: italic;
+  color: #999;
+  margin: 5px 5px 5px 50px;
+}
+
+.slotpage_mod
+  .frb
+  input[type="radio"]:empty:checked
+  ~ label
+  span.frb-description,
+.slotpage_mod
+  .frb
+  input[type="checkbox"]:empty:checked
+  ~ label
+  span.frb-description {
+  color: #fafafa;
+}
+
+.slotpage_mod
+  .frb.frb-default
+  input[type="radio"]:empty:checked
+  ~ label
+  span.frb-description,
+.slotpage_mod
+  .frb.frb-default
+  input[type="checkbox"]:empty:checked
+  ~ label
+  span.frb-description {
+  color: #999;
+}
+.slotpage_mod .frb input[type="radio"] ~ label,
+.frb input[type="checkbox"] ~ label {
+  padding: 15px 0px;
+  background-color: #fff;
+}
+.slotpage_mod .frb.frb-success input[type="radio"]:checked ~ label,
+.frb.frb-success input[type="checkbox"]:checked ~ label {
+  background-color: #e75b00;
+}
+.slotpage_mod .modal-header .close {
+  color: #fff;
+}
+.slotpage_mod .modal-header {
+  background-color: #e75b00;
+  color: #fff;
+}
+.slotpage_mod .modal-content {
+  padding: 0px;
+}
+.slotpage_mod .modal-header .close {
+  border: none !important;
+  color: #fff;
+}
+.slotpage_mod .modal-title {
+  font-size: 17px;
+  font-weight: bold;
+}
+.slotpage_mod .modal-footer {
+  display: none;
+}
+.slotpage_mod .modal-dialog {
+  width: 100%;
+  max-width: 540px;
+  margin: 10px auto;
+  padding: 0px 15px;
+}
+.slotpage_mod .modal-body {
+  padding: 35px 15px;
+}
+.slotpage_mod .modal-body p {
+  padding-bottom: 3px;
+  font-weight: bold;
+  font-size: 17px;
+}
+/** Time Slotpage ends **/
+
+/** Summary page starts **/
+.summary_content {
+  max-width: 605px;
+  margin: 0px auto;
+}
+.summary_content h4 {
+  font-family: "Open Sans", sans-serif;
+  color: #393939;
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.summary_content p {
+  color: #393939;
+  font-weight: bold;
+  font-size: 16px;
+}
+.summary_content label {
+  font-size: 16px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  color: #666666;
+}
+.des_coach_abt.summary_content .timeslot {
+  padding: 30px 20px 0px;
+  color: #666666;
+}
+.des_coach_abt_btn {
+  border: 2px solid #e75a00 !important;
+  border-radius: 30px;
+  margin-top: 30px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #e75a00 !important;
+}
+.smtotal_text {
+  max-width: 300px;
+  margin: 30px auto 30px;
+  padding: 14px 10px;
+  color: #393939;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #ffdfcb;
+}
+a.dark_grey_bg,
+a.dark_grey_bg:hover {
+  background-color: #5d5d5d !important;
+  border: 2px solid #5d5d5d !important;
+}
+
+@media (max-width: 767px) {
+  .des_coach_abt.summary_content .timeslot {
+    padding: 30px 0px 25px;
+  }
+  .summary_content h4 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .summary_content p,
+  .summary_content label {
+    font-size: 13px;
+  }
+  .des_coach_abt_btn {
+    margin-top: 0px;
+    display: block;
+    margin-bottom: 12px;
+  }
+}

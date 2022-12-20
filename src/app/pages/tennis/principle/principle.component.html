@@ -1,0 +1,254 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="regle_content">
+  <div class="container">
+    <div class="row">
+      <div class="license">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Règlementation du matériel de tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="license_section">
+          <div class="col-xs-12">
+            <h5>
+              <strong>Quelle est la taille de la raquette de tennis ?</strong>
+            </h5>
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <p class="license_txt">
+              Un cadre de raquette de tennis est composé de trois parties : le
+              manche où on la tient, le tamis surface de frappe qui doit être
+              plat et le cœur qui relie les deux parties précédentes. Le cordage
+              (une ou plusieurs cordes qui se croisent et s'entrelacent grâce
+              aux trous dans le cadre) est attaché par des nœuds sur le tamis,
+              il doit être homogène.
+            </p>
+            <p class="license_txt">
+              Le manche est généralement en bois, un grip permettant une
+              meilleure sensation est enroulé autour. Les joueurs ajoutent
+              souvent un surgrip au dessus du grip pour avoir une meilleure
+              accroche avec le manche notamment en cas de transpiration au
+              niveau de la paume de la main.
+            </p>
+            <p class="license_txt">
+              D'après les règlements de la FFT, la taille de la raquette de
+              tennis le cadre de la raquette ne pourra dépasser 73,66 cm de
+              longueur totale (manche compris) ni 31,75 cm de largeur totale. Le
+              tamis de la raquette de tennis quant à lui ne pourra excéder 39,37
+              cm de longueur totale ni 29,21 cm de largeur totale.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img
+              src="./assets/images/titre_img1.jpg"
+              class="center-block"
+              alt="titre_img1"
+            />
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <p class="license_txt">
+              Il est possible d'ajouter des éléments à la raquette de tennis
+              comme un ou plusieurs antivibrateurs dans le cordage aux endroits
+              où les cordes ne se croisent pas pour limiter l'effet des
+              vibrations dues aux impacts de la balle dans le cordage, des lests
+              en plomb pour modifier la masse et l'équilibre du cadre, un socle
+              en bas du manche pour une prise en main différentes.
+            </p>
+            <p class="license_txt">
+              Toujours d'après les règlements de la FFT, le cadre de la
+              raquette, manche et cordage compris, doit être libre de tout
+              ajout, et ne doit être équipé d’aucun système qui permettrait, en
+              cours d’échange, de modifier la forme de la raquette ou
+              l’équilibre de son poids dans son axe longitudinal, ce qui
+              changerait son moment de torsion, ou de modifier délibérément
+              toute propriété physique de la raquette, susceptible d’affecter sa
+              performance. Enfin, aucune source d’énergie susceptible de
+              modifier les caractéristiques de jeu de la raquette ne peut être
+              intégrée ou attachée à la raquette.
+            </p>
+            <p>
+              <strong
+                ><a class="content_link" href=""
+                  >Pour en savoir plus sur la taille de la raquette
+                  (conseils).</a
+                ></strong
+              >
+            </p>
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="regles_section_2">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <img
+                src="./assets/images/titre_img2.jpg"
+                class="center-block"
+                alt="titre_img1"
+              />
+            </div>
+
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <h5>
+                <strong>Quel est le diamètre de la balle de tennis ?</strong>
+              </h5>
+              <p class="license_txt">
+                Une balle de tennis est sphérique, elle est constituée de
+                caoutchouc, recouverte de feutre et remplie d'air plus ou moins
+                sous pression suivant le type.
+              </p>
+              <p class="license_txt">
+                Ces différents paramètres (pression, qualité du feutre, masse)
+                influent sur la longévité, la qualité du rebond de la balle et
+                donc sur leur utilisation (joueur occasionnel ou confirmé). Par
+                exemple, une balle dite sans de pression (en réalité la pression
+                est de 7000 Pa soit 7 % de la pression atmosphérique) a une
+                longévité supérieure à une balle avec pression mais présente un
+                rebond de moindre qualité.
+              </p>
+              <p class="license_txt">
+                Les balles autorisées en compétition doivent être blanches ou
+                jaunes, les joueurs disposent de 3, 4 ou 6 balles suivant leur
+                niveau et le tournoi.
+              </p>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <p class="license_txt">
+                Il faut aussi noter qu'en compétition, si une balle crève en
+                cours d'échange, le point doit être remis alors que si on
+                constate qu'une balle est dégonflée après le point, il reste
+                acquis à son vainqueur.
+              </p>
+              <p class="license_txt">
+                Certaines catégories de jeunes emploient des balles moins dures
+                comme pour les 8 ou 9 ans qui peuvent jouer avec des balles
+                dites souples (ou dites oranges) et les 9 ou 10 ans pouvant
+                utiliser des balles dites intermédiaires (ou appelées vertes)
+                qui sont un peu plus dures que les balles souples.
+              </p>
+              <p class="license_txt">
+                <b
+                  >Les balles ordinaires doivent respecter les contraintes
+                  suivantes, les valeurs ont été arrondie :</b
+                >
+              </p>
+
+              <ul class="regles_points">
+                <li>
+                  une masse de la balle de tennis comprise entre 56 et 59,4 g.
+                </li>
+                <li>
+                  un diamètre de la balle de tennis entre 6,54 et 7,30 cm.
+                </li>
+                <li>
+                  un rebond sur une base en béton de référence entre 1,35 m et
+                  1,47 m pour une hauteur de chute de 2,54 m.
+                </li>
+              </ul>
+              <p style="margin-bottom:-9px;">
+                <a class="content_link" href=""
+                  >Pour en savoir plus sur le diamètre des balles de tennis
+                  (conseils).</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="regles_section_3 col-xs-12">
+            <h5><strong>Réglementation de la tenue de tennis</strong></h5>
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <p class="license_txt">
+              Les règles sont peu restrictives quant à la tenue de tennis
+              proprement dite ainsi les joueurs doivent porter des vêtements et
+              des chaussures. Par contre, les sigles ou logos d'équipementier
+              sont fortement réglementés, ils ne doivent figurer qu'une seule
+              fois sur les vêtements, chaussures, casquettes et ne peuvent
+              dépasser une surface de 13 cm2. Un second sigle ou logo est
+              autorisé et ne doit pas excéder 19,5 cm2 sur chaque vêtement ou
+              chaussure. Certaines compétitions internationales ajoutent des
+              règles encore plus contraignantes comme une tenue de tennis à
+              dominante blanche à Wimbledon ou des tenues à couleurs identiques
+              pour les partenaires de double en coupe Davis ou aux Jeux
+              Olympiques.
+            </p>
+            <p>
+              <strong
+                ><a class="content_link" href=""
+                  >Pour en savoir plus sur votre équipement tennis
+                  (conseils).</a
+                ></strong
+              >
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="./assets/images/titre_img3.jpg" />
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

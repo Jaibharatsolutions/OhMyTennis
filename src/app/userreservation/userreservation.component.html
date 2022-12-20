@@ -1,0 +1,381 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form_devarea">
+                    <div class="box-body">
+                        <div class="row book_course_label">
+                            <div class="col-md-4">
+                                <label for="filter" class="control-label"><b>Filtre</b></label>
+                                <input (keyup)="filtersearch($event)" [(ngModel)]="filter" placeholder="filter"
+                                    class="form-control" />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="" class="control-label"><b>Cours</b></label>
+                                <select [(ngModel)]="course" (change)="filtersearch($event)" class="form-control ">
+                                    <option selected value="">Sélectionner</option>
+                                    <option value="CoursIndividuel">Cours Individuel</option>
+                                    <option value="CoursCollectifOndemand">Cours collectif à la demande</option>
+                                    <option value="CoursCollectifClub">Cours Collectif Club</option>
+                                    <option value="Stage">Stage</option>
+                                    <option value="Tournoi">Toumoi amical</option>
+                                    <option value="TeamBuilding">Team Building</option>
+                                    <option value="Animation">Animation</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="" class="control-label"><b>Status</b></label>
+                                <select [(ngModel)]="status" (change)="filtersearch($event)" class="form-control ">
+                                    <option selected value="">Sélectionner</option>
+                                    <option value="A">Approuvé</option>
+                                    <option value="R">Demande de réservation</option>
+                                    <option value="B">Réservé</option>
+                                    <option value="S">Reprogrammé</option>
+                                    <option value="C">Annulé</option>
+                                    <option value="UC">prestation annulée</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="book_coursetab" style="overflow-x: auto;">
+                            <table class="table book_coursetable">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">N</th>
+                                        <th>Nom du coach</th>
+                                        <th>Cours</th>
+                                        <th>Date</th>
+                                        <!-- <th>Heure</th> -->
+                                        <th>Statut</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        *ngFor="let rowData of rowDataCollection | paginate: { itemsPerPage: 10, currentPage: p }">
+                                        <td> {{rowData[0]}} </td>
+                                        <td align="left"> {{rowData[9]}} {{rowData[10]}} </td>
+                                        <td align="left"> {{rowData[2]}} </td>
+                                        <td> {{rowData[3]}}</td>
+                                        <!-- <td>{{rowData[4]}} </td> -->
+                                        <td>
+                                            <span *ngIf="rowData[6] == 'B'" style="color: #3cd376;">Réservé</span>
+                                            <span *ngIf="rowData[6] == 'A'" style="color: #dbb126;">Approuvé</span>
+                                            <span *ngIf="rowData[6] == 'R'" style="color: #b86735;">Demande de
+                                                réservation</span>
+                                            <span *ngIf="rowData[6] == 'S'" style="color:darkblue;">Reprogramm`e</span>
+                                            <span *ngIf="rowData[6] == 'C'" style="color: #f00612;">Annulé</span>
+                                            <span *ngIf="rowData[6] == 'UC'" style="color: #111110;">Prestation
+                                                annulé</span>
+
+                                        </td>
+                                        <td><a class="btn des_abt_btn view_reservation" data-toggle="modal"
+                                                style="cursor: pointer;" data-target="#myModal_edit_course"
+                                                id="bookingDetailPage" (click)="cancelDialog(rowData)">VUE
+                                                <!-- <i class="fa fa-thumbs-o-up fa-2x"
+                                                    aria-hidden="true"></i> -->
+
+                                            </a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <pagination-controls (pageChange)="p = $event" previousLabel="Précédent"
+                                style="float: right; padding: 11px;" nextLabel="Prochain" directionLinks="true"
+                                autoHide="true" responsive="true">
+                            </pagination-controls>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal_edit_course" class="modal fade" role="dialog"
+        [ngStyle]="{'display' : dialogStatus ? 'block':'none', 'opacity':1}">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" (click)="modalclose()" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Formulaire d'approbation des utilisateurs</h4>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+                        <button type="button" (click)="_closeAlertMessage($event)"
+                            class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                    </div>
+                    <!-- <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Nom du coach</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="userName" class="form-control" type="text" value="Username" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Cours</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="userCourseType" class="form-control" type="text" value="Individuel" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group bmd-form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Date</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="userDate" type="text" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="form-group bmd-form-grou bmd-form-group is-filled alert alert-danger">
+                        <div class="row">
+                            <div class="col-md-12">Remarque: Le montant doit être payé 24 heures avant le début de la
+                                session / de l'événement. Aucun remboursement après paiement.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="col">Coach</th>
+                                            <td scope="col">{{user_name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Cours</th>
+                                            <td scope="col">{{course}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Prix</th>
+                                            <td scope="col">{{amount |currency:'EUR':'symbol':'2.2-2':'fr'}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Paquet sélectionné</th>
+                                            <td scope="col">{{remaining_status}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">DATE</th>
+                                            <th scope="col">{{booking_date | date:'dd/MM/yyyy'}}</th>
+                                        </tr>
+                                        <tr *ngFor="let slots of slotRowDatas">
+                                            <td scope="col">{{slots.booking_date | date:'dd/MM/yyyy'}}</td>
+                                            <td scope="col">{{slots.booking_time}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div *ngIf="course !== 'Stage' && course !== 'Tournoi' && course !== 'Animation' && course !== 'TeamBuilding'"
+                        class="form-group bmd-form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Heure</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="userhours" type="text" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div *ngIf="course =='CoursCollectifClub'" class="form-group bmd-form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Course Name</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="Remarks" [(ngModel)]="Remarks" name="Remarks" readonly type="text"
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="course =='CoursCollectifClub'" class="form-group bmd-form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Prix (€)</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="discount" [(ngModel)]="discount" name="discount" type="text"
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="course =='Stage' && amount == 0" class="form-group bmd-form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Prix (€)</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="discount" [(ngModel)]="discount" name="discount" type="text"
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div align="center" *ngIf="course == 'CoursCollectifOndemand' && booked_users.length>1">
+                        <table width="100%" class="available_table">
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">Booked Users</th>
+                                </tr>
+                                <tr *ngFor="let user of booked_users">
+                                    <td>{{user.firstName}} {{user.lastName}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div align="center"
+                        *ngIf="course == 'Tournoi' || course == 'TeamBuilding' || course == 'Animation'">
+                        <div class="stepwizard_section">
+                            <div class="row setup-content">
+                                <div class="wizard_outer">
+                                    <div class="col-md-12">
+                                        <br>
+                                        <h4>Reservation Details</h4>
+                                        <div class="stepwizard_section" align="left">
+                                            <div class="row setup-content">
+                                                <div class="wizard_outer"
+                                                    style="border: 1px solid #e75b00;padding: 13px;margin: 27px;">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <label style="text-align: initial;"><strong>Nom de
+                                                                            l'entreprise /
+                                                                            personne :</strong></label>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <label>{{reservation.Name_of_company}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <label style="text-align: initial;"><strong>Email
+                                                                            :</strong></label>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <label>{{reservation.Email}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <label style="text-align: initial;"><strong>téléhone
+                                                                            :</strong></label>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <label>{{reservation.Mobile}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <label style="text-align: initial;"><strong>Date
+                                                                            :</strong></label>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <label>{{reservation.Date}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div *ngIf="course !== 'Tournoi'"
+                                                            class="form-group bmd-form-grou bmd-form-group is-filled">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <label style="text-align: initial;"><strong>Adresse
+                                                                            :</strong></label>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <label>{{reservation.Address}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div *ngIf="course !== 'Tournoi'"
+                                                            class="form-group bmd-form-grou bmd-form-group is-filled">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <label style="text-align: initial;"><strong>Code
+                                                                            Postal
+                                                                            :</strong></label>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <label>{{reservation.Postalcode}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div *ngIf="course == 'Tournoi'"
+                                                            class="form-group bmd-form-grou bmd-form-group is-filled">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <label style="text-align: initial;"><strong>Level
+                                                                            :</strong></label>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <label>{{reservation.Level}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <label style="text-align: initial;"><strong>Nombre
+                                                                            de
+                                                                            personne :</strong></label>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <label>{{reservation.Number_of_person}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="modal-footer">
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-8" style="padding: 0px 10px;">
+                                <div class="form_buttons" style="text-align: left; padding: 0px 0px;">
+                                    <!-- <a data-toggle="modal"  data-target="#myModal_save_course"  class="btn btn-success des_save_btn">Enregistrer</a> -->
+                                    <button *ngIf="book_status=='R'" type="button" class="btn btn-danger"
+                                        (click)="cancelreq()" data-dismiss="modal">Annuler</button>
+                                    <!-- <button type="button" (click)="closemodal()" class="btn btn-default" data-dismiss="modal">Proche</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

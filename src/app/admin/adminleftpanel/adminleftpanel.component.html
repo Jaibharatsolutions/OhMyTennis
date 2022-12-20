@@ -1,0 +1,50 @@
+<!-- <div class="sidebar-wrapper">
+    <ul class="nav">
+        <li class="nav-item active">
+            <a class="nav-link"href="/admin/dashboard">
+                <i class="fa fa-th-large"></i> <p>TABLEAU DE BORD</p>
+            </a>
+        </li>
+       <li class="nav-item nav-link">
+            
+                <i class="fa fa-user-o"></i> <p>GESTION DES UTILISATEURS</p>
+         
+            <ul class="treeview-menu">
+                <li><a href="/admin/coachlist">Entra�neurs</a></li>
+                <li><a href="/admin/prospectuslist">PERSPECTIVES</a></li>
+                <li><a href="/admin/clublist">COURT DE TENNIS</a></li>
+            </ul>
+        </li> -->
+        <!-- <li class="nav-item">
+            <a class="nav-link"href="/admin/coachlist">
+                <i class="fa fa-users"></i> <p>Entra�neurs</p>
+            </a>
+        </li>
+       <li class="nav-item">
+            <a class="nav-link"href="/admin/service">
+                <i class="fa fa-th-large"></i> <p>les service</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"href="/admin/prospectuslist">
+                <i class="fa fa-users"></i> <p>PERSPECTIVES</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"href="/admin/clublist">
+                <i class="fa fa-map-marker"></i> <p>COURT DE TENNIS</p>
+            </a>
+        </li>
+    </ul>
+</div>  -->
+
+<div class="sidebar-wrapper admin_leftpanel">
+        <ul class="nav">
+            <li *ngFor="let l of leftPanel(); let i = index" class="nav-item" [ngClass]="(navActiveIndex ===i) ? 'active': null">
+                    <a (click)="navActiveIndex = i;" routerLink="{{l.path}}" class="nav-link" href="javascript:;">
+                            <i [ngClass]="l.iclass"></i>
+                            <p [ngClass]="(l.style) ? 'nav-sub-title': null" [innerHTML]="l.title"></p>
+                    </a>
+            </li>
+        </ul>
+</div>

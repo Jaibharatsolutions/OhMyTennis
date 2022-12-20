@@ -1,0 +1,243 @@
+.modal-dialog {
+    top: 125px!important;
+}
+
+#container {
+    width: 600px;
+}
+/* Styles go here */
+
+/** form wizrd **/
+
+
+.form_wizard li.active > a.hidden-xs {
+    display: block!important;
+   }
+   .form_wizard li.active > a.visible-xs {
+       display: none!important; 
+   }
+   .form_wizard .nav-pills.nav-wizard > li {
+     position: relative;
+     overflow: visible;
+     border-right: 10px solid #fff;
+     border-left: 10px solid #fff;
+   }
+   .form_wizard .nav-pills.nav-wizard > li:first-child {
+     border-left: 0;
+   }
+   .form_wizard .nav-pills.nav-wizard > li:first-child a {
+     border-radius: 5px 0 0 5px;
+   }
+   .form_wizard .nav-pills.nav-wizard > li:last-child {
+     border-right: 0;
+   }
+   .form_wizard .nav-pills.nav-wizard > li:last-child a {
+     border-radius: 0 5px 5px 0;
+   }
+   .form_wizard .nav-pills.nav-wizard > li a {
+     border-radius: 0;
+     background-color: #eee;
+     padding: 10px;
+   }
+   .form_wizard .nav-pills.nav-wizard > li .nav-arrow {
+     position: absolute;
+     top: 0px;
+     right: -20px;
+     width: 0px;
+     height: 0px;
+     border-style: solid;
+     border-width: 20px 0 20px 20px;
+     border-color: transparent transparent transparent #eee;
+     z-index: 150;
+   }
+   .form_wizard .nav-pills.nav-wizard > li .nav-wedge {
+     position: absolute;
+     top: 0px;
+     left: -20px;
+     width: 0px;
+     height: 0px;
+     border-style: solid;
+     border-width: 20px 0 20px 20px;
+     border-color: #eee #eee #eee transparent;
+     z-index: 150;
+   }
+   .form_wizard .nav-pills.nav-wizard > li:hover .nav-arrow {
+     border-color: transparent transparent transparent #aaa;
+   }
+   .form_wizard .nav-pills.nav-wizard > li:hover .nav-wedge {
+     border-color: #aaa #aaa #aaa transparent;
+   }
+   .form_wizard .nav-pills.nav-wizard > li:hover a {
+     background-color: #aaa;
+     color: #fff;
+   }
+   .form_wizard .nav-pills.nav-wizard > li.active .nav-arrow {
+     border-color: transparent transparent transparent #428bca;
+   }
+   .form_wizard .nav-pills.nav-wizard > li.active .nav-wedge {
+     border-color: #428bca #428bca #428bca transparent;
+   }
+   .form_wizard .nav-pills.nav-wizard > li.active a {
+     background-color: #428bca;
+   }
+   .progress-bar-success{ background-color: #29a036;}
+   .form_wizard .data_blk{padding: 10px 40px;}
+   .form_wizard .data_blk h3{text-align: center;line-height: 32px;}
+   .form_wizard .data_blk p{text-align: center;font-size: 14px;}
+   .form_wizard .data_blk p.lead{text-align: left; font-size: 21px;}
+   .a_right {
+       border: solid #29a036;
+       border-width: 0 1px 1px 0;
+       display: inline-block;
+       padding: 6px;
+       transform: rotate(135deg);
+       -webkit-transform: rotate(135deg);
+       vertical-align: middle;
+       margin-right: -10px;
+   }
+   .a_left {
+       border: solid #29a036;
+       border-width: 0 1px 1px 0;
+       display: inline-block;
+       padding: 6px;
+       transform: rotate(-45deg);
+       -webkit-transform: rotate(-45deg);
+       vertical-align: middle;
+       margin-left: -5px;
+   }
+   
+   .form_wizard .back,.form_wizard .btn-default.next {
+       background: transparent;
+       border-color: transparent;
+       outline: 0;
+       text-transform: unset;
+       font-size: 16px;
+       padding-left: 0;
+       color: #29a036;
+       margin-left: 10px;
+   }
+   
+   .form_wizard .btn-default.next{color: #fff;}
+   .form_wizard .back:hover,.form_wizard .back:focus{
+       background: transparent;
+       border-color: transparent;
+   }
+   
+   .form_wizard .btn-primary {
+       background: #29a036;
+       border-radius: 3px;
+       border-color: #29a036;
+       text-transform: capitalize;
+       padding: 10px 20px;
+   }
+   .form_wizard .progress{
+       height: 8px;
+       margin: 0 60px;
+   }
+   .form_wizard .form_blk{margin-bottom: 40px;margin-right: -15px;margin-left: -15px;}
+   .form_wizard .form_blk .radio,.form_blk .checkbox{
+       margin: 0;
+   }
+   .form_wizard .form_blk .radio label,.form_blk .checkbox label{
+       padding: 12px;
+       background: #fff;
+       padding-left: 40px;
+       display: block;
+       font-size: 16px;
+       border-top: 1px solid #f2f2f2;
+   }
+   .form_wizard .form_blk .radio:last-child label,.form_blk .checkbox:last-child label{
+       border-bottom: 1px solid #f2f2f2;
+   }
+   .formwizardpopup .modal-body{
+       padding-top: 40px;
+   }
+   .formwizardpopup .modal-body button.close{    
+       position: absolute;
+       top: 4px;
+       right: 15px;
+       font-size: 3.5rem;
+       opacity: .1;
+   }
+   .formwizardpopup .modal-content{
+       border-radius: 3px;
+       background: #fafafa;
+   }
+   .form_wizard .form_blk .other label input[type="checkbox"]{
+       margin-top: 10px;
+   }
+   .form_wizard .form_blk .other label input[type="text"]{
+       display: block;
+       width: 100%;
+       height: 35px;
+       padding: 5px;
+       border: 1px solid #d4d4d4;
+       border-radius: 3px;
+   }
+   .form_wizard textarea{height: 100px;}
+   .form_wizard .zip_blk {
+       padding: 20px 130px 30px;
+   }
+   .form_wizard .zip_blk input{text-align: center;}
+   .form_wizard .sm_text {
+       font-size: 10px;
+       padding: 0 100px 40px;
+       text-align: center;
+   }
+   .form_wizard .col-sm-6 .sm_text{padding: 0;}
+   @media (min-width: 768px){
+   .formwizardpopup .modal-dialog {
+       width: 500px;
+   }}
+   .form_wizard .progress-bar-info{background: transparent;text-align: center;padding: 10px 0;font-size: 12px;}
+   
+   .formwizardpopup .modal-content.banner .progress,.formwizardpopup .modal-content.banner .progress-bar-info {display: none;}
+   .formwizardpopup .modal-content.banner .modal-body{padding-top: 20px;background: #203047;color: #fff;}
+   .formwizardpopup .modal-content.banner .modal-body h3 {
+       text-align: left;
+       font-size: 3rem;
+       margin-bottom: 30px;
+   }
+   .formwizardpopup .modal-content.banner .a_left{border-color: #fff;}
+   .formwizardpopup .modal-content.banner{background:#203047; }
+   .formwizardpopup .modal-content.banner button.close{color: #fff;opacity: .2;}
+   .formwizardpopup .modal-content.banner {text-align: center;}
+   .formwizardpopup .modal-content.banner img{    
+       -webkit-filter: brightness(0) invert(1);
+       filter: brightness(0) invert(1);
+   }
+  
+   .des_coach_abt .map-container {
+    position: relative;
+    top: unset;
+    left: unset;
+    height: 250px;
+    right: unset;
+    bottom: unset;
+    margin: 15px 0px 15px;
+  }
+    .map-container {
+      position: absolute;
+      top: 0;
+      left: -16px;
+      right: -18px;
+      bottom: -30px;
+      margin: 30px;
+      top: 114px;
+  }
+    .map-frame {
+    border: 2px solid #d8d0d0;
+    height: 100%;
+    }
+    
+    #map {
+    height: 100%;
+    }
+  
+    @media (min-width:992px) {
+  
+  
+    .des_map {
+      position: relative;
+    }
+  }

@@ -1,0 +1,253 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Recherche
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">HISTOIRE DU TENNIS 1880-1930</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div
+              class="panel-group"
+              id="accordion"
+              role="tablist"
+              aria-multiselectable="true"
+            >
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Le jeu de paume : ancêtre du tennis
+                    </a>
+                  </h4>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="panel-collapse collapse in"
+                  role="tabpanel"
+                  aria-labelledby="headingOne"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Le jeu de paume fait son apparition en France au Les
+                      sports de raquettes comme le tennis, le badminton, le
+                      squash ou encore la pelote basque ont pour ancêtre le Jeu
+                      de Paume.XIII°siècle grâce à des moines qui voulaient
+                      faire un peu d’exercice. Avec l’utilisation du sol, des
+                      murs et des poutres du cloître ils pratiquaient avec une
+                      balle (l’esteuf) et la paume de la main. D’où le nom "Jeu
+                      de Paume".Il pouvait être joué soit avec les mains, soit
+                      avec des gants. A la fin du XV°siècle, les gants furent
+                      équipés avec des sortes de cordage car cela devenait trop
+                      douloureux pour la peau. Au XVI° siècle que la première
+                      raquette est créée avec un long manche et un cordage en
+                      boyaux de mouton.Le Jeu de Paume est pratiqué par la
+                      noblesse et fait donc partie des "Jeu des Rois" : François
+                      I, Henri II, Charles IX, Henri IV sont très experts en la
+                      matière.Ce jeu se développe ensuite dans le monde entier
+                      sous diverses appellations. Le mot "tennis" vient de
+                      "tennetz", lors de la mise en jeu de la balle dans le jeu
+                      de Paume. En 1850, les Anglais créent le jeu de rackets.
+                      Plusiurs joueurs se retrouvent ainsi contre un
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      1874 : l’invention du Major Wingfield
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingTwo"
+                >
+                  <div class="panel-body">
+                    <p>
+                      La véritable histoire du tennis commence avec le major
+                      Walter Clopton Wingfield qui dépose un brevet pour un
+                      nouveau jeu qui deviendra en 1877 le Lawn-Tennis.
+                    </p>
+
+                    <p>
+                      Le concept est vendu sous forme d’une boite contenant : •
+                      Quatre raquettes de Paume légères. • Un filet avec ses
+                      piquets. • Des bandes pour tracer le terrain.
+                    </p>
+
+                    <p>
+                      Pour jouer et installer le terrain de tennis il est
+                      necessaire de disposer d’une surface de gazon. (lawn veut
+                      dire pelouse en anglais)Au tout debut les règles sont
+                      incompletes et laissent place a toutes les fantaisies.
+                      C’est le Marylebone Cricket Club (l’autorité responsable
+                      des sports de rackets et du Jeu de Paume) en collaboration
+                      avec le major Wingfield qui fixera des règles plus
+                      simplifiées. Le All England Club est ensuite crée pour
+                      organiser le premier tournoi : Wimbledon est né !
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Le Lawn-tennis à la conquête du monde
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingThree"
+                >
+                  <div class="panel-body">
+                    <p>
+                      A partir de 1880-1900, le Lawn-tennis se diffuse dans le
+                      monde entier (Italie , Espagne , France ,Allemagne ,
+                      Norvege , Pays bas , Portugal). Peu à peu le terme
+                      lawn-tennis est abandonné puisque plusieurs surfaces sont
+                      utilisées. Le mot « tennis » est adopté .En France , Le
+                      Havre, Dinard et Cannes sont les premiers clubs de tennis
+                      français. Vers 1890, le Racing Club de Paris, le Stade
+                      Français et le club sportif de l’île de Puteaux
+                      construisent des terrains de tennis. En juin 1891, les
+                      premiers championnats français de Lawn-tennis sont
+                      organisés sur l’île de Puteaux. Des tournois sont
+                      organisés et s’ouvrent aux étrangers.
+                    </p>
+
+                    <p>
+                      Des courts de tennis sont construits sur les lieux de
+                      vacances et devient un véritable loisir (sous l’influence
+                      des touristes anglais). On peu noter que l’US Open
+                      apparait en 1881 et l’Open d’Australie en 1905. En 1912, à
+                      Paris, la I.F.LT ( fédération internationale de
+                      Lawn-tennis) est née. Elle deviendra ensuite la IFT
+                      (fédération internationale de Tennis). Son but est de
+                      faire la promotion et de protéger les intérêt du tennis
+                      mondial.
+                    </p>
+
+                    <p>
+                      A partir de 1900, chaque pays organise des tournois
+                      nationaux organisé et internationaux. La coupe Davis créée
+                      en 1900 par Dwight Davis va se populariser et devenir la
+                      plus grande compétition par équipe du monde. De 1896 à
+                      1924 le Lawn tennis sera présent aux Jeux Olympiques . Les
+                      années 20 sont peut-être la plus belle page de l’histoire
+                      du tennis mondial. En 1925 le championnat de France
+                      devient international , c’est la naissance de
+                      Roland-Garros le plus grand tournoi de terre battue. Les
+                      années 20 sont également la période du règne des Français
+                      sur le tennis mondial. Avec les mousquetaires (Jean
+                      Borotra Henri Cochet René Lacoste Toto brugnon)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

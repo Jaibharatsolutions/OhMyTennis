@@ -1,0 +1,52 @@
+.username {
+    font-size: 14px;
+    color: #fff;
+    margin-right:10px;
+}
+
+.notification {
+    
+    color: white;
+    text-decoration: none;
+    
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+  }
+  
+  
+  .notification .badge {
+
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    padding: 0px 4px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    width: 26px;
+    height: 29px;
+  }
+
+
+  .notification1 {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+  }
+  
+  
+  .notification1 .badge1 {
+
+    position: absolute;
+    top: 0px;
+    right: 43px;
+    padding: 0px 8px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    width: 25px;
+    height: 26px;
+  }

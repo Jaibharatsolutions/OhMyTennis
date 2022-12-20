@@ -1,0 +1,112 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+  <!-- Banner starts --> 
+  <div class="innerbanner" style="background-color:#000">
+    <img src="../assets/images/cours-particuliers-de-tennis.jpg" style="width:100%;opacity:0.8" alt="Los Angeles">
+    <div class="inner_carousel">
+        <h3>COURS DE TENNIS EN LIGNE</h3>
+    </div>
+</div>
+<!-- Banner ends --> 
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+    <div class="banner_container">
+        <h3>Réservez un cours avec un coach</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input class="form-control" id="" maxlength="6" placeholder="Code Postal" [(ngModel)]="Ville"
+                            type="text" />
+                        <label><img src="./assets/images/ville_icon.png" /></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input type="text" style="text-align:left!important;" [min]="min" class="form-control" id=""
+                            placeholder="Date" [(ngModel)]="Date" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" />
+                        <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+                        <label><img src="./assets/images/date_icon.png" /> </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+                <button (click)="handleClick($event)" class="btn black_btn">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inner Search area ends --> 
+
+<!-- section1 starts -->
+<div class="sec_news section1  des_concept_list haspadd">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="page_title_div">            
+                    <h1 class="page_title">COURS DE TENNIS EN LIGNE</h1>				
+                    <img src="../assets/images/title_border.png" alt="title_border" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Cours de tennis en ligne</h3>	
+                    <p>Le e-learning vous permettent  de prendre des cours de tennis en ligne par le biais de vidéos et de fiches qui constituent de véritables tutoriels. Ils sont regroupés en 4 thèmes qui sont les quatre piliers du joueur de tennis :</p>
+                    <p><span>La technique du tennis</span>C’est la forme gestuelle utilisés par le joueur de tennis avec sa raquette</p>
+                    <p><span>La tactique au tennis</span>Stratégie utilisée par le joueur de tennis sur le terrain pour gagner un point (ou ne pas le perdre)</p>
+                    <p><span>Le mental tennis</span>Etat psychologique permettant d’optimiser les performances sur le court de tennis</p>
+                    <p><span>Le physique au tennis</span>A vitesse, l’endurance, l’explosivité et la motricité sont autant de qualités à développer pour jouer au tennis</p>
+                    <p><strong><a class="content_link" href="">Découvrez notre offre concernant les cours de tennis en ligne</a></strong></p>
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Participer à un tournoi de tennis officiel</h3>	      
+                    <p><span>La licence</span>C’est votre passeport pour participer à un tournoi officiel de tennis. Impossible de jouer à une compétition officielle sans la présenter au juge arbitre (elle est téléchargeable en pdf via l’espace du licencié de la fft). Il existe quatre licence (C : annuelle , D : temporaire, P : périscolaire, W : internet)</p>   
+                    <p><span>Le certificat médical </span>C’est l’autorisation du médecin généraliste qui lors de votre consultation stipulera qu’il n’y a aucune contre indication à la pratique du  tennis en compétition. C’est un élément à fournir également  au juge arbitre lors de votre arrivée.</p>   
+                    <p><span>Ou trouver la liste des tournois de tennis  officiels</span>Il est possible de trouver un tournoi de tennis via le site internet de sa ligue de département ou par un moteur de recherche de la fédération française de tennis présent sur notre site internet.</p>   
+                    <p><span>Inscription et lettre d’engagement</span>Vous avez la possibilité d’envoyer par écrit au juge arbitre une lettre contenant noms, prénoms , disponibilités etc…avec un chèque du montant de l’inscription (informations via la liste des tournois)  Les inscriptions en ligne peuvent se faire également</p>   
+                    <p><span>Les tournois de tennis open</span>ce sont les tournois organisés en France pour les amateurs et semi professionnels .  Ils commencent à NC (non classés) pour se terminer au meilleur classement français (-15). Ils sont ouverts à tous le monde mais le nombre de places est limité , il faut donc s’y prendre souvent à l’avance.</p>   
+                  
+                    <p><strong><a class="content_link" href="">La compétition au tennis mode d’emploi</a></strong></p>
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Les infos tennis du circuit ATP et WTA</h3>	      
+                    <p><span>Pronostics tennis</span>Pariez sur les matchs de tennis et gagnez de l’argent toute l’année. Il est possible de parier sur des tournois internationaux avec des joueurs ou des joueuses de tennis. A vous de repérer la futur surpris du prochain tournoi pour augmenter vos gains.</p>   
+                  <p><span>Billetterie tennis</span>Assistez à votre premier tournoi de tennis pour voir évoluer les meilleurs joueurs et joueuses de tennis en vrai ! Ce sera l’occasion pour vous de voir des services à 200km/h et de copier la technique ou la tactique utilisée sur le terrain.</p>
+                  <p><span>Actualité</span>Il est  possible de suivre l’actualité tennis du circuit ATP et WTA toute l’année car chaque semaine apporte son lot de surprises. Ne ratez rien des dernières déclarations en conférence de presse en passant par les derniers résultats.</p>
+                  <p><span>Le tennis en direct</span>Suivez les matchs de tennis en direct où que vous soyez sur votre ordinateur ou tablette. Le streaming est une technique permettant de diffuser des flux continu de vidéos sur le tennis notamment.</p>
+                  <p><span>Classements tennis ATP et WTA</span>Le classement ATP et WTA des joueurs et joueuses est réactualisé chaque semaine et permet de voir l’évolution de semaine en semaine. C’est un indicateur de la forme des professionnels vous permettant de mieux pronostiquer leur victoire ou défaite.</p>
+            
+                    <p><strong><a class="content_link" href="">Les classements au tennis , comment ça marche ?</a></strong></p>
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+
+
+    </div>
+</div>
+   
+<app-footer></app-footer>
+

@@ -1,0 +1,29 @@
+.notification {
+    
+    color: white;
+    text-decoration: none;
+    position: relative;
+    border-radius: 2px;
+  }
+  
+  
+  .notification .badge {
+
+    position: absolute;
+    top: -8px;
+    right: -11px;
+    padding: 0px 4px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    width: 26px;
+    height: 29px;
+  }
+
+  // .notification:nth-of-type(3) {
+  //   display: none;
+  // }
+
+  .nav-item:nth-child(3) > a:nth-child(1) {
+    display: none;
+}

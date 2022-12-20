@@ -1,0 +1,270 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="banner">
+  <div class="innerbanner" style="background-color:#000">
+    <img
+      src="./assets/images/cours-particuliers-de-tennis.jpg"
+      style="width:100%;opacity:0.8"
+      alt="Los Angeles"
+    />
+    <div class="inner_carousel">
+      <h3>oh my concept</h3>
+    </div>
+  </div>
+  <div class="inner_searcharea">
+    <div class="banner_container">
+      <h3>Réservez un cours avec un coach</h3>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <div class="form-group">
+            <div class="addon-lg">
+              <input
+                class="form-control"
+                id=""
+                maxlength="6"
+                placeholder="Code Postal"
+                [(ngModel)]="Ville"
+                type="text"
+              />
+              <label><img src="./assets/images/ville_icon.png"/></label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <div class="form-group">
+            <div class="addon-lg">
+              <input
+                type="text"
+                style="text-align:left!important;"
+                [min]="min"
+                class="form-control"
+                id=""
+                placeholder="Date"
+                [(ngModel)]="Date"
+                [owlDateTime]="dt1"
+                [owlDateTimeTrigger]="dt1"
+              />
+              <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+              <label><img src="./assets/images/date_icon.png" /> </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+          <button (click)="handleClick($event)" class="btn black_btn">
+            Rechercher
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Banner area ends -->
+<!-- section1 starts -->
+<div class="section1 des_concept_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Les concept Oh my tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <p>
+            Vous souhaitez mieux comprendre le concept de notre plateforme
+            Ohmytennis, n’hésitez pas à découvrir notre présentation générale,
+            la réglementation sportif du tennis, ainsi que nos engagements et la
+            charte de qualité de nos professeurs de tennis. Tout ceci vous
+            aidera certainement mieux à cerner ce que nous vous proposons pour
+            commencer à faire une partie de tennis.
+          </p>
+          <h5><strong>Présentation générale Ohmytennis</strong></h5>
+          <p>
+            Présentation des services de la plateforme Ohmytennis liés au
+            coaching et à la pratique amateurs ou professionnels du tennis. Vous
+            allez ainsi pouvoir trouver un professeur de tennis particulier,
+            mais aussi apprendre par vous même le tennis pour que ce sport
+            devienne pour vous une passion
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept1.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/cours-particulier-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h5><strong>Réglementation du tennis</strong></h5>
+          <p>
+            La pratique du tennis nécessite des règles de conditions d’exercices
+            régies par le règlement intérieur du lieu en question. Il est
+            important d’avoir un minimum de discipline pour pouvoir vivre
+            ensemble ainsi que de profiter au maximum du professeur de tennis et
+            des joueurs sur le terrain . Votre tenue vestimentaire ainsi que le
+            matériel pour le tennis seront des préambules obligatoires pour la
+            bonne pratique du tennis. Il y a également des prérogatives
+            essentielles en terme d’assurance et responsabilité avant de jouer
+            au tennis car malheureusement des blessures dans ce sport peuvent
+            rapidement arrivées.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h5><strong>Les engagements ohmytennis</strong></h5>
+          <p>
+            Notre plateforme recrute des professeurs de tennis qualifiés afin
+            d’avoir un encadrement formé et diplômé pour maximiser la
+            progression des joueurs de tennis. <br />
+            Le pratiquant est au cœur de notre attention pour lui apporter un
+            maximum d’informations. L’exigence, le professionnalisme de nos
+            enseignants sont une priorité afin de valoriser nos élèves avec une
+            offre toujours optimale. Tout ceci est inclu dans un projet
+            d’éducation afin de transmettre des valeurs notamment pour les plus
+            jeunes
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/cours-individuel-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/jouer-au-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h5><strong>Charte de qualité des éducateurs</strong></h5>
+          <p>
+            Notre charte aborde plusieurs points dont le respect des règlements,
+            la ponctualité, une tenue adaptée, la responsabilité du professeur,
+            l’éducation au respect de l’environnement et d’autrui et favoriser
+            l’engagement envers les partenaires.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+<!-- section2 starts -->
+<div class="section2 des_concept_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Nous proposons aux passionnés de tennis d'avoir un univers
+            spécialement créé pour eux.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<!-- section3 starts -->
+
+<div class="section3 des_concept_circletext haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon1.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.PRESENTATION.SELF')
+              }}"
+              >Présentation <br />Générale</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon2.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{ '/' + this._const('PATH.CONCEPTS.CHARTE.SELF') }}"
+              >La charte <br />de Qualité</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon3.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.ENGAGEMENTS.SELF')
+              }}"
+              >Nos <br />Engagements</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon4.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.INFORMATIONS.SELF')
+              }}"
+              >Informations<br />
+              Réglementaires</a
+            ></strong
+          >
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section3 ends -->
+<app-footer></app-footer>

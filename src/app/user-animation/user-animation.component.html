@@ -1,0 +1,246 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="../../assets/images/coach_banner.jpg" alt="Los Angeles" />
+  <div class="inner_carousel1">
+    <h3>oh my animation</h3>
+  </div>
+</div>
+
+<div class="banner">
+  <div class="search_area">
+    <div class="banner_container">
+      <h3>Réservez un cours avec un event</h3>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-lg-2"></div>
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <div class="form-group">
+            <div class="addon-lg">
+              <input
+                class="form-control"
+                id=""
+                maxlength="6"
+                placeholder="Code Postal"
+                [(ngModel)]="Ville"
+                type="text"
+              />
+              <label><img src="./assets/images/ville_icon.png"/></label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+          <button (click)="searchEvent()" class="btn black_btn">
+            Recherche
+          </button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Search area ends -->
+</div>
+<!---------------------------------------Text Section Starts---------------------------------->
+<div class="lexique_content" style="padding: 16px 0px;">
+  <div class="container">
+    <div class="row" style="border: 0px solid gray;">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="wrapper1 center-block">
+          <br />
+          <h2 class="panel-title">
+            <b>MUR INTERACTIF 32</b>
+          </h2>
+          <br />
+          <div
+            class="panel-body"
+            style="text-align: justify;text-justify: inter-word; padding: 3px;"
+          >
+            Produit digital et innovant , le mur interactif 32 vous permet une
+            animation evenentielle grand public. Animation totalement
+            personnalisable et joubale vaec les mains , une raquette de tennis
+            et une balle ou avec un ballon. Venez tester vos réflexes et votre
+            précision sur ce mur de LED ! Permancence technique avec montage et
+            demontage , frais de livraison 0,25 euros le km depuis Paris 12eme.
+            <br />
+            <br />
+            <br />
+            <b>Prix :</b> 250 euros la demi journée
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="wrapper1 center-block">
+          <br />
+          <h2 class="panel-title">
+            <b>ANNIVERSAIRE TENNIS</b>
+          </h2>
+          <br />
+          <div
+            class="panel-body"
+            style="text-align: justify;text-justify: inter-word; padding: 3px;"
+          >
+            Jouer au tennis et fêter son anniversaire en même temps, une façon
+            originale de marquer cet événement avec vos amis. L’objectif est de
+            découvrir ou de pratiquer une discipline sportive encadrée par un
+            moniteur de tennis tout en s’amusant. Le matériel sera adapté selon
+            le niveau et l’âge des enfants afin qu’ils puissent s’éclater ! Vous
+            allez partager un après midi de façon festive tout en faisant du
+            sport avec bien sur l’incontournable goûter et son gâteau. 12
+            personnes maximum pour 3h <br />
+            <br />
+            <b>Prix : </b> 300 euros
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row" style="padding: 0px 0px;">
+      <div class="col-xs-12">
+        <h1 class="page_title">Animation</h1>
+        <img src="./assets/images/title_border.png" alt="title_border" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Animation</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div
+              class="panel-group"
+              id="accordion"
+              role="tablist"
+              aria-multiselectable="true"
+            >
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Animation 1
+                    </a>
+                  </h4>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingOne"
+                >
+                  <div class="panel-body">
+                    <p>
+                      <b>MUR INTERACTIF 32 </b>
+                      Produit digital et innovant , le mur interactif 32 vous
+                      permet une animation evenentielle grand public. Animation
+                      totalement personnalisable et joubale vaec les mains , une
+                      raquette de tennis et une balle ou avec un ballon. Venez
+                      tester vos réflexes et votre précision sur ce mur de LED !
+                      Permancence technique avec montage et demontage , frais de
+                      livraison 0,25 euros le km depuis Paris 12eme.
+                    </p>
+
+                    <b>Prix :</b>250 euros la demi journée
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Animation 2
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingTwo"
+                >
+                  <div class="panel-body">
+                    <p>
+                      <b>ANNIVERSAIRE TENNIS</b>
+                      Jouer au tennis et fêter son anniversaire en même temps,
+                      une façon originale de marquer cet événement avec vos
+                      amis. L’objectif est de découvrir ou de pratiquer une
+                      discipline sportive encadrée par un moniteur de tennis
+                      tout en s’amusant. Le matériel sera adapté selon le niveau
+                      et l’âge des enfants afin qu’ils puissent s’éclater ! Vous
+                      allez partager un après midi de façon festive tout en
+                      faisant du sport avec bien sur l’incontournable goûter et
+                      son gâteau. 12 personnes maximum pour 3h <br />
+                      <b>Prix : </b> 300 euros
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="col-sm-12">
+  <div class="des_events des_events_rev">
+    <div class="container">
+      <div class="column" *ngFor="let res of response">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="des_events_bg des_events_bg_rev">
+            <img
+              src="{{ res.Photo }}"
+              class="img-responsive center-block"
+              style="height: 250px;"
+            />
+            <div class="">
+              <p class="des_event_para max-lines">{{ res.Description }}</p>
+            </div>
+            <div class="text-center">
+              <a
+                (click)="gotoCoach(res)"
+                class="btn btn-primary des_event_btn"
+                style="margin-top: 15px;"
+                >Reserve maintenant</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="response.length == 0">
+        <h2 style="color:red;">Aucun enregistrement trouvé</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<app-footer></app-footer>

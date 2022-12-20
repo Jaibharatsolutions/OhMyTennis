@@ -1,0 +1,33 @@
+.site_map{
+	padding:15px;
+}
+.site_detail li a:hover{
+	 color:#e7630d;
+}
+.site_detail li{
+	display:block; 
+}
+.site_detail h3{
+	font-weight: bold;
+	text-transform: uppercase;
+	color:#e7630d;
+	padding-top: 15px;
+}
+.tens_sec{
+	width:50%;
+}
+.site_detail h4{
+	font-weight: bold;
+	padding-top:10px;
+}
+@media (min-width:320px) {
+.site_detail h3{
+	font-size: 19px;
+}
+}
+@media (min-width:768px) {
+
+.site_detail h3{
+	font-size: 20px;
+}
+}

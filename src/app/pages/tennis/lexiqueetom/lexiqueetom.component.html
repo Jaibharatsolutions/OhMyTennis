@@ -1,0 +1,602 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Lexique du tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border">
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Jargon du tennis commençant par la lettre E :
+                    </a>
+                  </h4>
+                </div>
+
+
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <p><b>Échange:</b> Ensemble des coups (coup droit , revers , service , voléee) au tennis réalisé
+                      pendant un point.</p>
+                    <p><b>Eastern :</b> Prise de raquette de tennis surtout utilisée pour le coup droit. Pour un joueur
+                      droitier, le bas de la
+                      paume (éminence hypothénar) est appliquée sur le chanfrein haut-droit du manche.
+                    </p>
+
+                    <p><b>Effet:</b> Rotation de la balle dans l’air. Selon son sens, l&#39;effet est qualifié de lifté,
+                      coupé, slicé ou kické. Un coup sans effet est dit à plat. Un effet peut modifier substantiellement
+                      la trajectoire d&#39;une balle.</p>
+
+                    <p><b>Effet coupé :</b> Voir expression « chop » a la lettre C.</p>
+
+                    <p><b>Effet kické :</b> Terme employé principalement pour qualifier un service lifté où le joueur de
+                      tennis frappe la balle le plus souvent en position cambrée. Il coiffe véritablement la balle pour
+                      lui donner une trajectoire bombée. Cet effet est utilisé sur second service car il minimise le
+                      risque d&#39;erreur tout en rendant le retour de service difficile à contrôler.</p>
+
+                    <p><b>Effet lifté :</b> Effet imprimé à la balle afin que sa rotation soit dans le sens de son
+                      déplacement. Une balle liftée a une trajectoire bombée et prend de la vitesse au moment du rebond.
+                      C’est un coup très physique qui nécessite une action du poignet. L&#39;effet lifté est très
+                      efficace sur terre battue car la surface est particulièrement sensible aux effets. Rod Laver,
+                      Vilas et Björn Borg font partie des premiers champions à avoir utilisé l&#39;effet lifté dans les
+                      échanges. Rafael Nadal est considéré comme l&#39;un des meilleurs lifteurs des années 2000.</p>
+
+                    <p><b>Effet slicé ou coup slicé :</b> Un slice est un effet latéral imprimé à la balle. L&#39;effet
+                      slicé est souvent utilisé au service (notamment pour les gauchers pour trouver le revers de
+                      l’adversaire) et parfois au cours des échanges et permet de donner une trajectoire incurvée à la
+                      balle (déviation vers la gauche ou vers la droite) pour obtenir une rebond avec effet latéral
+                      (déviation).</p>
+
+                    <p><b>Effet rétro:</b> Effet coupé très prononcé en conséquence duquel la balle part en arrière
+                      après le rebond. C’est le seul coup du tennis où l’adversaire est autorisé de passer sa raquette
+                      au dessus du filet dans le terrain adverse pour rattraper la balle.</p>
+
+                    <p><b>Égalité :</b> (En anglais deuce) terme utilisé lorsque les joueurs sont à égalité de point
+                      après un avantage perdu. L&#39;expression 40-A ou 40 partout est toutefois normalement usitée pour
+                      désigner la toute première égalité précédant le premier avantage.
+                    </p>
+
+                    <p><b>Ère Open :</b> Période débutée en 1968, à laquelle les joueurs amateurs et professionnels ont
+                      été autorisés à disputer les tournois du Grand Chelem contre rémunération </p>
+
+                    <p><b>Entraîneur de tennis ou coach :</b> Personne qui entraîne un joueur ou une équipe. Dans la
+                      plupart des tournois professionnels, les entraîneurs ne sont pas autorisés à communiquer avec leur
+                      joueur. La Coupe Davis et la Fed Cup font figure d&#39;exceptions. Voir expression « coach » a la
+                      lettre C. On peut citer parmi les plus célèbres entraineurs de tennis Nick Bollettieri ou encore
+                      Patrice Hagelhauer.
+                    </p>
+
+                    <p><b>Épicondylite:</b> Inflammation au coude courante chez les joueurs de tennis, généralement
+                      causée par les vibrations de la raquette lors de la frappe. Une mauvaise technique avec notamment
+                      un bras plié à la frappe favorise ce genre de traumatisme. L&#39;utilisation d&#39;anti-vibrateurs
+                      permet de limiter les risques.
+                    </p>
+
+                    <p><b>Exhibition:</b> Match sans enjeu disputé en marge du circuit professionnel dans un but
+                      évènementiel. Parmi les exhibitions connues, on peut citer la bataille des sexes opposant Billie
+                      Jean King et Bobby Riggs en 1973 ou la bataille des surfaces entre Roger Federer et Rafael Nadal
+                      en 2007 (gazon d&#39;un côté du filet, terre battue de l&#39;autre).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Expression du tennis commençant par la lettre F :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <p><b>Faute :</b> Une balle est annoncée faute lorsqu&#39;elle rebondit en dehors des limites du
+                      court et sans toucher les lignes.
+                      Le point est alors gagné par l’adversaire. Lors du service, la balle est annoncée faute si elle
+                      rebondit en dehors du carré de service situé de l&#39;autre côté du filet dans la diagonale.
+                      Lorsqu&#39;une balle est faute, le juge de ligne annonce faute, dehors ou encore out. Il est
+                      possible également de lever juste l’index pour indiquer à son adversaire le jugement de la balle
+                      (en présence de bruit). A l’inverse une balle annoncée bonne est indiquée avec la paume de la main
+                      vers le sol avec la main plate.</p>
+
+                    <p><b>Faute directe (ou faute non provoquée) :</b> Coup manqué (dans le filet de tennis ou en dehors
+                      des limites du
+                      terrain) par un joueur de tennis sans aucune raison. Il s&#39;agit d&#39;un coup apparemment
+                      facile à réaliser. Plus un
+                      joueur a un tempérament risqué et plus son nombre de fautes directes sera grand.
+                    </p>
+
+                    <p><b>Faute de pied :</b> Une faute de pied est commise lorsqu&#39;un pied du serveur mord la ligne
+                      de fond de court (même
+                      du bout du pied). Pour éviter cette faute il doit sauter au dessus de la ligne pendant qu’il sert.
+                      Le receveur doit
+                      rester également dans sa moitié de terrain, avant que la balle ne soit frappée par le serveur.
+                      Cette faute est
+                      signalée par un juge de ligne du fond de court qui regarde les pieds du joueur de tennis lors de
+                      son service.
+                    </p>
+
+                    <p><b>Faute provoquée :</b> Coup manqué (dans le filet ou annoncé faute) par un joueur sous la
+                      contrainte de son adversaire sur une attaque ou un changement de variation durant l’échange. Le
+                      décompte des fautes provoquées, comme celui des fautes directes, est partiellement subjectif.
+                      Fed Cup (Coupe de la Fédération jusqu&#39;en 1994) : compétition féminine annuelle par équipe
+                      nationale
+                      regroupant les meilleures joueuses de tennis.
+                    </p>
+
+                    <p><b>Filet de tennis :</b> Elément délimitant les deux parties du court, tendu entre deux poteaux.
+                      Ils se mettent a l’intérieur des couloirs pour des matches de simples (on prend la longueur du
+                      poteau a partir de la ligne de couloir coté simple en l’allongeant par terre pour déterminer la
+                      distance adéquate, en double ils sont enlevés). Un joueur n&#39;est pas autorisé à le toucher
+                      durant l&#39;échange, ni avec une partie du corps, ni avec la raquette de tennis, au risque de
+                      perdre le point. Il est impossible de passer la raquette au dessus et de pénétrer dans le côté
+                      adverse, cependant seul un coup rétro de l’adversaire permet un passage au dessus du filet de
+                      tennis. On peut noter également que la hauteur du filet est différente au milieu du terrain (0,914
+                      cm) et à ses extrémités (1,07m) soit 15 cm d’écart ! On peut comprendre pourquoi certains serveurs
+                      sont très coutumiers de la fameuse ligne médiane et de l’ace sur le T !</p>
+
+                    <p><b>Forfait :</b> Victoire par disqualification de l’adversaire (scratch) en raison d’un mauvais
+                      comportement par exempele ou, beaucoup plus fréquemment, par forfait de l&#39;adversaire.
+                      (blessure, maladie) Abrégé W.O.ou walkl over.</p>
+
+                    <p><b>Frappe :</b> Voir coup a la lettre C.</p>
+
+                    <p><b>Future :</b> Circuit professionnel secondaire (équivalent de la 3 ème division), géré par
+                      l&#39;ITF, de niveau inférieur au circuit Challenger (2ème division) pour les hommes, et
+                      équivalent de ces Challenger pour les femmes : voir ITF
+                      Women&#39;s Circuit.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Terme de tennis commençant par la lettre G :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+
+                    <p><b>Gazon ou herbe :</b> Surface sur laquelle se dispute notamment le tournoi de Wimbledon et
+                      quelques tournois préparatoires. C&#39;est une surface dite rapide sur laquelle le rebond des
+                      balles de tennis est bas voire fusant et qui était très en vogue jusque dans les années 1970.
+                      Aujourd’hui les joueurs de tennis professionnels jouent sur cette surface environ 1 mois par an.
+                      L&#39;Open d&#39;Australie s&#39;est disputé sur herbe jusqu&#39;en 1985 et l’US Open (ex Forest
+                      Hills) également jusqu’en 1974.</p>
+
+                    <p><b>Glissade :</b> Technique de déplacement employée surtout sur terre battue pour réaliser des
+                      coups de tennis en bout de course ou pour remplacer les petits pas d’ajustement. C’est une
+                      véritable science de déplacement qui a souvent fait défaut aux grands attaquants à Roland garros.
+                    </p>
+
+                    <p><b>Grand Chelem :</b> Désigne les quatre tournois de tennis les plus importants sur le circuit
+                      ATP : l&#39;Open d&#39;Australie, Roland-Garros, Wimbledon et l&#39;US Open. On dit qu&#39;un
+                      joueur de tennis réalise un Grand Chelem lorsqu&#39;il remporte tous les tournois la même année.
+                      En simple, depuis l&#39;ère Open, seuls Rod Laver (1969) chez les hommes, Margaret Smith Court
+                      (1970) et Steffi Graf (1988) chez les dames ont réalisé cet exploit. Lorsqu&#39;une personne
+                      parvient à gagner les quatre tournois d&#39;affilée à cheval sur deux ans, on parle parfois de
+                      Grand Chelem mais il est considéré comme moins prestigieux et on précise généralement « sur deux
+                      années ».</p>
+
+                    <p><b>Golden Grand Chelem (ou Golden Slam) :</b> Désigne la victoire des 4 tournois du Grand Chelem
+                      sur la même année en plus des jeux olympiques. Seule steffi graf l&#39;a réussi en 1988.</p>
+
+                    <p><b>Grand tableau :</b> Désigne les tours d&#39;un tournoi de tennis disputés après la phase de
+                      qualification (du premier tour jusqu&#39;en finale). Il regroupe les joueurs de tennis les mieux
+                      classés pouvant y participer.</p>
+                    <p><b>Greenset :</b> Surface rapide en ciment utilisée notamment aux Etats Unis sur la tournée
+                      américaine des tournois de tennis conduisant a l’US Open.</p>
+                    <p><b>Grip :</b> Matière en synthétique ou cuir recouvrant le manche de la raquette de tennis afin
+                      de permettre une meilleure prise. Lorsqu&#39;il est usé, on peut le recouvrir d&#39;un sur-grip ou
+                      over-grip pour un meilleur confort.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
+                      aria-expanded="false" aria-controls="collapse4">
+                      Tout sur le tennis  commençant par la lettre H :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    <p><b>Hawk-Eye :</b> Terme anglais « œil de faucon » : système d&#39;assistance-vidéo pour les
+                      arbitres de chaise durant les
+                      matchs de tennis. Chaque joueur de tennis a le droit de « challenger » l’arbitre 2 fois par set
+                      (une fois
+                      supplémentaire si il y a tie break). Si après vérification le hawk eye donne raison au joueur, son
+                      challenge n’est pas comptabilisé. Utilisé sur certains courts de tennis du circuit professionnel
+                      de tennis WTA et ATP car son coût d’entretien est très onéreux (environ 10 000 euros par jour). Ce
+                      mode d’arbitrage est pluôt utilisé sur les courts de tennis centraux des tournois.</p>
+                    <p><b>Herbe :</b> Surface des terrains de tennis rapide utilisée pour le tournoi du Grand Chelem de
+                      Wimbledon. Autre terme utilisé le gazon.
+                    </p>
+                    <p><b>Heureux perdant :</b> Traduction de l’anglais lucky looser ou repêché : joueur de tennis qui a
+                      perdu pendant les qualifications d’un tournoi mais qui profite du désistement d&#39;un autre
+                      joueur (blessé ou malade) pour disputer la phase finale d&#39;un tournoi. (Abrégé en LL).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5"
+                      aria-expanded="false" aria-controls="collapse5">
+                      Expressions sur le tennis  commençant par la lettre I :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    <p><b>Indoor :</b> Terme anglais utilisé pour désigner un terrain de tennis se jouant en intérieur
+                      (en salle) qu’importe la surface.</p>
+                    <p><b>International Series :</b> Tournois de l&#39;ATP Tour (circuit des joueurs professionnels),
+                      moins prestigieux que les tournois du Grand Chelem et que les Masters 1000. Ils représentent la
+                      plus grande partie des tournois de tennis disputés durant l’année.
+                    </p>
+                    <p><b>Invitation :</b> Possibilité reçue par un joueur professionnel de disputer un tournoi auquel
+                      il n’a pas le droit de participer en raison de son classement trop faible. Elles sont au nombre de
+                      8 par exemple sur un tournoi du Grand Chelem. Il accède directement au tableau final sans même
+                      passer par les qualifications. Elle est généralement attribuée à un joueur de tennis revenant de
+                      blessure, un ancien gagnant de ce tournoi de tennis ou à un jeune espoir national. L’utilisation
+                      abrégée est W.C. pour Wild Card. Attribuées à la discrétion des organisateurs des tournois de
+                      tennis, elles ne sont pas sans susciter des polémiques.
+                    </p>
+                    <p><b>ITF :</b> International tennis federation (Fédération internationale de tennis ). Elle a en
+                      charge la gestion de la Fed Cup, les 4 tournois du Grand Chelem, (Open d’Australie, Roland garros,
+                      Wimbledon, Us Open), de la Coupe Davis, de la Coupe Hopman, des tournois Challenger(équivalent de
+                      la 2eme division du circuit ATP), Future et Satellite (équivalent de la 3eme division du circuit
+                      ATP).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading6">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6"
+                      aria-expanded="false" aria-controls="collapse6">
+                      Terme de tennis  commençant par la lettre J
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                  <div class="panel-body">
+                    <p><b>Jeu :</b> Désigne un total de 4 points disputés et gagné par un joueur de tennis avec 2 points
+                      d’écart. On compte 0,
+                      15, 30, 40 et jeu si les deux joueurs arrivent a 40-40 il y a Avantage puis Jeu (2 points
+                      d’écart). Pendant un jeu, c&#39;est toujours le même joueur qui sert et qui alterne une fois a
+                      droite et une fois a gauche du terrain de tennis. Un set est gagné par un joueur s&#39;il atteint
+                      le nombre de 6 jeux avec deux jeux d&#39;écart ou s&#39;il gagne le jeu décisif lorsque cette
+                      règle est appliquée.</p>
+                    <p><b>Jeu blanc :</b> Jeu durant lequel un joueur gagne 4 points consécutivement depuis le début. Il
+                      est souvent réalisé par le serveur. On parle aussi de break blanc lorsqu&#39;un joueur réalise un
+                      jeu blanc sur le service de son adversaire. (souvent réalisé en début de match quand le joueur
+                      n’est pas chaud).</p>
+                    <p><b>Jeu de jambe(s) :</b> Capacité d&#39;un joueur à se déplacer et se replacer sur le court de
+                      pour arriver près de la balle de tennis. On distingue le grand jeu de jambes (foulées allongées
+                      des pas de course) du petit jeu de jambes (petits pas d’ajustement) avant la frappe de balle.
+                    </p>
+                    <p><b>Jeu décisif, tie-break ou bris d&#39;égalité :</b> Jeu particulier départageant les joueurs de
+                      tennis à la fin d&#39;un set lorsque le score est de 6-6 en jeux. Le premier joueur à remporter au
+                      moins sept points avec deux points d&#39;écart remporte le set. L’ordre des serveurs est ainsi :
+                      le premier joueur a servir est celui qui a retourné lors du jeu précédent le tie-break, il sert
+                      pour un point et ensuite on change de serveur tous les 2 points. On change également de coté tous
+                      les 6 points joués (4-2, 6-6 par exemple).
+                    </p>
+                    <p><b>Jeu, set et match :</b> Phrase prononcée en fin de match par l&#39;arbitre de chaise pour
+                      signifier la victoire d&#39;un des joueurs, et donc la fin de la rencontre.</p>
+                    <p><b>Jouer long :</b> Joueur qui envoie des balles de tennis bonnes proches de la ligne de fond à
+                      environ 1m/1m,50 afin de repousser au maximum l’adversaire pour se protéger et éviter de se faire
+                      attaquer. C’est une des premières tactiques de base au tennis.</p>
+                    <p><b>Juge-arbitre :</b> Arbitre général d&#39;un tournoi (administrateur) auquel l&#39;arbitre de
+                      chaise fait appel en cas de problème ou litige particulier dans les tournois professionnels
+                      (interruption d’un match ou litige avec un joueur par exemple). Dans beaucoup de tournois
+                      amateurs, il s&#39;agit du seul arbitre car les joueurs s&#39;auto-arbitrent comptant sur leur
+                      fair-play.</p>
+                    <p><b>Juge de chaise :</b> Voir arbitre de chaise.</p>
+                    <p><b>Juge de filet :</b> Arbitre placé à hauteur du filet avec sa main en contact avec la bande du
+                      filet et qui annonce le let lors du service. Ils sont aujourd’hui remplacés par un système de
+                      détection automatique.</p>
+                    <p><b>Juge de ligne :</b> Arbitre placé en marge du court de tennis (derrière ou sur les cotés) et
+                      dont la tâche est de vérifier si la balle est bonne ou non. C’est à l’aide de leurs bras qu’ils
+                      indiquent leur jugement (si le bras est tendu vers un coté c’est que la balle est sortie, si les
+                      deux bras se rejoignent par les mains ils indiquent que la balle est bonne). L&#39;un d&#39;eux a
+                      également pour rôle de vérifier les fautes de pied lors du service. (juge de la ligne de fond de
+                      court). Le nombre de juges de ligne peut varier entre sept et neuf : deux pour les lignes de fond,
+                      quatre pour les couloirs, un pour la ligne de service (qui change de côté tous les deux jeux, en
+                      décalé par rapport au changement de côté des joueurs) et éventuellement deux pour la ligne médiane
+                      lors du service (leur rôle peut être endossé par
+                      un juge de couloir qui se place vers la ligne médiane puis se déplace vers son couloir une fois le
+                      service
+                      effectué). Ces juges sont des assistants de l&#39;arbitre de chaise, lequel a le dernier mot en
+                      cas de doute.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading7">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7"
+                      aria-expanded="false" aria-controls="collapse7">
+                      Vocabulaire du tennis  commençant par la lettre K :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                  <div class="panel-body">
+                    <b>Kick ou effet kické :</b> Terme employé principalement pour qualifier un service comportant un
+                    effet lifté. Il est possible d’employer cette option pour effectuer une service – volée pour se
+                    laisser le temps de monter au filet de tennis. Cet effet est également employé la plupart du temps
+                    lors du second service car il minimise le risque d&#39;erreur tout en rendant la mise en jeu
+                    difficile à retourner.
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading8">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8"
+                      aria-expanded="false" aria-controls="collapse8">
+                      Vocabulaire de tennis  commençant par la lettre L :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                  <div class="panel-body">
+                    <b>Lance-balles ou cracheuse de balles :</b> Matériel automatique permettant à un joueur de tennis
+                    de s&#39;entraîner seul sur un terrain ou lors d’un cours particulier afin de corriger en temps réel
+                    son élève. Le coût de ce matériel étant relativement élevé, une grande partie des joueurs amateurs
+                    s&#39;entraînent face à un mur lorsqu&#39;ils sont seuls.<br /><br />
+                    <b>Let (ou parfois net) :</b> Un service est annoncé let lorsque la balle de tenis touche la bande
+                    du filet sans être faute. Le joueur est alors invité à refaire un service (donc un let sur une
+                    seconde balle permet seulement de rejouer une seconde balle). L&#39;arbitre peut également annoncer
+                    let au cours d&#39;un point de tennis dans des cas bien spécifiques (balle qui tombe de la poche
+                    d&#39;un joueur, un cri dans le public gênant les joueurs, over-rule de l’arbitre, événement
+                    extérieur interrompant le match de tennis). Le point est alors à rejouer.
+                    <br /><br />
+                    <b>Lift ou coup lifté :</b> Un lift est un effet imprimé à la balle afin que sa rotation soit dans
+                    le sens de son déplacement. Une balle liftée a une trajectoire bombée et prend de la vitesse au
+                    moment du rebond pour jaillir et repousser l’adversaire car elle devient incontrôlable. L&#39;effet
+                    lifté est très efficace sur terre battue car la surface est particulièrement sensible aux effets.
+                    Beaucoup de joueurs Espagnols et Sud-Américains emploient cet effet dans
+                    la majorité de leurs frappes. Guillermo Vilas ou encore Bjorn Borg font partie des premiers
+                    champions à avoir
+                    utilisé très fréquemment l&#39;effet lifté dans les échanges. Rafael Nadal est considéré comme
+                    l&#39;un des meilleurs
+                    lifteurs des années 2000.<br /><br />
+                    <b>Ligne :</b> Bande blanche au sol, qui délimite le court de tennis et certaines zones de jeu. Il
+                    existe plusieurs types de.<br /><br />
+
+                    <b>Ligne de côté ou des couloirs :</b> Au nombre de quatre (voire deux sur certains courts spéciaux
+                    ne comportant
+                    pas de couloirs), elles mesurent 23,77 m.
+                    <br /><br />
+                    <b>Ligne de fond :</b> Ligne délimitant le fond du court au délà de celle-ci la balle est faute. Au
+                    nombre de deux, elles
+                    mesurent 8,23 m en simple et 10,97 m en double.
+                    <br /><br />
+                    <b>Ligne de service :</b> Ligne délimitant le fond des carrés de service. Au nombre de deux, elles
+                    mesurent 8,23 m et
+                    sont situées à 6,40 m du filet.
+                    <br /><br />
+                    <b>Ligne médiane :</b> Ligne séparant en deux les carrés de service. Perpendiculaire au filet,
+                    qu&#39;elle traverse, elle mesure 12,80 m. Cette ligne est rappelée par un petit trait placé, dans
+                    son prolongement, sur les lignes de fond. Ce trait permet au joueur de se placer du bon côté pour
+                    servir en diagonale.
+                    <br /><br />
+                    <b>Lob :</b> Coup de tennis réalisé par un joueur lorsque son adversaire est avancé dans le terrain
+                    (près du filet). Il consiste à faire passer la balle par dessus l&#39;adversaire tout en la gardant
+                    dans les limites du court de tennis. L&#39;effet
+                    lifté est fréquemment employé pour l&#39;exécution de ce coup car il permet d&#39;accentuer
+                    l&#39;angle de la trajectoire
+                    parabolique de la balle et ainsi emporte le joueur adverse vers le fond. Un lob trop court peut
+                    entraîner un smash
+                    de l&#39;adversaire qui est souvent gagnant. Un lob peut être réalisé dans une optique offensive (en
+                    vue de gagner le
+                    point tout en essayant de viser le revers adverse) ou en dernier recours lorsque que le joueur est
+                    débordé. Dans ce
+                    dernier cas, le lob est exécuté dans l&#39;urgence avec une effet coupé et est rarement efficace
+                    mais il a l&#39;avantage de
+                    donner du temps pour le replacement.
+                    <br /><br />
+                    <b>Long de ligne :</b> Coup exécuté le long d&#39;une ligne du couloir, pratiquement parallèle à
+                    celle-ci. C&#39;est un coup
+                    particulièrement risqué car le filet est plus haut sur les côtés du court. Et le risque de voir sa
+                    balle dévié est
+                    grand. Il est principalement utilisé pour les attaques du fond de court ou les passings-shots.
+                    <br /><br />
+                    <b>Longueur de balle :</b> Caractérise une balle plus ou moins proche de la ligne de fond (environ 2
+                    mètres minimum).
+                    On dit qu&#39;un joueur trouve une bonne longueur de balle quand il remet des balles bonnes
+                    régulièrement proches
+                    de la ligne de fond afin de se protéger contre des possibles attaques.
+                    <br /><br />
+                    <b>Love :</b> Terme utilisé en anglais pour dire zéro lors du décompte des points (15-0 est donc
+                    annoncé fifteen-love).<br /><br />
+                    <b>Lucky loser (littéralement « Perdant chanceux ») ou repêché :</b> joueur qui a perdu son match
+                    pendant les qualifications au dernier tour mais qui profite du désistement de dernière minute
+                    d&#39;un autre joueur (blessure, maladie) pour disputer la phase finale d&#39;un tournoi. (Abrégé en
+                    LL).
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading9">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9"
+                      aria-expanded="false" aria-controls="collapse9">
+                      Tout sur le tennis  commençant par la lettre M :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                  <div class="panel-body">
+                    <b>Manche : </b>Dans le language du tennis le mot set peut être remplacé par le mot manche. Exemple:
+                    andré Agassi vient de gagner la première manche 6/1
+                    <br /><br />
+                    <b>Manche de raquette:</b> Le manche de raquette de tennis désigne la partie inférieure de la
+                    raquette de tennis ( ou le joueur appose sa main). Le manche de la raquette de tennis est constitué
+                    de meplat et chanfrein. Le joueur de tennis peut aussi poser sur le manche de la raquette un surgrip
+                    afin de protéger sa main des frottements du.
+                    <br /><br />
+                    <b>manche de la raquette Manchette :</b> Petit morceau de tissu qui entoure le poignet du joueur de
+                    tennis. Ceci afin de
+                    permettre au joueurs ou joueuses de tennis d&#39;essuyer la sueur qu&#39;ils peuvent avoir sur leur
+                    front.
+                    <br /><br />
+                    <b>Marteau (la prise marteau) :</b> Il ne faut pas confondre la tenue de la raquette de tennis et la
+                    prise. La tenue de
+                    raquette de tennis désigne la hauteur ou le joueur de tennis pose sa main sur le manche de la
+                    raquette de tennis.
+                    La prise marteau s&#39;effectue lorsque l&#39;on pose l&#39;eminence hypothenar sur le chanfrein
+                    supérieur, plus simplement
+                    prenez votre raquette de la même façon qu&#39;un marteau.
+                    <br /><br />
+                    <b>Masters :</b> Les masters est un des tournois de tennis des plus prestigieux de la planète. Il
+                    regroupe chaque année
+                    les 8 meilleurs joueurs du monde dans un tournoi de tennis sous forme de poule de 4 joueurs ou les
+                    deux
+                    meilleurs de chaque poules sorte sur un tableau final.
+                    <br /><br />
+                    <b>Masters séries :</b> Les masters séries sont les tournois de tennis les plus important du monde.
+                    Chaque masters
+                    séries de tennis rapporte plus de 1000 points atp pour le vainqueur. A l&#39;heure actuelle nous
+                    comptons 9 masters
+                    séries.
+                    <br /><br />
+                    <b>Match :</b> Un match de tennis se déroule la plupart du temps au meilleur des 3 manches. Un match
+                    de tennis
+                    oppose deux joueurs en simple et 4 joueurs en double.
+                    <br /><br />
+                    <b>Meilleur des 3 sets :</b> Dans la plupart des tournois de tennis professionnels comme amateur
+                    pour gagner un match
+                    il faut gagner 2 sets, si il y a égalité de set au terme des deux premiers sets du match de tennis
+                    il y aura alors un
+                    3e set pour départager les joueurs.
+                    <br /><br />
+                    <b>Meilleur des 5 manches :</b> Lors des tournois du grand chelem et des matchs de coupe davis
+                    chaque match se
+                    déroulera au meilleur des 5 manches, il faudra donc gagner 3 set pour remporter la rencontre.
+                    <br /><br />
+                    <b>Le meplat :</b> Il désigne une des arrêtes latérales du manche de la raquette de tennis.
+                    <br /><br />
+                    <b>Le mini tennis:</b> Le mini tennis est une pré-initiation au tennis pour les enfants de 5 ans. Le
+                    mini tennis permet
+                    d&#39;apprendre le tennis aux enfants a l&#39;aide de jeux et de matériaux adaptés. Tout ceci pour
+                    leur apprendre les
+                    régles et les premieres notions de jeux du tennis.
+                    <br /><br />
+                    <b>Mise en jeu :</b> La mise en jeu désigne la premiere balle jouée par le serveur au tennis.
+                    <br /><br />
+                    <b>Mixte :</b> Les joueuses et les joueurs de tennis ont la possibilité de participer a des tournois
+                    de tennis en double mixte, c&#39;est a dire d&#39;une équipe composée d’un joueur et d’une joueuse
+                    de tennis.
+                    <br /><br />
+                    <b>Montée en chaussette :</b> Au tennis une montée en chaussette est caractérisée par une montée au
+                    filet de tennis très hasardeuse.
+                    <br /><br />
+                    <b>Montée a la volée :</b> Une montée a la volée ou au filet est caractérisé par le déplacement du
+                    joueur vers le filet afin d effectuer des volées de fixation ou de finition.
+                    <br /><br />
+                    <b>Mur d&#39;entrainement :</b> Le mur d&#39;entrainement au tennis est un élément indispensable
+                    d&#39;un club de tennis. Il permet aux joueurs de s&#39;entrainer seul en envoyant la balle vers un
+                    mur. ( généralement une ligne blanche horizontale est tracé sur celui-ci afin de représenter le
+                    filet de tennis ).
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- section3 ends -->
+
+
+<app-footer></app-footer>

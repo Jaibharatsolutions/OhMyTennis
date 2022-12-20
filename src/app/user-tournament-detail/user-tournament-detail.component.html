@@ -1,0 +1,499 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<div class="innerbanner">
+    <img src="../../assets/images/coach_banner.jpg" alt="Los Angeles">
+    <div class="inner_carousel">
+        <h3>oh my tournoi</h3>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="des_coach_abt">
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="des_coach_abt_sec">
+                <!-- <h1 class="des_coach_abt_heading">{{event_detail.Tournamentname}}</h1> -->
+                <h2 class="page_title" style="margin: 10px 0px 21px;">
+                    <strong>{{ event_detail.Tournamentname }}</strong><br />
+                    <img src="./assets/images/title_border.png" alt="title_border" />
+                </h2>
+                <!-- <div class="star-rating">
+                    <ul class="list-inline1">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                    </ul>
+                </div> -->
+                <!-- <a href="#" class="des_price_text">€{{event_detail.Price}}</a> -->
+            </div>
+            <div class="clearfix"></div>
+            <p class="des_coach_abt_para1" style="text-align: justify;text-justify: inter-word;">{{event_detail.Description}}</p>
+
+            <!-- <div class="des_detail_sec">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="des_row1">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <p class="des_icon_class"><img src="../../assets/images/detail_icon1.png"> Noté 5/5 par ses
+                                élèves
+                            </p>
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <p class="des_icon_class" id="payment"><img
+                                    src="../../assets/images/detail_icon2.png">{{this.str}}
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <a *ngIf="coach_detail.ResumeName === 'undefined'" id="resume" class="des_icon_class">
+                                <img src="../../assets/images/detail_icon3.png"> Curriculum vitae
+                            </a>
+                            <a *ngIf="coach_detail.ResumeName !== 'undefined'" id="resume"
+                                download={{coach_detail.ResumeName}} (click)="download()" href="#"
+                                class="des_icon_class"><img src="../../assets/images/detail_icon3.png"> Curriculum vitae
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="des_row2">
+                        <div class="col-md-8 col-sm-4 col-xs-12">
+                            <p class="des_icon_class" id="transport"><img src="../../assets/images/detail_icon4.png">
+                                {{coach_detail.Coach_transport}}
+                            </p>
+                        </div>
+                        <!-- <div class="col-md-4 col-sm-4 col-xs-12">
+                            <p class="des_icon_class"><img src="../../assets/images/detail_icon5.png"> Coach connecté
+                            </p>
+                        </div> -->
+                    <!-- </div>
+                </div>
+                <div class="clearfix"></div>
+            </div> -->
+            <div class="des_detail_sec">
+                <div class="col-md-12 col-sm-12 col-xs-12 px-0">
+                    <div class="des_row1">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite">
+                            <p class="des_icon_class">
+                                <img src="../../assets/images/detail_icon1.png" /> Noté 5/5 par
+                                ses élèves
+                            </p>
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite">
+                                              <p class="des_icon_class" id="payment">
+                                                  <img src="../../assets/images/detail_icon2.png" />{{ this.str }}
+                                              </p>
+                                              </div> -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite" *ngIf="coach_detail.Coach_Resume == ''">
+                            <a id="resume" download="{{ coach_detail.Coach_Resume }}" (click)="download()" href="#"
+                                class="des_icon_class "><img src="../../assets/images/detail_icon3.png" /> Curriculum
+                                vitae
+                            </a>
+                        </div>
+                        <div disabled class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite disable_select"
+                            *ngIf="coach_detail.Coach_Resume != ''">
+                            <p>
+                                <img src="../../assets/images/detail_icon2.png" /> Curriculum
+                                vitae
+                            </p>
+                        </div>
+                        <div class="clearfix lg-block"></div>
+                        <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                          <p class="des_icon_class"><img src="../../assets/images/detail_icon5.png"> Coach connecté
+                                                          </p>
+                                                      </div> -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite">
+                            <p class="des_icon_class" id="transport">
+                                <img src="../../assets/images/road_icon.png" />
+                                <!-- {{ coach_detail.Coach_transport }} -->
+                                <span [ngClass]="
+                                voiture == 'true' ? 'textenable_wh' : 'textenable_wh2'
+                              ">Voiture,</span>
+                                <span [ngClass]="bus == 'true' ? 'textenable_wh' : 'textenable_wh2'">Bus,</span>
+                                <span [ngClass]="
+                                metro == 'true' ? 'textenable_wh' : 'textenable_wh2'
+                              ">Métro,</span>
+                                <span [ngClass]="rer == 'true' ? 'textenable_wh' : 'textenable_wh2'">RER,</span>
+                                <span [ngClass]="
+                                tram == 'true' ? 'textenable_wh' : 'textenable_wh2'
+                              ">Tram</span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite"
+                            *ngIf="courseActive !== 'CoursCollectifOndemand' && Video !== ''">
+                            <a (click)="openURL()" target="_blank" class="des_icon_class"><img
+                                    src="../../assets/images/detail_icon6.png" />
+                                Cours avec vidéo
+                            </a>
+                        </div>
+                        <div disabled class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite" *ngIf="Video == ''">
+                            <img src="../../assets/images/detail_icon6.png" />
+                            Cours avec vidéo
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <p class="des_map_content">Intervention géographique :
+                <select class="select_drop_custom">
+                    <option>Liste des villes</option>
+                    <option [ngValue]="city.id" *ngFor="let city of selectedCity">
+                        {{city.Libelle_acheminement}}</option>
+                </select>
+
+            </p>
+            <div class="clearfix"></div>
+            <div class="des_map">
+                <div class="map-container">
+                    <div class="map-frame">
+                    <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route={{curentlat}}%2C{{curentlang}}%3B{{lat}}%2C{{lang}}"
+                        target="_blank">
+                        <div id="map"></div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-12 col-sm-12 col-xs-12" align="left;">
+                <h4 class="des_contents_cdetail_title pull-left">Expérience de Lena</h4><br/>
+                <br />
+                <p class="des_contents_cdetail" id="eventdetails" style="text-align: justify;text-justify: inter-word;" [innerHTML]="event_detail.Eventdetails"></p>
+            </div>
+            <div class="text-center">
+                <button data-toggle="modal" class="btn btn-primary des_event_btn" id="btnbooking"
+                    data-target="#reserve_modal" style="margin-top: 15px;">Reserve
+                    maintenant</button>
+                <br><br>
+
+            </div>
+
+        </div>
+
+
+        <!-- <div class="col-md-4 col-sm-4 col-xs-12" align="center">
+            <img src="{{coach_detail.Coach_Image}}" #img
+                (error)="img.src = 'https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png'"
+                class="img-responsive center-block">
+            <br>
+            <b style="margin-top: 10px;font-size:20px;">{{coach_detail.Coach_Fname}} {{coach_detail.Coach_Lname}}</b>
+            <br />
+            <img src="../../assets/images/fav_logo.png"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="des_fav_content">Ajouter à mes coachs favoris</span>
+            <div class="des_social_icons_footer1">
+                <ul>
+                    <li><a class="twitter" target="_blank" href={{coach_detail.TwitterURL}}><i
+                                class="fa fa-twitter"></i></a></li>
+                    <!-- <li><a class="linked" target="_blank" href={{coach_detail.TwitterURL}}><i class="fa fa-linkedin"></i></a></li> -->
+                    <!-- <li><a class="facebook" target="_blank" href={{coach_detail.FacebookURL}}><i
+                                class="fa fa-facebook-f"></i></a></li>
+                    <li><a class="insta" target="_blank" href={{coach_detail.InstagramURL}}><i
+                                class="fa fa-instagram"></i></a></li>
+                </ul>
+
+            </div>
+            <p class="des_right_content">Les 22 avis des élèves de Lena</p>
+            <div class="star-rating">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                </ul>
+            </div>
+
+            <div class="chip">
+                <img src="../../assets/images/coach_detail_right_mini.png" alt="no file">
+                <span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+            </div>
+
+            <div class="chip1">
+                <img src="../../assets/images/coach_detail_right_mini.png" alt="no file">
+                <span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+            </div>
+
+            <div class="chip">
+                <img src="../../assets/images/coach_detail_right_mini.png" alt="no file">
+                <span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+            </div>
+
+        </div> -->
+        <div class="col-md-4 col-sm-4 col-xs-12" align="center">
+            <div class="right_coachprofile">
+                <img src="{{ coach_detail.Coach_Image }}" #img (error)="img.src = '../../assets/images/profile_blackwhite.png'"
+                    class="coachright_image img-responsive center-block" />
+                <div class="des_coach_abt_sec" style="float: none;">
+                    <h1 class="des_coach_abt_heading">
+                        {{ coach_detail.Coach_Fname.toUpperCase() }}
+                        {{ coach_detail.Coach_Lname.toUpperCase() }}
+                    </h1>
+                    <!-- <h3 *ngIf="course == 'CoursCollectifClub'"><strong>Cours Collectif
+                                              Club</strong></h3> -->
+                    <!-- <h3 *ngIf="course == 'CoursIndividuel'"><strong>Cours Individuel</strong> -->
+                    <!-- </h3> -->
+                    <!-- <h3 *ngIf="course == 'CoursCollectifOndemand'"><strong>Cours Collectif Ondemand</strong>
+                                      </h3> -->
+                    <div class="star-rating">
+                        <ul class="list-inline1">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="des_social_icons_footer1">
+                    <ul>
+                        <li>
+                            <a *ngIf="coach_detail.TwitterURL != ''" class="twitter" target="_blank"
+                                href="{{ coach_detail.TwitterURL }}"><i class="fa fa-twitter"></i></a>
+                            <a *ngIf="coach_detail.TwitterURL == ''" class="twitter"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <!-- <li><a class="linked" target="_blank" href={{coach_detail.TwitterURL}}><i class="fa fa-linkedin"></i></a></li> -->
+                        <li>
+                            <a *ngIf="coach_detail.FacebookURL != ''" class="facebook" target="_blank"
+                                href="{{ coach_detail.FacebookURL }}"><i class="fa fa-facebook-f"></i></a>
+                            <a *ngIf="coach_detail.FacebookURL == ''" class="facebook"><i class="fa fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a *ngIf="coach_detail.InstagramURL != ''" class="insta" target="_blank"
+                                href="{{ coach_detail.InstagramURL }}"><i class="fa fa-instagram"></i></a>
+                            <a *ngIf="coach_detail.InstagramURL == ''" class="insta"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right_coachprofilenew">
+                <h3>
+                    Avis Clients &nbsp;&nbsp;<span style="color:#e75b00;">({{count_id}})</span>
+                </h3>
+        
+                <div *ngIf= "showsuccessMsg">
+                    <p class="alert alert-success">
+                      <strong >Comments inscrit avec succès</strong>
+                    </p>
+                  </div>
+
+                <form class="text-left" [formGroup]="tournamentform" (ngSubmit)="onSubmitComment()">
+                    <textarea
+                      class="don_avis"
+                      name="don_avis"
+                      rows="3"
+                      cols="30"
+                      placeholder="Donnez votre avis"
+                      formControlName="comments"></textarea>
+                    <button type="submit" [disabled] ="!tournamentform.valid" class="btn des_event_btn" id="btnreviews">
+                      Donnez votre avis</button>
+                  </form>
+        
+                <div class="testimonial_outer">
+
+                    <div class="testimonial_avis"  *ngFor="let reviews of cutomerReviewCollection">
+                        <div class="~row">
+                          <div class="col-xs-3 no_padding">
+                            <img *ngIf= "reviews.user_image" src="{{reviews.user_image}}" width="60" height="60">
+                            <img *ngIf= "!reviews.user_image" src="../../assets/images/profile_icon.png" />
+                          </div>
+                          <div class="col-xs-9 no_padding">
+                            <div
+                              class="star-rating text-left"
+                              style="text-align: left; display: inline-block; margin-right: 6px;"
+                            >
+                              <ul class="list-inline">
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star-o"></i>
+                                </li>
+                              </ul>
+                            </div>
+            
+                            <span style="margin-right: 6px;"><b>{{reviews.first_name }}{{reviews.last_name}}</b></span>
+                            <span>{{reviews.today_day - reviews.review_day}} days ago</span>
+                            <p>
+                             {{reviews.comments}}
+                            </p>
+                           
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<!-- Company Details -->
+<div id="reserve_modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="stepwizard_section">
+            <div class="row setup-content">
+                <div class="wizard_outer">
+                    <div class="col-md-12">
+                        <div class="wizard_formarea" style="background-color: white;">
+                            <h3>Réservation Détail</h3>
+                            <form #tournament="ngForm" (ngSubmit)="onSubmit(reserve)">
+                                <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label><strong>Nom de l'entreprise / personne:</strong></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="text"
+                                                [(ngModel)]="reserve.Name_of_company" name="reserve.Name_of_company"
+                                                readyonly required #Name_of_company="ngModel"
+                                                [ngClass]="{'alert_field': (Name_of_company.errors && (Name_of_company.touched || Name_of_company.dirty))}"
+                                                placeholder="">
+                                            <ng-container
+                                                *ngIf="Name_of_company.errors && (Name_of_company.touched || Name_of_company.dirty)">
+                                                <span class="alert_text"
+                                                    *ngIf="Name_of_company.errors.required">Indiquez
+                                                    votre
+                                                    Nom de l'entreprise/personne.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label><strong>Email:</strong></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="email" [(ngModel)]="reserve.Email"
+                                                name="reserve.Email" readyonly required #Email="ngModel"
+                                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                                [ngClass]="{'alert_field': (Email.errors && (Email.touched || Email.dirty))}"
+                                                placeholder="">
+                                            <ng-container *ngIf="Email.errors && (Email.touched || Email.dirty)">
+                                                <span class="alert_text" *ngIf="Email.errors.required">Indiquez votre
+                                                    Email.</span>
+                                                <span class="alert_text" *ngIf="Email.errors.pattern">Indiquez votre
+                                                    Email.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label><strong>téléhone:</strong></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="form-control"  (keypress)="numberOnly($event)" minlength="10" type="text" [(ngModel)]="reserve.Mobile"
+                                                name="reserve.Mobile" readyonly required #Mobile="ngModel"
+                                                [ngClass]="{'alert_field': (Mobile.errors && (Mobile.touched || Mobile.dirty))}"
+                                                placeholder="">
+                                            <ng-container *ngIf="Mobile.errors && (Mobile.touched || Mobile.dirty)">
+                                                <span class="alert_text" *ngIf="Mobile.errors">Indiquez votre
+                                                    téléhone.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label><strong>Date:</strong></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="text" [(ngModel)]="reserve.Date"
+                                                [min]="min" name="reserve.Date" readyonly required #Date="ngModel"
+                                                [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1"
+                                                [ngClass]="{'alert_field': (Date.errors && (Date.touched || Date.dirty))}"
+                                                placeholder="">
+                                            <owl-date-time #dt1 [pickerType]="'calendar'">
+                                            </owl-date-time>
+                                            <ng-container *ngIf="Date.errors && (Date.touched || Date.dirty)">
+                                                <span class="alert_text" *ngIf="Date.errors.required">Indiquez votre
+                                                    Date.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label><strong>Level:</strong></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                                <select class="form-control" required [(ngModel)]="reserve.Level" #Level="ngModel"
+                                                [ngClass]="{'alert_field': (Level.errors && (Level.touched || Level.dirty))}"
+                                                name="reserve.Level" placeholder="Niveau de tennis" readonly>
+                                                <option value="Débutant" selected>Débutant</option>
+                                                <option value="Intermédiaire">Intermédiaire</option>
+                                                <option value="Avancée">Avancée</option>
+                                            </select>
+                                            <ng-container *ngIf="Level.errors && (Level.touched || Level.dirty)">
+                                                <span class="alert_text" *ngIf="Level.errors.required">Indiquez votre
+                                                    Level.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label><strong>Nombre de personne:</strong></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="number"
+                                                [(ngModel)]="reserve.Number_of_person" name="reserve.Number_of_person"
+                                                readyonly required #Number_of_person="ngModel"
+                                                [ngClass]="{'alert_field': (Number_of_person.errors && (Number_of_person.touched || Number_of_person.dirty))}"
+                                                placeholder="">
+                                            <ng-container
+                                                *ngIf="Number_of_person.errors && (Number_of_person.touched || Number_of_person.dirty)">
+                                                <span class="alert_text"
+                                                    *ngIf="Number_of_person.errors.required">Indiquez votre
+                                                    Nombre de personne.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-xs-12 text-center">
+                                    <div *ngIf="alertMsg.show"
+                                        class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                        <button type="button" (click)="_closeAlertMessage($event)"
+                                            class="close"><span>&times;</span></button>
+                                        {{alertMsg.msg}}
+                                    </div>
+                                    <button class="btn btn-info previous_btn prevBtn btn-lg" (click)="closemodal()"
+                                        data-dismiss="modal" style="background-color: grey;"
+                                        type="button">PRECEDENTE</button>
+                                    <input class="btn btn-primary des_coach_abt_btn nextBtn btn-lg" id="confirmbtn"
+                                        [disabled]="!tournament.valid " type="submit" value="CONFIRM"
+                                        style="background-color: #e75b00">
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,378 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+
+
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Lexique du tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border">
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Lexique sur le tennis  commençant par la lettre R :
+                    </a>
+                  </h4>
+                </div>
+
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <p><b>Race:</b> Classement des joueurs et des joueuses de tennis adoptés depuis 2000 (pour la petite
+                      histoire Fabrice Santoro est le premier numero mondial de la Race). Le classement se calcule sur
+                      les performances établies pendant l&#39;année en cours et détermine les joueurs de tennis
+                      sélectionnés pour le Masters de fin d&#39;année. Il est publié chaque semaine et remis à zéro à
+                      chaque debut de saison en janvier. Il existe un second mode de. classement: Le classement
+                      technique.</p>
+
+                    <p><b>Rallye:</b> Echange de tennis avec beaucoup de frappes de la part des joueurs.</p>
+
+                    <p><b>Ramasseur (de balles de tennis) :</b> Personne, souvent mineure, et passionnée de tennis qui
+                      se charge de ramasser la balle à la fin d&#39;un point afin de garder le terrain de tennis propre.
+                      Ils sont cinq ou six ramasseurs sur le court de. Tennis: Un dans chaque coin et un ou deux au
+                      niveau des poteaux du filet de tennis. Les ramasseurs font rouler les balles de tennis par terre
+                      entre eux afin de fournir le serveur en balles. Le ramasseur garde aussi la serviette du joueur de
+                      tennis.</p>
+
+                    <p><b>Rameur:</b> Joueur de tennis qui est pret a rester longtemps sur sa ligne de fond de court
+                      pour gagner le point sans attaquer. Ce type de jeu convient aux personnes endurantes qui aiment
+                      taper beaucoup de balles de tennis avant de gagner le point.
+                    </p>
+
+                    <p><b>Raquette:</b> Materiel utilisé par les joueurs de tennis pour exécuter des frappes sur le
+                      terrain.</p>
+
+                    <p><b>Rebound Ace:</b> Surface des courts de tennis de l&#39;Open d&#39;Australie de 1998 à 2008
+                      jugée moins rapide avec un rebond de balle assez haut.</p>
+
+                    <p><b>Rencontre:</b> Terme qui designe un match de tennis mais aussi un ensemble de matches dans le
+                      cas d&#39;opposition entres clubs de tennis (amateur) ou encore de pays (coupe davis).
+                      RepêchéJoueur de tennis ne devant pas accéder au tableau final d&#39;un tournoi de tennis mais
+                      suite a une défection rentre dans le tableau final.
+                    </p>
+
+                    <p><b>Replacement:</b> Course effectuée par un joueur de tennis après la frappe de la balle. Il peut
+                      se faire soit en pas chassés (si le joueur est dans les temps) soit en pas courus (si le joueur de
+                      tennis est en retard).
+                    </p>
+
+                    <p><b>Reprise ou time:</b> Terme annoncé par l&#39;arbitre de chaise à la fin du temps écoulé au
+                      changemets de cotés (il est de 1 minute 30 secondes durant le set et de 2 minutes a la fin de
+                      chaque set).</p>
+
+                    <p><b>Retour: </b>Premiere frappe effectuée par l&#39;adversaire pour engager le point. C&#39;est un
+                      coup de tennis un peu a part car l&#39;organisation de la gestuelle est assez reduite car le temps
+                      de reaction est logiquement diminué.
+                    </p>
+
+                    <p><b> Revers: </b> Coup effectué du côté opposé à la main qui tient la raquette. Cette frappe peut
+                      être jouée avec une prise à une main ou à deux mains.
+                    </p>
+
+                    <p><b> Roue de bicyclette:</b> Lorsqu&#39;un des joueurs de tennis ne marque aucun jeu durant le set
+                      joué, il se prend un roue de bicyclette ou une bulle soit 0 jeu marqué.
+                    </p>
+
+                    <p><b> Round robin:</b> Dans une compétition et plus précisement au Masters, c&#39;est un tour
+                      particulier (poule) où les joueurs de tennis se rencontrent chacun entre eux.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1"
+                      aria-expanded="false" aria-controls="collapse1">
+                      Terme du tennis commençant par la lettr S :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    <p><b>saison régulière:</b> Correspond au calendrier des tournois de tennis atp et wta qui se
+                      déroule de janvier a novembre.</p>
+
+                    <p><b>Tournois satellite:</b> Les tournois de tennis satellites représentent des épreuves moins
+                      importantes que les challengers et et futures ( moins de point ATP a gagner).</p>
+
+                    <p><b>Scratch:</b> Un joueur de tennis est scratché lorsqu&#39;il ne ce présente pas a la
+                      convocation du juge arbitre.</p>
+
+                    <p><b>Seconde balle de service:</b> Au service le joueur de tennis a le droit a deux chances pour
+                      rentrer dans le point. La seconde balle est donc la dernière chance pour le serveur pour pouvoir
+                      engager le point contre son adversaire.
+                    </p>
+
+                    <p><b>Serveur:</b> Le serveur est le joueur qui commence le point au tennis par un service.</p>
+
+                    <p><b>Service gagnant:</b> Un service est dit gagnant lorsque le receveur n&#39;arrive pas a
+                      renvoyer la balle de tennis. Si le receveur ne touche pas la balle alors le serveur a fait un ace.
+                    </p>
+
+                    <p><b>Service volée :</b> Le service volée est une tactique qui consiste a suivre la balle que
+                      l&#39;on vient de servir au filet de tennis. Cela permet de moins laisser de temps au receveur.
+                    </p>
+
+                    <p><b>Simple:</b> Le simple est un des deux formats de jeu du tennis. Il est le format le plus
+                      courant match de tennis entre deux joueurs. Le double est l&#39;autre format de jeu.
+                    </p>
+
+                    <p><b>Slice:</b> Le slice est un effet de rotation que le joueur de tennis donne a la balle de
+                      tennis. Il est utilisé la plupart du temps au service pour sortir latéralement le joueur du
+                      terrain de tennis.
+                    </p>
+
+                    <p><b>Smash:</b> Le smash est le coup le plus puissant du tennis, il consiste a rabattre la balle
+                      vers le sol (comme au service ). le smash s&#39;effectue généralement proche du filet.
+                    </p>
+
+                    <p><b>Spécialiste:</b> Un spécialiste est un joueur de tennis qui préfère plus particulièrement une
+                      surface de jeu plutôt qu&#39;une autre. Un spécialiste peut être aussi un joueur qui préfère aussi
+                      en fonction de ses points fort effectuer une tactique particulière ( service volée, fond de court
+                      ).
+                    </p>
+
+                    <p><b>Super tie-break:</b> Lors de certains match de tennis d&#39;exhibition a 1 set partout le 3e
+                      set se déroulera en un Super tie-break en 10 points. Le premier joueur a gagner au moins 10 points
+                      avec deux points d&#39;écart aura alors gagner la rencontre.
+                    </p>
+
+                    <p><b>Surface: </b>La surface de jeux est la matière utilisée pour fabriquer les courts de tennis
+                      terre battue, gazon, resine, synthetique.
+                    </p>
+
+                    <p><b>Surgrip:</b> Un surgrip est une bande que l&#39;on applique sur le manche de la raquette de
+                      tennis afin d&#39;éviter les frottements entre le manche et la main.
+                    </p>
+
+                    <p><b>Synthétique:</b> Est une surface de jeu au tennis ( paris bercy ).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2"
+                      aria-expanded="false" aria-controls="collapse2">
+                      Jargon sur le tennis commençant par la lettre T :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    <p><b>T:</b> Ligne centrale sur le terrain de tennis, désignée par la forme que prend le croisement
+                      de celle-ci avec la ligne de service. On dit qu&#39;un service est sur le T lorsque la balle de
+                      tennis touche cette ligne.</p>
+                    <p><b>Tableau de qualifications:</b> Voir expression qualification. Tableau final ou principal: voir
+                      grand tableau.</p>
+
+                    <p><b>Tamis:</b> Partie de la raquette de tennis en forme ovale, composée de cordes, avec laquelle
+                      est frappée la balle de ennis. Le tamis est délimité par le cadre de la raquette de tennis.
+                    </p>
+
+                    <p><b>Taraflex:</b> Surface du terrain de tennis en synthétique très rapide utilisée dans certains
+                      tournois indoor.
+                    </p>
+
+                    <p><b>Tennis elbow:</b> Inflammation au coude propre aux joueurs de tennis, généralement causée par
+                      les vibrations de la
+                      raquette de tennis lors de l&#39;impact de balle. L&#39;utilisation d&#39;anti-vibrateurs permet
+                      de limiter les risques de blessure
+                      recurrente.
+                    </p>
+
+                    <p><b>Tennisman, tenniswoman (faux anglicisme) :</b> Voir joueur de tennis.
+                    </p>
+
+                    <p><b>Tennistique:</b> Relatif a l&#39;univers du tennis.
+                    </p>
+
+                    <p><b>Tension:</b> Voir cordage de la raquette de tennis.
+                    </p>
+
+                    <p><b>Terre battue:</b> Surface de terrain de tennis sur laquelle se déroulent plusieurs tournois de
+                      tennis, dont Roland- Garros. Monte Carlo , Rome. C&#39;est une surface dite lente qui est très
+                      sensible aux effets de balle de tennis et sur laquelle le rebond des balles de tennis est
+                      relativement haut.
+                    </p>
+
+                    <p><b>Terrien:</b> Joueur de tennis spécialiste de terre battue qui est la surface d&#39;un terrain
+                      de tennis.
+                    </p>
+
+                    <p><b>Tête de série:</b> Joueur de tennis suffisamment bien classé pour avoir un tirage au sort
+                      favorable dans un tournoi de tennis. Les têtes de série ne se rencontrent pas avant le troisième
+                      tour d&#39;un tournoi de tennis. Les têtes de série numéros 1 et 2 ne peuvent pas se rencontrer
+                      avant la finale (ni non plus les têtes de série numéros 3 et 4).
+                    </p>
+
+                    <p><b>Thermobag:</b> Sac de rangement de raquettes de tennis doublé d&#39;un système isolant
+                      thermique, pour protéger le cordage des raquettes des changements de température susceptibles de
+                      modifier leur tension.
+                    </p>
+
+                    <p><b>Tie-break:</b> Voir jeu décisif.
+                    </p>
+
+                    <p><b>Time:</b> Voir reprise.
+                    </p>
+
+                    <p><b>Tirer un passing:</b> Voir passer.
+                    </p>
+
+                    <p><b>Toss ou Tirage au sort:</b> Tirage au sort fait par l&#39;arbitre au début d&#39;un match de
+                      tennis à l&#39;aide d&#39;une pièce ou avec une raquette de tennis chez les amateur avec le logo
+                      (a l&#39;envers ou a l&#39;endroit). Le joueur de tennis qui gagne le tirage au sort a le choix de
+                      servir ou de recevoir pour le premier jeu laissant a son adversaire le second choix.
+                    </p>
+
+                    <p><b>Toucher de balle:</b> Voir effet.
+                    </p>
+
+                    <p><b>Tour du défi:</b> Voir challenge round.
+                    </p>
+
+                    <p><b>Tournoi du Grand Chelem:</b> Voir grand chelem.
+                    </p>
+
+                    <p><b>Trois sets gagnants:</b> Voir meilleur des cinq sets trouver une bonne longueur de balle :
+                      voir jouer long, le but ici est de repousser le joueur de tennis le plus loin de sa ligne de fond
+                      de court.
+                    </p>
+
+                    <p><b>Tweener:</b> Coup entre les jambes parfois tapé par un joueur de tennis lorsqu&#39;il est lobé
+                      et dos au filet de tennis pour tenter de remettre la balle dans le terrain. Parfois utilisé face
+                      au filet de tennis pour distraire les spectateurs ou provoquer l&#39;adversaire.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3"
+                      aria-expanded="false" aria-controls="collapse3">
+                      Tout sur le tennis  commençant par la lettre V :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    <p><b>Volée:</b> Coup effectué avant le rebond de la balle de tennis. C&#39;est une frappe executée
+                      près du filet de tennis.
+                    </p>
+
+                    <p><b>Volleyeur:</b> Cela concerne un joueur de tennis frappant une volée ou une expert de la volée.
+                      Voir aussi : attaquant de fond de court.
+                    </p>
+
+                    <p><b>Volleyer: </b>Action d&#39;effectuer une volée au tennis.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
+                      aria-expanded="false" aria-controls="collapse4">
+                      Lexique sur le tennis  commençant par la lettre W :
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    <p><b>Walk over:</b> (Victoire par disqualification (scratch) ou, beaucoup plus fréquemment, par
+                      forfait de l&#39;adversaire. Abrégé dans les tableaux en W.O.).</p>
+
+                    <p><b>Western:</b> Voir prise western.</p>
+
+                    <p><b>Wild card:</b> Ou invitation privilégiée : Autorisation exceptionnelle permise à un sportif ou
+                      à une équipe de jouer une compétition de tennis sans répondre aux critères communs de sélection.
+                    </p>
+
+                    <p><b>WTA Tour ou simplement WTA:</b> Association qui supervise les principaux tournois de tennis
+                      féminins professionnels dans le monde. On parle aussi du circuit WTA.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section3 ends -->
+
+<app-footer></app-footer>

@@ -1,0 +1,264 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/club-house-tennis_bg.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>Oh My Club House</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Recherche
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_titre_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Les quiz tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot middle_contents">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h5>Les quiz portent sur quoi exactement sur ohmytennis ?</h5>
+          <p>
+            Vous allez pouvoir répondre à un grand nombre de questions portant
+            sur des thèmes très larges concernant l’univers du tennis. Cela peut
+            concerner l’histoire du tennis, les termes du tennis (lexique), les
+            règles du tennis, le circuit ATP (joueurs professionnels du tennis),
+            le circuit WTA (joueuses professionnelles du tennis), les tournois
+            de tennis notamment les grands chelems, la pédagogie. Tout sera
+            passé au crible pour vous vérifier si vous êtes incollables,
+            certaines réponses sont même sur le site internet et ce sera à vous
+            de fouiller !
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Découvrez les règles du tennis</a
+              ></strong
+            >
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Connaissez-vous bien tous les termes liés au tennis ?</a
+              ></strong
+            >
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/jeu-concours-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot middle_contents">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/jeux-concours-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h5>Sous quelle forme sont organisés les quiz tennis ?</h5>
+          <p>
+            Des quiz sont organisés afin de tester vos connaissances sur le
+            milieu du tennis. Ces questionnaires sont sous forme de QCM
+            (Questionnaire à choix multiples), il y a donc plusieurs
+            propositions de réponses à chaque question. Une ou plusieurs de ces
+            propositions est correcte. Les autres sont la pour vous induire en
+            erreur ce sont des pièges.Ce genre d’évaluation peut vous permettre
+            d’avoir une chance de bien répondre même si vous n’avez pas la
+            réponse. (on sait jamais ça peut marcher).Rédigé de façon ludique,
+            c’est un moyen d’apprendre ou de s’interroger sur une problématique
+            de la balle jaune. Il est très facile de se prendre au jeu pour
+            vérifier si on est un puit de sciences.
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Compléter vos connaissances avec l’histoire du tennis</a
+              ></strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row split_marginbot middle_contents">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h5>Quand les quiz sont ils organisés sur ohmytennis ?</h5>
+          <p>
+            Les quiz sont programmés sur 6 semaines en général afin de vous
+            laisser le temps d’y participer. Une pause de 2 semaines est
+            généralement prévue pour élir le vainqueur de la session en cours.
+            Ce sont donc environ 6 quiz qui sont prévus à l’année sur des thèmes
+            bien précis liés souvent à l’actualité tennis dans la saison.
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >A lire aussi : Connaissez-vous tout le vocabulaire du
+                tennis?</a
+              ></strong
+            >
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/jeu-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot middle_contents">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img9.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h5>Comment est il possible de jouer au quiz tennis ?</h5>
+          <p>
+            Les quiz sont ouverts à toute personne passionnée de tennis et
+            inscrite (abonné) au site internet. Pour cela vous devez saisir
+            votre nom, votre prénom, votre adresse email et acceptez le
+            règlement du quizz pour jouer. Il est important de noter que votre
+            participation est unique, vous avez le droit qu’à une seule chance
+            pour bien répondre a toutes les questions. Si vous n‘êtes pas
+            inscrit , vous devez remplir le formulaire d’inscription pour
+            commencer à jouer. N’hésitez pas à faire partager ces quiz à vos
+            amis pour les tester afin de savoir si ils s’y connaissent vraiment
+            en tennis.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row split_marginbot middle_contents">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h5>
+            Que peut-on gagner si on participe à ces quiz sur ohmytennis ?
+          </h5>
+          <p>
+            Vous pouvez gagner des nombreux lots et cadeaux grâce à nos
+            partenaires mais aussi des points (qui sont à accumuler) pour
+            obtenir des réductions sur des achats voire même des gratuités sur
+            le site internet. Les 3 premières places sont récompensées de façon
+            dégressive et constitueront le podium s ur chaque session. En cas
+            d’égalité celui qui aura mis le moins de temps à répondre sera
+            désigné gagnant.
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Voir règlement du quiz</a
+              ></strong
+            >
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href="">Voir dotation du quiz</a></strong
+            >
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img13.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_titre_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Nous proposons aux passionnés de tennis d'avoir un univers
+            spécialement créé pour eux.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+
+<app-footer></app-footer>

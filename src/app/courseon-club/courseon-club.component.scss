@@ -1,0 +1,35 @@
+.fields.alert_field,
+.alert_field {
+    border: 1px solid red !important;
+}
+
+.book_courseclub th {
+    color: #e75b00;
+    padding-top: 10px;
+    padding: 12px 0px 7px;
+    font-size: 14px;
+	font-weight:bold !important;
+    line-height: 37px !important;
+    text-align: center !important;
+    padding: 18px 0px 7px;
+}
+.book_courseclub tr td {
+    text-align: center !important;
+	border-top: 1px solid #c0bebe;
+    text-align: center !important;
+    padding: 12px 0px 7px;
+    line-height: 37px !important;
+    font-size: 15px;
+	color:#333;
+	font-weight: 400;
+}
+.book_courseclub .fa-eye {
+    color: #333;
+}
+.text-size{
+    width: 126px;
+    margin-left: 22px;
+}
+.book_courseclub tr td:last-of-type {
+    border: none;
+  }

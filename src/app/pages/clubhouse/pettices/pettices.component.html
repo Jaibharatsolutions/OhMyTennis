@@ -1,0 +1,242 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/club-house-tennis_bg.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>Oh My Club House</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Recherche
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 content_secs des_titre_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Petites annonces tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5>Qu’est ce qu’une petite annonce sur Ohmytennis ?</h5>
+        <p>
+          Une petite annonce est un moyen de diffuser une information concernant
+          un objet que vous souhaitez proposer à la vente (matériel d’occasion
+          de tennis). Il est également possible de faire des recherches sur un
+          produit qui vous voulez absolument à acheter en seconde main. En effet
+          vous allez pouvoir informer toute la communauté tennis de la mise en
+          vente d’équipements grâce à nos rubriques.
+        </p>
+        <p>
+          <strong
+            ><a class="content_link" href=""
+              >Connaissez-vous bien le matériel au tennis ?</a
+            ></strong
+          >
+        </p>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img1.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img3.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5>Qui peut créer des petite annonces sur notre site ?</h5>
+        <p>
+          Les personnes habilitées à créer une ou des petites annonces sont
+          inscrites au site internet. Vous pouvez consulter ce qui est proposé
+          si vous êtes non membre mais pour accéder aux coordonnées (nom, prénom
+          )de votre interlocuteur et prendre contact il est obligatoire d’être
+          inscrit. N’hésitez pas à faire un petit tour pour voir ce qui s’y
+          trouve et peut être déniché des petites trouvailles d’occasion du
+          tennis sait on jamais !
+        </p>
+        <p>
+          <strong
+            ><a class="content_link" href=""
+              >Vous souhaitez trouver un partenaire de tennis ?</a
+            ></strong
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5>Quand mettre une annonce sur le site Ohmytennis ?</h5>
+        <p>
+          Vous pouvez à tout instant déposer une annonce si vous le désirez.
+          Notre équipe, après modération, fera le nécessaire pour relayer votre
+          information le plus rapidement possible et ainsi mettre en ligne votre
+          petite annonce.
+        </p>
+        <p>
+          <strong
+            ><a class="content_link" href=""
+              >Pourquoi pas challenger un sparring partner de tennis ?</a
+            ></strong
+          >
+        </p>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img6.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img9.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5>Comment créer une annonce concernant le tennis ?</h5>
+        <p>
+          Pour déposer une annonce il faut rédiger un texte descriptif bien
+          détaillé sans faute d’orthographe (c’est toujours mieux). Prenez
+          plusieurs photos de l’objet que vous souhaitez proposer avec une belle
+          photo (biené clairée) qui fera office de photo principale. Mettre bien
+          en avant votre produit est conseillé afin mettre toutes les chances de
+          votre côté et favoriser des contacts potentiels.
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5>Pourquoi créer une annonce sur notre site ?</h5>
+        <p>
+          Si vous souhaitez vous débarrasser d’un objet qui devient encombrant ,
+          qui n’a plus d’utilité pour vous et qui a de la valeur n’hésitez pas.
+          Ca peut être l’occasion pour vous de renouveler votre matériel et de
+          faire profiter quelqu’un qui en aurait besoin. Une deuxième vie
+          commence pour cet équipement et son échange fera le bonheur des deux
+          parties.
+        </p>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img13.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img3.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5>Quel est l’objectif d’une petite annonce sur Ohmytennis ?</h5>
+        <p>
+          Les petites annonces vont permettre à un membre de la communauté
+          tennis d’acheter un objet moins cher que sa valeur neuve tout en
+          remplissant le porte monnaie du vendeur. C est une bonne occasion de
+          créer un lien ,si vous habitez la même région, entre des passionnés de
+          tennis qui ont forcément des points communs. Il est possible pour
+          celui qui dépose une annonce d’offre ou de demande de gagner des
+          points et bénéficier par la suite de réductions via nos partenaires ou
+          des gratuités sur le site internet.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_titre_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Nous proposons aux passionnés de tennis d'avoir un univers
+            spécialement créé pour eux.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+
+<app-footer></app-footer>

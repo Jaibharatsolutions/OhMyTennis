@@ -1,0 +1,832 @@
+.panel .panel-login {
+    .tabs {}
+  
+    -webkit-box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
+    -moz-box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
+    box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.3);
+  }
+  
+  .tabs_act {
+    margin: 0px
+  }
+  
+  .tabs_act>li.active>a,
+  .tabs_act>li.active>a:focus,
+  .tabs_act>li.active>a:hover {
+    font-family: 'Montserrat Medium';
+    text-align: center;
+    background-color: #e75b00;
+    color: #fff;
+  }
+  
+  body {
+    font-family: 'Montserrat Medium!important';
+  }
+  
+  .modal-content {
+    background-color: #fff !important;
+  }
+  
+  .modal-title {
+    text-align: center;
+    font-family: comfortaa;
+  }
+  
+  .form-horizontal .control-label {
+    font-family: 'Montserrat Medium';
+    font-size: 12px;
+  }
+  
+  .well {
+    box-shadow: none !important;
+    background-color: #fff !important;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  span.input-group-addon {
+    background-color: #e75b00 !important;
+    position: initial !important;
+    color: #fff !important;
+    width: 40px;
+  }
+  
+  .input-group {
+    width: 100%;
+  }
+  
+  
+  @-webkit-keyframes HeroBG {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 100% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  @keyframes HeroBG {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 100% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  
+  .panel {
+    width: 65%;
+    margin: 60px auto;
+    border-radius: 5px;
+  }
+  
+  label {
+    font-weight: 300;
+  }
+  
+  .panel-login {
+    border: none;
+    -webkit-box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
+    -moz-box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
+    box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
+  }
+  
+  .panel-login .checkbox input[type=checkbox] {
+    margin-left: 0px;
+  }
+  
+  .panel-login .checkbox label {
+    padding-left: 25px;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .panel-login .checkbox {
+    padding-left: 20px;
+  }
+  
+  .panel-login .checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: 0px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  }
+  
+  .panel-login .checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 0;
+    margin-left: 0px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555;
+  }
+  
+  .panel-login .checkbox input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  .panel-login .checkbox input[type="checkbox"]:focus+label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  
+  .panel-login .checkbox input[type="checkbox"]:checked+label::after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+  }
+  
+  .panel-login>.panel-heading .tabs {
+    padding: 0;
+  }
+  
+  .panel-login h2 {
+    font-family: 'Montserrat Medium';
+    font-size: 20px;
+    font-weight: 300;
+    margin: 30px;
+  }
+  
+  .panel-login>.panel-heading {
+    color: #848c9d;
+    background-color: #e8e9ec;
+    border-color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom: 0px;
+  }
+  
+  .panel-login .form-group {
+    padding: 0 30px;
+  }
+  
+  .panel-login>.panel-heading .login {
+    font-family: 'Montserrat Medium';
+    text-align: center;
+    background-color: #e75b00;
+    color: #fff;
+    padding: 20px 30px;
+    border-bottom-leftt-radius: 5px;
+  }
+  
+  .panel-login>.panel-heading .register {
+    font-family: 'Montserrat Medium';
+    color: #000;
+    padding: 20px 30px;
+    background: #dadada;
+    text-align: center;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .panel-login>.panel-heading a {
+    padding: 20px 147px;
+    text-decoration: none;
+    color: #666;
+    font-weight: 300;
+    font-size: 16px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+  }
+  
+  .panel-login>.panel-heading a#register-form-link {
+    color: #fff;
+    width: 100%;
+    text-align: right;
+  }
+  
+  .panel-login>.panel-heading a#login-form-link {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .panel-login input[type="text"],
+  .panel-login input[type="email"],
+  .panel-login input[type="password"] {
+    height: 45px;
+    border: 0;
+    font-size: 16px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: 0px;
+    padding: 6px 0px;
+  }
+  
+  .panel-login input:hover,
+  .panel-login input:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-color: #ccc;
+  }
+  
+  .btn-login {
+    margin-top: 20px;
+    width: 40%;
+    background-color: #E8E9EC;
+    outline: none;
+    color: #2D3B55;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  
+  .btn-login:hover,
+  .btn-login:focus {
+    color: #fff;
+    background-color: #e75b00;
+  }
+  
+  .forgot-password {
+    text-decoration: underline;
+    color: #888;
+  }
+  
+  .forgot-password:hover,
+  .forgot-password:focus {
+    text-decoration: underline;
+    color: #666;
+  }
+  
+  .btn-register {
+    background-color: #E8E9EC;
+    outline: none;
+    color: #2D3B55;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  
+  .btn-register:hover,
+  .btn-register:focus {
+    color: #fff;
+    background-color: #2D3B55;
+  }
+  
+  .panel-heading a:before {
+    font-family: 'none' !important;
+  
+    float: right;
+    transition: all 0.5s;
+  
+  }
+  
+  .panel-heading a:before {
+    display: none;
+  }
+  
+  .login_page3 div.right,
+  div.connect {
+    color: gray;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .login_page3 a {
+    display: inline-block;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    width: 38px;
+    padding: 0.55em 0.3em !important;
+    clear: both;
+    text-align: center;
+    margin: 0.5em 0.1em;
+    border-radius: 50%;
+    height: 38px;
+  }
+  
+  .login_page3 .input-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .login_page3 .input-box i {
+    background-color: #e75b00;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    left: 1px;
+  }
+  
+  .login_page3 a .fa {
+    vertical-align: top;
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+  }
+  
+  .login_page3 a:hover {
+    opacity: 0.78;
+  }
+  
+  .login_page3 a.facebook {
+    background: #3a589a;
+  }
+  
+  .login_page3 a.twitter {
+    background: #4099ff;
+  }
+  
+  .login_page3 a.google-plus {
+    background: #e9544f;
+  }
+  
+  .title {
+    color: #000;
+    line-height: 1;
+    text-align: center;
+    font-size: .9375rem;
+    font-weight: 700;
+  }
+  
+  .form_page {
+  
+    width: 65%;
+    margin: 40px auto;
+  }
+  
+  
+  a.btn-social,
+  .btn-social {
+    border-radius: 50%;
+    color: #ffffff !important;
+    display: inline-block;
+    height: 54px;
+    line-height: 54px;
+    margin: 8px 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s;
+    webkit-transition: background-color .3s;
+    width: 54px;
+  }
+  
+  .btn-social .fa,
+  .btn-social i {
+    backface-visibility: hidden;
+    moz-backface-visibility: hidden;
+    ms-transform: scale(1);
+    o-transform: scale(1);
+    transform: scale(1);
+    transition: all .25s;
+    webkit-backface-visibility: hidden;
+    webkit-transform: scale(1);
+    webkit-transition: all .25s;
+  }
+  
+  .btn-social:hover,
+  .btn-social:focus {
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  .btn-social:hover .fa,
+  .btn-social:focus .fa,
+  .btn-social:hover i,
+  .btn-social:focus i {
+    ms-transform: scale(1.3);
+    o-transform: scale(1.3);
+    transform: scale(1.3);
+    webkit-transform: scale(1.3);
+  }
+  
+  .btn-social.btn-xs {
+    font-size: 9px;
+    height: 24px;
+    line-height: 13px;
+    margin: 6px 2px;
+    width: 24px;
+  }
+  
+  .btn-social.btn-sm {
+    font-size: 13px;
+    height: 36px;
+    line-height: 18px;
+    margin: 6px 2px;
+    width: 36px;
+  }
+  
+  .btn-social.btn-lg {
+    font-size: 22px;
+    height: 72px;
+    line-height: 40px;
+    margin: 10px 6px;
+    width: 72px;
+  }
+  
+  .btn-facebook {
+    background-color: #3b5998;
+  }
+  
+  .btn-facebook:hover {
+    background-color: #4c70ba;
+  }
+  
+  a.btn-social,
+  .btn-social {
+    border-radius: 50%;
+    color: #ffffff !important;
+    display: inline-block;
+    height: 40px;
+    line-height: 42px;
+    margin: 8px 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s;
+    webkit-transition: background-color .3s;
+    width: 40px;
+  }
+  
+  .btn-twitter {
+    background-color: #55acee;
+  }
+  
+  .btn-twitter:hover {
+    background-color: #83c3f3;
+  }
+  
+  .btn-instagram {
+    background-color: #E1306C;
+  }
+  
+  .btn-instagram:hover {
+    background-color: #E1306C;
+  }
+  
+  .fields {
+    display: block;
+    height: 45px;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-topleft: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    border-radius: 3px;
+    background-clip: padding-box;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .login_btn_form {
+    margin-top: 20px;
+    color: #fff;
+    padding: 13px 0px;
+    font-family: 'Montserrat Medium';
+    text-align: center;
+    font-weight: 700;
+    border: 0;
+    background: #ff5c00;
+    cursor: pointer;
+  }
+  
+  .login_btn_form:hover {
+    color: #fff;
+    background-color: #d44c00;
+  }
+  
+  .sec1 {
+    padding-right: 40px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .reg_form {
+    margin: 30px auto;
+  }
+  
+  .title_reg {
+    font-family: Montserrat;
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    color: #e75b00;
+  }
+  
+  .label1 {
+    float: left;
+    text-align: left;
+    line-height: 46px;
+    color: #000;
+    font-size: 14px;
+    font-family: 'Montserrat';
+  }
+  
+  .span_class {
+    font-size: 15px;
+  }
+  
+  .head_sec {
+    margin-bottom: 25px;
+  }
+  
+  @media(max-width:767px) {
+    .title_reg {
+      font-size: 23px;
+    }
+  
+    .client_logo h3 {
+      font-size: 20px;
+    }
+  
+    .span_class {
+      display: block;
+    }
+  
+    .line_txt {
+      display: none;
+    }
+  
+    .icon_txt {
+      display: inline-block;
+      margin-top: 10px;
+    }
+  
+    .ville_text {
+      clear: both;
+    }
+  
+    .ville_text,
+    .ville_width {
+      padding-top: 26px;
+    }
+  
+    .postal_width,
+    .postal_text {
+      margin-top: 15px;
+    }
+  
+    select.form-control {
+      font-size: 13px;
+      color: #999
+    }
+  }
+  
+  @media(min-width:768px) {
+    .reg_form {
+      width: 100%;
+      margin: 30px auto 10px;
+      max-width: 765px;
+    }
+  
+    .span_class {
+      margin-right: 5px;
+    }
+  
+    .postal_width {
+      width: 20%;
+    }
+  
+    .ville_width {
+      width: 50%;
+      margin-left: 4px;
+    }
+  
+    .ville_text {
+      padding: 0px;
+      width: 4%;
+    }
+  }
+  
+  /* The radio */
+  .radio {
+    margin-right: 20px;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+  }
+  
+  /* Hide the browser's default radio button */
+  .radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkround {
+  
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-color: #e75b00;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+  }
+  
+  
+  /* When the radio button is checked, add a blue background */
+  .radio input:checked~.checkround {
+    background-color: #fff;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkround:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio input:checked~.checkround:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radio .checkround:after {
+    left: 2px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e75b00;
+  
+  
+  }
+  
+  /* The check */
+  .check {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    padding-right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border-color: #f8204f;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  
+  
+  /* When the checkbox is checked, add a blue background */
+  .check input:checked~.checkmark {
+    background-color: #fff;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .check input:checked~.checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .check .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid;
+    border-color: #f8204f;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .cust-btn {
+    margin-bottom: 10px;
+    background-color: #f8204f;
+    border-width: 2px;
+    border-color: #f8204f;
+    color: #fff;
+  }
+  
+  .cust-btn:hover {
+  
+    border-color: #f8204f;
+    background-color: #fff;
+    color: #f8204f;
+    border-radius: 20px;
+    transform-style: 2s;
+  
+  }
+  
+  .icon_txt {
+    margin-right: 10px;
+    display: inline-grid;
+  }
+  
+  .line_txt {
+    font-size: 10px;
+    color: #919191;
+  }
+  
+  .label2 {
+  
+    text-align: right;
+    line-height: 46px;
+    color: #000;
+    font-size: 14px;
+    font-family: 'Montserrat';
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .fields.alert_field, .alert_field {
+    border: 1px solid red;
+  }
+  

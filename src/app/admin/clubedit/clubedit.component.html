@@ -1,0 +1,176 @@
+<div class="content clubedit_page">
+  <div class="container-fluid">
+    <br /><br />
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form_devarea admin_profform">
+          <div class="pull-right" style="text-align: left; padding: 22px 20px 0px;">
+            <button class="btn orange_btn" style="cursor: pointer;" (click)="goBack()">
+              Retour
+            </button>
+          </div>
+          <div class="box-body">
+            <br />
+            <form #user="ngForm" (ngSubmit)="onSubmit(res)">
+              <h4>CLUB EDIT FORM</h4>
+              <br />
+              <div *ngIf="alertMsg.show" class="alert {{ alertMsg.type }} alert-dismissible text-center">
+                <button type="button" (click)="_closeAlertMessage($event)" class="close">
+                  <span>&times;</span>
+                </button>
+                {{ alertMsg.msg }}
+              </div>
+              <div class="form-group bmd-form-group">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3">
+                    <label>Name of Court <span class="red">*</span></label>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <input type="text" [(ngModel)]="res.court_name" #court_name="ngModel" [ngClass]="{
+                        alert_field:
+                          court_name.errors &&
+                          (court_name.touched || court_name.dirty)
+                      }" name="court_name" class="form-control" placeholder="Prénom" required />
+                    <ng-container *ngIf="
+                        court_name.errors &&
+                        (court_name.touched || court_name.dirty)
+                      ">
+                      <span class="alert_text" *ngIf="court_name.errors.required">Indiquez votre Prénom.</span>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group bmd-form-group">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3">
+                    <label>Contact Name<span class="red">*</span></label>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <input type="text" [(ngModel)]="res.incharge_name" #incharge_name="ngModel" [ngClass]="{
+                        alert_field:
+                          incharge_name.errors &&
+                          (incharge_name.touched || incharge_name.dirty)
+                      }" name="incharge_name" class="form-control" placeholder="" required />
+                    <ng-container *ngIf="
+                        incharge_name.errors &&
+                        (incharge_name.touched || incharge_name.dirty)
+                      ">
+                      <span class="alert_text" *ngIf="incharge_name.errors.required">Indiquez votre Nom.</span>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group bmd-form-group">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3">
+                    <label>E-mail <span class="red">*</span></label>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <input type="text" class="form-control" id="court_email" [(ngModel)]="res.court_email"
+                      name="court_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      placeholder="tenniscourt@court.com" readonly required />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group bmd-form-group">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3">
+                    <label>Téléphone <span class="red">*</span></label>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <input type="text" class="form-control" [(ngModel)]="res.court_phone" pattern="^[0-9]\d{9}$"
+                      #court_phone="ngModel" [ngClass]="{
+                        alert_field:
+                          court_phone.errors &&
+                          (court_phone.touched || court_phone.dirty)
+                      }" name="court_phone" placeholder="téléhone" required />
+                    <ng-container *ngIf="
+                        court_phone.errors &&
+                        (court_phone.touched || court_phone.dirty)
+                      ">
+                      <span class="alert_text" *ngIf="court_phone.errors.required">Indiquez votre Téléphone.</span>
+                      <span class="alert_text" *ngIf="court_phone.errors.pattern">Indiquez votre Téléphone.</span>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group bmd-form-group">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3">
+                    <label>Code Postal<span class="red">*</span></label>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <input type="text" class="form-control" [(ngModel)]="res.court_postal_code" pattern="^[1-9]\d{5}$"
+                      #court_postal_code="ngModel" [ngClass]="{
+                        alert_field:
+                          court_postal_code.errors &&
+                          (court_postal_code.touched || court_postal_code.dirty)
+                      }" name="court_postal_code" placeholder="Code Postal" required />
+                    <ng-container *ngIf="
+                        court_postal_code.errors &&
+                        (court_postal_code.touched || court_postal_code.dirty)
+                      ">
+                      <span class="alert_text" *ngIf="court_postal_code.errors.required">Indiquez votre code
+                        postal.</span>
+                      <span class="alert_text" *ngIf="court_postal_code.errors.pattern">Indiquez votre code
+                        postal.</span>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group bmd-form-group">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3">
+                    <label>Adresse <span class="red">*</span></label>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <textarea class="form-control" id="court_address" style="height:110px;" required
+                      [(ngModel)]="res.court_address" name="res.court_address" #court_address="ngModel" [ngClass]="{
+                        alert_field:
+                          court_address.errors &&
+                          (court_address.touched || court_address.dirty)
+                      }">
+                    </textarea>
+                    <ng-container *ngIf="
+                        court_address.errors &&
+                        (court_address.touched || court_address.dirty)
+                      ">
+                      <span class="alert_text" *ngIf="court_address.errors.required">Indiquez votre adresse.</span>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group bmd-form-group">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3">
+                    <label>Photo de profil <span class="red">*</span></label>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <div class="card-avatar">
+                      <img class="img club_samimg" src="{{ res.courtfile }}" />
+                      <br /><br />
+                    </div>
+                    <div class="upload-btn-wrapper">
+                      <button class="btn club_upload">Upload a file</button>
+                      <input type="file" name="myfile" (change)="changeListener($event)" />
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 text-center"></div>
+                <div class="col-md-9 text-left">
+                  <button type="submit" id="submit" class="btn btn-primary">
+                    SAUVEGARDER
+                  </button>
+                </div>
+              </div>
+              <br />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

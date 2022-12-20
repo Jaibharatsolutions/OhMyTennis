@@ -1,0 +1,208 @@
+<div class="content cours_individualsec">
+    <div class="container-fluid">
+        <div class="~row">
+            <div class="form_devarea col-md-12" style="max-width: 100%;">
+                <div class="">
+                    <div class="tab-content">
+                        <div class="form_section" id="availabilityDiv" style="max-width: 100%;">
+                            <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                <button type="button" (click)="_closeAlertMessage($event)"
+                                    class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                            </div>
+                            <form #user="ngForm" (ngSubmit)="onSubmit(res)">
+                               
+                                <div class="col-xs-12 col-md-8">
+                                    <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <label>Prénom <span class="red">*</span></label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <input type="text" [(ngModel)]="res.firstName" #firstName="ngModel"
+                                                    [ngClass]="{'alert_field': (firstName.errors && (firstName.touched || firstName.dirty))}"
+                                                    name="firstName" class="form-control" placeholder="Prénom" readonly
+                                                    required>
+                                                <ng-container
+                                                    *ngIf="firstName.errors && (firstName.touched || firstName.dirty)">
+                                                    <span class="alert_text" *ngIf="firstName.errors.required">Indiquez
+                                                        votre
+                                                        Prénom.</span>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <label>Nom <span class="red">*</span></label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <input type="text" [(ngModel)]="res.lastName" #lastName="ngModel"
+                                                    [ngClass]="{'alert_field': (lastName.errors && (lastName.touched || lastName.dirty))}"
+                                                    name="lastName" class="form-control" placeholder="Nom" readonly
+                                                    required>
+                                                <ng-container
+                                                    *ngIf="lastName.errors && (lastName.touched || lastName.dirty)">
+                                                    <span class="alert_text" *ngIf="lastName.errors.required">Indiquez
+                                                        votre Nom.</span>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <label>Téléphone <span class="red">*</span></label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <input type="text" class="form-control" [(ngModel)]="res.mobile"
+                                                    pattern="^[0-9]\d{9}$" #mobile="ngModel"
+                                                    [ngClass]="{'alert_field': (mobile.errors && (mobile.touched || mobile.dirty))}"
+                                                    name="mobile" placeholder="téléhone" readonly required>
+                                                <ng-container *ngIf="mobile.errors && (mobile.touched || mobile.dirty)">
+                                                    <span class="alert_text" *ngIf="mobile.errors.required">Indiquez
+                                                        votre Téléphone.</span>
+                                                    <span class="alert_text" *ngIf="mobile.errors.pattern">Indiquez
+                                                        votre Téléphone.</span>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <label>E-mail <span class="red">*</span></label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <input type="text" class="form-control" id="email"
+                                                    [(ngModel)]="res.email" name="email" placeholder="user@user.com"
+                                                    readonly required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <label>Code Postal <span class="red">*</span></label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <input type="text" [(ngModel)]="res.postalCode"
+                                                    #postalCode="ngModel"
+                                                    [ngClass]="{'alert_field': (postalCode.errors && (postalCode.touched || postalCode.dirty))}"
+                                                    name="postalCode" class="form-control"
+                                                    placeholder="La Possession - 97419" readonly required>
+                                                <ng-container
+                                                    *ngIf="postalCode.errors && (postalCode.touched || postalCode.dirty)">
+                                                    <span class="alert_text"
+                                                        *ngIf="postalCode.errors.required">Indiquez
+                                                        votre
+                                                        Ville.</span>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <label>Niveau de tennis <span class="red">*</span></label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <select class="form-control" [(ngModel)]="res.User_Level"
+                                                    name="User_Level" placeholder="Niveau de tennis" readonly>
+                                                    <option value="Débutant" selected>Débutant</option>
+                                                    <option value="Intermédiaire">Intermédiaire</option>
+                                                    <option value="Avancée">Avancée</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <label class="label1">Team <span class="mandatory">*</span></label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <div class="chech_box_services1">
+                                                    <div class="form-group" style="margin-bottom: 0px !important;">
+                                                        <span class="chech_box_services"><input id="Partenaire"
+                                                                type="checkbox" readonly class="service" name="service"
+                                                                value="Partenaire" />
+                                                            Partenaire</span>
+                                                        <span class="chech_box_services"><input id="Sparring"
+                                                                type="checkbox" readonly class="service" name="service"
+                                                                value="Sparring" />
+                                                            Sparring</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <label>Coordonnees bancaires <span class="red">*</span></label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <textarea class="form-control" id="address" style="height:110px;"
+                                                    readonly required [(ngModel)]="res.address" name="res.address"
+                                                    #address="ngModel"
+                                                    [ngClass]="{'alert_field': (address.errors && (address.touched || address.dirty))}">
+                                </textarea>
+                                                <ng-container
+                                                    *ngIf="address.errors && (address.touched || address.dirty)">
+                                                    <span class="alert_text" *ngIf="address.errors.required">Indiquez
+                                                        votre Coordonnees bancaires.</span>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-8 text-left">
+                                        <button type="submit" [disabled]="!user.valid || submit_disabled" disabled
+                                            id="submit" readonly class="btn btn-primary">SAUVEGARDER</button>
+
+                                            <a (click)="makeEnable()"
+                                            style="margin-left:4px; color: #ffffff;"
+                                            class="btn btn-info"><i class="fa fa-edit"></i> MODIFIER</a>
+                                            
+                                                <button
+                                                class="btn btn-primary"
+                                                style="cursor: pointer;"
+                                                (click)="goBack()">
+                                                Retour
+                                                </button>
+                                            
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group bmd-form-group">
+                                        <div class="card card-profile">
+                                            <div class="card-avatar">
+                                                <a href="#pablo">
+                                                    <img class="img" src={{res.User_Image}}>
+                                                </a>
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Photo de profil</h4>
+                                                <div class="upload-btn-wrapper">
+                                                    <button class="btn">Upload a file</button>
+                                                    <input type="file" name="myfile"
+                                                        (change)="changeListener($event)" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form_devarea">
+          <div class="box-body">
+            <div class="delete row book_course_label">
+              <div class="col-md-12">
+                <div>
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Delete Account</h4>
+                      </div>
+                      <div class="modal-body">
+                        <br />
+                        <div
+                          class="form-group bmd-form-grou bmd-form-group is-filled"
+                        >
+                          <div class="row">
+                            <div class="col-md-12">
+                              Appuyez sur Supprimer compte si vous voulez
+                              supprimer votre compte et supprimer toutes vos
+                              données personnelles
+                              <br /><br />
+                              Nous sommes désolés de vous voir partir
+                              <br /><br />
+                              Supprimer votre compte signifie supprimer toutes
+                              vos données personnelles, et l’annulation de tous
+                              les abonnements. Cela ne peut pas être annulé.
+                              <br /><br />
+                              Si vous avez des questions, veuillez communiquer
+                              avec nous à admin@ohmytennis.com.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="modal-footer">
+                        <div class="text-center">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div
+                                class="form_buttons"
+                                style="text-align: center; padding: 0px 20px;"
+                              >
+                                <button
+                                  type="button"
+                                  id="cancelBtn"
+                                  class="btn btn-danger"
+                                  (click)="modalclose()"
+                                  style="cursor: pointer;"
+                                >
+                                  Annuler
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-success"
+                                  (click)="_delete_account()"
+                                  style="cursor: pointer;"
+                                >
+                                  Delete Account
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

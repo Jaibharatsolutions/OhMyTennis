@@ -1,0 +1,429 @@
+<div class="content clublist_content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form_devarea">
+          <h4>{{ this._const("PATH.ADMIN.DYNAMICMENU.TITLE") }}</h4>
+          <div class="~box-body">
+            <div class="text-right">
+              <a
+                id="avBtn"
+                href="javascript:;"
+                routerLink="{{
+                  '/' +
+                    this._const('PATH.ADMIN.SELF') +
+                    '/' +
+                    this._const('PATH.ADMIN.DYNAMICMENUFORM.SELF')
+                }}"
+                ><i class="fa fa-plus-circle color-green"></i
+              ></a>
+            </div>
+          </div>
+          <br />
+          <div class="book_coursetab" style="overflow-x: auto;">
+            <table class="table book_coursetable">
+              <thead>
+                <tr>
+                  <th class="pull-left">Menu</th>
+                  <th></th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="btn_blocksec"
+                  *ngFor="
+                    let group of datanew
+                      | paginate: { itemsPerPage: 10, currentPage: p };
+                    let i = index
+                  "
+                >
+                  <td>
+                    <ol>
+                      <li>
+                        <div class="pull-left">
+                          <b
+                            >{{ group.main_name }} - &nbsp;<i
+                              class="fa fa-trash-o"
+                              *ngIf="group.isDelete == 0"
+                              (click)="delete(group.id, 'identity_mainmenu')"
+                            ></i>
+                            &nbsp;<i
+                              class="fa fa-edit"
+                              (click)="onClick(group, 'main')"
+                              style="cursor: pointer;font-weight: bold;"
+                            ></i> </b
+                          ><br />
+                        </div>
+                        <ol>
+                          <br />
+                          <li *ngFor="let primary of group.child">
+                            <div class="pull-left">
+                              {{ primary.primary_menu }} - &nbsp;<i
+                                class="fa fa-trash-o"
+                                *ngIf="primary.isDelete == 0"
+                                (click)="delete(primary.id, 'identity_primary')"
+                              ></i>
+                              &nbsp;<i
+                                class="fa fa-edit"
+                                (click)="onClick(primary, 'primary')"
+                                style="cursor: pointer;font-weight: bold;"
+                              ></i>
+                              <br />
+                            </div>
+                            <ol class="second_submenu">
+                              <br />
+                              <li *ngFor="let secondary of primary.children">
+                                <div class="pull-left">
+                                  {{ secondary.secondary_menu }} - &nbsp;<i
+                                    class="fa fa-trash-o"
+                                    *ngIf="secondary.is_delete == 0"
+                                    (click)="
+                                      delete(secondary.id, 'identity_secondary')
+                                    "
+                                  ></i
+                                  >&nbsp;<i
+                                    class="fa fa-edit"
+                                    (click)="onClick(secondary, 'secondary')"
+                                    style="cursor: pointer;font-weight: bold;"
+                                  ></i
+                                  ><br />
+                                </div>
+                              </li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </td>
+                  <td></td>
+                  <td>
+                    Add Primary Menu &nbsp;
+                    <i
+                      class="fa fa-plus"
+                      (click)="addPrimaryMenu(group, 'primary')"
+                      style="cursor: pointer;font-weight: bold;"
+                    ></i>
+                    <br />
+                    Add Secondary Menu &nbsp;
+                    <i
+                      class="fa fa-plus"
+                      (click)="addSecondaryMenu(group, 'secondary')"
+                      style="cursor: pointer;font-weight: bold;"
+                    ></i>
+                  </td>
+                </tr>
+                <tr class="btn_blocksec" *ngIf="datanew.length == 0">
+                  <td colspan="5">No Content</td>
+                </tr>
+              </tbody>
+            </table>
+            <pagination-controls
+              (pageChange)="p = $event"
+              previousLabel="Précédent"
+              style="float: right; padding: 11px;"
+              nextLabel="Prochain"
+              directionLinks="true"
+              autoHide="true"
+              responsive="true"
+            >
+            </pagination-controls>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="myModal" [style.display]="showModal ? 'block' : 'none'">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          (click)="hide()"
+          class="close"
+          data-dismiss="modal"
+        >
+          &times;
+        </button>
+        <h4 class="modal-title">Confirmer le contrôle</h4>
+      </div>
+      <div class="modal-body" style="padding: 15px!important;">
+        <input
+          type="text"
+          [(ngModel)]="menuname"
+          name="menuname"
+          class="form-control"
+          placeholder="Nom du menu"
+          required
+        />
+        <input
+          type="hidden"
+          [(ngModel)]="menuId"
+          name="menuId"
+          class="form-control"
+        />
+
+        <input
+          type="hidden"
+          [(ngModel)]="menuPosition"
+          name="menuPosition"
+          class="form-control"
+        />
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          (click)="onUpdateMenuName($event, menuname, menuId, menuPosition)"
+          class="btn btn-success"
+          data-dismiss="modal"
+        >
+          Oui
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal"
+  id="myModal"
+  [style.display]="showPrimaryModal ? 'block' : 'none'"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          (click)="hide()"
+          class="close"
+          data-dismiss="modal"
+        >
+          &times;
+        </button>
+        <h4 class="modal-title">Confirmer le contrôle</h4>
+      </div>
+      <div class="modal-body" style="padding: 15px!important;">
+        <form #user="ngForm" (ngSubmit)="onSubmit(res)">
+          <div class="col-xs-12 col-md-12">
+            <div class="form-group bmd-form-group">
+              <div class="row">
+                <div class="col-xs-12 col-md-4">
+                  <label>Main menu </label>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <input
+                    type="text"
+                    [(ngModel)]="res.mainname"
+                    #mainname="ngModel"
+                    name="mainname"
+                    class="form-control"
+                    placeholder="Nom du sous-menu"
+                    tabindex="1"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12">
+            <div class="form-group bmd-form-group">
+              <div
+                class="row"
+                *ngFor="let rowData of availablity; let idx = index"
+              >
+                <div class="col-xs-12 col-md-4">
+                  <label>Primary menu</label>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <input
+                    type="text"
+                    name="primarymenu"
+                    class="form-control"
+                    placeholder="Nom du sous-menu"
+                    tabindex="2"
+                    [(ngModel)]="availablity[idx].primarymenu"
+                    name="primarymenu-{{ idx }}"
+                  /><br />
+                </div>
+                <div class="col-xs-12 col-md-2">
+                  <a
+                    ><i
+                      class="fa fa-plus"
+                      (click)="addPrimaryMenus()"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  &nbsp;&nbsp;
+                  <a
+                    ><i
+                      class="fa fa-minus"
+                      *ngIf="availablity.length > 1"
+                      (click)="removePrimaryMenu(idx)"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12">
+            <div class="form-group bmd-form-group">
+              <div class="row">
+                <div class="col-xs-12 col-md-8">
+                  <button
+                    type="button"
+                    (click)="onAddPrimaryMenuName(res)"
+                    class="btn btn-success"
+                    data-dismiss="modal"
+                  >
+                    Enregistrer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal"
+  id="myModal"
+  [style.display]="showSecondaryModal ? 'block' : 'none'"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          (click)="secondaryHide()"
+          class="close"
+          data-dismiss="modal"
+        >
+          &times;
+        </button>
+        <h4 class="modal-title">Confirmer le contrôle</h4>
+      </div>
+      <div class="modal-body" style="padding: 15px!important;">
+        <form #user="ngForm" (ngSubmit)="onSubmit(res)">
+          <div class="col-xs-12 col-md-12">
+            <div class="form-group bmd-form-group">
+              <div class="row">
+                <div class="col-xs-12 col-md-4">
+                  <label>Main menu </label>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <input
+                    type="text"
+                    [(ngModel)]="resSec.mainname"
+                    #mainname="ngModel"
+                    name="mainname"
+                    class="form-control"
+                    placeholder="Nom du sous-menu"
+                    tabindex="1"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12">
+            <div class="form-group bmd-form-group">
+              <div class="row">
+                <div class="col-xs-12 col-md-4">
+                  <label>Primary menu </label>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <select
+                    class="form-control"
+                    id="exampleFormControlSelect2"
+                    [(ngModel)]="resSec.primarymenu"
+                    name="primarymenu"
+                    #primarymenu="ngModel"
+                    [ngClass]="{
+                      alert_field:
+                        primarymenu.errors &&
+                        (primarymenu.touched || primarymenu.dirty)
+                    }"
+                    tabindex="2"
+                  >
+                    <option value="">Sélectionnez le nom du menu </option>
+                    <option
+                      value="{{ l.id }}"
+                      *ngFor="let l of primarymenu_array; let i = index"
+                      >{{ l.mainMenu }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12">
+            <div class="form-group bmd-form-group">
+              <div
+                class="row"
+                *ngFor="let rowData of availablitySecondary; let idx = index"
+              >
+                <div class="col-xs-12 col-md-4">
+                  <label>Secondary menu</label>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <input
+                    type="text"
+                    name="secondarymenu"
+                    class="form-control"
+                    placeholder="Nom du sous-menu"
+                    tabindex="2"
+                    [(ngModel)]="availablitySecondary[idx].secondarymenu"
+                    name="secondarymenu-{{ idx }}"
+                  /><br />
+                </div>
+                <div class="col-xs-12 col-md-2">
+                  <a
+                    ><i
+                      class="fa fa-plus"
+                      (click)="addSecondaryMenus()"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  &nbsp;&nbsp;
+                  <a
+                    ><i
+                      class="fa fa-minus"
+                      *ngIf="availablitySecondary.length > 1"
+                      (click)="removeSecondaryMenu(idx)"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12">
+            <div class="form-group bmd-form-group">
+              <div class="row">
+                <div class="col-xs-12 col-md-8">
+                  <button
+                    type="button"
+                    (click)="onAddSecondaryMenuName(resSec)"
+                    class="btn btn-success"
+                    data-dismiss="modal"
+                  >
+                    Enregistrer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,223 @@
+<!-- Banner starts -->
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<div class="innerbanner" style="background-color:#000">
+  <img
+    src="../assets/images/cours-particuliers-de-tennis.jpg"
+    style="width:100%;opacity:0.8"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>Mentions légales Ohmytennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Recherche
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_concept_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Mentions légales Ohmytennis</h1>
+          <img src="../assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h3>DÉFINITIONS OHMYTENNIS</h3>
+          <p>
+            Les présentes Mentions légales sont proposées par la société LEP
+            SPORTS (ci-après la « Société »), SASU au capital de 5 000 euros,
+            inscrite au Registre du commerce et des sociétés de PARIS sous le
+            numéro 81778949800018, dont le siège social est 43, rue de la
+            Chaussée d'Antin, 75009 Paris, France. Son numéro de téléhone non
+            surtaxé est le 0683587013, son adresse de courrier électronique est
+            julienmilgram@proftennis.com et son numéro individuel
+            d’identification TVA intracommunautaire FR 80 817789498.
+          </p>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h3>Propriétaire et éditeur du site OHMYTENNIS</h3>
+          <p>
+            La société est propriétaire et éditeur du site internet
+            ohmytennis.com (ci-après le "Site"). Le Site est hébergé par [nom de
+            l'hébergeur], [forme sociale de l'hébergeur], domiciliée au [siège
+            social de l'hébergeur], joignable au [numéro de téléhone de
+            l'hébergeur].
+          </p>
+          <p>Le directeur de la publication est Monsieur Julien Milgram.</p>
+          <p>
+            Le Site propose au Client (ci-après le "Client") la mise à
+            disposition d’une plateforme permettant d’entrer en contact avec des
+            professionnels du tennis (ci-après les "Services").
+          </p>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h3>Utilisation du site internet OHMYTENNIS</h3>
+          <p>
+            Avant toute utilisation du Site, le Client doit s’assurer qu’il
+            dispose des moyens techniques et informatiques lui permettant
+            d’utiliser le Site et de commander les Services sur le Site, et que
+            son navigateur permet un accès sécurisé au Site. Le Client doit
+            également s’assurer que la configuration informatique de son
+            matériel/équipement est en bon état et ne contient pas de virus.
+          </p>
+          <p>
+            lien contextualisé : Découvrez les conditions générales de vente du
+            site Ohmytennis lien contextualisé : Découvrez les conditions
+            générales d’utilisation du site Ohmytennis lien contextualisé :
+            Connaissez vous tous les termes du tennis ?.
+          </p>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_concept_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Nous proposons aux passionnés de tennis d'avoir un univers
+            spécialement créé pour eux.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+
+<!-- section3 starts -->
+<div class="section3 des_concept_circletext haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="../assets/images/concept_icon1.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a href="concept_présentation.html"
+              >Présentation <br />Générale</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="../assets/images/concept_icon2.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a href="concept_lacharte.html"
+              >La charte <br />de Qualité</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="../assets/images/concept_icon3.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a href="concept_engagements.html"
+              >Nos <br />Engagements</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="../assets/images/concept_icon4.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a href="concept_informations.html"
+              >Informations<br />
+              Réglementaires</a
+            ></strong
+          >
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<!-- section3 ends -->

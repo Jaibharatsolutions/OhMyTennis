@@ -1,0 +1,77 @@
+.latest-blog-posts {
+  position: relative;
+
+  .container-fluid {
+    padding: 60px;
+    position: relative;
+    max-width: 1230px;
+  }
+
+  .thumbnail {
+    margin: 0 15px;
+  }
+
+  .customNavigation {
+    transform: translateY(-50%);
+    top: calc(50% - 37px);
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+
+  .customNavigation > span {
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+  }
+
+  .pager-left {
+    left: calc(0% + 15px);
+  }
+
+  .pager-right {
+    right: calc(0% + 15px);
+  }
+
+  .next,
+  .prev {
+    font-size: 28px;
+    color: #ccc;
+  }
+}
+
+.download_app {
+  background: #f5f5f5;
+}
+.download.btn_sec a {
+  display: inline-block;
+}
+.download.btn_sec span {
+  color: #ff5722;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  vertical-align: middle;
+}
+.play_download {
+  margin: 75px;
+}
+.play_download h5 {
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.play_download img span {
+  float: left;
+}
+.clearfix {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .download_app {
+    background: url("../../../assets/images/phone-bg1.png") top right no-repeat;
+    background-size: contain;
+    min-height: 600px;
+  }
+}

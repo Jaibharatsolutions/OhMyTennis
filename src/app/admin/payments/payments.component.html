@@ -1,0 +1,46 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form_devarea">
+          <h4>PAIEMENTS</h4>
+          <div class="~box-body">
+            <table
+              class="coach_listable table table-striped table-bordered table-sm row-border hover"
+              id="datatable"
+            >
+              <thead>
+                <tr>
+                  <th>Sl.no</th>
+                  <th>Nom de l'entraîneur</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="btn_blocksec"
+                  *ngFor="let group of datanew; let i = index"
+                >
+                  <td>{{ i + 1 }}</td>
+                  <td>
+                    {{ group.name }}
+                  </td>
+                  <td>
+                    <button
+                      id="approveBtn"
+                      class="btn btn-block btn-success"
+                      (click)="getCoachIndividualData(group.slno)"
+                    >
+                    Vue
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

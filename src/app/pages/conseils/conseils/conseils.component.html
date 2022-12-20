@@ -1,0 +1,201 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Ohmyconseils</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <p>
+          Vous souhaitez mieux comprendre le concept de notre plateforme
+          Ohmytennis, n’hésitez pas à découvrir notre présentation générale, la
+          réglementation du tennis, nos engagements et la charte de qualité des
+          éducateurs. Tout ceci vous aidera certainement mieux à cerner ce que
+          nous vous proposons pour commencer à jouer.
+        </p>
+        <h5><strong>Jouer au tennis</strong></h5>
+        <p>
+          Lors de votre première partie, vous devez impérativement vous habiller
+          comme tout joueur de tennis qui se respecte. Vous trouverez des
+          conseils sur l’équipement, le matériel à apporter ou encore sur la
+          réservation de terrain. Concernant votre premier cours, il est
+          nécessaire d’avoir la bonne démarche mentale afin de progresser. Toute
+          personne qui vient prendre un cours doit passer un bon moment avec son
+          professeur qui est un véritable guide pour vous.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_advice22.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tarif-cours-de-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5><strong>Matcher au tennis</strong></h5>
+        <p>
+          Votre premier match (non officiel) constitue un test pour connaître
+          les règles du tennis, appliquer des points abordés en cours avec
+          moniteur et tester sa faculté à rester concentrer. N’oubliez pas que
+          tout le monde peut faire des matchs, il est tout à fait possible de
+          faire des matchs adaptés (laisser 2 rebonds maximum ou accepter 3
+          services) Votre premier tournoi officiel sera l’occasion de vous
+          tester psychologiquement afin de mieux vous connaître. Il est
+          important de prendre en compte tous les éléments liés à cet
+          environnement de compétition surtout sur le plan organisationnel afin
+          de ne pas être « dépassé » par l’enjeu sur jour la.
+        </p>
+      </div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5><strong>Les conseils au tennis</strong></h5>
+        <p>
+          Pour la diététique l’accent est mis sur l’hydratation et
+          l’alimentation avant, pendant et après la pratique. Le but est de
+          préparer le corps à l’effort, optimiser le rendement durant l’effort
+          et récupérer après l’effort afin de pouvoir recommencer. L’entretien
+          de votre forme physique pour faire un match de tennis sera essentielle
+          et nous vous mettons à disposition 10 conseils simples pour être en
+          forme et ne pas se blesser. Tout ceci également dans le but de pouvoir
+          prolonger au maximum votre plaisir sur le terrain.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_advice3.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row middle_contents">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/cours-individuel-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5><strong>Le matériel au tennis</strong></h5>
+        <p>
+          Choisir son matériel est passage nécessaire pour optimiser votre
+          performance sur le court de tennis. Cela concerne votre raquette, le
+          cordage, les balles , chaussures et même les accessoires. Votre
+          physique sera un premier critère afin de mettre en main une raquette
+          adaptée pour ne pas vous blesser. Certains magasins vous proposent de
+          tester leur raquette avant de les acheter. Cela concerne plutôt des
+          raquettes milieu de gamme voire haut de gamme. C’est un service
+          apprécié des joueurs de tennis car « sentir » une raquette juste en la
+          prenant en main n’est pas forcément très parlant. Le mieux c’est de le
+          ressentir sur le terrain en situation réelle en frappant la balle.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

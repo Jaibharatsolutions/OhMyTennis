@@ -1,0 +1,54 @@
+// @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+// @import "../node_modules/@syncfusion/ej2-angular-navigations/styles/material.css";
+.gallery img {
+  border-radius: 10px 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.banner1 {
+  background: #fff;
+  position: relative;
+  padding-bottom: 1px;
+  border-radius: 15px 15px 15px 15px;
+  background-color: white;
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
+  width: 100%;
+}
+
+.admin_tempstyle .card1 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border: 0;
+  margin-bottom: -4px;
+  margin-top: 2px;
+  border-radius: 0;
+  color: #333333;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  min-height: 155px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #eeeeee;
+  border-radius: 0.25rem;
+}
+.admin_tempstyle .card-profile1 {
+  margin-top: -28px;
+  text-align: center;
+}
+
+.chech_box_services2 {
+  display: block;
+  padding-bottom: -12px;
+}
+
+.form-group {
+  margin-bottom: 13px !important;
+}

@@ -1,0 +1,290 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">
+            Les 10 conseils de Ohmytennis pour optimiser votre forme physique
+          </h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >1. Réveillez-vous plusieurs heures avant le match de tennis</strong
+          >
+        </h2>
+        <p>
+          Vous avez un entrainement ou un match de tennis à 9h00 ; or là il est
+          8h00, vous êtes encore au lit, et vous pensez être large… Et bien
+          c’est faux. Votre corps à besoin de se réveiller avant de donner la
+          pleine mesure de lui-même et donc, avant de faire une partie de
+          tennis. Essayez d’anticiper un peu l’heure du réveil ; cela vous
+          permettra de vous mettre dans les meilleures conditions pour le match
+          de tennis, de faire la différence sur le plan physique mais aussi
+          mental, et pour éviter les blessures.
+        </p>
+        <h2>
+          <strong
+            >2. Pensez à vous échauffer avant l’entrainement ou le match de
+            tennis.</strong
+          >
+        </h2>
+        <p>
+          Une fois sur le court de tennis, il est tout à fait inapproprié de se
+          mettre dans le rouge dès les premiers échanges c’est à dire de jouer
+          directement à 100%, alors pensez à vous échauffer progressivement pour
+          diminuer les chances de vous blesser pendant le match ou le court de
+          tennis. Les muscles bien sûr, mais aussi les articulations, et sans
+          oublier le cœur. Vous devez monter en température progressivement, et
+          élever le rythme avant que les choses sérieuses ne commencent avec le
+          joueur de tennis en face de vous.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/forme-physique-tennis.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/la-preparation-physique-tennis.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >3. Jouez avec des chaussures adaptées à la pratique du
+            tennis</strong
+          >
+        </h2>
+        <p>
+          Il ne viendrait à l’idée de personne de jouer au football avec des
+          chaussures d’escalade – ni l’inverse d’ailleurs… Il en va de même pour
+          les chaussures de tennis. Celles-ci vous garantissent à la fois un
+          maintien, un amorti et une semelle adaptés à la pratique du tennis. Il
+          est donc important d’avoir des chaussures adaptées jouer un meilleur
+          tennis. Rappelons néanmoins que les modèles les plus onéreux ne sont
+          pas obligatoirement les plus adaptés à votre tennis.
+        </p>
+        <h2>
+          <strong
+            >4.Faites toujours des étirements après un entraînement ou un match
+            de tennis
+          </strong>
+        </h2>
+        <p>
+          La pratique du tennis vous demande de prendre soin de votre corps.
+          Pour durer dans un tournoi de tennis par exemple, les étirements sont
+          incontournables pour différentes raisons. Ils vous permettront
+          d’optimiser la récupération pendant et après les matchs de tennis,
+          mais ça vous permettra aussi de diminuer les risques de blessures.
+          Demandez à votre professeur de tennis de vous conseiller sur les
+          mouvements les plus adaptés avant et après un cours de tennis. Même si
+          vous avez pas beaucoup de temps, sachez que même les plus grands
+          joueurs de tennis s’étirent avant et après chaque match, alors prenez
+          le temps.
+        </p>
+      </div>
+    </div>
+
+    <div class="row middle_contents split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2><strong>5. Ecoutez votre corps</strong></h2>
+        <p>
+          Une douleur à la cheville, aux bras, au tendon d’Achille, des
+          difficultés à récupérer, ou au contraire un besoin intense de
+          pratiquer… sont autant de messages et de signaux que votre corps vous
+          donne pour arrêter le cours ou le match de tennis . Ecouter son corps
+          permet de mieux se connaître, mais aussi de se placer dans une logique
+          de progression durable. Observer des temps de repos et n’oubliez pas,
+          au tennis, votre corps reste votre meilleur ami : choyez-le !
+        </p>
+        <h2>
+          <strong
+            >6. Pensez à prendre une casquette lorsque vous êtes sur le court de
+            tennis
+          </strong>
+        </h2>
+        <p>
+          Sur les courts extérieurs, bien souvent il n’y a pas d’ombre. Et on en
+          compte plus le nombre de joueurs qui ont commencé à ressentir des maux
+          de têtes dans les heures qui ont suivi leur entraînement : le verdict
+          est simple, l’insolation… L’éviter est tout aussi simple : il suffit
+          de mettre une casquette. Un geste simple qui pourra vous rapporter
+          gros.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/conseils-tennis12.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+
+    <div class="row middle_contents split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/condition-physique-tennis.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >7. Privilégiez la pratique plus légère et régulière du tennis
+            plutôt qu’une pratique massive et ponctuelle
+          </strong>
+        </h2>
+        <p>
+          Il est peut être amusant de jouer une fois 5h00 par mois, mais
+          finalement ce n’est pas très utile. Ni pour votre corps, ni pour votre
+          tennis. Si vous voulez optimiser la plus-value de la pratique du
+          tennis et réellement progresser, privilégiez des séances plus courtes
+          et plus régulières. Vous verrez très vite la différence. 1 à 2 séances
+          par semaine d’une heure est vivement conseillé.
+        </p>
+        <h2>
+          <strong>8. Tenez un carnet de bord de vos cours de tennis</strong>
+        </h2>
+        <p>
+          Le plus difficile dans la pratique d’un sport, c’est de durer. Surtout
+          lorsque vient l’hiver… tenir un carnet de bord de vos entraînement et
+          de vos matchs de tennis permet à la fois d’objectiver votre niveau de
+          pratique, de visualiser votre progression, et ravive votre motivation.
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2><strong>9. Communiquez avec votre professeur de tennis</strong></h2>
+        <p>
+          Votre prof de tennis est à la fois garant de votre progression et de
+          votre sécurité. Il est aussi votre conseil, sachant s’adapter à vos
+          caractéristiques, à vos besoins et à vos envies. Cela passe par
+          l’instauration d’un dialogue permanent entre le professeur e tennis et
+          l’élève. La bonne communication sera alors un incontournable d’une
+          relation durable et profitable.
+        </p>
+        <h2>
+          <strong>10. Entretien physique en dehors du terrain de tennis</strong>
+        </h2>
+        <p>
+          Accordez vous un footing (30 min si possible) par semaine sur une
+          surface autre que le ciment (pas bon pour les genoux. Un bénéfice
+          d’endurance sera observable dans le temps et vous trouverez plus
+          facilement votre second souffle afin de prolonger le plaisir de jouer
+          !
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/entrainement-physique-tennis.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

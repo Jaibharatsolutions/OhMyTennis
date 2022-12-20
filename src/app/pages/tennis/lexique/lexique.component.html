@@ -1,0 +1,176 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section3 starts -->
+<div class="section3 events_page lexique_page">
+  <div class="container">
+    <div class="row">
+      <div class="page_title_div col-xs-12">
+        <h1 class="page_title">Lexique</h1>
+        <img src="./assets/images/title_border.png" alt="title_border" />
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="lexique_detail_sec">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img
+            src="./assets/images/Lexique-tennis-lettre-A-D.jpg"
+            class="img-responsive center-block"
+          />
+          <p class="lexique_section_title">Lettre A - Lettre D</p>
+          <p class="events_section_para">
+            <strong>A:</strong> cette lettre est employée pour indiquer une
+            égalité de points pendant un jeu, soit 15-A pour 15-15, 30-A pour
+            30-30 et 40-A pour 40-40 lors d’un match de tennis.
+          </p>
+          <p class="lexique_section_title">
+            <a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.TENNIS.LEXIQUEATOD.SELF')
+              }}"
+              class="btn btn-primary lex_btn"
+              >EN SAVOIR PLUS</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="lexique_detail_sec">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img
+            src="./assets/images/Lexique-tennis-lettre-E-M.jpg"
+            class="img-responsive center-block"
+          />
+          <p class="lexique_section_title">Lettre E - Lettre M</p>
+          <p class="events_section_para">
+            <strong>Échange:</strong> ensemble des coups (coup droit , revers ,
+            service , voléee) au tennis réalisé pendant un point.
+          </p>
+          <p class="lexique_section_title">
+            <a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.TENNIS.LEXIQUEETOM.SELF')
+              }}"
+              class="btn btn-primary lex_btn"
+              >EN SAVOIR PLUS</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="lexique_detail_sec">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img
+            src="./assets/images/Lexique-tennis-lettre-N-P.jpg"
+            class="img-responsive center-block"
+          />
+          <p class="lexique_section_title">Lettre N - Lettre Q</p>
+          <p class="events_section_para">
+            <strong>Net:</strong> un service est annoncé let (ou filet) lorsque
+            la balle touche la bande du filet tout en retombant dans le carré de
+            service. Le joueur de tennis doit refaire un service.
+          </p>
+          <p class="lexique_section_title">
+            <a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.TENNIS.LEXIQUENTOQ.SELF')
+              }}"
+              class="btn btn-primary lex_btn"
+              >EN SAVOIR PLUS</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="lexique_detail_sec">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img
+            src="./assets/images/Lexique-tennis-lettre-R-Z.jpg"
+            class="img-responsive center-block"
+          />
+          <p class="lexique_section_title">Lettre R - Lettre Z</p>
+          <p class="events_section_para">
+            <strong>Race:</strong> Classement des joueurs et des joueuses de
+            tennis adoptés depuis 2000 (pour la petite histoire Fabrice Santoro
+            est le premier numero mondial de la Race).
+          </p>
+          <p class="lexique_section_title">
+            <a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.TENNIS.LEXIQUERTOZ.SELF')
+              }}"
+              class="btn btn-primary lex_btn"
+              >EN SAVOIR PLUS</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<!-- section3 ends -->
+
+<app-footer></app-footer>

@@ -1,0 +1,168 @@
+<div class="sidebar-wrapper">
+  <div class="user_profsm">
+    <img src="{{ image }}" alt="{{ this.username }}" class="user_smicon" />
+    <span>{{ this.username }}</span>
+  </div>
+  {{ this.url }}
+  <ul class="nav">
+    <li
+      *ngFor="let l of leftPanel(); let i = index"
+      [ngClass]="
+        l.path === '/coach/Tounament' && l.path === this.router.url
+          ? 'tour_mainmenu nav-item active'
+          : l.path === '/coach/Stage' && l.path === this.router.url
+          ? 'stage_mainmenu nav-item active'
+          : l.path === '/coach/Animation' && l.path === this.router.url
+          ? 'animation_mainmenu nav-item active'
+          : l.path === this.router.url
+          ? 'nav-item active'
+          : null
+      "
+    >
+      <a
+        routerLink="{{ l.path }}"
+        (click)="stageclick()"
+        *ngIf="l.path === '/coach/Stage'"
+        class="nav-link"
+        href="javascript:;"
+      >
+        <i [ngClass]="l.iclass"></i>
+        <p
+          [ngClass]="l.style ? 'nav-sub-title' : null"
+          [innerHTML]="l.title"
+        ></p>
+      </a>
+      <a
+        routerLink="{{ l.path }}"
+        (click)="tounamentclick()"
+        *ngIf="l.path === '/coach/Tounament'"
+        class="nav-link"
+        href="javascript:;"
+      >
+        <i [ngClass]="l.iclass"></i>
+        <p
+          [ngClass]="l.style ? 'nav-sub-title' : null"
+          [innerHTML]="l.title"
+        ></p>
+      </a>
+      <a
+        routerLink="{{ l.path }}"
+        (click)="animationclick()"
+        *ngIf="l.path === '/coach/Animation'"
+        class="nav-link"
+        href="javascript:;"
+      >
+        <i [ngClass]="l.iclass"></i>
+        <p
+          [ngClass]="l.style ? 'nav-sub-title' : null"
+          [innerHTML]="l.title"
+        ></p>
+      </a>
+
+      <a
+        routerLink="{{ l.path }}"
+        (click)="bookingclick()"
+        *ngIf="l.path === '/coach/reservation'"
+        class="nav-link notification"
+        href="javascript:;"
+      >
+        <i [ngClass]="l.iclass"></i>
+        <p
+          [ngClass]="l.style ? 'nav-sub-title' : null"
+          [innerHTML]="l.title"
+        ></p>
+        <span class="badge" *ngIf = "count_coach_id">{{count_coach_id}}</span>
+      </a>
+
+      <a
+        routerLink="{{ l.path }}"
+        (click)="commonMenuclick()"
+        *ngIf="
+          l.path !== '/coach/Stage' &&
+          l.path !== '/coach/Animation' &&
+          l.path !== '/coach/Tounament'
+        "
+        class=" nav-link"
+        href="javascript:;"
+      >
+        <i [ngClass]="l.iclass"></i>
+        <p
+          [ngClass]="l.style ? 'nav-sub-title' : null"
+          [innerHTML]="l.title"
+        ></p>
+      </a>
+      <div
+        [ngClass]="{
+          'tour_submenu ng-star-inserted activecl tour_submenu11': tourClass === true,
+          tour_submenu: tourClass === false
+        }"
+        *ngIf="l.path === '/coach/Tounament' && tournList.length > 0"
+      >
+        <ul class="nav">
+          <li
+            *ngFor="let ls of tournList; let k = index"
+            class="nav-item"
+            [ngClass]="null"
+          >
+            <a class="" (click)="editTournament(ls.tourn_id, ls.coach_id)">
+              <p
+                [ngClass]="ls.style ? 'nav-sub-title' : null"
+                [innerHTML]="ls.title"
+              ></p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        [ngClass]="{
+          'stage_submenu ng-star-inserted activecl stage_submenu11': stageClass === true,
+          stage_submenu: stageClass === false
+        }"
+        *ngIf="l.path === '/coach/Stage' && stageList.length > 0"
+      >
+        <ul class="nav">
+          <li
+            *ngFor="let st of stageList; let j = index"
+            class="nav-item"
+            [ngClass]="null"
+          >
+            <a class="" (click)="editStage(st.stage_id, st.coach_id)">
+              <p
+                [ngClass]="st.style ? 'nav-sub-title' : null"
+                [innerHTML]="st.title"
+              ></p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        [ngClass]="{
+          'animation_submenu ng-star-inserted activecl animation_submenu11':
+            animationClass === true,
+          animation_submenu: animationClass === false
+        }"
+        *ngIf="l.path === '/coach/Animation' && animationList.length > 0"
+      >
+        <ul class="nav">
+          <li
+            *ngFor="let ai of animationList; let m = index"
+            class="nav-item"
+            [ngClass]="null"
+          >
+            <a
+              class=""
+              (click)="editAnimation($event, ai.stage_id, ai.coach_id)"
+            >
+              <p
+                [ngClass]="ai.style ? 'nav-sub-title' : null"
+                [innerHTML]="ai.title"
+              ></p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

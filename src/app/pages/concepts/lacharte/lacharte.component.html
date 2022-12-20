@@ -1,0 +1,448 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/cours-particuliers-de-tennis.jpg"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>Oh My Concept</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_titre_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Charte des professeurs Ohmytennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h3><strong>Préambule :</strong></h3>
+        <p>
+          Le professeur de tennis ohmytennis est un professionnel, diplômé,
+          exerçant contre rémunération. il transmet dans l’intérêt général et en
+          exerçant sa misssion d’accompagnement, son savoir, savoir être,
+          savoir-faire et se doit d’offrir une image exemplaire.
+        </p>
+        <p>
+          Dans le cadre de ses missions il engage en permanence l’image de
+          ohmytennis. Le développement individuel, tennistique et humain des
+          pratiquants dont il a la charge est au cœur de ses préoccupation
+        </p>
+        <p>
+          ohmytennis labellise un encadrement, en étant garant de sa compétence,
+          de son professionnalisme et de son éthique.<br />
+          ohmytennis est ainsi à la fois une vitrine et une certification
+          qualité pour l’ensemble des entraîneurs labellisés.
+        </p>
+        <p class="para_nomargin">
+          Agissant pour ohmytennis, chaque éducateur dans le cadre de ses
+          activités professionnelles, engage l’image de ohmytennis.
+        </p>
+        <p class="~para_nomargin">
+          Au travers des éléments qui suivent, cette charte de l’éducateur doit
+          constituer l’engagement que prendra tout éducateur lors de sa prise de
+          fonction au sein de ohmytennis.
+        </p>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_court.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_court3.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h3 style="font-size:15px; font-weight: bold;">
+          CHARTE DE L’EDUCATEUR SPORTIF OHMYTENNIS:
+        </h3>
+        <h5><strong>Respect des règlements :</strong></h5>
+        <p><strong>Préconisations/obligations :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>
+            Connaître les règlements du tennis et du code du sport et s’y
+            conformer est l’une des tâches fondamentale de l’éducateur.
+          </li>
+          <li>
+            L’enseignement de la règle du tennis – et du code du sport - doit
+            mettre en valeur ses raisons, notamment avant, pendant et après les
+            animations.
+          </li>
+          <li>
+            Placer le pratiquant (son développement, son bien-être, sa santé) au
+            centre de toutes ses attentions.
+          </li>
+        </ul>
+        <p><strong>Comportements répréhensibles :</strong></p>
+        <ul>
+          <li>
+            Manquements aux règlements et tous contournements de l’éthique.
+          </li>
+          <li>Manquements au droit de réserve.</li>
+          <li>Tout comportement portant atteinte à l’image de ohmytennis.</li>
+          <li>Prise en compte insuffisante des intérêts du client.</li>
+          <li>Refus de travailler.</li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5><strong>Ponctualité :</strong></h5>
+        <p><strong>Préconisations/obligations :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>Se conformer aux exigences du métier.</li>
+          <li>
+            Tenir informé ohmytennis et ses élèves des absences, maladies,
+            retards
+          </li>
+        </ul>
+        <p><strong>Comportements répréhensibles :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>
+            Ne pas justifier ses retards et absences. Chaque retard ou absence
+            signalé par les pratiquants fera l’objet d’une remontrance
+            spécifique pouvant aller jusqu’à l'exclusion de ohmytennis.
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_court2.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot" style="padding-top:13px;">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_court5.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5><strong>Tenue adaptée :</strong></h5>
+        <p><strong>Préconisations/obligations :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>Se conformer aux exigences du métier.</li>
+          <li>
+            Etre vêtu de telle façon à être reconnu de tous comme le référent de
+            l’animation.
+          </li>
+          <li>
+            Avoir une attitude conforme à l’éthique sportive ( expression orale
+            et corporelle, politesse, civisme…).
+          </li>
+        </ul>
+        <p><strong>Comportements répréhensibles :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>
+            Nuire à l’image d’éducateur et par ce fait à celle de ohmytennis.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row split_marginbot" style="padding-top:13px;">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5><strong>Se responsabiliser :</strong></h5>
+        <p><strong>Préconisations/obligations :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>
+            Les éducateurs sportifs doivent se mettre au service du collectif.
+          </li>
+          <li>
+            Les éducateurs sportifs doivent avertir ohmytennis de toutes
+            modifications d’emploi du temps ou du lieu de structure en cas de
+            changement (ex : incendie de salle…)
+          </li>
+          <li>
+            Les éducateurs sportifs doivent faire remonter toutes les
+            informations utiles au bon fonctionnement de l’association
+            ohmytennis.
+          </li>
+        </ul>
+        <p><strong>Comportements répréhensibles :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>Refuser de se plier aux exigences du métier.</li>
+        </ul>
+        <p class="para_nomargin">
+          Chaque manquement signalé par les pratiquants fera l’objet d’une
+          remontrance spécifique pouvant aller jusqu’à exclusion de ohmytennis.
+        </p>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_court4.png"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot" style="padding-top:13px;">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_court7.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5>
+          <strong>S’éduquer au respect de l’environnement et d’autrui :</strong>
+        </h5>
+        <p><strong>Préconisations/obligations :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>
+            Les relations mutuelles entre les personnes comme l’attitude envers
+            la nature sont empreintes de respect.
+          </li>
+          <li>
+            Enseigner dans le cadre de la laïcité, de l’égalité et de la
+            citoyenneté.
+          </li>
+        </ul>
+        <p><strong>Comportements répréhensibles :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>
+            Refuser de se soumettre aux codes institutionnels (code du travail,
+            règlement intérieur, code national des forêts...).
+          </li>
+          <li>Faire preuve de quelque forme de discriminations que ce soit</li>
+        </ul>
+        <p class="para_nomargin">
+          Chaque manquement signalé par les pratiquants fera l’objet d’une
+          remontrance spécifique pouvant aller jusqu’à exclusion de ohmytennis.
+          Par ailleurs, le signalement d’une pratique discriminatoire pourra
+          faire l’objet d’un signalement aux autorités compétentes.
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot" style="padding-top:13px;">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h5>
+          <strong>Favoriser l’engagement envers les partenaires :</strong>
+        </h5>
+        <p><strong>Préconisations/obligations :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>Véhiculer une image professionnelle.</li>
+          <li>Avoir un comportement digne, de la tenue et de la réserve.</li>
+        </ul>
+        <p><strong>Comportements répréhensibles :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>Le mépris.</li>
+          <li>Tout comportement irrespectueux.</li>
+        </ul>
+        <p>
+          Chaque manquement signalé par les pratiquants fera l’objet d’une
+          remontrance spécifique pouvant aller jusqu’à exclusion de ohmytennis.
+        </p>
+        <p>
+          Cette charte relève également d’une certaine déontologie c’est-à-dire
+          d’une morale professionnelle, impliquant le respect par les membres
+          d’un corps d’un ensemble de règles de conduite, reposant sur une
+          axiologie (une philosophie des valeurs ) de la profession.
+        </p>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_court9.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-xs-12">
+        <p><strong>C’est pourquoi chaque personnel employé devra :</strong></p>
+        <ul style="margin-bottom:10px;">
+          <li>Exercer son activité dans le respect de la personne humaine.</li>
+          <li>
+            S’occuper avec la même attention de chacun, quelles que soient sa
+            condition, sa nationalité, ses convictions.
+          </li>
+          <li>
+            S’abstenir de tout prosélytisme politique, religieux ou
+            philosophique.
+          </li>
+          <li>Proposer d’autres démarches si nécessaire.</li>
+          <li>
+            Garantir le secret professionnel, sauf dérogation prévue par la loi.
+          </li>
+        </ul>
+        <p>
+          Le respect de la charte peut être vérifié par un certain nombre de
+          contrôles. Ces contrôles seront opérés par les dirigeants de
+          ohmytennis et pris en compte dans l’évaluation annuelle.
+        </p>
+        <p>
+          En foi de quoi, chacun sera appelé à adhérer à la charte et à
+          participer à sa promotion en toutes circonstances.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_titre_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Nous proposons aux passionnés de tennis d'avoir un univers
+            spécialement créé pour eux.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<div class="section3 des_concept_circletext haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon1.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.PRESENTATION.SELF')
+              }}"
+              >Présentation <br />Générale</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon2.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{ '/' + this._const('PATH.CONCEPTS.CHARTE.SELF') }}"
+              >La charte <br />de Qualité</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon3.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.ENGAGEMENTS.SELF')
+              }}"
+              >Nos <br />Engagements</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon4.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.INFORMATIONS.SELF')
+              }}"
+              >Informations<br />
+              Réglementaires</a
+            ></strong
+          >
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

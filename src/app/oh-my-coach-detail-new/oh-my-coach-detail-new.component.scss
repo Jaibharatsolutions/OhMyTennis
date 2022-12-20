@@ -1,0 +1,940 @@
+.modal-dialog {
+  top: 125px !important;
+}
+
+#container {
+  width: 600px;
+}
+/* Styles go here */
+
+/** form wizrd **/
+
+.des_detail_sec {
+  max-width: 500px;
+}
+.des_detail_sec p {
+  line-height: 74px;
+  padding: 0px;
+}
+.des_detail_sec .des_icon_class {
+  padding: 0px;
+  line-height: 60px;
+}
+.des_detail_sec img {
+  margin-top: 16px;
+  line-height: 60px;
+}
+.coachnewlistview .des_detail_sec {
+  margin: 14px 0px 36px;
+}
+.border_bgwhite {
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  height: 60px;
+}
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.form_wizard li.active > a.hidden-xs {
+  display: block !important;
+}
+.form_wizard li.active > a.visible-xs {
+  display: none !important;
+}
+.form_wizard .nav-pills.nav-wizard > li {
+  position: relative;
+  overflow: visible;
+  border-right: 10px solid #fff;
+  border-left: 10px solid #fff;
+}
+.form_wizard .nav-pills.nav-wizard > li:first-child {
+  border-left: 0;
+}
+.form_wizard .nav-pills.nav-wizard > li:first-child a {
+  border-radius: 5px 0 0 5px;
+}
+.form_wizard .nav-pills.nav-wizard > li:last-child {
+  border-right: 0;
+}
+.form_wizard .nav-pills.nav-wizard > li:last-child a {
+  border-radius: 0 5px 5px 0;
+}
+.form_wizard .nav-pills.nav-wizard > li a {
+  border-radius: 0;
+  background-color: #eee;
+  padding: 10px;
+}
+.form_wizard .nav-pills.nav-wizard > li .nav-arrow {
+  position: absolute;
+  top: 0px;
+  right: -20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #eee;
+  z-index: 150;
+}
+.form_wizard .nav-pills.nav-wizard > li .nav-wedge {
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: #eee #eee #eee transparent;
+  z-index: 150;
+}
+.form_wizard .nav-pills.nav-wizard > li:hover .nav-arrow {
+  border-color: transparent transparent transparent #aaa;
+}
+.form_wizard .nav-pills.nav-wizard > li:hover .nav-wedge {
+  border-color: #aaa #aaa #aaa transparent;
+}
+.form_wizard .nav-pills.nav-wizard > li:hover a {
+  background-color: #aaa;
+  color: #fff;
+}
+.form_wizard .nav-pills.nav-wizard > li.active .nav-arrow {
+  border-color: transparent transparent transparent #428bca;
+}
+.form_wizard .nav-pills.nav-wizard > li.active .nav-wedge {
+  border-color: #428bca #428bca #428bca transparent;
+}
+.form_wizard .nav-pills.nav-wizard > li.active a {
+  background-color: #428bca;
+}
+.progress-bar-success {
+  background-color: #29a036;
+}
+.form_wizard .data_blk {
+  padding: 10px 40px;
+}
+.form_wizard .data_blk h3 {
+  text-align: center;
+  line-height: 32px;
+}
+.form_wizard .data_blk p {
+  text-align: center;
+  font-size: 14px;
+}
+.form_wizard .data_blk p.lead {
+  text-align: left;
+  font-size: 21px;
+}
+.a_right {
+  border: solid #29a036;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  vertical-align: middle;
+  margin-right: -10px;
+}
+.a_left {
+  border: solid #29a036;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  vertical-align: middle;
+  margin-left: -5px;
+}
+
+.form_wizard .back,
+.form_wizard .btn-default.next {
+  background: transparent;
+  border-color: transparent;
+  outline: 0;
+  text-transform: unset;
+  font-size: 16px;
+  padding-left: 0;
+  color: #29a036;
+  margin-left: 10px;
+}
+
+.form_wizard .btn-default.next {
+  color: #fff;
+}
+.form_wizard .back:hover,
+.form_wizard .back:focus {
+  background: transparent;
+  border-color: transparent;
+}
+
+.form_wizard .btn-primary {
+  background: #29a036;
+  border-radius: 3px;
+  border-color: #29a036;
+  text-transform: capitalize;
+  padding: 10px 20px;
+}
+.form_wizard .progress {
+  height: 8px;
+  margin: 0 60px;
+}
+.form_wizard .form_blk {
+  margin-bottom: 40px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.form_wizard .form_blk .radio,
+.form_blk .checkbox {
+  margin: 0;
+}
+.form_wizard .form_blk .radio label,
+.form_blk .checkbox label {
+  padding: 12px;
+  background: #fff;
+  padding-left: 40px;
+  display: block;
+  font-size: 16px;
+  border-top: 1px solid #f2f2f2;
+}
+.form_wizard .form_blk .radio:last-child label,
+.form_blk .checkbox:last-child label {
+  border-bottom: 1px solid #f2f2f2;
+}
+.formwizardpopup .modal-body {
+  padding-top: 40px;
+}
+.formwizardpopup .modal-body button.close {
+  position: absolute;
+  top: 4px;
+  right: 15px;
+  font-size: 3.5rem;
+  opacity: 0.1;
+}
+.formwizardpopup .modal-content {
+  border-radius: 3px;
+  background: #fafafa;
+}
+.form_wizard .form_blk .other label input[type="checkbox"] {
+  margin-top: 10px;
+}
+.form_wizard .form_blk .other label input[type="text"] {
+  display: block;
+  vertical-align: middle;
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+}
+.form_wizard textarea {
+  height: 100px;
+}
+.form_wizard .zip_blk {
+  padding: 20px 130px 30px;
+}
+.form_wizard .zip_blk input {
+  text-align: center;
+}
+.form_wizard .sm_text {
+  font-size: 10px;
+  padding: 0 100px 40px;
+  text-align: center;
+}
+.form_wizard .col-sm-6 .sm_text {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .formwizardpopup .modal-dialog {
+    width: 500px;
+  }
+}
+.form_wizard .progress-bar-info {
+  background: transparent;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+.formwizardpopup .modal-content.banner .progress,
+.formwizardpopup .modal-content.banner .progress-bar-info {
+  display: none;
+}
+.formwizardpopup .modal-content.banner .modal-body {
+  padding-top: 20px;
+  background: #203047;
+  color: #fff;
+}
+.formwizardpopup .modal-content.banner .modal-body h3 {
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+.formwizardpopup .modal-content.banner .a_left {
+  border-color: #fff;
+}
+.formwizardpopup .modal-content.banner {
+  background: #203047;
+}
+.formwizardpopup .modal-content.banner button.close {
+  color: #fff;
+  opacity: 0.2;
+}
+.formwizardpopup .modal-content.banner {
+  text-align: center;
+}
+.formwizardpopup .modal-content.banner img {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.des_coach_abt .map-container {
+  position: relative;
+  top: unset;
+  left: unset;
+  height: 250px;
+  right: unset;
+  bottom: unset;
+  margin: 15px 0px 15px;
+}
+.map-container {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  right: -18px;
+  bottom: -30px;
+  margin: 30px;
+  top: 114px;
+}
+.map-frame {
+  border: 2px solid #d8d0d0;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .des_map {
+    position: relative;
+  }
+}
+
+// .img-circle {
+//   border-radius: 50%;
+// }
+// .newcoachprofile .inner_carousel {
+//   text-align: center;
+//   float: right;
+//   top: 30px;
+// }
+// .newcoachprofile .footer {
+//   margin-top: 0px;
+// }
+// .newcoachprofile .inner_carousel img {
+//   max-width: 200px;
+// }
+// .newcoachprofile .header-icons {
+//   margin-left: 30px;
+// }
+
+// .newcoachprofile .sel img {
+//   max-width: 32px;
+//   margin-bottom: 4px;
+//   margin-right: 4px;
+//   margin-left: 25px;
+// }
+// .newcoachprofile .sel a {
+//   color: white;
+//   font-size: 19px;
+//   line-height: 50px;
+//   font-weight: 501;
+// }
+
+// .newcoachprofile .sect {
+//   text-align: center;
+// }
+// .newcoachprofile .banner1 {
+//   height: 400px;
+// }
+// .newcoachprofile .train {
+//   color: white;
+//   background: #474c48;
+//   padding: 12px 12px 11px 11px;
+//   font-style: italic;
+// }
+// .newcoachprofile .train h4 {
+//   text-align: left;
+//   margin-left: 20px;
+//   font-weight: bold;
+// }
+// .newcoachprofile .training_section {
+//   width: 100%;
+//   background: #f6f6f6;
+//   margin: 0px;
+//   padding: 70px 50px 80px 50px;
+// }
+// .newcoachprofile .training_section1 {
+//   width: 100%;
+//   background: #f6f6f6;
+//   margin: 0px;
+//   padding: 12px 50px 80px 50px;
+// }
+// .newcoachprofile .train1 img,
+// .newcoachprofile .train2 img {
+//   background: #686866;
+//   margin-left: -40px;
+//   height: 100px;
+//   border-radius: 5px;
+// }
+// .newcoachprofile .train1 h4,
+// .newcoachprofile .train2 h4 {
+//   padding: 0px 0px 0px 0px;
+
+//   margin-top: 30px;
+//   text-align: left;
+// }
+// /*.newcoachprofile .sect .train-2 h4{
+// 	padding: 40px;
+// margin-top: 0px;
+// margin-right: -16px;
+// margin-left: -48px;
+// } */
+
+// .newcoachprofile .mytrain {
+//   border: 1px solid;
+// }
+// .newcoachprofile .train2 {
+//   background: white;
+//   padding: 0px;
+//   margin: 0px 0px 13px;
+//   box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.56);
+//   border-radius: 4px;
+// }
+// .px-0 {
+//   padding: 0px;
+// }
+// .mx-0 {
+//   margin: 0px;
+// }
+// .newcoachprofile .event {
+//   color: white;
+//   background: #474c48;
+//   padding: 10px 0px 2px 0px;
+//   margin: 40px -15px 0px -15px;
+// }
+// .newcoachprofile .event h4 {
+//   text-align: left;
+//   margin-left: 20px;
+//   font-weight: bold;
+// }
+// .newcoachprofile .col-md-8 .train1 {
+//   padding: 15px;
+// }
+// .newcoachprofile .innerbanner .fa {
+//   border: 1px solid #ff8a00;
+//   border-radius: 50%;
+//   height: 35px;
+//   width: 35px;
+//   line-height: 32px;
+//   margin: 4px 5px 12px;
+//   color: #ff8a00;
+//   text-align: center;
+//   font-size: 20px;
+//   font-weight: bold;
+// }
+// .newcoachprofile .map {
+//   font-size: 20px;
+//   color: coral;
+// }
+// .newcoachprofile .i-font {
+//   font-size: 10px;
+// }
+
+// .newcoachprofile .inner_carousel h3 {
+//   font-weight: bold;
+//   margin-top: -6px;
+//   margin-bottom: 11px;
+//   text-transform: none;
+//   font-size: 29px;
+// }
+// .newcoachprofile .innerbanner h5 {
+//   font-size: 29px;
+//   font-weight: bold;
+// }
+// .newcoachprofile .innerbanner h5 .prix {
+//   text-decoration: line-through;
+// }
+// .newcoachprofile .innerbanner h5 .prix-1 {
+//   color: #b53d11;
+//   font-size: 19px;
+// }
+// .coach_profilesection {
+//   background: #f6f6f6;
+// }
+// .newcoachprofile .section2 h3 {
+//   background: #474c48;
+//   color: white;
+//   padding: 10px;
+//   font-weight: bold;
+//   margin: 30px 0px 10px 0px;
+// }
+// .newcoachprofile .sect h3 {
+//   font-size: 17px;
+// }
+// .newcoachprofile .sect h3 .sect-1 {
+//   color: #e75c01;
+// }
+
+// .newcoachprofile .section2 h4 {
+//   color: #e05f22;
+//   text-align: center;
+//   font-style: italic;
+//   font-size: 28px;
+//   font-weight: bold;
+//   margin: 20px;
+// }
+// .newcoachprofile .set {
+//   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.56);
+//   background: white;
+//   padding: 3px 5px;
+//   position: relative;
+// }
+// .newcoachprofile .set img {
+//   margin: 2px 16px 2px -9px;
+//   float: left;
+//   width: 130px;
+// }
+
+// .newcoachprofile .grand-stage {
+//   text-align: left;
+//   margin-left: -50px;
+// }
+// .newcoachprofile .section1_btn,
+// .newcoachprofile .section2_btn {
+//   border-radius: 50px;
+//   background-color: white;
+//   box-sizing: border-box;
+//   border: 1px solid#ccc;
+//   padding: 10px 25px 10px 25px;
+//   color: #ff5722;
+//   font-style: normal;
+//   font-weight: bold;
+//   border-color: #ff5722;
+// }
+// .newcoachprofile .section1_btn {
+//   float: none;
+//   font-size: 14px;
+//   position: absolute;
+//   right: 0px;
+//   top: 30px;
+//   margin-top: 50px;
+// }
+// .newcoachprofile .section2_btn {
+//   margin-top: 30px;
+//   border-color: #ff5722;
+//   font-size: 13px;
+//   float: none;
+//   display: block;
+//   text-transform: uppercase;
+//   margin-left: 0px;
+//   margin-right: 0px;
+// }
+// .newcoachprofile .training_section1 {
+//   padding: 12px 0px 80px 0px;
+// }
+// .newcoachprofile .section2_btn:hover {
+//   background-color: #ff5722;
+//   color: white;
+// }
+// .newcoachprofile .section1_btn:hover {
+//   background-color: #ff5722;
+//   color: white;
+// }
+// .newcoachprofile .section2_btn:hover {
+// }
+// .newcoachprofile .section1 .my-event {
+//   padding-top: 55px;
+// }
+// .newcoachprofile .section2 .row {
+//   margin: 15px 0px 15px -30px;
+// }
+// .newcoachprofile .section2 h5 {
+//   font-size: 19px;
+//   color: #e75b00;
+//   font-weight: bold;
+//   text-align: left;
+//   margin-left: -40px;
+// }
+// .newcoachprofile .section2 {
+//   background: #f6f6f6;
+//   /*  margin-bottom: -84px; */
+//   /* padding-top: 30px; */
+// }
+// /*.newcoachprofile .gray-bg{
+// 	background:#f6f6f6;
+// }*/
+// .newcoachprofile .calender {
+//   background-color: #e05f22;
+//   position: absolute;
+//   top: 5px;
+//   right: 11px;
+//   height: 40px;
+//   width: 90px;
+
+//   margin-right: -16px;
+// }
+// .newcoachprofile .calender h2 {
+//   font-size: 20px;
+//   font-weight: bold;
+//   color: white;
+//   text-align: center;
+//   margin-top: 8px;
+// }
+// .newcoachprofile .calender p {
+//   font-size: 11px;
+//   font-weight: bold;
+//   color: white;
+//   margin-top: -13px;
+//   margin-left: 4px;
+//   text-align: center;
+// }
+// .newcoachprofile .team-build {
+//   padding-left: 10px;
+// }
+// .newcoachprofile .team-build {
+//   margin-left: 27px;
+// }
+// :hover .newcoachprofile .train1 img {
+//   color: #e05f22;
+// }
+// .train2 a:hover .stage {
+//   background-color: #e05f22;
+// }
+
+// .train2 a:hover h4 {
+//   color: #e05f22;
+// }
+
+// @media (min-width: 480px) and (max-width: 767px) {
+//   .service-1 .col-md-4 {
+//     width: 50%;
+//     float: left;
+//   }
+//   .newcoachprofile .section2_btn {
+//     max-width: 100% !important;
+//   }
+// }
+// @media (min-width: 320px) and (max-width: 410px) {
+//   .newcoachprofile .calender {
+//     top: -220px !important;
+//   }
+//   body.newcoachprofile .section1_btn {
+//     top: -184px;
+//   }
+// }
+// @media (max-width: 479px) {
+//   body.newcoachprofile .set img {
+//     float: left;
+//     width: unset;
+//     margin: 2px 0px 2px -13px;
+//     max-width: 120px;
+//   }
+//   .newcoachprofile .banner1 {
+//     height: 450px;
+//   }
+//   body.newcoachprofile .grand-stage {
+//     font-size: 12px;
+//     margin-left: 0px;
+//     margin-bottom: 0px;
+//   }
+//   body.newcoachprofile .section1_btn {
+//     float: none;
+//     font-size: 10px;
+//     right: 0px;
+//     /*	top: 50px; */
+//     position: absolute;
+//     z-index: 23;
+//     padding: 7px 12px;
+//   }
+//   .newcoachprofile .set {
+//     padding: 3px 5px 10px;
+//   }
+//   body.newcoachprofile .section2 h5 {
+//     font-size: 13px;
+//     text-align: left;
+//     margin-top: 25px;
+//     margin-left: 0px;
+//   }
+
+//   .newcoachprofile .calender {
+//     height: 30px;
+//     width: 61px;
+//     top: 230px;
+//     margin-right: -16px;
+//     z-index: 5;
+//     position: absolute;
+//   }
+// }
+// @media (min-width: 992px) and (max-width: 1199px) {
+//   .newcoachprofile .grand-stage {
+//     margin-left: -25px;
+//   }
+//   .newcoachprofile .section2 h5 {
+//     margin-left: -25px;
+//   }
+// }
+// @media (max-width: 767px) {
+//   .newcoachprofile .section2_btn {
+//     margin-left: auto;
+//     max-width: 240px;
+//     margin-right: auto;
+//     text-align: center;
+//     float: none;
+//     display: block;
+//   }
+//   .newcoachprofile .set {
+//   }
+//   .newcoachprofile .section1_btn {
+//     top: -93px;
+//     padding: 10px 15px 10px 15px;
+//     float: none;
+//     font-size: 10px;
+//   }
+//   .newcoachprofile .set img {
+//   }
+//   .newcoachprofile .section2 .row {
+//     margin: 20px -30px 25px -30px;
+//   }
+//   .newcoachprofile .calender h2 {
+//     font-size: 16px;
+//     margin-top: 7px;
+//   }
+//   .newcoachprofile .section2 h5 {
+//     font-size: 16px;
+//     color: #e75b00;
+//     font-weight: bold;
+//     text-align: left;
+//     margin-top: -120px;
+//     margin-left: 140px;
+//   }
+//   .newcoachprofile .grand-stage {
+//     text-align: left;
+//     font-size: 10px;
+//     margin-left: 140px;
+//   }
+//   .newcoachprofile .calender {
+//     height: 30px;
+//     width: 61px;
+//     top: -130px;
+//     margin: auto;
+//     right: -5px;
+//   }
+//   .newcoachprofile .event {
+//     margin: 40px -15px 0px -15px;
+//   }
+//   .newcoachprofile .training_section1 {
+//     padding: 12px 5px 80px 5px;
+//   }
+//   .newcoachprofile .section2_btn {
+//     padding: 15px 25px 15px 25px;
+//   }
+//   .training_section1 .service-1 {
+//   }
+//   .newcoachprofile .section2_btn {
+//     float: none;
+//     display: block;
+//   }
+// }
+
+// .newcoachprofile .section1_btn {
+//   float: none;
+//   font-size: 13px;
+//   position: absolute;
+//   right: 0px;
+// }
+
+.cours_testimonial h2 {
+  color: #333;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  margin: 30px 0 40px;
+}
+.cours_testimonial h2::after {
+  content: "";
+  width: 100px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: #e75b00;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+.mapsection {
+  // position: relative;
+}
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 3px 0px;
+}
+
+.map-frame {
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+.newcoachlist .mapsection {
+  position: relative;
+  height: 450px;
+}
+.cours_testimonial .carousel-inner {
+  padding: 0px 0px;
+}
+.cours_testimonial {
+  background: #ffffff;
+}
+.cours_testimonial .col-center {
+  margin: 0 auto;
+  float: none !important;
+}
+.cours_testimonial .carousel {
+  margin: 0px auto;
+  padding: 0 100px;
+}
+.cours_testimonial .carousel .item {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 290px;
+}
+.cours_testimonial .carousel .item .img-box {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+.cours_testimonial .carousel .img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.cours_testimonial .carousel .testimonial {
+  padding: 30px 0px 10px;
+  color: #5d5d5d;
+}
+.cours_testimonial .carousel .overview {
+  color: #e75b00;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.cours_testimonial .carousel .carousel-control {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  top: 50%;
+  background: none;
+}
+.cours_testimonial .carousel h5 {
+  color: #5d5d5d;
+}
+.cours_testimonial .carousel-control i {
+  font-size: 58px !important;
+  line-height: 15px !important;
+  position: absolute;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.cours_testimonial .carousel .carousel-indicators {
+  bottom: -40px;
+  display: none;
+}
+.cours_testimonial .carousel-indicators li,
+.cours_testimonial .carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
+  border-radius: 50%;
+}
+.cours_testimonial .carousel-indicators li {
+  background: #999;
+  border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.cours_testimonial .carousel-indicators li.active {
+  background: #555;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.cours_testimonial {
+}
+
+.train_secdiv4_gray {
+  background: url(../../assets/images/dashboard_icons/trainicon/trainsec_img4ho.png)
+    9px 50% no-repeat;
+  background-color: #afafaf;
+}
+
+.train_secdiv5_gray {
+  background: url(../../assets/images/dashboard_icons/trainicon/team_hovericon.png)
+    9px 50% no-repeat;
+  background-color: #afafaf;
+}
+
+.train_secdiv6_gray {
+  background: url(../../assets/images/dashboard_icons/trainicon/trainsec_img7ho.png)
+    9px 50% no-repeat;
+  background-color: #afafaf;
+}
+
+.train_secdiv7_gray {
+  background: url(../../assets/images/dashboard_icons/trainicon/tour_hovericon.png)
+    19px 50% no-repeat;
+  background-color: #afafaf;
+}
+
+.train_secdiv_gray {  
+  padding-left: 80px;
+  min-height: 69px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.train_secdiv_gray h2 {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  line-height: 69px;
+}
+
+.train_secdiv_1 {
+  background: #afafaf
+    url(../../assets/images/dashboard_icons/trainicon/trainsec_img1ho.png) 9px
+    50% no-repeat;
+}
+
+.train_secdiv_2 {
+  background: #afafaf
+    url(../../assets/images/dashboard_icons/trainicon/collective_grouphovericon.png)
+    12px 50% no-repeat;
+}
+
+.train_secdiv_3 {
+  background: #afafaf
+    url(../../assets/images/dashboard_icons/trainicon/trainsec_img3ho.png) 9px
+    50% no-repeat;
+}

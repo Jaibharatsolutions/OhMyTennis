@@ -1,0 +1,427 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="banner">
+  <slideshow
+    [height]="height"
+    [autoPlay]="true"
+    [autoPlayInterval]="3333"
+    [lazyLoad]="true"
+    [showArrows]="true"
+    [minHeight]="'525px'"
+    [autoPlay]="true"
+    [imageUrls]="bannerImageSources"
+    [lazyLoad]="imageSources?.length > 1"
+    [autoPlayWaitForLazyLoad]="true"
+  >
+  </slideshow>
+  <!-- Search area starts -->
+  <div class="search_area">
+    <div class="banner_container">
+      <h3>Réservez un cours avec un coach</h3>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <div class="form-group">
+            <div class="addon-lg">
+              <input
+                class="form-control"
+                id=""
+                maxlength="6"
+                placeholder="Code postal"
+                [(ngModel)]="Ville"
+                type="text"
+              />
+              <label><img src="./assets/images/ville_icon.png"/></label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <div class="form-group">
+            <div class="addon-lg">
+              <input
+                type="text"
+                style="text-align:left!important;"
+                [min]="min"
+                class="form-control"
+                id=""
+                placeholder="Date"
+                [(ngModel)]="Date"
+                [owlDateTime]="dt1"
+                [owlDateTimeTrigger]="dt1"
+              />
+              <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+              <label><img src="./assets/images/date_icon.png" /> </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+          <button (click)="handleClick($event)" class="btn black_btn">
+            Recherche
+          </button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Search area ends -->
+</div>
+<!-- Banner area ends -->
+
+<!-- about section starts -->
+<div class="about_sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <img
+          [src]="getTransForm('./assets/images/gallery_3.png')"
+          class="img-responsive abt_img"
+        />
+        <div class="form_bg">
+          <h1 class="des_about_heading">Oh My Concept</h1>
+          <p class="des_about_para">
+            Présentation de notre plateforme communautaire de mise en relation
+            entre les passionnés du tennis et les professionnels. Notre objectif
+            est de proposer des sevices de qualité sélectionnés pour vous afin
+            de garantir votre satisfaction.
+          </p>
+          <div style="text-align: center;">
+            <a
+              href="javascript:;"
+              routerLink="{{ '/' + this._const('PATH.CONCEPTS.CONCEPT.SELF') }}"
+              class="btn btn-primary des_abt_btn"
+              >découvrir</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12"></div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- about section ends -->
+
+<div class="my_coach">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h1 class="coach_heading">Oh My Coachs</h1>
+        <div class="center">
+          <ul id="myTabs" class="nav nav-pills">
+            <ng-container>
+              <li
+                style="width: 50% !important;float: left!important;"
+                *ngFor="let t of myCoaches; let i = index; let first = first"
+                [ngClass]="t.class ? 'active' : ''"
+                class=""
+              >
+                <a
+                  (click)="changeMyCoachTab($event, i)"
+                  title="t.title"
+                  href="javascript:;"
+                  >{{ t.title }}</a
+                >
+              </li>
+            </ng-container>
+            <!-- <li class="active"><a (click)="changeTabs($event)" href="javascript:;" >Tous Les Coachs</a></li>
+                        <li><a (click)="changeTabs($event)" href="javascript:;" >Réserver un cours</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="tab-content flipover_div">
+        <div class="tab-pane fade in active" id="Commentary">
+          <div class="col-lg-11" style="position: relative; top: 30px;"></div>
+          <div
+            id="myCarousel01"
+            class="carousel slide"
+            data-ride="carousel"
+            data-interval="0"
+          >
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div class="row">
+                  <ngx-slick-carousel
+                    class="tab-pane fade in active"
+                    #slickModal="slick-carousel"
+                    [config]="slides.config"
+                  >
+                    <div
+                      ngxSlickItem
+                      *ngFor="let s of slides.data"
+                      class="col-xs-12 col-md-4 col-lg-3"
+                    >
+                      <div class="card-wrapper card-container">
+                        <div class="card">
+                          <div class="front">
+                            <div class="card-up">
+                              <img
+                                class="card-img-top"
+                                [src]="
+                                  getTransForm(
+                                    '../assets/images/tennis_coachbg.jpg'
+                                  )
+                                "
+                                alt="Team member card image"
+                              />
+                            </div>
+                            <div class="avatar mx-auto white">
+                              <img
+                                class="rounded-circle"
+                                src="{{
+                                  s.img ||
+                                    'https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png'
+                                }}"
+                                #img
+                                (error)="
+                                  img.src =
+                                    'https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png'
+                                "
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content">
+                              <div class="main">
+                                <h3 class="name">{{ s.name }}</h3>
+                                <div class="star-rating">
+                                  <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                      <i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <i class="fa fa-star-o"></i>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="back text-center">
+                            <div class="card-body">
+                              <!-- Content -->
+                              <h4 class="font-weight-bold mb-0">
+                                À propos de moi
+                              </h4>
+                              <hr />
+                              <p class="des_event_para max-lines66">
+                                {{ s.comment }}
+                              </p>
+                              <hr />
+                              <!-- Social Icons -->
+                              <ul class="text-center carousel_socialicons">
+                                <li>
+                                  <a href="www.facebook.com" target="_blank"
+                                    ><i
+                                      class="fa wp-icon fa-facebook-f fa-lg"
+                                    ></i
+                                  ></a>
+                                </li>
+                                <li>
+                                  <a href="www.twitter.com" target="_blank"
+                                    ><i class="fa wp-icon fa-twitter fa-lg"></i
+                                  ></a>
+                                </li>
+                                <li>
+                                  <a href="www.instagram.com" target="_blank"
+                                    ><i
+                                      class="fa wp-icon fa-instagram fa-lg"
+                                    ></i
+                                  ></a>
+                                </li>
+                              </ul>
+                              <!-- Triggering button -->
+                              <!--     <a class="rotate-btn" data-card="card-1"><i class="fas fa-undo"></i> Click here to rotate back</a> -->
+                              <a
+                                style="border-radius:30px;"
+                                class="btn btn-primary des_abt_btn"
+                                (click)="gotoCouch(s)"
+                                >Voir plus</a
+                              >
+                            </div>
+                          </div>
+                          <div class="footer">
+                            <div class="social-links text-center">
+                              <a
+                                href="http://deepak646.blogspot.in/"
+                                class="facebook"
+                                ><i class="fa fa-facebook fa-fw"></i
+                              ></a>
+                              <a
+                                href="http://deepak646.blogspot.in/"
+                                class="google"
+                                ><i class="fa fa-google-plus fa-fw"></i
+                              ></a>
+                              <a
+                                href="http://deepak646.blogspot.in/"
+                                class="twitter"
+                                ><i class="fa fa-twitter fa-fw"></i
+                              ></a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end back panel -->
+                      </div>
+                      <!-- end card -->
+                    </div>
+                  </ngx-slick-carousel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- my events -->
+<div class="des_events" *ngIf="isHidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h1 class="des_event_heading">Oh My Events</h1>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-md-4 col-sm-4 col-xs-12" *ngFor="let res of response">
+        <div class="des_events_bg">
+          <img
+            [src]="getTransForm(res.Photo)"
+            alt="{{ res.Eventname }}"
+            class="img-responsive center-block ohevents_img"
+          />
+          <div class=" ">
+            <p class="des_date_sec">
+              <span>{{ res.Date }}</span
+              >{{ res.Month_Year }}
+            </p>
+            <p class="des_event_sub_title">{{ res.Eventname }}</p>
+            <p class="des_event_para max-lines">{{ res.Description }}</p>
+          </div>
+          <!-- <div class="text-center">
+                    <a class="btn btn-primary des_event_btn" (click)="gotoCoach(res)" style="margin-top: 15px;">Reserve
+                        maintenant</a>
+                </div> -->
+        </div>
+      </div>
+      <div class="text-center">
+        <a (click)="goToStage()" class="btn btn-primary des_event_btn"
+          >Tous les stages</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- my events -->
+
+<!-- middle sec starts-->
+<div class="middle_sec">
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+        <img
+          [src]="getTransForm('../assets/images/slides_3.png')"
+          class="img-responsive"
+        />
+        <div class="middle_sec_contents">
+          <img
+            [src]="getTransForm('../assets/images/tennis-ball.png')"
+            class="ball_img"
+          />
+          <h2>Oh My Club House</h2>
+          <p>
+            Voici un espace pour devenir un membre actif de notre communauté.
+            Vous allez ainsi pouvoir dépasser vos limites par le biais du
+            challenge (trouver un sparring partner) , du défi (gagner des points
+            pour obtenir des reductions avec nos partenaires) , des quiz ou jeux
+            concours ou en particpant au forum.
+          </p>
+          <a
+            href="javascript:;"
+            routerLink="{{ '/' + this._const('PATH.CLUB_HOUSE_LIST') }}"
+            class="btn btn-primary middle_sec_btn"
+            >DECOUVRIR</a
+          >
+        </div>
+      </div> -->
+      <div class="col-md-6 col-sm-6 col-xs-12">        
+        <img src="./assets/images/team.png" class="img-responsive" style="max-height: 350px !important;"/>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="middle_sec_contents" style="padding: 0px 0px 0px;">
+          <!-- <img src="./assets/images/tennis-ball.png" class="ball_img" /> -->
+          <h2 style="text-align: left;">Oh My Tennis</h2>
+          <p style="text-align: left;">
+            Rejoignez la rubrique dédiée aux passionnés du tennis ! Une
+            immersion inédite dans le monde de la balle jaune pour tous ceux qui
+            souhaitent franchir un premier pas. Vous allez pouvoir apprendre
+            (e-learning) , comprendre (règles , lexique , histoire) , pratiquer
+            (trouver un partenaire, acheter du materiel) et suivre les
+            profesionnels du circuit ATP/WTA.
+          </p>
+          <a style="text-align: left; margin: 20px 0px 0px;"
+            href="javascript:;"
+            routerLink="{{ '/' + this._const('PATH.CONCEPTS.CONCEPT.SELF') }}"
+            class="btn btn-primary middle_sec_btn"
+            >DECOUVRIR</a
+          >
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- middle sec ends-->
+<div class="conseils_banner">
+  <div class="conseils_banner_contents">
+    <h1 class="conseils_banner_heading">Oh My Conseils</h1>
+    <p class="conseils_banner_para">
+      Vous souhaitez bénéficiez de quelques conseils sur la diététique, la
+      préparation physique, votre première partie (ou match) ou encore des tests
+      matériels , cette rubrique est faite pour vous ! Découvrez les tips et
+      astuces mais aussi quelques idées reçues …
+    </p>
+    <a
+      href="javascript:;"
+      routerLink="{{ '/' + this._const('PATH.CONSEILS.CONSEILS.SELF') }}"
+      class="btn btn-primary conseils_banner_btn"
+      >EN SAVOIR PLUS
+    </a>
+  </div>
+</div>
+<div class="section download_app">
+  <div class="container">
+    <div class="row">
+      <div class="download btn_sec">
+        <div class="col-md-12 col-sm-6 col-xs-12 text-left">
+          <div class="play_download">
+            <img src="./assets/images/logo4.png" alt="logo4" /><span
+              >COACH</span
+            >
+            <div class="clearfix"></div>
+            <h5>Téléchargez l’app Coach</h5>
+
+            <a href=""><img src="./assets/images/app.png" alt="app"/></a>&nbsp;
+            <a href=""><img src="./assets/images/play.png" alt="app"/></a>
+          </div>
+          <div class="play_download">
+            <img src="./assets/images/logo5.png" alt="logo5" /><span>USER</span>
+            <h5>Téléchargez l’app Utilisateur</h5>
+            <a href=""><img src="./assets/images/app.png" alt="app"/></a>&nbsp;
+            <a href=""><img src="./assets/images/play.png" alt="app"/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

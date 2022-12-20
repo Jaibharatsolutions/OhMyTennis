@@ -1,0 +1,243 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Premier cours</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >Points clés pour pratiquer pendant un cours de tennis chez
+            ohmytennis</strong
+          >
+        </h2>
+        <ul>
+          <li>
+            <span class="text_underline">Ecoute:</span>Etre concentré sur les
+            points évoqués par le professeur de tennis , poser des questions
+            même bête si nécessaire pour pouvoir améliorer votre tennis.
+          </li>
+          <li>
+            <span class="text_underline">Assiduité/régularité:</span>Engagement
+            à long terme pour progresser (contrat moral).
+          </li>
+          <li>
+            <span class="text_underline">Motivation:</span>Etre volontaire pour
+            apprendre à jouer au tennis, se remettre en question, toujours
+            essayer.
+          </li>
+          <li>
+            <span class="text_underline">Patience:</span>l'apprentissage du
+            tennis est un processus long, non linéaire.
+          </li>
+          <li>
+            <span class="text_underline"
+              >Pratiquer le tennis en dehors des cours</span
+            >= meilleur moyen d’avoir un feed back avec les cours de tennis
+            (mise en application lors du jeu libre).
+          </li>
+          <li>
+            <span class="text_underline">Ne pas stresser</span>si on rate la
+            balle, le tennis est d’abord un sport de patience (respiration
+            profonde).
+          </li>
+          <li>
+            <span class="text_underline"
+              >Prendre du plaisir lors des cours de tennis</span
+            >, satisfaction dans la réussite.
+          </li>
+          <li>
+            <span class="text_underline">Les balles de tennis</span>sont
+            fournies par le professeur Ohmytennis.
+          </li>
+          <li>
+            <span class="text_underline"
+              >Préférable d’apporter sa raquette de tennis</span
+            >(Prêt possible).
+          </li>
+          <li>
+            <span class="text_underline">Se faire un mémento</span>(Points
+            essentiels abordés)
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/stage-de-tennis-adultes.jpg"
+          class="center-block"
+          alt="concept_image1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/stage-de-tennis.jpg"
+          class="center-block"
+          alt="concept_image2"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >Les possibles aprioris sur les courts de tennis et le tennis de
+            manière général</strong
+          >
+        </h2>
+        <ul class="">
+          <li>
+            <span class="text_underline"
+              >L’apprentissage du tennis lorsqu’on a plus de 30 ans</span
+            >= je ne peux pas prendre de cours de tennis: il n’y a pas d’âge
+            pour apprendre à jouer au tennis, surtout en tant que loisir. NB :
+            l’apprentissage et la coordination certes sont plus faciles lorsque
+            nous sommes jeunes voire très jeunes.
+          </li>
+          <li>
+            <span class="text_underline">Les méthodes ou pédagogies</span>sont
+            les mêmes d’un professeur de tennis à l’autre : Elles sont
+            différentes mais doivent toutes respecter les mêmes fondamentaux du
+            tennis. Les sensibilités liées aux expériences vécues ont un
+            influence sur l’enseignement. Les professeurs Ohmytennis auront une
+            méthodes et une pédagogie qui vous fera évoluer rapidement.
+          </li>
+          <li>
+            <span class="text_underline"
+              >Le professeur de tennis va s’embêter s’il joue avec moi:</span
+            >il sait s’adapter à votre niveau et peut mettre en place des
+            situations facilitant votre réussite (balle de tennis lancée à la
+            main à coté de vous , situation de panier : balle lancée derrière le
+            filet doucement avec la raquette de tennis sans effet).
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row split_marginbot" style="padding-top:13px;">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <ul class="para_nomargin">
+          <li>
+            <span class="text_underline"
+              >Je suis impressionné voire intimidé dans cet environnement
+              inconnu (tout le monde me regarde):</span
+            >
+            le professeur vous mettra tout de suite à l’aise afin de passer un
+            bon moment de partage, si vous prenez un cours c’est pour apprendre
+            donc c’est normal de rater !
+          </li>
+        </ul>
+        <h5><strong>Petites astuces ohmytennis</strong></h5>
+        <ul>
+          <li>
+            Ne pas hésiter à poser des questions (même bêtes) si vous ne
+            comprenez pas.
+          </li>
+          <li>
+            Demandez au professeur de tennis de vous faire une démonstration
+            afin de mieux visualiser les gestes demandés.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/stage-de-tennis-enfants.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

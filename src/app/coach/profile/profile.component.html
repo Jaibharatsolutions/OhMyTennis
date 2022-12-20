@@ -1,0 +1,733 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab_accordian">
+                    <ul class="nav nav-tabs">
+                        <li *ngFor="let t of profileTabs(); let i = index"
+                            [ngClass]="(activeTabIndex ===i) ? 'active': null"><a href="javascript:;"
+                                (click)="changeTabs($event, i)">{{t.title}}</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+                            <button type="button" (click)="_closeAlertMessage($event)"
+                                class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                        </div>
+                        <div class="col-xs-12"><a id="enableBtn" data-target="#myModal_edit_course"style="float:right;margin-bottom:20px; color: #ffffff;"
+                                *ngIf="(activeTabIndex === 0)" (click)="makeEnable()" class="btn btn-info"><i
+                                    class="fa fa-edit"></i> MODIFIER</a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div [ngClass]="(activeTabIndex === 0) ? 'active': null" class="tab-pane tab1">
+                            <div class="panel panel-default">
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <form #activeTabIndex0="ngForm" (ngSubmit)="onSubmit(res)"
+                                            enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Prénom <span class="red">*</span></label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="text" [(ngModel)]="res.Coach_Fname"
+                                                                    #Coach_Fname="ngModel"
+                                                                    [ngClass]="{'alert_field': (Coach_Fname.errors && (Coach_Fname.touched || Coach_Fname.dirty))}"
+                                                                    name="Coach_Fname" class="form-control"
+                                                                    placeholder="Prénom" readonly required>
+                                                                <ng-container
+                                                                    *ngIf="Coach_Fname.errors && (Coach_Fname.touched || Coach_Fname.dirty)">
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Coach_Fname.errors.required">Indiquez
+                                                                        votre
+                                                                        Prénom.</span>
+                                                                </ng-container>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Nom <span class="red">*</span></label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="text" [(ngModel)]="res.Coach_Lname"
+                                                                    #Coach_Lname="ngModel"
+                                                                    [ngClass]="{'alert_field': (Coach_Lname.errors && (Coach_Lname.touched || Coach_Lname.dirty))}"
+                                                                    name="Coach_Lname" class="form-control"
+                                                                    placeholder="Nom" readonly required>
+                                                                <ng-container
+                                                                    *ngIf="Coach_Lname.errors && (Coach_Lname.touched || Coach_Lname.dirty)">
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Coach_Lname.errors.required">Indiquez
+                                                                        votre Nom.</span>
+                                                                </ng-container>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>E-mail <span class="red">*</span></label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control" id="email"
+                                                                    [(ngModel)]="res.Coach_Email" name="Coach_Email"
+                                                                    placeholder="user@user.com" readonly required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>téléhone <span class="red">*</span></label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control"
+                                                                    [(ngModel)]="res.Coach_Phone" pattern="^[0-9]\d{9}$"
+                                                                    #Coach_Phone="ngModel"
+                                                                    [ngClass]="{'alert_field': (Coach_Phone.errors && (Coach_Phone.touched || Coach_Phone.dirty))}"
+                                                                    name="Coach_Phone" placeholder="téléhone" readonly
+                                                                    required>
+                                                                <ng-container
+                                                                    *ngIf="Coach_Phone.errors && (Coach_Phone.touched || Coach_Phone.dirty)">
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Coach_Phone.errors.required">Indiquez
+                                                                        votre téléhone.</span>
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Coach_Phone.errors.pattern">Indiquez
+                                                                        votre téléhone.</span>
+                                                                </ng-container>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Instagram </label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control"
+                                                                    [(ngModel)]="res.InstagramURL"
+                                                                    pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$"
+                                                                    #Instagram="ngModel"     
+                                                                    name="InstagramURL" placeholder="Instagram" readonly>
+                                                                <!-- <ng-container
+                                                                    *ngIf="Instagram.errors && (Instagram.touched || Instagram.dirty)">
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Instagram.errors.required">Indiquez
+                                                                        votre Instagram.</span>
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Instagram.errors.pattern">Entrez l'URL de
+                                                                        vaild.</span>
+                                                                </ng-container> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Facebook</label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control"
+                                                                    [(ngModel)]="res.FacebookURL"
+                                                                    pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$"
+                                                                    #Facebook="ngModel"
+                                                                    name="FacebookURL" placeholder="Facebook" readonly>
+                                                                <!-- <ng-container
+                                                                    *ngIf="Facebook.errors && (Facebook.touched || Facebook.dirty)">
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Facebook.errors.required">Indiquez
+                                                                        votre Facebook.</span>
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Facebook.errors.pattern">Entrez l'URL de
+                                                                        vaild.</span>
+                                                                </ng-container> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Twitter</label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control"
+                                                                    [(ngModel)]="res.TwitterURL"
+                                                                    pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$"
+                                                                    #Twitter="ngModel"
+                                                                    name="TwitterURL" placeholder="Twitter" readonly>
+                                                                <!-- <ng-container
+                                                                    *ngIf="Twitter.errors && (Twitter.touched || Twitter.dirty)">
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Twitter.errors.required">Indiquez
+                                                                        votre Twitter.</span>
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Twitter.errors.pattern">Entrez l'URL de
+                                                                        vaild.</span>
+                                                                </ng-container> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Description <span class="red">*</span></label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <textarea maxlength="300" class="form-control" readonly
+                                                                    required [(ngModel)]="res.Coach_Description"
+                                                                    #Coach_Description="ngModel"
+                                                                    [ngClass]="{'alert_field': (Coach_Description.errors && (Coach_Description.touched || Coach_Description.dirty))}"
+                                                                    name="Coach_Description"
+                                                                    id="exampleFormControlTextarea1" rows="5"
+                                                                    placeholder=""></textarea>
+                                                                <ng-container
+                                                                    *ngIf="Coach_Description.errors && (Coach_Description.touched || Coach_Description.dirty)">
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Coach_Description.errors.required">Indiquez
+                                                                        votre Description.</span>
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Coach_Description.errors.maxlength">Seuls
+                                                                        300 caractères sont autorisés.</span>
+                                                                </ng-container>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                  
+                                                    <!-- <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Emplacement <span class="red"> *</span></label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control" [(ngModel)]="res.Coach_Emplacement"
+                                                                    name="res.Coach_Emplacement" readyonly required #Coach_Emplacement="ngModel"
+                                                                    [ngClass]="{'alert_field': (Coach_Emplacement.errors && (Coach_Emplacement.touched || Coach_Emplacement.dirty))}"
+                                                                    placeholder="" readonly required>
+                                                                <ng-container *ngIf="Coach_Emplacement.errors && (Coach_Emplacement.touched || Coach_Emplacement.dirty)">
+                                                                    <span class="alert_text" *ngIf="Coach_Emplacement.errors.required">Indiquez votre
+                                                                        Emplacement.</span>
+                                                                </ng-container>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                   
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Code Postal <span class="red">*</span></label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input class="form-control"
+                                                                    [(ngModel)]="res.Coach_City" 
+                                                                    minlength="5" 
+                                                                    onKeyPress="if(this.value.length>=5) return false;" type="number"
+                                                                    id="coach_city"
+                                                                    #Coach_City="ngModel"
+                                                                    (change)="searchCity($event)"
+                                                                    [ngClass]="{'alert_field': (Coach_City.errors && (Coach_City.touched || Coach_City.dirty))}"
+                                                                    name="Coach_City" 
+                                                                    placeholder="Postal Code" 
+                                                                    readonly
+                                                                    required>
+
+                                                                <ng-container
+                                                                    *ngIf="Coach_City.errors && (Coach_City.touched || Coach_City.dirty)">
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Coach_City.errors.required">Indiquez
+                                                                        votre Postal Code.</span>
+                                                                    <span class="alert_text"
+                                                                        *ngIf="Coach_City.errors.pattern">Indiquez
+                                                                        votre Postal Code.</span>
+                                                                </ng-container>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label>Ville<span class="red"> *</span></label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                    <select [(ngModel)]="res.Coach_Ville" style="height:45px" class="form-control" #Coach_Ville="ngModel" name="res.Coach_Ville"
+                                                                        [ngClass]="{'alert_field': (Coach_Ville.errors && (Coach_Ville.touched || Coach_Ville.dirty))}">
+                                                                        <option [ngValue]="city.id" *ngFor="let city of selectedCity">
+                                                                            {{ city.Libelle_acheminement }}</option>
+                                                                    </select>
+
+                                                                <ng-container *ngIf="Coach_Ville.errors && (Coach_Ville.touched || Coach_Ville.dirty)">
+                                                                    <span class="alert_text" *ngIf="Coach_Ville.errors.required">Indiquez votre
+                                                                        Emplacement.</span>
+                                                                </ng-container>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <label><span class="red">*</span>Champs
+                                                                    obligatoires</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="card card-profile">
+                                                            <div class="card-avatar">
+                                                                <a>
+                                                                    <img class="img" src={{res.Coach_Image}}>
+                                                                </a>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title">Photo de profil</h4>
+                                                                <div style="cursor: pointer;" class="upload-btn-wrapper">
+                                                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                                                    <!-- <button style="cursor: pointer;" class="btn">Importer l'image</button> -->
+                                                                    <input style="cursor: pointer;" type="file" name="myfile" (change)="changeListener($event)" />
+                                                                </div>
+                                                            </div> 
+
+                                                            <!-- <div class="card-body">
+                                                                <h4 class="card-title">Photo de profil</h4>
+                                                                <div style="cursor: pointer;" class="upload-btn-wrapper">
+                                                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                                                    <input style="cursor: pointer;" type="file" name="myfile" (change)="onFileSelected($event)" />
+                                                                </div>
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- <div class="col-md-5">
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="card card-profile">
+                                                            <div class="card-body" style="cursor: pointer;">
+                                                              
+                                                                <div class="upload-btn-wrapper card-avatar" style="cursor: pointer;">
+                                                                    <img class="img" src={{res.Coach_Image}} style="cursor: pointer;" (change)="changeListener($event)">
+                                                                 
+                                                               
+ 
+                                                                <h4 class="card-title">Photo de profil</h4>
+                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                <input type="file" style="cursor: pointer;" name="myfile" (change)="changeListener($event)" />
+                                                        </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="col-md-12 text-center">
+                                                    <button type="submit"
+                                                        [disabled]="!activeTabIndex0.valid || submit_disabled" readonly
+                                                        id="submit" disabled class="btn btn-primary">SAUVEGARDER</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div [ngClass]="(activeTabIndex === 1) ? 'active': null" class="tab-pane tab2">
+                            <div id="collapseTwo" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <form #activeTabIndex1="ngForm" (ngSubmit)="onSubmit(res)"
+                                        enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-xs-12"><a id="enableBtn" data-target="#myModal_edit_course" style="float:right;margin-bottom:20px; color: #ffffff;"
+                                                *ngIf="(activeTabIndex === 1)" (click)="makeEnable()" class="btn btn-info"><i
+                                                    class="fa fa-edit"></i> MODIFIER</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4 col-sm-12">
+                                                            <label>CV</label>
+                                                        </div>
+                                                        <div class="col-md-8 col-sm-12">
+                                                            <div class="btn btn-info">
+                                                                <input type="file" disabled id="Coach_Resume"
+                                                                    name="Coach_Resume"
+                                                                    (change)="changeListener($event)">
+                                                            </div>
+                                                            <br>
+                                                            <a id="resume" (click)="download()"
+                                                                class="label1">{{filename}}</a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                            <label class="label1">Prestation de service </label>
+                                                        </div>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <div class="chech_box_services1">
+                                                                <div class="form-group">
+                                                                    <span class="chech_box_services"><input
+                                                                            id="CoursIndividuel" type="checkbox"
+                                                                            readonly class="service" name="service"
+                                                                            value="CoursIndividuel" /> Cours
+                                                                        individuel</span>
+                                                                    <span class="chech_box_services"><input
+                                                                            id="CoursCollectifOndemand" type="checkbox"
+                                                                            readonly class="service" name="service"
+                                                                            value="CoursCollectifOndemand" /> Cours
+                                                                        collectif ondemand</span>
+                                                                    <span class="chech_box_services"><input
+                                                                            id="CoursCollectifClub" type="checkbox"
+                                                                            readonly class="service" name="service"
+                                                                            value="CoursCollectifClub" /> Cours
+                                                                        collectif
+                                                                        club</span>
+                                                                    <span class="chech_box_services"><input id="Stage"
+                                                                            readonly type="checkbox" class="service"
+                                                                            name="service" value="Stage" /> Stage</span>
+                                                                    <span class="chech_box_services"><input
+                                                                            id="TeamBuilding" type="checkbox" readonly
+                                                                            class="service" name="service"
+                                                                            value="TeamBuilding" /> Team building</span>
+                                                                    <span class="chech_box_services"><input
+                                                                            id="Animations" type="checkbox" readonly
+                                                                            class="service" name="service"
+                                                                            value="Animations" /> Animations</span>
+                                                                    <span class="chech_box_services"><input
+                                                                            id="Tournament" type="checkbox" readonly
+                                                                            class="service" name="service"
+                                                                            value="Tournament" /> Tournament</span>
+                                                                    <!-- <ng-container *ngIf="Coach_Description.errors && (Coach_Description.touched || Coach_Description.dirty)">
+                                                                        <span class="alert_text" *ngIf="Coach_Description.errors.required">Choisissez
+                                                                            votre préstation
+                                                                            de service.</span>
+                                                                    </ng-container> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label>Rayon <span class="red">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <select class="form-control" id="exampleFormControlSelect1"
+                                                                [(ngModel)]="res.Coach_Rayon" name="Coach_Rayon"
+                                                                readonly required>
+                                                                <option value="1" readonly>1 kilomètre</option>
+                                                                <option value="2" readonly>2 Kilomètres</option>
+                                                                <option value="3" readonly>3 Kilomètres</option>
+                                                                <option value="4" readonly>4 Kilomètres</option>
+                                                                <option value="5" readonly>5 Kilomètres</option>
+                                                                <option value="6" readonly>6 Kilomètres</option>
+                                                                <option value="7" readonly>7 Kilomètres</option>
+                                                                <option value="8" readonly>8 Kilomètres</option>
+                                                                <option value="9" readonly>9 Kilomètres</option>
+                                                                <option value="10" readonly>10 Kilomètres</option>
+                                                                <option value="11" readonly>11 Kilomètres</option>
+                                                                <option value="12" readonly>12 Kilomètres</option>
+                                                                <option value="13" readonly>13 Kilomètres</option>
+                                                                <option value="14" readonly>14 Kilomètres</option>
+                                                                <option value="15" readonly>15 Kilomètres</option>
+                                                                <option value="16" readonly>16 Kilomètres</option>
+                                                                <option value="17" readonly>17 Kilomètres</option>
+                                                                <option value="18" readonly>18 Kilomètres</option>
+                                                                <option value="19" readonly>19 Kilomètres</option>
+                                                                <option value="20" readonly>20 Kilomètres</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label>Prix <span class="red">*</span><br/>(Indiquer le prix en euros)</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+                                                                <div class="col-md-6"><input type="text"
+                                                                        [(ngModel)]="res.Coach_Price" pattern="^[0-9]*$"
+                                                                        #Coach_Price="ngModel"
+                                                                        [ngClass]="{'alert_field': (Coach_Price.errors && (Coach_Price.touched || Coach_Price.dirty))}"
+                                                                        name="Coach_Price" class="form-control"
+                                                                        placeholder="20" readonly required>
+                                                                    <ng-container
+                                                                        *ngIf="Coach_Price.errors && (Coach_Price.touched || Coach_Price.dirty)">
+                                                                        <span class="alert_text"
+                                                                            *ngIf="Coach_Price.errors.required">Indiquez
+                                                                            votre Prix.</span>
+                                                                        <span class="alert_text"
+                                                                            *ngIf="Coach_Price.errors.pattern">Indiquez
+                                                                            votre Prix.</span>
+                                                                    </ng-container>
+                                                                </div>
+                                                                <div class="col-md-6"><input type="text"
+                                                                        [(ngModel)]="res.Coach_PriceX10"
+                                                                        pattern="^[0-9]*$" #Coach_PriceX10="ngModel"
+                                                                        [ngClass]="{'alert_field': (Coach_PriceX10.errors && (Coach_PriceX10.touched || Coach_PriceX10.dirty))}"
+                                                                        name="Coach_PriceX10" class="form-control"
+                                                                        placeholder="2000" readonly required>
+                                                                    <ng-container
+                                                                        *ngIf="Coach_PriceX10.errors && (Coach_PriceX10.touched || Coach_PriceX10.dirty)">
+                                                                        <span class="alert_text"
+                                                                            *ngIf="Coach_PriceX10.errors.required">Indiquez
+                                                                            votre Prix X10.</span>
+                                                                        <span class="alert_text"
+                                                                            *ngIf="Coach_PriceX10.errors.pattern">Indiquez
+                                                                            votre Prix X10.</span>
+                                                                    </ng-container>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                            <label class="label1">Mode de transport <span
+                                                                    class="mandatory">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12">
+                                                            <div class="chech_box_services1">
+                                                                <div class="form-group">
+                                                                    <label class="checkbox-inline"><input id="voiture"
+                                                                            type="checkbox" class="transport" readonly
+                                                                            name="transport"
+                                                                            value="Voiture" />Voiture</label>
+                                                                    <label class="checkbox-inline"><input id="bus"
+                                                                            type="checkbox" class="transport" readonly
+                                                                            name="transport" value="bus" />bus</label>
+                                                                    <label class="checkbox-inline"><input id="métro"
+                                                                            readonly type="checkbox" class="transport"
+                                                                            name="transport"
+                                                                            value="métro" />métro</label>
+                                                                    <label class="checkbox-inline"><input id="rer"
+                                                                            readonly type="checkbox" class="transport"
+                                                                            name="transport"
+                                                                            value="rer" />RER</label>
+                                                                            <label class="checkbox-inline"><input id="tram"
+                                                                                    readonly type="checkbox" class="transport"
+                                                                                    name="transport"
+                                                                                    value="tram" />tram</label>
+                                                                    <br>
+                                                                    <span id="trans_error" class="alert_text">Choisissez
+                                                                        vos moyens de
+                                                                        transport.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <label><span class="red">*</span>Champs
+                                                                obligatoires</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-12 text-center">
+                                                <button type="submit"
+                                                    [disabled]="!activeTabIndex1.valid || submit_disabled" id="submit1"
+                                                    disabled class="btn btn-primary">SAUVEGARDER</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div [ngClass]="(activeTabIndex === 2) ? 'active': null" class="tab-pane tab3">
+                            <div id="collapseThree" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <form #activeTabIndex2="ngForm" (ngSubmit)="onSubmit(res)"
+                                        enctype="multipart/form-data">
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-12"><a id="enableBtn" data-target="#myModal_edit_course" style="float:right;margin-bottom:20px; color: #ffffff;"
+                                                *ngIf="(activeTabIndex === 2)" (click)="makeEnable()" class="btn btn-info"><i
+                                                    class="fa fa-edit"></i> MODIFIER</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label>Paiement <span class="red">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-8 col-sm-8 col-xs-12 chech_box_sec1">
+                                                            <label class="checkbox-inline"><input id="Cheque" readonly
+                                                                    type="checkbox" name="payment" class="payment"
+                                                                    value="Cheque">Chequè</label>
+                                                            <label class="checkbox-inline"><input id="VirementEnligne"
+                                                                    readonly type="checkbox" name="payment"
+                                                                    class="payment" value="VirementEnligne">Virement en
+                                                                ligne</label>
+                                                            <label class="checkbox-inline"><input id="VirementBanque"
+                                                                    readonly type="checkbox" name="payment"
+                                                                    class="payment" value="VirementBanque">Virement
+                                                                banque</label> <br>
+                                                            <span id='cheque_error' class="alert_text">Choisissez votre
+                                                                mode de
+                                                                paiement</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3><strong>Coordonnées bancaires</strong></h3><br>
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label>IBAN<span class="red">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="IBAN"
+                                                                [(ngModel)]="res.Coach_Bank_Name"
+                                                                #Coach_Bank_Name="ngModel"
+                                                                [ngClass]="{'alert_field': (Coach_Bank_Name.errors && (Coach_Bank_Name.touched || Coach_Bank_Name.dirty))}"
+                                                                name="Coach_Bank_Name" readonly required>
+                                                            <ng-container
+                                                                *ngIf="Coach_Bank_Name.errors && (Coach_Bank_Name.touched || Coach_Bank_Name.dirty)">
+                                                                <span class="alert_text"
+                                                                    *ngIf="Coach_Bank_Name.errors.required">Indiquez
+                                                                    votre banque.</span>
+                                                            </ng-container>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label>Code B.I.C<span class="red">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Numéro de compte"
+                                                                [(ngModel)]="res.Coach_Bank_ACCNum"
+                                                                #Coach_Bank_ACCNum="ngModel"
+                                                                [ngClass]="{'alert_field': (Coach_Bank_ACCNum.errors && (Coach_Bank_ACCNum.touched || Coach_Bank_ACCNum.dirty))}"
+                                                                name="Coach_Bank_ACCNum" readonly required>
+                                                            <ng-container
+                                                                *ngIf="Coach_Bank_ACCNum.errors && (Coach_Bank_ACCNum.touched || Coach_Bank_ACCNum.dirty)">
+                                                                <span class="alert_text"
+                                                                    *ngIf="Coach_Bank_ACCNum.errors.required">Indiquez
+                                                                    votre Numéro de compte.</span>
+                                                            </ng-container>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label>Nom et prénom du propriétaire du compte <span class="red">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Code banque"
+                                                                [(ngModel)]="res.Branch_Code" #Branch_Code="ngModel"
+                                                                [ngClass]="{'alert_field': (Branch_Code.errors && (Branch_Code.touched || Branch_Code.dirty))}"
+                                                                name="Branch_Code" readonly required>
+                                                            <ng-container
+                                                                *ngIf="Branch_Code.errors && (Branch_Code.touched || Branch_Code.dirty)">
+                                                                <span class="alert_text"
+                                                                    *ngIf="Branch_Code.errors.required">Indiquez votre
+                                                                    Code banque.</span>
+                                                            </ng-container>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label>Ville de la banque</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Ville de la banque"
+                                                                [(ngModel)]="res.Coach_Bank_City"
+                                                                #Coach_Bank_City="ngModel"
+                                                                [ngClass]="{'alert_field': (Coach_Bank_City.errors && (Coach_Bank_City.touched || Coach_Bank_City.dirty))}"
+                                                                name="Coach_Bank_City" readonly required>
+                                                            <ng-container
+                                                                *ngIf="Coach_Bank_City.errors && (Coach_Bank_City.touched || Coach_Bank_City.dirty)">
+                                                                <span class="alert_text"
+                                                                    *ngIf="Coach_Bank_City.errors.required">Indiquez
+                                                                    votre Ville de la banque.</span>
+                                                            </ng-container>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group bmd-form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <label><span class="red">*</span>Champs
+                                                                obligatoires</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-12 text-center">
+                                                <button type="submit"
+                                                    [disabled]="!activeTabIndex2.valid || submit_disabled" id="submit2"
+                                                    disabled class="btn btn-primary">SAUVEGARDER</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="myModal_edit_course" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmer les modifications</h4>
+            </div>
+            <div class="modal-body" style="padding: 15px!important;">
+                <p>Êtes-vous sûr de vouloir faire les changements?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" (click)="enableForm()" class="btn btn-success" data-dismiss="modal">Oui</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+
+    </div>
+</div>

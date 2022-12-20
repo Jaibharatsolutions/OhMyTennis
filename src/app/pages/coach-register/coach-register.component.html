@@ -1,0 +1,385 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<div class="reg_form">
+  <div class="container-fluid">
+    <div class="head_sec">
+      <p class="title_reg">CREER MON COMPTE - COACH</p>
+      <br />
+      <app-social-login></app-social-login>
+      <div
+        *ngIf="alertMsg.show"
+        class="alert {{ alertMsg.type }} alert-dismissible text-center"
+      >
+        <button
+          type="button"
+          (click)="_closeAlertMessage($event)"
+          class="close"
+        >
+          <span>&times;</span>
+        </button>
+        {{ alertMsg.msg }}
+      </div>
+      <!-- <app-social-login></app-social-login> -->
+    </div>
+    <form
+      autocomplete="off"
+      [formGroup]="registerForm"
+      autocomplete="off"
+      (ngSubmit)="addnewCoach(registerForm)"
+    >
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <label class="label1 civilite_label"
+            >Civilité <span style="color:red">*</span></label
+          >
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <label class="radio"
+            >Madame
+            <input
+              type="radio"
+              name="gender"
+              value="Madame"
+              formControlName="gender"
+            />
+            <span class="checkround"></span>
+          </label>
+          <input type="hidden" formControlName="mobile" name="roleId" />
+          <label class="radio"
+            >Monsieur
+            <input
+              type="radio"
+              name="gender"
+              value="Monsieur"
+              formControlName="gender"
+            />
+            <span class="checkround"></span>
+          </label>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <label class="label1">Prénom <span style="color:red">*</span></label>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <input
+            type="text"
+            formControlName="firstName"
+            name="firstName"
+            class="form-control fields"
+            placeholder="Prénom"
+            [ngClass]="{
+              alert_field:
+                rForm.firstName.errors &&
+                (rForm.firstName.touched || rForm.firstName.dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              rForm.firstName.errors &&
+              (rForm.firstName.touched || rForm.firstName.dirty)
+            "
+            class="invalid-feedback"
+          >
+            <div class="alert_text">Indiquez votre prénom</div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <label class="label1">Nom <span style="color:red">*</span></label>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <input
+            type="text"
+            formControlName="lastName"
+            name="lastName"
+            class="form-control fields"
+            placeholder="Nom"
+            [ngClass]="{
+              alert_field:
+                rForm.lastName.errors &&
+                (rForm.lastName.touched || rForm.lastName.dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              rForm.lastName.errors &&
+              (rForm.lastName.touched || rForm.lastName.dirty)
+            "
+            class="invalid-feedback"
+          >
+            <div class="alert_text">Indiquez votre nom</div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <label class="label1">E-mail <span style="color:red">*</span></label>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <input
+            type="text"
+            formControlName="email"
+            name="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            class="form-control fields"
+            placeholder="E-mail"
+            [ngClass]="{
+              alert_field:
+                rForm.email.errors && (rForm.email.touched || rForm.email.dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              rForm.email.errors && (rForm.email.touched || rForm.email.dirty)
+            "
+            class="invalid-feedback"
+          >
+            <div class="alert_text">Indiquez votre e-mail</div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <label class="label1"
+            >Mot de passe <span style="color:red">*</span></label
+          >
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <input
+            type="password"
+            minlength="6"
+            formControlName="password"
+            name="password"
+            class="form-control fields"
+            placeholder="Mot de passe"
+            [ngClass]="{
+              alert_field:
+                rForm.password.errors &&
+                (rForm.password.touched || rForm.password.dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              rForm.password.errors &&
+              (rForm.password.touched || rForm.password.dirty)
+            "
+            class="invalid-feedback"
+          >
+            <div class="alert_text">
+              Les mots de passe doivent comporter au moins 8 caractères avec
+              majuscules, chiffres et caractères spéciaux.
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-5 postal_text">
+          <label class="label1"
+            >Code Postal <span style="color:red">*</span></label
+          >
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-7 postal_width">
+          <input
+            type="number"
+            minlength="5"
+            onKeyPress="if(this.value.length>=5) return false;"
+            formControlName="postalCode"
+            (change)="searchCity($event)"
+            name="postalCode"
+            class="form-control fields"
+            placeholder="Code Postal"
+            [ngClass]="{
+              alert_field:
+                rForm.postalCode.errors &&
+                (rForm.postalCode.touched || rForm.postalCode.dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              rForm.postalCode.errors &&
+              (rForm.postalCode.touched || rForm.postalCode.dirty)
+            "
+            class="invalid-feedback"
+          >
+            <div class="alert_text">
+              S'il vous plaît entrer le code postal valide
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 col-sm-1 col-xs-5 ville_text">
+          <label class="label2" style="margin-right:2px"
+            >Ville<span style="color:red">*</span></label
+          >
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-7 ville_width">
+          <select
+            [(ngModel)]="cityId"
+            style="height:45px"
+            class="form-control"
+            formControlName="cityId"
+            name="cityId"
+            id="cityId"
+            [ngClass]="{
+              alert_field:
+                rForm.cityId.errors &&
+                (rForm.cityId.touched || rForm.cityId.dirty)
+            }"
+          >
+            <option value="">Sélectionnez votre ville</option>
+            <option [ngValue]="city.id" *ngFor="let city of selectedCity">
+              {{ city.Libelle_acheminement }}</option
+            >
+          </select>
+          <div
+            *ngIf="
+              rForm.cityId.errors &&
+              (rForm.cityId.touched || rForm.cityId.dirty)
+            "
+            class="invalid-feedback"
+          >
+            <div class="alert_text">Sélectionnez votre ville.</div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <label class="label1"
+            >téléhone mobile <span style="color:red">*</span></label
+          >
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <input
+            formControlName="mobile"
+            name="mobile"
+            class="form-control fields"
+            placeholder="téléhone mobile"
+            (keypress)="numberOnly($event)"
+            [ngClass]="{
+              alert_field:
+                rForm.mobile.errors &&
+                (rForm.mobile.touched || rForm.mobile.dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              rForm.mobile.errors &&
+              (rForm.mobile.touched || rForm.mobile.dirty)
+            "
+            class="invalid-feedback"
+          >
+            <div class="alert_text">Cette valeur semble non valide.</div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-12"></div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <input
+            type="checkbox"
+            name="termsCondition"
+            id="termsCondition"
+            formControlName="termsCondition" style="margin-left: 4px;"
+          />
+
+          <a
+            href="javascript:;"
+            routerLink="{{ '/' + this._const('PATH.TERMS_CONDITION') }}"
+            >&nbsp;&nbsp;Termes et conditions</a
+          >
+          <span style="color:red">&nbsp;*</span>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-sm-3 col-xs-12"></div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <span style="color:red; padding-top:6px;">*</span> Champs obligatoires
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="col-md-3 col-sm-3 col-xs-12"></div>
+      <div class="col-md-9 col-sm-9 col-xs-12">
+        <!-- <a class="btn btn-default login_btn_form btn-block" style="text-transform:uppercase">S'inscrire</a> -->
+        <input
+          [disabled]="!registerForm.valid"
+          type="submit"
+          value="S'inscrire"
+          class="btn btn-default login_btn_form btn-block"
+          style="text-transform:uppercase"
+        />
+      </div>
+      <div class="clearfix"></div>
+    </form>
+  </div>
+</div>
+<div class="modal fade" id="successModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="thank-you-pop">
+          <img
+            src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png"
+            alt=""
+          />
+          <h1>Merci</h1>
+          <p>
+            Merci de vous inscrire avec nous. Vous recevrez un mail pour
+            l'activer et continuer
+          </p>
+          <!-- <a style="width:50%;margin:0px auto" href="#" class="btn btn-default login_btn_form btn-block">ok</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="codePostalAlert" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="thank-you-pop">
+          <p>Please enter valid pincode</p>
+          <!-- <a style="width:50%;margin:0px auto" href="#" class="btn btn-default login_btn_form btn-block">ok</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="emailIdExistMod" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="thank-you-pop">
+          <p>Email id existe déjà</p>
+          <!-- <a style="width:50%;margin:0px auto" href="#" class="btn btn-default login_btn_form btn-block">ok</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

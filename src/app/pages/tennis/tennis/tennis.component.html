@@ -1,0 +1,352 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 left_sidebarmenu haspadd">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-3 col-md-4 col-sm-4 sm_noleftpadd col-xs-12 left_sidebarmenu"
+      >
+        <div class="black_sidemenu">
+          <h2 class="left_menutitle">comprendre</h2>
+          <ul>
+            <li>
+              <a href="#"
+                >Historique du tennis<span
+                  ><i class="fa fa-angle-right"></i></span
+              ></a>
+              <ul class="black_sidesubmenu">
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.HISTOIREFIRST.SELF')
+                    }}"
+                    >1880 - 1930</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.HISTOIRE1SECOND.SELF')
+                    }}"
+                    >1930 - 1950</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.HISTOIRETHIRD.SELF')
+                    }}"
+                    >1950 - 1973</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.HISTOIREFOUR.SELF')
+                    }}"
+                    >1973 - auj</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Lexique du tennis<span><i class="fa fa-angle-right"></i></span
+              ></a>
+              <ul class="black_sidesubmenu">
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.LEXIQUEATOD.SELF')
+                    }}"
+                    >LETTRE A - D</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.LEXIQUEETOM.SELF')
+                    }}"
+                    >LETTRE E - M</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.LEXIQUENTOQ.SELF')
+                    }}"
+                    >LETTRE N - Q</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.LEXIQUERTOZ.SELF')
+                    }}"
+                    >LETTRE R - Z</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Régles du tennis<span><i class="fa fa-angle-right"></i></span
+              ></a>
+              <ul class="black_sidesubmenu" style="min-width: 240px;">
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.COMPTER.SELF')
+                    }}"
+                    >Compter les points</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.PRINCIPLE.SELF')
+                    }}"
+                    >Règles principales</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.ELEMENTS.SELF')
+                    }}"
+                    >Eléments d'un terrain de tennis</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:;"
+                    routerLink="{{
+                      '/' + this._const('PATH.TENNIS.DIMENSIONS.SELF')
+                    }}"
+                    >Dimensions d'un terrain de tennis</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="black_sidemenu">
+          <h2 class="left_menutitle">Apprendre</h2>
+          <ul>
+            <li><a href="#">Technique</a></li>
+            <li><a href="#">Tactique</a></li>
+            <li><a href="#">Physique</a></li>
+            <li><a href="#">Mental</a></li>
+          </ul>
+        </div>
+        <div class="black_sidemenu">
+          <h2 class="left_menutitle">Pratiquer</h2>
+          <ul>
+            <li><a href="#">Vente de matériel</a></li>
+            <li><a href="#">Guide terrains</a></li>
+            <li><a href="#">Recherche partenaire</a></li>
+            <li><a href="#">Tournois amicaux</a></li>
+            <li><a href="#">Tournois officiels</a></li>
+          </ul>
+        </div>
+        <div class="black_sidemenu">
+          <h2 class="left_menutitle">Circuit ATP</h2>
+          <ul>
+            <li><a href="#">Pronostics</a></li>
+            <li><a href="#">Billeterie</a></li>
+            <li><a href="#">Actualité</a></li>
+            <li><a href="#">Livescore</a></li>
+            <li><a href="#">Classement ATP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="col-lg-9 col-md-8 col-sm-8 col-xs-12 sm_norightpadd right_sidecontent"
+      >
+        <div class="page_title_div">
+          <h1 class="page_title">Les tennis pour les débutants</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="col-md-6 col-sm-12 padd_botspace md_noleftpadd col-xs-12">
+          <h5><strong>Comprendre le tennis</strong></h5>
+          <p>
+            Nous mettons à votre disposition les principales règles pour
+            commencer à jouer au tennis. Le lexique vous permettra de compléter
+            certaines connaissances notamment les termes spécifiques et
+            expressions couramment utlisés. Pour les plus curieux, nous avons
+            retracé les grands moments qui ont marqué l’histoire du tennis
+            vieille de plus d’un siècle.
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href="">Le lexique du tennis.</a></strong
+            >
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-12 padd_botspace md_norightpadd col-xs-12">
+          <img
+            src="./assets/images/les-regles-du-tennis.jpg"
+            style="width:100%;"
+          />
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+          <div
+            class="col-md-6 col-md-12 padd_botspace md_noleftpadd col-xs-12 order-last order-md-first"
+          >
+            <img src="./assets/images/ligne-tennis.jpg" style="width:100%;" />
+          </div>
+          <div
+            class="col-md-6 col-md-12 padd_botspace md_norightpadd col-xs-12 order-first order-md-last"
+          >
+            <h5><strong>Apprendre le tennis</strong></h5>
+            <p>
+              Le site Ohmytennis.com vous offre la possibilité d’apprendre le
+              tennis de chez vous grâce au e-learning (formation en ligne).Des
+              fiches et des vidéos sont mises à votre disposition concernant la
+              technique, la tactique, le physique et le mental. Des descriptions
+              ainsi que des exercices sont disponibles afin de vous faire
+              progresser rapidement.
+            </p>
+            <p>
+              <strong
+                ><a class="content_link" href=""
+                  >Découvrez comment apprendre le tennis par vous même.</a
+                ></strong
+              >
+            </p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="col-md-6 col-md-12 md_noleftpadd padd_botspace col-xs-12">
+          <h5><strong>Pratiquer le tennis</strong></h5>
+          <p>
+            Vous pouvez acheter du materiel de tennis (raquette, balle, textile)
+            et trouver un court pas trop loin de chez vous grâce au guide des
+            terrains. Si vous ne savez pas avec qui jouer, nous vous proposons
+            de la recherche de partenaires qui ont le même niveau que vous et
+            des disponibilités comme les vôtres. Vous avez également la
+            possibilité de participer à un tournoi amical si vous voulez vous
+            essayer contre des styles de jeu inconnus ou sauter le pas en
+            particpant à un vrai tournoi de tennis officiel.
+          </p>
+
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Achetez votre matériel de tennis.</a
+              ></strong
+            >
+          </p>
+        </div>
+        <div class="col-md-6 col-md-12 padd_botspace md_norightpadd col-xs-12">
+          <img
+            src="./assets/images/liste-tournoi-tennis.jpg"
+            style="width:100%;"
+          />
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="~row">
+          <div class="col-md-6 col-sm-12 padd_botspace md_noleftpadd col-xs-12">
+            <img
+              src="./assets/images/taille-filet-tennis.jpg"
+              style="width:100%;"
+            />
+          </div>
+          <div
+            class="col-md-6 col-sm-12 padd_botspace md_norightpadd col-xs-12"
+          >
+            <h5><strong>Les pros (tournois de tennis ATP/WTA)</strong></h5>
+            <p>
+              Retrouvez vos joueurs et joueuses de tennis professionnels
+              préférés en suivant leur classement mais aussi l’actualité du
+              circuit des tournois de tennis ATP ou WTA. Pour ceux qui
+              souhaitent prolonger l’expérience en direct nous vous proposons
+              des pronostics, du livescore/streaming live ou encore de la
+              billetterie pour les principaux événements nationaux et
+              internationaux.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section1 ends -->
+
+<app-footer></app-footer>

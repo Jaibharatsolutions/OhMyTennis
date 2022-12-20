@@ -1,0 +1,191 @@
+.court_listarea .container {
+	max-width: 1000px;
+	margin: 0px auto;
+}
+.list_right , .list_right img {
+	position: relative;
+}
+.court_listarea h4 {
+    font-weight: bold;
+	margin-top: 0px;
+	font-size: 25px;
+	text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.orange_btns {
+    background: #e75b00;
+    padding: 9px 21px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;	
+	text-decoration: none;
+    font-weight: bold;
+}
+.orange_btns:hover {
+    background: #fff;
+    border: 1px solid #e75b00;
+	text-decoration: none;
+    color: #e75b00;
+}
+.club_outer {
+	padding-top: 22px;
+}
+.listdetail_design {
+	background:#f6f6f6;
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.21);
+}
+.tennis_courtname {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #e75b00;;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+.tennis_courtname:hover {
+	text-decoration:underline;
+	color: #495057;
+}
+.court_name h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.listing_design:hover {
+    background: #6f6f6f;
+
+}
+.court_name h2:hover {
+    text-decoration: underline;
+}
+.list_right img {
+	width: 100%;
+}
+.listdetail_design .col-md-4 h5 {
+    margin: 0px 0px 0px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    background: rgba(0,0,0,0.560);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0px;
+    z-index: 23;
+    width: 100%;
+    padding: 12px 0px;
+    text-align: center;
+}
+
+.search_area label, .inner_searcharea label {
+    position: absolute;
+    top: 11px;
+    left: 90px;
+}
+.clearfix {
+	clear: both;
+}
+.court_name a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.court_listarea .fa {
+    border: 1px solid #fff;
+    font-size: 14px;
+    border-radius: 50%;
+	background: #e2e2e2;
+    color: #737373;
+    margin-right: 17px;
+	height: 30px;
+	line-height: 30px !important;
+	float: left;
+    width: 30px;
+    text-align: center;
+
+}
+
+.cloubhouse_list .map-container {
+    top: 193px;
+    height: 218px;
+    right: -29px;
+  }
+.club_contdiv span{
+	float:right;
+	max-width: 170px;
+}
+.club_contdiv {
+	font-size: 15px;
+	padding-left: 10px;
+    padding-bottom: 5px;
+}
+.club_contdiv label{
+	margin-right:10px;
+}
+.text-center {
+	text-align: center;
+}
+.no_padd {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.search_area .form-control, .inner_searcharea .form-control {
+    text-indent: 50px;
+    height: 56px;
+    color: #495057;
+    font-weight: 400;
+    font-size: 15px;
+    border: 1px solid #ccc !important;
+    padding: 10px;
+    border-radius: 30px !important;
+    max-width: 200px;
+    margin: 0px auto;
+    text-transform: uppercase;
+}
+.court_listarea {
+    padding: 30px 0px;
+}
+@media (min-width: 768px) {
+	.banner_container {
+		max-width: 650px;
+	}
+	.listdetail_design {
+	padding-left: 20px;
+	}
+	.listdetail_design .col-md-8 {
+		float:left;
+		width:66.66666667%;
+	}
+	.listdetail_design .col-md-4 {
+		float:left;
+		width:33.333333%;
+	}
+	.club_contdiv {
+		padding-left: 40px;
+	}
+}
+@media (min-width: 992px) {
+	.listdetail_design {
+		padding-left: 50px;
+	}	
+	.club_contdiv {
+		padding-left: 70px;
+	}
+}
+
+.map-container {
+    position: absolute;
+    top: 0;
+    left: -16px;
+    right: -18px;
+    bottom: -30px;
+    margin: 30px;
+    top: 114px;
+}
+  .map-frame {
+	border: 2px solid black;
+	height: 100%;
+  }
+  
+  #map {
+	height: 100%;
+  }

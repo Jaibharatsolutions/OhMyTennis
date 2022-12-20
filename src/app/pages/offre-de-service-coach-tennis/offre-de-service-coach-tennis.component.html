@@ -1,0 +1,349 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section3 starts -->
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Ohmytennis: Offre de service coach tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div
+              class="panel-group"
+              id="accordion"
+              role="tablist"
+              aria-multiselectable="true"
+            >
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Cours particulier de tennis ou collectif à la demande
+                    </a>
+                  </h4>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="panel-collapse collapse in"
+                  role="tabpanel"
+                  aria-labelledby="headingOne"
+                >
+                  <div class="panel-body">
+                    <p>
+                      <b>Qu’est ce qu’un cours particuliers de tennis ?</b>
+                      c’est un cours de tennis avec un élève sur le terrain .
+                      Vous avez la possibilité d’avoir un discours personnalisé
+                      et de jouer avec le professeur pendant toute l’heure.
+                    </p>
+
+                    <p>
+                      <b>Qu’est ce qu’un cours collectif de tennis ?</b> c’est
+                      un cours de tennis avec au moins 2 personnes. L’intérêt
+                      principal de ce genre de cours est la mutualisation des
+                      coûts (location et cours) Lien contextualisé : Savez-vous
+                      comment vous préparez pour être en forme physique pour
+                      jouer au tennis ?
+                    </p>
+
+                    <p>
+                      <b
+                        >Faites un test avec votre prof de tennis avant de vous
+                        engager sur du plus long terme</b
+                      >
+                      C’est le meilleur moyen pour savoir si prendre un cours de
+                      tennis vous plaira avec le professeur choisit. En effet
+                      votre cours vous permettra d’avoir un retour réel
+                      d’expérience et d’envisager par la suite de continuer…
+                      Lien contextualisé : Découvrez également notre offre
+                      concernant les stages de tennis
+                    </p>
+
+                    <p>
+                      <b
+                        >Selon votre future consommation de cours le professeur
+                        de tennis vous conseillera sur les possibilités de
+                        tarifications de location de terrain.
+                      </b>
+                      Que cela soit pour un test , quelques cours ou un envie de
+                      reprendre le tennis sérieusement à l’année , vous avez la
+                      possibilité de jouer sur les tarifs de location des
+                      terrains. Les professeurs sur place connaissent les prix
+                      pratiqués qui varient d’un lieu à l’autre (valeur à
+                      l’unité ou pour la saison le plus souvent) Lien
+                      contextualisé : Choisissez bien votre matériel de tennis
+                      pour jouer
+                    </p>
+
+                    <p>
+                      <b>Réservation d’un coach de tennis via le planning </b>
+                      Notre planning en ligne vous permet d’avoir un visibilité
+                      sur la disponibilité des professeurs tout au long de
+                      l’année. La plupart dispensent des cours collectifs en
+                      club le soir et le samedi donc sont indisponibles. Il
+                      existe des exceptions en semaine selon certains cas mais
+                      aussi pendant les vacances scolaires.
+                    </p>
+
+                    <p>
+                      <b
+                        >Confirmation de la réservation du cours de tennis (=
+                        réservation du terrain) dans les 24 heures</b
+                      >
+                      Nous essayons de répondre au plus vite à votre demande dès
+                      que nous en avons pris connaissance. Le but est de
+                      réserver rapidement un terrain selon les moyens qui sont
+                      mis à notre disposition (internet, standard téléphonique)
+                      mais il se peut que nous soyons déjà sur le terrain , ne
+                      soyez pas impatients nous nous occupons de vous dès que
+                      possible.
+                    </p>
+
+                    <p>
+                      <b
+                        >Rendez vous sur le terrain à l’heure et jour dit (le
+                        moniteur peut venir vous chercher dans certains cas)
+                      </b>
+                      Notre équipe est fiable et ponctuelle car notre
+                      professionnalisme commence par la ponctualité. En effet
+                      les plannings de chacun étant souvent chargés il est
+                      préférable que tout le monde soit à l’heure c’est une
+                      question de respect mutuel.
+                    </p>
+
+                    <p>
+                      <b
+                        >Les balles sont fournies ainsi que le matériel
+                        pédagogique
+                      </b>
+                      Le moniteur arrive sur le terrain munis de balles dans un
+                      seau ou panier (environ une trentaine ou plus) , vous
+                      n’avez pas à vous encombrer avec cela lors de votre venue.
+                      Il se peut que le moniteur ait également des bandelettes ,
+                      des plots pour matérialiser le terrain ou un élastique
+                      (fil rouge) pour avoir un surfilet. Du matériel physique
+                      peut faire son apparition sur le court dans certains cas
+                      si c’est nécessaire (échelle, step).
+                    </p>
+
+                    <p>
+                      <b
+                        >Raquettes de prêt ou raquette de tennis recordée
+                        apportée sur le terrain quand nécessaire </b
+                      >Si c’est votre premier cours il est possible de vous
+                      prêter une raquette avant de vous engager de façon ferme.
+                      Plutôt que de se donner rendez vous autant vous apporter
+                      directement la raquette lors de votre prochain cours sauf
+                      si vous projeter de jouer avec un ami entre temps auquel
+                      cas il faudra surement rejoindre le moniteur sur terrain
+                      pendantq u’il sera evc un autre élève.
+                    </p>
+
+                    <p>
+                      <b
+                        >Les services complémentaires liés aux cours
+                        particuliers de tennis</b
+                      >
+                      Il est possible de vivre un cours de tennis C’est souvent
+                      après votre douche voire le lendemain que les courbatures
+                      se font sentir donc n’hésitez pas à vous étirez après
+                      votre séance afin d’éviter les mauvaises surprises. Vous
+                      êtes plein de nouvelles résolutions car les thèmes abordés
+                      vous ont permis d’entrevoir de nouvelles possibilités dans
+                      votre jeu.
+                    </p>
+
+                    <p>
+                      <b
+                        >Il est préférable de garder le même professeur afin
+                        d’assurer un suivi lors de votre encadrement
+                      </b>
+                      Il est possible de vivre un cours de tennis Si vous
+                      professeur vous convient ne changez surtout pas ! Cela
+                      permet une relation de confiance et d’établir une
+                      programmation sur du moyen ou du long terme. En effet il
+                      sera plus facile de transmettre un savoir au fur et à
+                      mesure des séances si vous adhérez au discours de votre
+                      enseignant. L’assiduité est primordiale si vous souhaitez
+                      évoluer dans votre jeu.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Cours collectifs de tennis à l’année
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingTwo"
+                >
+                  <div class="panel-body">
+                    <p>
+                      <b>L’ engagement moral sur l’année de tennis </b> Lorsque
+                      vous prenez la décision de vous inscrire à des cours
+                      collectifs c’est un engagement ferme dès le début de
+                      l’année. En effet vous régler la totalité des cours qui
+                      commencent dès le mois de septembre jusqu’au mois de juin.
+                      (environ 30 séances hors vacances scolaires). Dans
+                      certains clubs vous devez vous engager dès le mois de juin
+                      avec la possibilité de régler en plusieurs fois. Le
+                      séances où vous êtes absents ne seront pas remboursées et
+                      si les leçons sont dispensées dehors le club doit
+                      s’engager sur un minimum de séances (cas de pluie, neige).
+                    </p>
+
+                    <p>
+                      <b>Prix tennis fixe à l’adhésion</b> A l’inverse des cours
+                      collectifs à la demande, le prix reste fixe à l’année avec
+                      la possibilité d’obtenir des réductions (dans certains
+                      clubs) si vous êtes plusieurs membres de la même famille à
+                      vous inscrire. Ce prix inclu également la licence qui est
+                      obligatoire pour être protégé des risques inhérents à la
+                      pratique sportive. L’adhésion au club entraîne de facto
+                      l’adhésion à la ligue de Tennis du département auquelle
+                      est rattachée le club et par la même occasion à la
+                      Fédération française de Tennis. Enfin il vous sera demandé
+                      un certificat médical de non contre indication à la
+                      pratique sportive. (vous pouvez le faire via votre médecin
+                      généraliste)
+                    </p>
+
+                    <p>
+                      <b
+                        >Créneau fixe , même enseignant de tennis à l’année
+                        durant les périodes hors vacances scolaires</b
+                      >
+                      Les cours sont proposés sur le principe du créneau horaire
+                      (exemple : lundi 19h à 20h) avec le même professeur
+                      pendant toute l‘année hors vacances scolaires. Des
+                      changements sont possibles durant les 2/3 première séances
+                      si le niveau par exemple n’est pas homogène. Le but étant
+                      d’avoir un rendez vous régulier afin de pouvoir progresser
+                      dans le temps suivant une programmation établie par le
+                      moniteur.
+                    </p>
+
+                    <p>
+                      <b>Offres proposées via les clubs de tennis </b>
+                      S’inscrire dans un club de tennis vous oblige à respecter
+                      le règlement intérieur , vous permet de participer à la
+                      vie du club si vous le souhaitez (animations, tournois,
+                      bénévolat). Il est également possible d’acheter des places
+                      pour le tournoi de Roland Garros et Bercy , vous serez
+                      prévenu par email de l’ouverture des réservations par la
+                      Fédération Française de tennis si vous acceptez d’en
+                      recevoir les informations.
+                    </p>
+
+                    <p>
+                      <b
+                        >remplir ou constituer des groupes (maximum 6 élèves)
+                        par terrain de tennis
+                      </b>
+                      Le site tennisandme.com vous propose un maxumum de choix
+                      afin de compléter des groupes déjà existants ou de les
+                      constituer si vous connaissez des gens qui sont prêts a
+                      jouer avec vous. L’objectif étant de donner de la
+                      visibilité aux créneaux proposés pour les gens souhaitant
+                      s’inscrire dans un club de tennis
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section3 ends -->
+
+<app-footer></app-footer>

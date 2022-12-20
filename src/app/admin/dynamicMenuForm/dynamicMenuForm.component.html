@@ -1,0 +1,223 @@
+<div class="content cours_individualsec">
+  <div class="container-fluid">
+    <div class="~row">
+      <div class="form_devarea col-md-12">
+        <div class="tab-content">
+          <div
+            class="form_section"
+            id="availabilityDiv"
+            style="max-width: 100%;"
+          >
+            <div
+              *ngIf="alertMsg.show"
+              class="alert {{ alertMsg.type }} alert-dismissible text-center"
+            >
+              <button
+                type="button"
+                (click)="_closeAlertMessage($event)"
+                class="close"
+              >
+                <span>&times;</span>
+              </button>
+              {{ alertMsg.msg }}
+            </div>
+            <form #user="ngForm" (ngSubmit)="onSubmit(res)">
+              <div class="col-xs-12 col-md-8">
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                      <label>Position du menu</label>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                      <select
+                        class="form-control"
+                        id="exampleFormControlSelect1 position"
+                        [(ngModel)]="res.position"
+                        name="position"
+                        tabindex="1"
+                      >
+                        <option value="top">Menu d'en-tête</option>
+                        <option value="bottom">Menu Pied de page</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                      <label>Main menu <span class="red">*</span></label>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                      <select
+                        class="form-control"
+                        id="exampleFormControlSelect2"
+                        [(ngModel)]="res.main_menu"
+                        name="main_menu"
+                        #main_menu="ngModel"
+                        [ngClass]="{
+                          alert_field:
+                            main_menu.errors &&
+                            (main_menu.touched || main_menu.dirty)
+                        }"
+                        tabindex="2"
+                      >
+                        <option value="">Sélectionnez le nom du menu </option>
+                        <option
+                          value="{{ l.id }}"
+                          *ngFor="let l of main_menu_array; let i = index"
+                          >{{ l.mainMenu }}
+                        </option>
+                      </select>
+                      <ng-container
+                        *ngIf="
+                          main_menu.errors &&
+                          (main_menu.touched || main_menu.dirty)
+                        "
+                      >
+                        <span
+                          class="alert_text"
+                          *ngIf="main_menu.errors.required"
+                          >Indiquez votre le nom du menu.</span
+                        >
+                      </ng-container>
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                      <label
+                        ><a
+                          data-toggle="modal"
+                          id="enableBtn"
+                          data-target="#myModal_menu_name"
+                          class="btn btn-info des_save_btn course_edit_btn ng-binding"
+                          >ADD</a
+                        ></label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                      <label>Primary menu</label>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                      <input
+                        type="text"
+                        [(ngModel)]="res.primary_menu"
+                        #primary_menu="ngModel"
+                        name="primary_menu"
+                        class="form-control"
+                        placeholder="Nom du sous-menu"
+                        tabindex="3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <div class="form-group bmd-form-group">
+                  <div
+                    class="row"
+                    *ngFor="let rowData of availablity; let idx = index"
+                  >
+                    <div class="col-xs-12 col-md-4">
+                      <label>Secondary menu</label>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                      <input
+                        type="text"
+                        name="menu"
+                        class="form-control"
+                        placeholder="Nom du sous-menu"
+                        tabindex="4"
+                        [(ngModel)]="availablity[idx].menu"
+                        name="menu-{{ idx }}"
+                      /><br />
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                      <a
+                        ><i
+                          class="fa fa-plus"
+                          (click)="addSecondaryMenu()"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                      &nbsp;&nbsp;
+                      <a
+                        ><i
+                          class="fa fa-minus"
+                          *ngIf="availablity.length > 1"
+                          (click)="removeSecondaryMenu(idx)"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                  <br />
+                </div>
+              </div>
+              <div class="col-md-12 text-right">
+                <button
+                  data-toggle="modal"
+                  type="submit"
+                  id="Enregistrer"
+                  class="btn btn-success des_save_btn"
+                >
+                  Enregistrer
+                </button>
+                <a
+                  id="cancel"
+                  (click)="ngOnInit()"
+                  class="btn btn-default des_cancel_btn"
+                  >Annuler</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myModal_menu_name" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <h4 class="modal-title">Confirmer le contrôle</h4>
+      </div>
+      <div class="modal-body" style="padding: 15px!important;">
+        <input
+          type="text"
+          [(ngModel)]="menu"
+          name="menu"
+          class="form-control"
+          placeholder="Nom du menu"
+          required
+        />
+        <ng-container *ngIf="menu.errors && (menu.touched || menu.dirty)">
+          <span class="alert_text" *ngIf="menu.errors.required"
+            >Indiquez menu.</span
+          >
+        </ng-container>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          (click)="onPushMenuName($event, menu)"
+          class="btn btn-success"
+          data-dismiss="modal"
+        >
+          Oui
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

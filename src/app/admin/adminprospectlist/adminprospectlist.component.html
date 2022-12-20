@@ -1,0 +1,74 @@
+<div class="content">
+  <div class="container-fluid">
+    <br /><br />
+    <div class="row">
+      <div
+        *ngIf="alertMsg.show"
+        class="alert {{ alertMsg.type }} alert-dismissible text-center"
+      >
+        <button
+          type="button"
+          (click)="_closeAlertMessage($event)"
+          class="close"
+        >
+          <span>&times;</span>
+        </button>
+        {{ alertMsg.msg }}
+      </div>
+      <div class="col-md-12">
+        <div class="form_devarea">
+          <h4>PROSPECTUS LIST</h4>
+          <div class="~box-body">
+            <br />
+            <table
+              class="coach_listable table table-striped table-bordered table-sm row-border hover"
+              id="datatable"
+            >
+              <thead>
+                <tr>
+                  <th>Sl.no</th>
+                  <th>Prospectus Name</th>
+                  <th>Email</th>
+                  <th>Code Postal</th>
+                  <th>Edit</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let group of dataprospectlist; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ group.prospectname }}</td>
+                  <td>{{ group.email }}</td>
+                  <td>{{ group.pincode }}</td>
+                  <td>
+                    <a (click)="getuser(group.slno)"
+                      ><i class="fa fa-edit color-green"></i
+                    ></a>
+                  </td>
+                  <td *ngIf="group.status == 1; else falseprint">
+                    <a (click)="changeuserstatus(group.slno)"
+                      ><input
+                        class="btn btn-success"
+                        type="button"
+                        value="Active"
+                    /></a>
+                  </td>
+                  <ng-template #falseprint
+                    ><td>
+                      <a (click)="changeuserstatus1(group.slno)"
+                        ><input
+                          class="btn btn-danger"
+                          type="button"
+                          value="InActive"
+                      /></a></td
+                  ></ng-template>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

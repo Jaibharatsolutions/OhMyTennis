@@ -1,0 +1,64 @@
+<div class="sidebar" data-color="purple" data-background-color="white">
+  <div class="logo">
+    <a href="#" class="simple-text logo-normal">
+      <img src="../../assets/images/admin_logo.png" alt="" />
+    </a>
+  </div>
+  <div class="sidebar-wrapper">
+    <div class="user_profsm">
+      <img src="{{ image }}" alt="{{ this.username }}" class="user_smicon" />
+      <span>{{ this.username }}</span>
+    </div>
+
+    {{ this.url }}
+    <ul class="nav mynav">
+      <li
+        *ngFor="let l of leftPanel(); let i = index"
+        class="nav-item"
+        [ngClass]="l.path === this.router.url ? 'active' : null"
+      >
+        <a
+          (click)="navActiveIndex = i"
+          routerLink="{{ l.path }}"
+          class="nav-link"
+          href="javascript:;"
+        >
+          <i [ngClass]="l.iclass"></i>
+          <p
+            [ngClass]="l.style ? 'nav-sub-title' : null"
+            [innerHTML]="l.title"
+          ></p>
+          
+        </a>
+
+        <a
+        routerLink="{{ l.path }}"
+        (click)="bookingclick()"
+        *ngIf="l.path === '/user/reservation'"
+        class="nav-link notification"
+        href="javascript:;"
+      >
+        <i [ngClass]="l.iclass"></i>
+        <p
+          [ngClass]="l.style ? 'nav-sub-title' : null"
+          [innerHTML]="l.title"
+        ></p>
+        <span class="badge" *ngIf = "count_id">{{count_id}}</span>
+      </a>
+
+      </li>
+      <li class="nav-item">
+        <a (click)="_logout()" class="nav-link" href="javascript:;">
+          <i class="far far-sign-out-o"></i>
+          <p>DÉCONNEXION</p>
+        </a>
+      </li>
+      <!-- <li class="nav-item">
+        <a (click)="_delete_account()" class="nav-link" href="javascript:;">
+          <i class="far far-sign-out-o"></i>
+          <p>DELETE ACCOUNT</p>
+        </a>
+      </li> -->
+    </ul>
+  </div>
+</div>

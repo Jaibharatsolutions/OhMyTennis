@@ -1,0 +1,51 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form_devarea">
+          <div class="pull-right">
+            <button style="cursor: pointer;" (click)="goBack(coachId)">
+              Back
+            </button>
+          </div>
+          <h4>{{ short }}</h4>
+
+          <div class="box-body">
+            <table
+              class="coach_listable table table-striped table-bordered table-sm row-border hover"
+              id="datatable"
+            >
+              <thead>
+                <tr>
+                  <th>Sl.no</th>
+                  <th>User Name</th>
+                  <th>Amount</th>
+                  <th>Commission</th>
+                  <th>Net Amount</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="btn_blocksec"
+                  *ngFor="let group of datanew; let i = index"
+                >
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ group.name }}</td>
+                  <td>€ {{ group.amount }}</td>
+                  <td>€ {{ group.comission_amount_display }}</td>
+                  <td>€ {{ group.net_amount }}</td>
+                  <td>
+                    <button id="approveBtn" class="btn btn-block btn-success">
+                      Transfer
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,260 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+  <!-- Banner starts --> 
+  <div class="innerbanner" style="background-color:#000">
+    <img src="../assets/images/cours-particuliers-de-tennis.jpg" style="width:100%;opacity:0.8" alt="Los Angeles">
+    <div class="inner_carousel">
+        <h3>COURS TENNIS</h3>
+    </div>
+</div>
+<!-- Banner ends --> 
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+    <div class="banner_container">
+        <h3>Réservez un cours avec un coach</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input class="form-control" id="" maxlength="6" placeholder="Code Postal" [(ngModel)]="Ville"
+                            type="text" />
+                        <label><img src="./assets/images/ville_icon.png" /></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input type="text" style="text-align:left!important;" [min]="min" class="form-control" id=""
+                            placeholder="Date" [(ngModel)]="Date" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" />
+                        <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+                        <label><img src="./assets/images/date_icon.png" /> </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+                <button (click)="handleClick($event)" class="btn black_btn">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inner Search area ends --> 
+
+<!-- section1 starts -->
+<div class="sec_news section1 des_concept_list haspadd">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="page_title_div">            
+                    <h1 class="page_title">COURS TENNIS</h1>				
+                    <img src="../assets/images/title_border.png" alt="title_border" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Cours particuliers de tennis</h3>	
+                    <p>Réserver votre professeur de tennis près de chez vous afin de bénéficier de conseils personnalisés. Formule à a la carte pour joueur souhaitant prendre des cours de tennis soit intensivement soit un peu plus ponctuellement.</p>
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Cours collectifs de tennis</h3>	
+                    <p>Vous pouvez prendre des cours collectifs tennis de deux façons différentes , vous pouvez décidez avec un groupe d’amis, qui ont les mêmes disponibilités que vous, de mutualiser le coût pour jouer de façon intensive ou plus ponctuelle avec un moniteur de tennis. L’autre solution consiste à piocher dans le catalogue de cours collectifs organisés par les clubs de tennis partenaires avec un rendez vous régulier par semaine durant la période scolaires (engagement sur environ 30 séances à l’année).</p>
+                    <p><strong><a class="content_link" href="">Découvrez notre offre concernant les cours de tennis collectifs</a></strong></p>
+                </div>
+            </div>
+         </div>	
+
+         <div class="row">
+             <div class="col-md-12 col-sm-12 col-xs-12">    
+                 <div class="mid_contentdiv">
+                     <h3>Stages de tennis</h3>	
+                     <p>Si vous souhaitez découvrir le tennis pour savoir si cela vous plait avant de vous engager de façon plus ferme , la solution du stage peut être intéressant pour vous. Organisés sur une semaine souvent pendant les vacances scolaires , les stages vous permettent de jouer de façon très intensive pendant une courte période pour progresser rapidement. Ils peuvent être à destination d’un public enfant (en journée) ou adulte (début de soirée).</p>
+                     <p><strong><a class="content_link" href="">Découvrez notre offre concernant les stage de tennis</a></strong></p>
+                 </div>
+             </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">    
+                  <div class="mid_contentdiv">
+                      <h3>Team building tennis</h3>	
+                      <p>Vous avez envie de motiver votre équipe d’entreprise par le biais du terrain de tennis avec un encadrant professionnel.  Nous vous permettons de vivre des émotions qui renforceront vos liens au quotidien grâce à des souvenirs indélébiles de victoires ou de défaites.  Ce sera l’occasion de vous découvrir dans un contexte différents de celui des bureaux car le sport permet d’avoir une approche plus détendue et joviale.</p>
+                  </div>
+              </div>
+           </div>
+
+
+           <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Animations tennis</h3>	
+                    <p>Rendez vous sur le terrain pour s’amuser et découvrir des support inédits pour pour jouer au tennis :  radar de vitesse au service pour mesurer votre puissance , découvrir le tennis connecté avec des statistiques concernant votre jeu (volume de frappes , qualité de centrage, rotation de la balles , vitesse de balle , vitesse de raquette) structure gonflable de tennis pour les enfants (précision , côté ludique de la discipline) , lance balle (jouer contre un machine qui vous envoie des balles de façon automatique , vous pouvez régler la vitesse , les effets pour mieux progresser).</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Anniversaire tennis</h3>	
+                    <p>Nous organisons l’anniversaire des enfants ou des adultes autour du thème du tennis pour s’éclater pendant un après-midi .  Il y aura bien sur des gâteaux , des bonbons et des boissons pour clôturer cet événement.</p>
+                    <p><strong><a class="content_link" href="">Découvrez notre offre concernant les stage de tennis</a></strong></p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Recherche de partenaires de tennis</h3>	
+                    <p>Retrouvez des personnes de votre niveau près de chez vous disponibles pour jouer au tennis. Ce sera l’occasion pour vous de jouer avec des personnes différentes si vous avez déjà un partenaire ou d’en trouver si cela fait longtemps que vous en cherchez. </p>
+                    <p><strong><a class="content_link" href="">Découvrez notre offre concernant la recherche de partenaires</a></strong></p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Participation à des tournois amicaux de tennis</h3>	
+                    <p>Apprenez à gérer votre stress en participant à un tournoi non officiel vous permettant de vous confronter avec des inconnus sous forme de matchs en petits formats pour commencer à vous habituer. Le but est de rencontrer plusieurs jeux différents pour voir votre capacité d’adaptation selon votre adversaire.</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Participation à des tournois officiels de tennis</h3>	
+                    <p>C’est l’expérience ultime du pratiquant pour plonger dans le grand bain et se tester en condition réelle. Votre participation doit d’abord être soumise à l’aval de votre professeur de tennis référent car c’est lui qui vous connait le mieux. Cette étape doit être une suite logique de vos matchs amicaux où vous vous sentez de plus en plus à l’aise : vous arrivez à gérer un minimum les situations de stress , l’environnement ne vous semble pas anxiogène bref vous êtes bien sur le terrain et prêt à donner le meilleur de vous même pour gagner. N’oubliez pas que cette participation se fait avec la licence et un certificat médical sinon il vous sera impossible de jouer.</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Guide des terrains de tennis</h3>	
+                    <p>Vous avez une envie irrésistible de jouer mais vous ne savez pas où et ce pour différentes raisons (vous venez de déménager, vous êtes en vacances , vous vous mettez au tennis pour la première fois). Ce guide vous recense la maximum de terrains en France pour jouer à votre guise. Nous vous conseillons de contacter le lieu qui vous intéresse pour y connaître les prix et conditions de réservations car ils diffèrent en fonction de l’heure, du terrain , de la région etc …</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>E learning (cours de tennis en ligne)</h3>	
+                    <p>Cette méthode de cours de tennis à distance vous permet de prolonger l’expérience terrain chez vous pour continuer à progresser. Vous avez évoqué un point technique, tactique, physique ou mental avec votre enseignant de tennis et bien il sera possible de se poser tranquillement chez vous par le biais de fiches et de vidéos qui seront vos tutoriels.</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Histoire du tennis</h3>	
+                    <p>Le tennis a évolué depuis son ancêtre le jeu de paume (invention Française au 13eme siècle) en passant par Lawn Tennis (invention des Anglais). Les règles , les tenues , les terrains , les infrastructures ainsi que l’organisation des tournois (et des classements) a changé au cours du temps pour permettre la pratique actuelle. Il est toujours intéressant de comprendre les différentes étapes qui nous ont amenées au jeu actuel que cela soit pour les pratiquants ou même les professionnels.</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Lexique du tennis</h3>	
+                    <p>Le tennis a son vocabulaire propre parfois incompris des néophytes. C’est une forme de langage qui réunit tous les termes de l’environnement du tennis avec ses acteurs (joueurs, coachs, organisateurs, spectateurs etc…) , ses éléments du jeu (terrains, matériels, lieux etc…) , les règles au tennis (cadre , loi définissant comment gagner ou perdre un point) , ainsi que les moyens utilisés pour gagner faisant référence à des termes techniques, tactiques, physiques , mentaux qui sont très précis dans leur approche du jeu pour permettre de gagner le point.</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Règles du tennis</h3>	
+                    <p>Pour commencer à jouer des points il est nécessaire de savoir un minimum de principes vous permettant de savoir qui à gagner ou qui a perdu l’échange. 
+                        Pour faire un match il y a également un nombre de règles minimum qu’il faut avoir en tête pour participer au bon déroulement de la rencontre.</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Forum du tennis</h3>	
+                    <p>vous pouvez échanger sur les différents sujets du tennis qui vous touchent avec d‘autres personnes du site internet. Vous avez un problème à régler, un coup de gueule , un sentiment à partager , ce sera l’endroit pour vous exprimer !</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Vente de matériel de tennis</h3>	
+                    <p>Rendez vous sur notre site internet pour acheter votre matériel de tennis (balle de tennis, chaussure de tennis, raquette de tennis) et vous faire livrer dans les plus brefs délais. Bénéficier des dernières promotions et des bons plans à venir pour s’équiper au mieux sur le terrain de tennis.</p>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Recherche de sparring de tennis</h3>	
+                    <p>vous recherchez un joueur de tennis un peu plus fort que vous pour vous mesurer à lui. Le sparring est un joueur de tennis et non pas un enseignant qui vient pour jouer avec vous et vous faire transpirer ! Il n’y a pas d’exercices lors de votre séance mais uniquement des balles ou carrément un match si vous le désirez.</p>
+                </div>
+            </div>
+         </div>
+
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Petites annonces de tennis</h3>	
+                    <p>Notre site de petites annonces aide les particuliers à vendre ou échanger leur matériel de tennis s’ils le désirent. Si vous souhaitez vous débarrasser d’une vieille raquette de tennis en bon état qui traine dans votre cave pour vous en acheter une nouvelle ce service est fait pour vous</p>
+                </div>
+            </div>
+         </div>
+
+
+
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">    
+                <div class="mid_contentdiv">
+                    <h3>Quiz et jeu concours tennis</h3>	
+                    <p>Apprenez sur le tennis en vous amusant et participez à nos quiz (questions à choix multiples) ou jeu concours pour tenter de gagner des points ou des cadeaux. Vous serez sûrement surpris de découvrir des événements , des performances ou encore des joueurs qui ont marqués l’histoire du tennis.</p>
+                </div>
+            </div>
+         </div>
+
+
+
+
+    </div>
+</div>
+   
+    <app-footer></app-footer>

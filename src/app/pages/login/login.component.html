@@ -1,0 +1,136 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<div class="container-fluid">
+  <div class="form_page">
+    <div class="row">
+      <div class="col-md-12 col-xs-12 col-sm-12">
+        <div class="">
+          <div *ngIf="loginErr" class="input error">{{ errorMessage }}</div>
+          <p class="title_reg">CONNEXION</p>
+          <app-social-login></app-social-login>
+          <div
+            *ngIf="alertMsg.show"
+            class="alert {{ alertMsg.type }} alert-dismissible text-center"
+          >
+            <button
+              type="button"
+              (click)="_closeAlertMessage($event)"
+              class="close"
+            >
+              <span>&times;</span>
+            </button>
+            {{ alertMsg.msg }}
+          </div>
+          <form
+            #newUserForm="ngForm"
+            (ngSubmit)="onSubmitUser(newUserForm)"
+            autocomplete="off"
+            style="margin-top:20px;"
+          >
+            <div class="form-group">
+              <label style="font-family: Montserrat;"
+                >E-mail <span style="color:red">*</span></label
+              >
+              <input
+                type="text"
+                required
+                [(ngModel)]="newUser.email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                #Email="ngModel"
+                [ngClass]="{
+                  alert_field: Email.errors && (Email.touched || Email.dirty)
+                }"
+                name="email"
+                class="form-control fields"
+                placeholder="E-mail"
+              />
+              <ng-container
+                *ngIf="Email.errors && (Email.touched || Email.dirty)"
+              >
+                <span class="alert_text" *ngIf="Email.errors.required"
+                  >Indiquez votre e-mail.</span
+                >
+                <span class="alert_text" *ngIf="Email.errors.pattern"
+                  >Indiquez votre e-mail.</span
+                >
+              </ng-container>
+            </div>
+
+            <!-- <div class="input-group">
+                            <input type="{{inputType}}" name="password" class="form-control input-lg" ng-model="password_field" placeholder="Enter Password" />
+                            <span class="input-group-addon">
+                             <span class="{{showHideClass}}" ng-click="showPassword()" style="cursor:pointer"></span>
+                            </span>
+                           </div> -->
+
+            <div class="" style="position: relative;">
+              <label style="font-family: Montserrat;"
+                >Mot de passe <span style="color:red">*</span></label
+              >
+              <input
+                [type]="passwordfield"
+                required
+                #Password="ngModel"
+                [ngClass]="{
+                  alert_field:
+                    Password.errors && (Password.touched || Password.dirty)
+                }"
+                [(ngModel)]="newUser.password"
+                name="password"
+                class="form-control fields"
+                placeholder="Mot de passe"
+              /><a
+                (click)="onClickPasswordfield()"
+                
+              >
+                <i
+                  class="fa fa-eye field-icon"
+                  aria-hidden="true"
+                  *ngIf="!showPassword"
+                ></i>
+                <i
+                  class="fa fa-eye-slash field-icon"
+                  aria-hidden="true"
+                  *ngIf="showPassword"
+                ></i>
+              </a>
+              <!-- <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i> -->
+              <ng-container
+                *ngIf="Password.errors && (Password.touched || Password.dirty)"
+              >
+                <span class="alert_text" *ngIf="Password.errors.required"
+                  >Indiquez votre mot de passe.</span
+                >
+              </ng-container>
+            </div>
+            <div>
+              <a
+                routerLink="{{ '/' + this._const('PATH.FORGET_PASSWORD') }}"
+                routerlinkactive="active"
+                style="color:#585858;text-align:center;font-family:'Montserrat';font-size:12px"
+                >Mot de passe oublié ?</a
+              >
+            </div>
+            <div class="form-group">
+              <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 12px; padding-left: 0px;">
+                <span style="color:red; padding-top:6px;">*</span> Champs obligatoires
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- <a class="btn btn-default login_btn_form btn-block">ME CONNECTER</a> -->
+            <input
+              type="submit"
+              [disabled]="!newUserForm.valid"
+              value="ME CONNECTER"
+              class="btn btn-default login_btn_form btn-block"
+              style="text-transform:uppercase"
+            />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

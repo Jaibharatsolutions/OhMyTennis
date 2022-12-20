@@ -1,0 +1,260 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="../../assets/images/coach_banner.jpg" alt="Los Angeles" />
+  <div class="inner_carousel1">
+    <h3>oh my team building</h3>
+  </div>
+</div>
+
+<div class="banner">
+  <div class="search_area">
+    <div class="banner_container">
+      <h3>Réservez un cours avec un event</h3>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-lg-2"></div>
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <div class="form-group">
+            <div class="addon-lg">
+              <input
+                class="form-control"
+                id=""
+                maxlength="6"
+                placeholder="Code Postal"
+                [(ngModel)]="Ville"
+                type="text"
+              />
+              <label><img src="./assets/images/ville_icon.png"/></label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+          <button (click)="searchEvent()" class="btn black_btn">
+            Recherche
+          </button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Search area ends -->
+</div>
+
+<div class="clearfix"></div>
+
+<!--------------------------Text Area-------------------------------->
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row" style="border: 0px solid gray;">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="wrapper1 center-block">
+          <br />
+          <h2 class="panel-title">
+            <b
+              >Motivez vos équipes par le biais d’une expérience originale en
+              découvrant le Padel !</b
+            >
+          </h2>
+          <br />
+          <div
+            class="panel-body"
+            style="text-align: justify;text-justify: inter-word; padding: 3px;"
+          >
+            A la croisée des chemins entre le tennis et le squash ce nouveau
+            sport rattaché à la fédération française de tennis permet de
+            s’amuser très facilement même si vous n’avez jamais joué.. Une salle
+            de réunion est à votre disposition à l’étage afin de permettre au
+            chef d’équipe de motiver ses équipes.
+            <br />
+            <b>Prix :</b> 500 euros
+            <br />
+            <b>Ville :</b> Fontenay sous Bois
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="wrapper1 center-block">
+          <br />
+          <h2 class="panel-title">
+            <b
+              >Bâtissez une cohésion de groupe par le biais du sport en
+              proposant à vos équipes de jouer au tennis.</b
+            >
+          </h2>
+          <br />
+          <div
+            class="panel-body"
+            style="text-align: justify;text-justify: inter-word; padding: 3px;"
+          >
+            Que cela soit en simple ou en double sur le terrain, ce sera
+            l’occasion de se retrouver dans un contexte différent que celui du
+            travail. Une salle est disponible pour réunir les salariés de votre
+            entreprise afin d‘aborder des sujets plus sérieux liés à votre
+            activité.
+            <br />
+            <br />
+            <b>Prix :</b> 500 euros
+            <br />
+            <b>Ville :</b> Montreuil
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="page_title">TEAM BUILDING</h1>
+        <img src="./assets/images/title_border.png" alt="title_border" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">TEAM BUILDING</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div
+              class="panel-group"
+              id="accordion"
+              role="tablist"
+              aria-multiselectable="true"
+            >
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      TEAM BUILDING 1
+                    </a>
+                  </h4>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingOne"
+                >
+                  <div class="panel-body">
+                    <p>
+                      <b
+                        >Motivez vos équipes par le biais d’une expérience
+                        originale en découvrant le Padel !</b
+                      >
+                      A la croisée des chemins entre le tennis et le squash ce
+                      nouveau sport rattaché à la fédération française de tennis
+                      permet de s’amuser très facilement même si vous n’avez
+                      jamais joué.. Une salle de réunion est à votre disposition
+                      à l’étage afin de permettre au chef d’équipe de motiver
+                      ses équipes.
+                      <br />
+                      <b>Prix :</b> 500 euros
+                      <br />
+                      <b>Ville :</b> Fontenay sous Bois
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      TEAM BUILDING 2
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingTwo"
+                >
+                  <div class="panel-body">
+                    <p>
+                      <b
+                        >Bâtissez une cohésion de groupe par le biais du sport
+                        en proposant à vos équipes de jouer au tennis.</b
+                      >
+                      Que cela soit en simple ou en double sur le terrain, ce
+                      sera l’occasion de se retrouver dans un contexte différent
+                      que celui du travail. Une salle est disponible pour réunir
+                      les salariés de votre entreprise afin d‘aborder des sujets
+                      plus sérieux liés à votre activité.
+                      <br />
+                      <b>Prix :</b> 500 euros
+                      <br />
+                      <b>Ville :</b> Montreuil
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="col-sm-12">
+  <div class="des_events des_events_rev">
+    <div class="container">
+      <div class="column" *ngFor="let res of response">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="des_events_bg des_events_bg_rev">
+            <img
+              src="{{ res.Photo }}"
+              class="img-responsive center-block"
+              style="height: 250px;"
+            />
+            <div class="">
+              <p class="des_event_para max-lines">{{ res.Description }}</p>
+            </div>
+            <div class="text-center">
+              <a
+                (click)="gotoCoach(res)"
+                class="btn btn-primary des_event_btn"
+                style="margin-top: 15px;"
+                >Reserve maintenant</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="response.length == 0">
+        <h2 style="color:red;">Aucun enregistrement trouvé</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<app-footer></app-footer>

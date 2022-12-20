@@ -1,0 +1,209 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Choix de votre matériel</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_present1.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5><strong>Quelle raquette de tennis faut-il tester ?</strong></h5>
+        <p>
+          Tester des raquettes équilibrées comme la précédente tout d’abord : La
+          nouvelle version de son ancienne raquette pour voir si il y a des
+          changements notables et après tester des modéles presques similaires.
+          Marque différentes oui mais c’est toujours intéressant de voir si un
+          nouveau brevet permet d’avoir un meilleur rendement On prend les
+          raquettes test sur le terrain et on les dispose au fond du terrain
+          pour être prêt à jouer avec (on perd moins de temps à interchanger )
+          et surtout il faut avoir un retour avec un minimum de delais entre
+          deux frappes pour avoir le meilleur retour sur sensation
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5>
+          <strong
+            >Quelques conseils lors de votre test de raquette de tennis
+          </strong>
+        </h5>
+        <ul>
+          <li>
+            Demander des conseils au vendeur de la boutique qui est au courant
+            des dernières nouveautés qui sortent souvent au début de chaque
+            saison voire un peu en avance (des fois même pendant Roland Garros)
+          </li>
+          <li>
+            N’hésiter pas à tester aussi une raquette exotique pour vous ,
+            histoire de voir la différence ! Vous avez environ 1 semaine de
+            délais pour votre essai donc essayer de caler plusieurs parties
+            entre temps pour avoir un retour sur sensation..
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis_advice3.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tarif-cours-de-tennis.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <ul></ul>
+        <h5><strong>Quelles raquettes de tennis peut-on essayer ?</strong></h5>
+        <ul>
+          <li>
+            C’est plutôt avec des raquettes de compétition qu’il est possible de
+            bénéficier de test (+ 100 euros) car les raquettes loisirs sont
+            dites faciles à jouer et n’ont pas de caractéristiques aussi
+            poussées.
+          </li>
+          <li>
+            SI vous ne connaissez pas le gérant de la boutique ou un moniteur
+            qui peut vous sortir des raquettes du magasin , il faudra laisser
+            une caution pour bénéficier de ce service.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5>
+          <strong
+            >Petite astuce une fois que vous avez testé votre raquette de
+            tennis</strong
+          >
+        </h5>
+        <ul>
+          <li>
+            il est toujours préférable de respecter vos engagements en achetant
+            votre produit au magasin et non pas sur internet une fois votre
+            choix fait
+          </li>
+          <li>
+            Miser sur le long terme et sur la confiance que vous allez
+            entretenir avec le vendeurs pour bénéficier de conseils avisés et
+            obtenir à un moment un geste commercial.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept_img1.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

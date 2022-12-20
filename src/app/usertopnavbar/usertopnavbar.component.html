@@ -1,0 +1,47 @@
+<section class="nav_bar1">
+  <div class="nav_container1">
+    <div class="brand">
+      TABLEAU DE BORD
+    </div>
+    <nav class="navi">
+      <div class="nav_mobile1">
+        <a (click)="clickEvent()" id="nav_toggle1"><span></span></a>
+      </div>
+      <ul class="nav_list1">
+        <li class="content_center">
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2 text_box_search"
+              style="border-radius:7px;"
+              type="search"
+              placeholder="Rechercher"
+              aria-label="Rechercher"
+            />
+          </form>
+        </li>
+        <li class="content_center">
+          <button
+            class="btn btn-outline-success pl-2 my-2 my-sm-0"
+            type="submit"
+          >
+            Rechercher
+          </button>
+        </li>
+        <li>
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            (click)="_logout()"
+            aria-haspopup="true"
+            aria-expanded="false"
+            style="color: #fff;"
+          >
+            <img src="./assets/images/register_icon.png" />&nbsp;Se
+            déconnecter</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>

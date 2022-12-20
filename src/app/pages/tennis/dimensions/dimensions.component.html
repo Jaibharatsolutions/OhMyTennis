@@ -1,0 +1,314 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="regle_content">
+  <div class="container">
+    <div class="row">
+      <div class="license">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Les dimensions d’un terrain de tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="col-xs-12">
+          <p class="license_txt">
+            Le terrain sur lequel on peut jouer au tennis est nommé court (de
+            tennis) qui étymologiquement signifie endroit fermé.Il est constitué
+            d'une surface de jeu, d'un filet et de grillages le délimitant.
+          </p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="~license_section">
+          <!-- section -->
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <h5><strong>Dimensions du court de tennis </strong></h5>
+            <p class="license_txt">
+              Tous les courts de tennis homologués c'est-à-dire ceux sur
+              lesquels des compétitions peuvent avoir lieu possèdent les mêmes
+              dimensions contrairement à un terrain de football (homologué) par
+              exemple à qui on peut donner des tailles différentes.Les
+              dimensions d'un terrain de tennis sont données ci-dessous sur le
+              schéma.
+            </p>
+            <p class="license_txt">
+              On peut remarquer que les longueurs et largeurs du terrain de
+              tennis sont précises au millimètre, elles sont données sur le
+              schéma en mètres et correspondent à des mesures en unités
+              anglo-saxonnes (pouces, pieds, yards). Il faut noter aussi que les
+              quatre rectangles au centre du court du tennis les plus proches du
+              filet sont appelés, par abus de langage, carrés de services.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img
+              src="./assets/images/dimensions-terrain-de-tennis.png"
+              class="center-block"
+              alt="titre_img1"
+            />
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <p class="license_txt">
+              Le court de tennis est la surface sur laquelle la balle doit être
+              mise en jeu, il faut cependant une surface supplémentaire sur les
+              côtés et dans le fond du court pour pouvoir se déplacer. Cet
+              espace est variable, il doit néanmoins mesurer au minimum de 5,50
+              m derrière chaque ligne de fond de court (recul) et 3,05 m sur
+              chaque côté (dégagement). Les courts principaux des stades
+              accueillant des tournois internationaux ont un recul et un
+              dégagement plus importants (de l'ordre de la dizaine de mètres)
+              afin de permettre l'installation de tribunes tout autour du
+              terrain.
+            </p>
+            <p class="license_txt">
+              Les lignes de tennis portent des noms spécifiques : lignes de fond
+              de court, lignes de côté de simple, ligne de côté de double,
+              lignes des carrés de service, ligne médiane.
+            </p>
+            <p class="license_txt">
+              Les deux rectangles situés allongés sont les couloirs au tennis,
+              ils servent uniquement au jeu en double (voir par ailleurs).
+            </p>
+
+            <p class="license_txt">
+              La ligne médiane a une épaisseur de 5 cm, les autres lignes
+              peuvent être de 2,5 cm à 5 cm sauf la ligne de fond de court qui
+              est limitée à 10 cm (notamment sur les grands courts pour que
+              cette dernière soit bien visible pendant les retransmissions
+              télévisées).
+            </p>
+            <p class="license_txt">
+              Toutes ces mesures commencent à l'extérieur des lignes et elles
+              doivent avoir une couleur uniforme.
+            </p>
+            <p class="license_txt">
+              <strong
+                ><a class="content_link" href=""
+                  >Pour continuer vous pouvez aussi lire l’historique des règles
+                  du tennis.</a
+                ></strong
+              >
+            </p>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+          <!-- section -->
+
+          <!-- section -->
+          <div class="regles_section_2" style="margin-top: 15px;">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <img
+                src="./assets/images/tennis-dimensions.jpg"
+                class="center-block"
+                alt="titre_img1"
+                style="margin-bottom: 23px;"
+              />
+            </div>
+
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <h5><strong>La hauteur du filet du court de tennis</strong></h5>
+              <p class="license_txt">
+                Le filet de tennis sépare le côté de chacun des joueurs, il
+                mesure 3 pieds soit 0,914 m au centre. Il est relié, par
+                l'intermédiaire d'un câble métallique à des poteaux mesurant
+                1,07 m (3,5 pieds) et il est tenu en son milieu par une sangle
+                au sol que l'on peut régler pour ajuster correctement la hauteur
+                du filet.
+              </p>
+              <p class="license_txt">
+                Les poteaux du filet de tennis sont placés à la même distance de
+                la ligne de côté de double que la hauteur du filet soit 0,914 m,
+                cette longueur de filet est celle du terrain de double.
+              </p>
+              <p class="license_txt">
+                Pour jouer en simple, il est indispensable d'ajouter des piquets
+                de simple, ils sont amovibles et se fixent sous le câble pour
+                qu'ils soient bien stables. Ils mesurent la même taille que les
+                poteaux et sont placés à 0,914 m de la ligne de côté de simple.
+              </p>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <p class="license_txt">
+                Il faut noter que les poteaux et la partie du filet qui se
+                trouve à l’extérieur des piquets de simple sont des dépendances
+                permanentes et ne sont pas considérés comme étant des poteaux de
+                filet ou comme faisant partie du filet. Une balle les heurtant
+                sera donc considérée comme faute.
+              </p>
+              <p class="license_txt">
+                <strong
+                  ><a class="content_link" href=""
+                    >Connaissez-vous la règlementation du matériel de tennis
+                    ?</a
+                  ></strong
+                >
+              </p>
+              <p class="license_txt para_nomargin" style="margin-bottom:-4px;">
+                <strong
+                  ><a class="content_link" href=""
+                    >Connaissez-vous tous les éléments d’un terrain de tennis
+                    ?</a
+                  ></strong
+                >
+              </p>
+            </div>
+         
+          <div class="clearfix"></div>
+          
+          <!-- section -->
+
+          <!-- section -->
+          <div class="regles_section_3" style="margin-top: 21px;">       
+          <div class="col-md-8 col-sm-8 col-xs-12">            
+            <h5><strong>Dimension du court de tennis en double</strong></h5>
+            <p class="license_txt">
+              Le terrain de double au tennis est le terrain de simple auquel des
+              couloirs sont ajoutés. Etant donné que 2 joueurs se partagent le
+              court , celui-ci est agrandi afin d’avoir plus de surface de jeu.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="./assets/images/taille-court-de-tennis.jpg" />
+          </div>
+          <br /><br />
+          <div class="clearfix"></div>
+          </div>
+          <!-- section -->
+
+          <!-- section -->
+          <div class="regles_section_3" style="margin-top: 26px;">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="./assets/images/tennis-dimensions.jpg" />
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <h5>
+              <strong
+                >Dimension du court de tennis spécifiques en compétition
+                jeunes</strong
+              >
+            </h5>
+            <p class="license_txt">
+              Les dimension du court de tennis présentés précédemment sont
+              dédiés à la pratique des adultes ou des jeunes de plus de 11 ans.
+              Dans les compétitions de jeunes, des dispositions spécifiques
+              existent notamment quant à la taille du terrain.
+            </p>
+            <p class="license_txt"><b>La compétition homologuée :</b></p>
+            <ul class="regles_points para_nomargin">
+              <li>
+                dès 8 ans se déroule sur un terrain de 18 m de long et de 8,23 m
+                de large, la hauteur du filet se situe à 0,80 m dit terrain
+                orange.
+              </li>
+              <li>
+                dès 9 ans se déroule soit sur un terrain orange soit sur un
+                terrain de 23,77 m de long et de 8,23 m de large, avec une
+                hauteur de filet de 0,914 m appelé terrain vert.
+              </li>
+              <li>
+                dès 10 ans se déroule soit sur un terrain vert soit sur un
+                terrain orange soit sur un terrain ordinaire appelé terrain
+                jaune.
+              </li>
+            </ul>
+          </div>         
+          <div class="clearfix"></div>
+          </div>
+          <!-- section -->
+
+          <!-- section -->
+          <div class="regles_section_3" style="margin-top: 23px;">     
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <h5>
+              <strong>Les différentes surfaces de jeu d’un terrain de tennis</strong>
+            </h5>
+            <p class="license_txt">
+              La surface est généralement de la terre battue (mélange de brique
+              pilée et de colorant sur un encaissement de différentes épaisseurs
+              de cailloux, terre, gravier), en terbal (mélange de brique pillée
+              déposée sur une surface goudronnée), en dur (résine qui est comme
+              une peinture déposée sur un sol en dur, béton poreux ou quick) ou
+              plus rarement en gazon ou parquet.
+            </p>
+            <p class="license_txt">
+              Les surfaces diffèrent par leur rapidité (hauteur du rebond de la
+              balle après impact et vitesse après rebond), par leur action sur
+              la balle (favorisant certains effets ou non) et aussi par leur
+              souplesse (les courts en dur font davantage mal aux
+              articulations). Il existe une classification des courts faisant
+              intervenir ces différents paramètres.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img src="./assets/images/taille-court-de-tennis.jpg" />
+          </div>
+          <div class="clearfix"></div>
+          </div>
+          <!-- section -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<app-footer></app-footer>

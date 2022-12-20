@@ -1,0 +1,727 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<div class="innerbanner ggs">
+    <img src="../../assets/images/coach_banner.jpg" alt="Los Angeles">
+    <div class="inner_carousel">
+        <h3>oh my coachs</h3>
+    </div>
+</div>
+
+<div class="inner_searcharea">
+    <div class="banner_container">
+        <h3>Réservez un cours avec un coach</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input class="form-control" id="" [(ngModel)]="Ville" placeholder="Ville" type="text">
+                        <label><img src="../../assets/images/ville_icon.png"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input style="text-align:left!important;" [min]="min" class="form-control" id=""
+                            placeholder="Date" [(ngModel)]="Date" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1">
+                        <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+                        <label><img src="./assets/images/date_icon.png">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4 inner_search_div">
+                <button (click)="handleClick($event)" class="btn black_btn">Rechercher</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="des_coach_abt coachnewlistview">
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <h2 class="page_title" style="margin: 10px 0px 30px;">Cours Individuel</h2>
+            <div class="coachnewprice" style="max-width: 180px;">
+                <p style="font-weight: bold; font-size: 18px; color: #000;">50,00 € / <span
+                        style="font-size: 14px; font-weight: normal !important; color: #000000;">1 heure</span> </p>
+                <div style="border-bottom: 1px solid #000000; margin: 5px 0px;"></div>
+                <p style="font-weight: bold; font-size: 18px; color: #000;">330,00 € / <span
+                        style="font-size: 14px; font-weight: normal !important; color: #000000;">10 heures</span>
+                </p>
+            </div>
+            <h3 style="font-weight: bold; font-size: 26px; margin: 20px 0px 10px;">Son expérience de coach</h3>
+            <p>
+                Coach Sportif professionnel depuis 10 ans, la forme le bien-être et la santé ont toujours été au cœur de
+                mes préoccupations. En effet, imprégné par le Karaté (Ceinture Noire), le Football et la performance
+                physique depuis l'enfance, se sentir en forme est en quelque sorte une seconde nature dont j'aimerais
+                vous donner le goût durablement.</p>
+            <div class="des_coach_abt_price">
+                <a href="#" class="btn btn-default">{{price}}</a>
+                <a href="#" *ngIf="course != 'CoursCollectifClub'" class="btn btn-default">{{price}} </a>
+            </div>
+            <div class="clearfix"></div>
+            <p class="des_coach_abt_para1">{{Description}}</p>
+
+            <div class="des_detail_sec">
+                <div class="col-md-12 col-sm-12 col-xs-12 px-0">
+                    <div class="des_row1">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite">
+                            <p class="des_icon_class"><img src="../../assets/images/detail_icon1.png"> Noté 5/5 par ses
+                                élèves
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite">
+                            <p class="des_icon_class" id="payment"><img
+                                    src="../../assets/images/detail_icon2.png">{{this.str}}
+                            </p>
+                        </div>
+                        <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <a id="resume" download={{coach_detail.ResumeName}} (click)="download()" href="#"
+                                class="des_icon_class"><img src="../../assets/images/detail_icon3.png"> Curriculum vitae
+                            </a>
+                        </div> -->
+                        <div class="clearfix lg-block"></div>
+                        <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <p class="des_icon_class"><img src="../../assets/images/detail_icon5.png"> Coach connecté
+                            </p>
+                        </div> -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite">
+                            <p class="des_icon_class" id="transport"><img src="../../assets/images/detail_icon4.png">
+                                {{coach_detail.Coach_transport}}
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border_bgwhite"
+                            *ngIf="course !== 'CoursCollectifOndemand'">
+                            <a (click)="openURL()" target="_blank" class="des_icon_class"><img
+                                    src="../../assets/images/detail_icon6.png"> Cours avec vidéo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <h3 _ngcontent-uck-c2="" style="font-weight: bold; font-size: 26px; margin: 15px 0px 10px;">Fournisseur de
+                services</h3>
+            <p class="des_map_content">Intervention géographique :
+                <select class="select_drop_custom">
+                    <option>Liste des villes</option>
+                    <option [ngValue]="city.id" *ngFor="let city of selectedCity">
+                        {{city.Libelle_acheminement}}</option>
+                </select>
+
+            </p>
+
+            <div class="des_map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.75769374048!2d2.27701965694365!3d48.858950681492054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2sin!4v1563876822850!5m2!1sen!2sin"
+                    width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+
+
+            <div *ngIf="course !== 'CoursCollectifClub'" class="timeslot col-sm-12" align="center">
+                <div>
+                    <div id='calendar'>
+                        <full-calendar locale="fr" id="mycal" #mycal [events]="calender" [plugins]="calendarPlugins">
+                        </full-calendar>
+                    </div>
+                    <!-- (dateClick)="handleDateClick($event)" -->
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="clearfix"></div>
+            <br><br>
+            <div class="timeslot" *ngIf="course == 'CoursCollectifClub'" style="overflow: scroll;margin-bottom: 15px;">
+                <table class="table mytable">
+                    <thead>
+                        <tr>
+                            <th><strong>Cours</strong></th>
+                            <th><strong>Journées</strong></th>
+                            <th><strong>Heure de début</strong></th>
+                            <th><strong>Heure de fin</strong></th>
+                            <th><strong>Nombre de joueurs</strong></th>
+                            <th><strong>Prix<br />(Indiquer le prix en euros)</strong></th>
+                            <th><strong>Action</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let rowData of availablity; let idx = index">
+                            <td> {{availablity[idx].Course}}</td>
+                            <td>{{availablity[idx].Weekday}}</td>
+                            <td align="left">{{availablity[idx].StartTime}}</td>
+                            <td align="left">{{availablity[idx].EndTime}}</td>
+                            <td align="left">{{availablity[idx].MaxCount}}</td>
+                            <td align="left">{{availablity[idx].Price}}</td>
+                            <td>
+                                <button class="btn btn-success" data-toggle="modal" data-target="#clubmodal"
+                                    (click)="addTimeslot(availablity[idx],idx)" aria-hidden="true">Book</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div *ngIf="timeslot.length>0 " class="timeslot row timeslotselect" align="center">
+                <div *ngFor="let rowData of timeslot" class="col-3 col-md-3 col-lg-3" style="margin: 10px;">
+                    <div>
+                        <input type="checkbox" (change)="addTimeslot(rowData,rowData.SlotId)"
+                            id="check_{{rowData.SlotId}}" name="vehicle1" [disabled]="rowData.Availability != 'Y'"
+                            value="{{rowData.description}}" style="margin-right: 5px;">{{rowData.description}}
+                        <p *ngIf="rowData.Availability == 'B'"
+                            style=" margin: 0px;height: 10.5px;background-color: #e06363;color:white;">.</p>
+                        <p *ngIf="rowData.Availability == 'R'"
+                            style=" margin: 0px;height: 10.5px;background-color: #de6111;color:white;">.</p>
+                        <p *ngIf="rowData.Availability == 'Y'"
+                            style=" margin: 0px;height: 10.5px;background-color: #539654;color:white;">.</p>
+                        <p *ngIf="rowData.Availability == 'N'"
+                            style=" margin: 0px;height: 10.5px;background-color: #b9b4b4;color:white;">.</p>
+                        <p *ngIf="rowData.Availability == ''"
+                            style=" margin: 0px;height: 10.5px;background-color: #b9b4b4;color:white;">.</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="timeslot.length>0 && course !== 'CoursCollectifClub'" class="timeslot row timeslotselect"
+                align="center">
+                <button class="btn btn-success" data-toggle="modal" data-target="#available" id="reserve"
+                    [disabled]="bookArray.length==0"> Reserve</button>
+            </div>
+            <div *ngIf="timeslot.length==0" class="timeslot row" align="center">
+                <br>
+                <h4><strong>Aucune donnée disponible</strong></h4>
+                <br>
+            </div>
+
+            <div id="clubmodal" class="modal fade ng-scope" role="dialog">
+                <div class="modal-dialog">
+                    <div *ngIf="booking.amount !== '' && course !== 'CoursCollectifOndemand'"
+                        class="col-md-12 col-sm-4 col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="" style="background-color:white;border: 5px solid #f5984d;">
+                                    <br>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 class="text-center"><strong>Résumé & Détails Utilisateurs</strong></h4>
+                                        <div class="order_summary">
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <label style="margin-bottom:8px;"><strong>Type de
+                                                        services</strong></label>
+                                                <p *ngIf="course == 'CoursCollectifClub'"><strong>Cours Collectif
+                                                        Club</strong></p>
+                                                <br />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+                                                <h3 class="orange_text text-center">{{booking.user_Name}}</h3>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                                                <p><label><strong>Temps:</strong></label></p>
+                                                <p><label><strong>Date:</strong></label></p>
+                                                <p><label><strong>Course:</strong></label></p>
+                                                <p><label><strong>Emplacement:</strong></label></p>
+                                                <p><label><strong>Postalcode:</strong></label></p>
+                                            </div>
+                                            <div *ngIf="course == 'CoursCollectifClub'"
+                                                class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                                <p><strong>{{temps}}</strong></p>
+                                                <p><strong>{{booking.bookingDateRange}}</strong></p>
+                                                <p><strong>{{Clubcourse}}</strong></p>
+                                                <p><strong>{{location}}</strong></p>
+                                                <p><strong>{{pincode}}</strong></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+
+                                            <div class="col-xs-12 text-center">
+                                                <div class="smtotal_text text-center" id="amount">Totale: €
+                                                    {{booking.amount}}
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <a (click)="closeclub()" data-dismiss="modal"
+                                                    class="btn btn-primary dark_grey_bg des_coach_abt_btn">Annuler</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <a (click)="bookCoach()" id="btnbooking"
+                                                    class="btn btn-primary des_coach_abt_btn">Confirmer</a>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <div *ngIf="alertMsg.show"
+                                                    class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                                    <button type="button" (click)="_closeAlertMessage($event)"
+                                                        class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="available" class="modal fade ng-scope" role="dialog">
+                <div class="modal-dialog">
+                    <div *ngIf="booking.amount !== '' && course !== 'CoursCollectifOndemand'"
+                        class="col-md-12 col-sm-4 col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="" style="background-color:white;border: 5px solid #f5984d;">
+                                    <br>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 class="text-center"><strong>Résumé & Détails Utilisateurs</strong></h4>
+                                        <div class="order_summary">
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <label style="margin-bottom:8px;"><strong>Type de
+                                                        services</strong></label>
+                                                <p><strong>Cours Individuel</strong></p>
+                                                <br />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+                                                <h3 class="orange_text text-center">{{booking.user_Name}}</h3>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                                                <p><label><strong>Temps</strong></label></p>
+                                                <p><label><strong>Date</strong></label></p>
+                                                <p><label><strong>Emplacement</strong></label></p>
+                                                <p><label><strong>Postalcode</strong></label></p>
+                                            </div>
+                                            <div *ngIf="course != 'CoursCollectifClub'"
+                                                class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                                <div>
+                                                    <p><strong>{{temps}}</strong></p>
+                                                </div>
+                                                <p><strong>{{moment_date}}</strong></p>
+                                                <p><strong>{{location}}</strong></p>
+                                                <p><strong>{{pincode}}</strong></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+
+                                            <div class="col-xs-12 text-center">
+                                                <div class="smtotal_text text-center" id="amount">Totale: €
+                                                    <strong>{{booking.amount}}</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <a (click)="closemodal()" data-dismiss="modal"
+                                                    class="btn btn-primary dark_grey_bg des_coach_abt_btn">Annuler</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <a (click)="bookCoach()" id="btnbooking"
+                                                    class="btn btn-primary des_coach_abt_btn">Confirmer</a>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <div *ngIf="alertMsg.show"
+                                                    class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                                    <button type="button" (click)="_closeAlertMessage($event)"
+                                                        class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                    <!-- Demand -->
+                    <div class="stepwizard_section">
+                        <div *ngIf="step_2==true" class="row setup-content" id="step-2">
+                            <div class="wizard_outer">
+                                <div class="col-md-12">
+                                    <div class="wizard_formarea" style="background-color: white;">
+                                        <h3>Réservation Détail</h3>
+                                        <div class="form-group text-center">
+                                            <div class="col-sm-12 col-md-12 col-xs-12">
+                                                <table width="100%" class="person_availtab">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th colspan="2">{{6}} Personnes</th>
+                                                            <th colspan="2">{{book_person}} disponible</th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <div class="col-sm-12 col-md-12 col-xs-12">
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-5"><label class="control-label">TYPE DE SERVICES
+                                                            :</label>
+                                                    </div>
+                                                    <div class="col-xs-7">
+                                                        <span><strong>{{booking.bookingCourse}}</strong></span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-5"><label class="control-label">TEMPS :</label>
+                                                    </div>
+                                                    <div class="col-xs-7">
+                                                        <span><strong>{{temps}}</strong></span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-5"><label class="control-label">DATE :</label>
+                                                    </div>
+                                                    <div class="col-xs-7"><span><strong>{{moment_date}}</strong></span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-5"><label class="control-label">EMPLACEMENT
+                                                            :</label>
+                                                    </div>
+                                                    <div class="col-xs-7"><span><strong>{{location}}</strong></span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-5"><label class="control-label">POSTAL CODE
+                                                            :</label>
+                                                    </div>
+                                                    <div class="col-xs-7"><span><strong>{{pincode}}</strong></span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-12 text-center" style="padding:20px 0px 20px;">
+                                                        <label class="control-label">DETAIL DU PARTICIPANT :</label>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <div class="col-xs-12">
+
+                                                        <div align="left" class="col-sm-12 col-md-12 col-xs-12">
+                                                            <h4><strong
+                                                                    style="color:#e75a00;">{{booking.user_Name}}</strong>
+                                                            </h4>
+                                                        </div>
+                                                        <div *ngFor="let user of booked_user" align="left"
+                                                            class="col-sm-12 col-md-12 col-xs-12">
+                                                            <h4><strong>{{user.firstName}}
+                                                                    {{user.lastName}}</strong></h4>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div *ngIf="alertMsg.show"
+                                            class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                            <button type="button" (click)="_closeAlertMessage($event)"
+                                                class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-xs-12 text-center">
+                                            <button class="btn btn-info previous_btn prevBtn btn-lg"
+                                                (click)="closemodal()" data-dismiss="modal"
+                                                style="background-color: grey;" type="button">PRECEDENTE</button>
+                                            <input class="btn btn-primary des_coach_abt_btn nextBtn btn-lg"
+                                                type="button" id="btnbooking" (click)="bookCoach()" value="CONFIRM"
+                                                style="background-color: #e75b00">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="step_3==true" class="row setup-content" id="step-3">
+                            <div class="wizard_outer">
+                                <div class="col-md-12">
+                                    <div class="wizard_formarea" style="background-color: white;">
+                                        <h3> Réservation Détail</h3>
+                                        <div class="form-group text-center">
+                                            <div class="col-sm-12 col-md-12 col-xs-12">
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-5"><label class="control-label">TEMPS :</label>
+                                                    </div>
+                                                    <div *ngFor="let row of booking.session" class="col-xs-7">
+                                                        <span>{{row}}</span>
+                                                    </div>
+                                                    <!-- <div class="col-xs-7">12h 30 minutes</div> -->
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-5"><label class="control-label">DATE :</label>
+                                                    </div>
+                                                    <div class="col-xs-7"><span>{{booking.bookingDate}}</span></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-5"><label class="control-label">EMPLACEMENT
+                                                            :</label>
+                                                    </div>
+                                                    <div class="col-xs-7"><span>Paris, FRANCE</span></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="reservation_det">
+                                                    <div class="col-xs-12 text-center" style="padding:20px 0px 20px;">
+                                                        <label class="control-label">DETAIL DU PARTICIPANT :</label>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <div class="col-xs-12">
+                                                        <div class="col-xs-9"><br>
+                                                            <h4><strong>{{booking.user_Name}}</strong></h4>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-xs-12 text-center">
+                                            <button class="btn btn-info previous_btn prevBtn btn-lg"
+                                                style="background-color: grey;" type="button">PRECEDENTE</button>
+                                            <input class="btn btn-primary des_coach_abt_btn nextBtn btn-lg"
+                                                type="button" (click)="bookCoach()" value="CONFIRM"
+                                                style="background-color: #e75b00">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="col-md-12 col-sm-12 col-xs-12" align="left" style="padding-left: 0px;">
+                <h4 class="des_contents_cdetail_title" style="text-align: left;">Entraîneur associé</h4>
+                <p class="des_contents_cdetail">{{coach_detail.Coach_Experience}}</p>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12" align="center">
+            <div class="right_coachprofile">
+                <img src="{{coach_detail.Coach_Image}}" #img
+                    (error)="img.src = '../../assets/images/profile_blackwhite.png'"
+                    class="img-responsive center-block">
+                <h1>Marryaa Andrew</h1>
+                <div class="des_coach_abt_sec" style="float: none;">
+                    <h1 class="des_coach_abt_heading">{{setCoachName}}</h1>
+                    <!-- <h3 *ngIf="course == 'CoursCollectifClub'"><strong>Cours Collectif
+                        Club</strong></h3> -->
+                    <!-- <h3 *ngIf="course == 'CoursIndividuel'"><strong>Cours Individuel</strong> -->
+                    <!-- </h3> -->
+                    <!-- <h3 *ngIf="course == 'CoursCollectifOndemand'"><strong>Cours Collectif Ondemand</strong>
+                </h3> -->
+                    <div class="star-rating">
+                        <ul class="list-inline1">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="des_social_icons_footer1">
+                    <ul>
+                        <li><a class="twitter" target="_blank" href={{coach_detail.TwitterURL}}><i
+                                    class="fa fa-twitter"></i></a></li>
+                        <!-- <li><a class="linked" target="_blank" href={{coach_detail.TwitterURL}}><i class="fa fa-linkedin"></i></a></li> -->
+                        <li><a class="facebook" target="_blank" href={{coach_detail.FacebookURL}}><i
+                                    class="fa fa-facebook-f"></i></a></li>
+                        <li><a class="insta" target="_blank" href={{coach_detail.InstagramURL}}><i
+                                    class="fa fa-instagram"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- <img src="../../assets/images/fav_logo.png"> &nbsp;&nbsp;&nbsp;&nbsp;<span class="des_fav_content">Ajouter à
+                mes coachs favoris</span>
+         
+            <p class="des_right_content">Les 22 avis des élèves de Lena</p>
+            <div class="star-rating">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                </ul>
+            </div>
+
+            <div class="chip">
+                <img src="../../assets/images/coach_detail_right_mini.png" alt="no file">
+                <span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+            </div>
+
+            <div class="chip1">
+                <img src="../../assets/images/coach_detail_right_mini.png" alt="no file">
+                <span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+            </div>
+
+            <div class="chip">
+                <img src="../../assets/images/coach_detail_right_mini.png" alt="no file">
+                <span>Lorem Ipsum is simply dummy text of the printing & typesetting industry. </span>
+            </div> -->
+
+
+            <div class="right_coachprofilenew">
+                <h3>Avis Clients (20)</h3>
+                <h5>Reviews (20)</h5>
+                <form>
+                    <textarea name="don_avis" rows="10" cols="30">Donnez votre avis</textarea>
+                    <input type="button" value="Submit" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="tab-content flipover_div container">
+    <div class="tab-pane fade in active" id="Commentary">
+        <div class="col-lg-11" style="position: relative; top: 30px;">
+        </div>
+        <div id="myCarousel01" class="carousel slide" data-ride="carousel" data-interval="0">
+            <div class="carousel-inner">
+                <div class="item carousel-item active">
+                    <div class="row">
+                        <ngx-slick-carousel class="tab-pane fade in active" #slickModal="slick-carousel"
+                            [config]="slides.config">
+                            <div ngxSlickItem *ngFor="let s of slides.data"
+                                class="col-xs-12 col-md-4 col-lg-3 col-sm-6">
+
+                                <div class="card-wrapper card-container">
+                                    <div class="card">
+                                        <div class="front">
+                                            <div class="card-up">
+                                                <img class="card-img-top" src="../assets/images/tennis_coachbg.jpg"
+                                                    alt="Team member card image">
+                                            </div>
+                                            <div class="avatar mx-auto white">
+
+                                                <img class="rounded-circle"
+                                                    src="{{s.img || 'https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png'}}"
+                                                    #img
+                                                    (error)="img.src = 'https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png'"
+                                                    class="rounded-circle" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="main">
+                                                    <h3 class="name">{{s.name}}</h3>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                            </li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                            </li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                            </li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                            </li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back text-center">
+                                            <div class="card-body">
+                                                <!-- Content -->
+                                                <h4 class="font-weight-bold mb-0">À propos de moi</h4>
+                                                <hr>
+                                                <p class="des_event_para max-lines66">
+                                                    {{ s.comment }}
+                                                </p>
+                                                <hr>
+                                                <!-- Social Icons -->
+                                                <ul class="text-center carousel_socialicons">
+                                                    <li><a href="{{coach_detail.FacebookURL}}"><i
+                                                                class="fa wp-icon fa-facebook-f fa-lg"></i></a></li>
+                                                    <li><a href="{{coach_detail.TwitterURL}}"><i
+                                                                class="fa wp-icon fa-twitter fa-lg"></i></a></li>
+                                                    <li><a href="{{coach_detail.InstagramURL}}"><i
+                                                                class="fa wp-icon fa-instagram fa-lg"></i></a></li>
+                                                </ul>
+                                                <!-- Triggering button -->
+                                                <!--     <a class="rotate-btn" data-card="card-1"><i class="fas fa-undo"></i> Click here to rotate back</a> -->
+                                                <a style="border-radius:30px;" class="btn btn-primary des_abt_btn"
+                                                    (click)="gotoCouch(s)">Voir plus</a>
+                                            </div>
+                                        </div>
+                                        <div class="footer">
+                                            <div class="social-links text-center">
+                                                <a href="http://deepak646.blogspot.in/" class="facebook"><i
+                                                        class="fa fa-facebook fa-fw"></i></a>
+                                                <a href="http://deepak646.blogspot.in/" class="google"><i
+                                                        class="fa fa-google-plus fa-fw"></i></a>
+                                                <a href="http://deepak646.blogspot.in/" class="twitter"><i
+                                                        class="fa fa-twitter fa-fw"></i></a>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end back panel -->
+
+                                </div> <!-- end card -->
+
+                            </div>
+
+                        </ngx-slick-carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 10Hr Popup -->
+<div id="10hrposter" class="modal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="width: 430px;">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="hide10h()" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Prix - Cours Individuel</h4>
+            </div>
+            <div class="modal-body" style="padding: 15px!important;">
+                <table class="table mytable">
+                    <thead>
+                        <tr>
+                            <th>Prix-1hr</th>
+                            <th>Prix-10hr</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <b>{{Indiv_1hr}}</b> </td>
+                            <td> <b>{{Indiv_10hr}}</b> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div align="center">
+                    <b style="color: coral; margin-bottom: 10px;">
+                        Voulez-vous choisir 10 heures?</b>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center; padding: 0px 20px;">
+                <button type="button" id="poster" style="margin-right: 20px;" (click)="enable10h()"
+                    class="btn btn-success">Acceptez</button>
+                <span> </span>
+                <button type="button" class="btn btn-default" (click)="hide10h()" data-dismiss="modal">Rejeter</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

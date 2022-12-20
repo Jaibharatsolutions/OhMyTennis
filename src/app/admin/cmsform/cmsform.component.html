@@ -1,0 +1,515 @@
+<div class="content cours_individualsec">
+  <div class="container-fluid">
+    <div class="~row">
+      <div class="form_devarea col-md-12">
+        <div class="text-right">
+          <div class="form_buttons">
+            <a
+              data-toggle="modal"
+              id="enableBtn"
+              data-target="#myModal_edit_course"
+              class="btn btn-info des_save_btn course_edit_btn ng-binding"
+              >CRÉER</a
+            >
+            <a
+              data-toggle="modal"
+              id="enableBtn1"
+              data-target="#myModal_edit_course"
+              class="btn btn-info des_save_btn course_edit_btn ng-binding"
+              >MODIFIER</a
+            >
+          </div>
+          <br />
+        </div>
+        <div class="tab-content">
+          <div
+            class="form_section"
+            id="availabilityDiv"
+            style="max-width: 100%;"
+          >
+            <div
+              *ngIf="alertMsg.show"
+              class="alert {{ alertMsg.type }} alert-dismissible text-center"
+            >
+              <button
+                type="button"
+                (click)="_closeAlertMessage($event)"
+                class="close"
+              >
+                <span>&times;</span>
+              </button>
+              {{ alertMsg.msg }}
+            </div>
+            <form #user="ngForm" (ngSubmit)="onSubmit(res)">
+              <div class="col-xs-12 col-md-12">
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                      <label>Nom du menu <span class="red">*</span></label>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <select
+                        class="form-control"
+                        id="exampleFormControlSelect1"
+                        [(ngModel)]="res.menu_id"
+                        #menu_id="ngModel"
+                        name="menu_id"
+                        [ngClass]="{
+                          alert_field:
+                            menu_id.errors && (menu_id.touched || menu_id.dirty)
+                        }"
+                        readonly
+                        required
+                      >
+                        <option value="" readonly>Select menu name</option>
+                        <option
+                          value="{{ data.id }}"
+                          readonly
+                          *ngFor="let data of datanew"
+                          >{{ data.name }} -- {{ data.position }}</option
+                        >
+                      </select>
+                      <ng-container
+                        *ngIf="
+                          menu_id.errors && (menu_id.touched || menu_id.dirty)
+                        "
+                      >
+                        <span class="alert_text" *ngIf="menu_id.errors.required"
+                          >Indiquez votre nom du menu.</span
+                        >
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                      <label>Title <span class="red">*</span></label>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <input
+                        type="text"
+                        [(ngModel)]="res.title"
+                        #title="ngModel"
+                        [ngClass]="{
+                          alert_field:
+                            title.errors && (title.touched || title.dirty)
+                        }"
+                        name="title"
+                        class="form-control"
+                        placeholder="Title"
+                        (change)="uriChange($event)"
+                        tabindex="1"
+                        readonly
+                        required
+                      />
+                      <ng-container
+                        *ngIf="title.errors && (title.touched || title.dirty)"
+                      >
+                        <span class="alert_text" *ngIf="title.errors.required"
+                          >Indiquez votre nom du titre.</span
+                        >
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                      <label>URL <span class="red">*</span></label>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <input
+                        type="text"
+                        [(ngModel)]="res.path"
+                        #path="ngModel"
+                        [ngClass]="{
+                          alert_field:
+                            path.errors && (path.touched || path.dirty)
+                        }"
+                        name="path"
+                        id="path"
+                        class="form-control"
+                        placeholder="URL"
+                        readonly
+                        required
+                      />
+                      <ng-container
+                        *ngIf="path.errors && (path.touched || path.dirty)"
+                      >
+                        <span class="alert_text" *ngIf="path.errors.required"
+                          >Indiquez votre menu URL.</span
+                        >
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                      <label>Mot-clé SEO <span class="red">*</span></label>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <input
+                        type="text"
+                        class="form-control"
+                        [(ngModel)]="res.seo_keyword"
+                        #seo_keyword="ngModel"
+                        [ngClass]="{
+                          alert_field:
+                            seo_keyword.errors &&
+                            (seo_keyword.touched || seo_keyword.dirty)
+                        }"
+                        name="seo_keyword"
+                        placeholder="Mot-clé SEO"
+                        tabindex="2"
+                        readonly
+                        required
+                      />
+                      <ng-container
+                        *ngIf="
+                          seo_keyword.errors &&
+                          (seo_keyword.touched || seo_keyword.dirty)
+                        "
+                      >
+                        <span
+                          class="alert_text"
+                          *ngIf="seo_keyword.errors.required"
+                          >Indiquez votre Mot-clé SEO.</span
+                        >
+                      </ng-container>
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                      <div class="chech_box_services1">
+                        <div class="form-group">
+                          <span class="chech_box_services2"
+                            ><input
+                              id="searchBox"
+                              [(ngModel)]="res.search_box"
+                              #search_box="ngModel"
+                              type="checkbox"
+                              readonly
+                              class="service"
+                              name="search_box"
+                              value="1"
+                            />
+                            Search box
+                          </span>
+                          <br />
+                          <span class="chech_box_services2"
+                            ><input
+                              id="is_publish"
+                              [(ngModel)]="res.is_publish"
+                              #is_publish="ngModel"
+                              type="checkbox"
+                              readonly
+                              class="service"
+                              name="is_publish"
+                              value="1"
+                            />
+                            Published
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                      <label>Meta Description <span class="red">*</span></label>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <textarea
+                        class="form-control"
+                        id="address"
+                        style="height:90px;"
+                        readonly
+                        required
+                        [(ngModel)]="res.seo_description"
+                        name="res.seo_description"
+                        #seo_description="ngModel"
+                        placeholder="Description du référencement"
+                        id="exampleFormControlTextarea1"
+                        [ngClass]="{
+                          alert_field:
+                            seo_description.errors &&
+                            (seo_description.touched || seo_description.dirty)
+                        }"
+                      >
+                      </textarea>
+                      <ng-container
+                        *ngIf="
+                          seo_description.errors &&
+                          (seo_description.touched || seo_description.dirty)
+                        "
+                      >
+                        <span
+                          class="alert_text"
+                          *ngIf="seo_description.errors.required"
+                          >Indiquez votre description du référencement.</span
+                        >
+                      </ng-container>
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                      <label>Banner</label>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <div class="card1 card-profile1">
+                        <div class="card-body">
+                          <div class="banner1" *ngIf="res.photo">
+                            <img class="img gallery" src="{{ res.photo }}" />
+                            <div class="chech_box_services1">
+                              <div class="form-group">
+                                <span class="chech_box_services2"
+                                  ><input
+                                    id="bannerBox"
+                                    [(ngModel)]="res.banner_box"
+                                    #banner_box="ngModel"
+                                    type="checkbox"
+                                    readonly
+                                    class="service"
+                                    name="banner_box"
+                                    value="1"
+                                  />
+                                  Need for banner image
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="upload-btn-wrapper">
+                            <button class="btn">Importer l'image</button>
+                            <input
+                              type="file"
+                              name="myfile"
+                              (change)="changeListener($event)"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                      <label>Banner content <span class="red">*</span></label>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <input
+                        type="text"
+                        [(ngModel)]="res.banner_content"
+                        #banner_content="ngModel"
+                        [ngClass]="{
+                          alert_field:
+                            banner_content.errors &&
+                            (banner_content.touched || banner_content.dirty)
+                        }"
+                        name="banner_content"
+                        class="form-control"
+                        placeholder="Banner content"
+                        tabindex="1"
+                        readonly
+                        required
+                      />
+                      <ng-container
+                        *ngIf="
+                          banner_content.errors &&
+                          (banner_content.touched || banner_content.dirty)
+                        "
+                      >
+                        <span
+                          class="alert_text"
+                          *ngIf="banner_content.errors.required"
+                          >Indiquez votre banner content.</span
+                        >
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                      <label>Upload banner image</label>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <div class="card1 card-profile1">
+                        <div class="card-body">
+                          <div class="banner1" *ngIf="res.photo">
+                            <img class="img gallery" src="{{ res.photo }}" />
+                            <div class="chech_box_services1">
+                              <div class="form-group">
+                                <span class="chech_box_services2"
+                                  ><input
+                                    id="bannerBox"
+                                    [(ngModel)]="res.banner_box"
+                                    #banner_box="ngModel"
+                                    type="checkbox"
+                                    readonly
+                                    class="service"
+                                    name="banner_box"
+                                    value="1"
+                                  />
+                                  Need for banner image
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="upload-btn-wrapper">
+                            <button class="btn">Importer l'image</button>
+                            <input
+                              type="file"
+                              name="myfile"
+                              (change)="changeListener($event)"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <div class="form-group bmd-form-group">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label
+                        >Détail de l'événement
+                        <span class="red"> *</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group bmd-form-group">
+                  <angular-editor
+                    [(ngModel)]="res.content"
+                    required
+                    #myckeditor="ngModel"
+                    name="myckeditor"
+                    [config]="editorConfig"
+                    debounce="500"
+                  ></angular-editor>
+
+                  <ng-container
+                    *ngIf="
+                      myckeditor.errors &&
+                      (myckeditor.touched || myckeditor.dirty)
+                    "
+                  >
+                    <span class="alert_text" *ngIf="myckeditor.errors.required"
+                      >Indiquez votre détail de l'événement.</span
+                    >
+                  </ng-container>
+                  <!-- <div
+                    class="form-group has-feedback"
+                    [ngClass]="{
+                      'has-error': myckeditor.invalid && myckeditor.touched
+                    }"
+                  >
+                    <ckeditor
+                      [(ngModel)]="res.content"
+                      #myckeditor="ngModel"
+                      name="myckeditor"
+                      required
+                      [config]="ckeConfig"
+                      debounce="500"
+                      (paste)="onPaste($event)"
+                      (change)="onChange($event)"
+                    >
+                    </ckeditor>
+                    <div
+                      *ngIf="
+                        myckeditor.errors &&
+                        (myckeditor.touched || myckeditor.dirty)
+                      "
+                      class="help-block"
+                    >
+                      <span
+                        class="alert_text"
+                        *ngIf="myckeditor.errors.required"
+                        >Indiquez votre Détail de l'événement.</span
+                      >
+                    </div>
+                  </div> -->
+                  <!-- <angular-editor
+                                          [(ngModel)]="res.cmsdetails"
+                                          required
+                                          #myckeditor="ngModel"
+                                          name="myckeditor"
+                                          [config]="editorConfig"
+                                          debounce="500"
+                                        ></angular-editor>
+                                        <ng-container
+                                          *ngIf="
+                                            myckeditor.errors &&
+                                            (myckeditor.touched || myckeditor.dirty)
+                                          "
+                                        >
+                                          <span
+                                            class="alert_text"
+                                            *ngIf="myckeditor.errors.required"
+                                            >Indiquez votre Détail de l'événement.</span
+                                          >
+                                        </ng-container> -->
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button
+                    data-toggle="modal"
+                    [disabled]="!user.valid"
+                    type="submit"
+                    id="Enregistrer"
+                    style="display: none;"
+                    class="btn btn-success des_save_btn"
+                  >
+                    Enregistrer
+                  </button>
+                  <a
+                    id="cancel"
+                    (click)="ngOnInit()"
+                    class="btn btn-default des_cancel_btn"
+                    style="display: none;"
+                    >Annuler</a
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="myModal_edit_course" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <h4 class="modal-title">Confirmer le contrôle</h4>
+      </div>
+      <div class="modal-body" style="padding: 15px!important;">
+        <p>Êtes-vous sûr de vouloir faire les changements?</p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          (click)="enableForm()"
+          class="btn btn-success"
+          data-dismiss="modal"
+        >
+          Oui
+        </button>
+        <button
+          type="button"
+          class="btn btn-default"
+          (click)="ngOnInit()"
+          data-dismiss="modal"
+        >
+          Annuler
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

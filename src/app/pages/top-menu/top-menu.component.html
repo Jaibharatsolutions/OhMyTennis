@@ -1,0 +1,421 @@
+<!-- Menuarea starts -->
+<div class="menuarea">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 col-lg-2 logo">
+        <a class="sidebar-icon" href="javascript:;"
+          ><img alt="" src="./assets/images/sidebar_menu.png"
+        /></a>
+        <a href="javascript:;" (click)="_gotoPath('/')" class="logo_icon"
+          ><img alt="" src="./assets/images/logo.png"
+        /></a>
+      </div>
+      <div class="col-md-10 col-lg-10 right_menu">
+        <nav class="navbar navbar-inverse">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li>
+                <a
+                  href="javascript:;"
+                  routerLink="{{
+                    '/' + this._const('PATH.CONCEPTS.CONCEPT.SELF')
+                  }}"
+                  >Oh My Concept</a
+                >
+                <ul class="first_submenu">
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{
+                        '/' + this._const('PATH.CONCEPTS.PRESENTATION.SELF')
+                      }}"
+                      >Présentation générale</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{
+                        '/' + this._const('PATH.CONCEPTS.CHARTE.SELF')
+                      }}"
+                      >Charte qualité</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{
+                        '/' + this._const('PATH.CONCEPTS.ENGAGEMENTS.SELF')
+                      }}"
+                      >Nos engagements</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{
+                        '/' + this._const('PATH.CONCEPTS.LACHARTE.SELF')
+                      }}"
+                      >Charte educateur</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="javascript:;"
+                  routerLink="{{
+                    '/' + this._const('PATH.CONSEILS.CONSEILS.SELF')
+                  }}"
+                  >Oh My Conseils</a
+                >
+                <ul class="first_submenu">
+                  <li>
+                    <a>Jouer</a>
+                    <ul class="second_submenu">
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' +
+                              this._const('PATH.CONSEILS.PREMIEREPARTIE.SELF')
+                          }}"
+                          >Premiere partie</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' + this._const('PATH.CONSEILS.PREMIERCOURS.SELF')
+                          }}"
+                          >Premier cours</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Matcher</a>
+                    <ul class="second_submenu">
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' + this._const('PATH.CONSEILS.PREMIERMATCH.SELF')
+                          }}"
+                          >Premiere match</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' +
+                              this._const('PATH.CONSEILS.PREMIERTOURNOI.SELF')
+                          }}"
+                          >Premier tournoi</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Conseils</a>
+                    <ul class="second_submenu">
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' + this._const('PATH.CONSEILS.DIETETIQUE.SELF')
+                          }}"
+                          >Diététique</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' +
+                              this._const('PATH.CONSEILS.FORMEPHYSIQUE.SELF')
+                          }}"
+                          >Forme physique</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a>Materiel</a>
+                    <ul class="second_submenu">
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' + this._const('PATH.CONSEILS.CHOISIR.SELF')
+                          }}"
+                          >Choisir</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' + this._const('PATH.CONSEILS.TESTER.SELF')
+                          }}"
+                          >Tester</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="javascript:;"
+                  routerLink="{{ '/' + this._const('PATH.OH_MY_COACH') }}"
+                  (click)="ohmycoachclick('CoursIndividuel')"
+                  >Oh My Coachs</a
+                >
+                <ul class="first_submenu">
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{ '/' + this._const('PATH.OH_MY_COACH') }}"
+                      (click)="ohmycoachclick('CoursIndividuel')"
+                      >Course Individual</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{ '/' + this._const('PATH.OH_MY_COACH') }}"
+                      (click)="ohmycoachclick('CoursCollectifOndemand')"
+                      >Collective on Demand</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{ '/' + this._const('PATH.OH_MY_COACH') }}"
+                      (click)="ohmycoachclick('CoursCollectifClub')"
+                      >Collective Club</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <!-- <a
+                  href="javascript:;"
+                  routerLink="{{ '/' + this._const('PATH.OH_MY_EVENT') }}"
+                  >Oh My Event</a
+                > -->
+                <a
+                  href="javascript:;"
+                  routerLink="{{ '/' + this._const('PATH.OH_MY_EVENT') }}"
+                  (click)="ohmyeventclick('Stage')"
+                  >Oh My Event</a
+                >
+                <ul class="first_submenu" >
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{ '/' + this._const('PATH.OH_MY_EVENT') }}"
+                      (click)="ohmyeventclick('Stage')"
+                      >Stage</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{ '/' + this._const('PATH.OH_MY_EVENT') }}"
+                      (click)="ohmyeventclick('TeamBuilding')"
+                      >Team Building</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{ '/' + this._const('PATH.OH_MY_EVENT') }}"
+                      (click)="ohmyeventclick('Animation')"
+                      >Animation</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      routerLink="{{ '/' + this._const('PATH.OH_MY_EVENT') }}"
+                      (click)="ohmyeventclick('Tournament')"
+                      >Tournament</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="javascript:;"
+                  routerLink="{{
+                    '/' + this._const('PATH.TENNIS.TENNIS.SELF')
+                  }}"
+                  >Oh My Tennis</a
+                >
+                <ul class="first_submenu">
+                  <li>
+                    <a href="#">Comprendre</a>
+                    <ul class="second_submenu">
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' + this._const('PATH.TENNIS.HISTOIRE.SELF')
+                          }}"
+                          >Historique du tennis</a
+                        >
+                        <!--<ul class="third_submenu">
+                                              <li><a href="#">1880 - 1930</a></li>
+                                              <li><a href="#">1930 - 1950</a></li>
+                                              <li><a href="#">1950 - 1973</a></li>
+                                              <li><a href="#">1973 - auj</a></li>
+                                          </ul>-->
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' + this._const('PATH.TENNIS.LEXIQUE.SELF')
+                          }}"
+                          >Lexique du tennis</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{
+                            '/' + this._const('PATH.TENNIS.REGLES.SELF')
+                          }}"
+                          >Régles du tennis</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Apprendre</a>
+                    <ul class="second_submenu">
+                      <li><a href="#">Technique</a></li>
+                      <li><a href="#">Tactique</a></li>
+                      <li><a href="#">Physique</a></li>
+                      <li><a href="#">Mental</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Pratiquer</a>
+                    <ul class="second_submenu">
+                      <li><a href="#">Vente de matériel</a></li>
+                      <li><a href="#">Guide terrains</a></li>
+                      <li><a href="#">Recherche partenaire</a></li>
+                      <li>
+                        <a
+                          href="javascript:;"
+                          routerLink="{{ '/' + this._const('PATH.TOUNAMENT') }}"
+                          >Tournois amicaux</a
+                        >
+                      </li>
+                      <li><a href="#">Tournois officiels</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Circuit ATP</a>
+                    <ul class="second_submenu">
+                      <li><a href="#">Pronostics</a></li>
+                      <li><a href="#">Billeterie</a></li>
+                      <li><a href="#">Actualité</a></li>
+                      <li><a href="#">Livescore</a></li>
+                      <li><a href="#">Classement ATP</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- <li>
+                <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.CLUB_HOUSE') }}">Oh My Club House</a>
+                <ul class="first_submenu clubhouse_menu">
+                  <li><a href="#">Defi Ohmytennis</a></li>
+                  <li>
+                    <a href="#">Challenge Ohmytennis</a>
+                    <ul class="second_submenu">
+                      <li>
+                        <a href="javascript:;" routerLink="{{
+                            '/' + this._const('PATH.PETTICES_ANNOUNCES')
+                          }}">Petites annonces</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;" routerLink="{{
+                            '/' + this._const('PATH.PARRAINER_CLUBHOUSE')
+                          }}">Parrainer un ami</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.QUIZ') }}">Jeux concours</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;" routerLink="{{
+                            '/' + this._const('PATH.QUIZ_JEUXCONCOUR')
+                          }}">Quizz</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="javascript:;" routerLink="{{
+                        '/' + this._const('PATH.CLUB_HOUSE_LIST')
+                      }}">Club House List</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" routerLink="{{
+                        '/' + this._const('PATH.OH_MY_COACH_NEW')
+                      }}">Oh My Coach New</a>
+                  </li>
+                </ul>
+              </li> -->
+
+              <!-- <li>
+                <a href="#">CMS</a>
+                <ul class="first_submenu clubhouse_menu">
+                  <li *ngFor="let group of response">
+                    <a (click)="goToCms($event, group.endpoint, group.id)">{{
+                      group.menu_name
+                    }}</a>
+                  </li>
+                </ul>
+              </li> -->
+
+              <!-- <li>
+                <a
+                  href="javascript:;"
+                  routerLink="{{ '/' + this._const('PATH.CLUB_HOUSE') }}"
+                  >Oh My Club House</a
+                >
+              </li> -->
+              <li class="nav-item-img">
+                <a
+                  class="nav-link"
+                  (click)="_gotoPath('/')"
+                  href="javascript:;"
+                >
+                  <img alt="" src="./assets/images/Logo1.png"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>OhMyTennis</title>
+    <!-- <base href="/tennis/"> -->
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto+Slab:400,700|Material+Icons"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/styler.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/style3.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="./assets/coach/css/admin_template.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/coach/css/admin_styles.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/coach/css/top-nav-bar.css"
+      type="text/css"
+    />
+    <!-- <script src="https://cdn.ckeditor.com/4.9.2/full-all/ckeditor.js"></script> -->
+    <style>
+      .user_profsm {
+        padding: 8px 15px 15px;
+        border-bottom: 1px solid #6d7671 !important;
+      }
+
+      .user_smicon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #fcc;
+      }
+
+      .user_profsm span {
+        font-weight: bold;
+        margin-left: 20px;
+        font-size: 16px;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css"
+      rel="stylesheet"
+    />
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script>
+      Stripe.setPublishableKey("pk_test_ppbf90Eyy5PuXBdNQNLpxVuz00e719Y31R");
+    </script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+
+    <script src="https://cdn.ckeditor.com/4.9.2/full-all/ckeditor.js"></script>
+    <script>
+      (function($) {
+        $(function() {
+          console.log("jquery invoked");
+          $("navi ul li a:not(:only-child)").click(function(e) {
+            $(this)
+              .siblings(".nav-dropdown1")
+              .toggle();
+            $(".dropdown")
+              .not($(this).siblings())
+              .hide();
+            e.stopPropagation();
+          });
+          $("html").click(function() {
+            $(".nav-dropdown1").hide();
+          });
+        });
+      })(jQuery);
+
+      Date.prototype.getWeek = function() {
+        var target = new Date(this.valueOf());
+        var dayNr = (this.getDay() + 6) % 7;
+        target.setDate(target.getDate() - dayNr + 3);
+        var firstThursday = target.valueOf();
+        target.setMonth(0, 1);
+        if (target.getDay() != 4) {
+          target.setMonth(0, 1 + ((4 - target.getDay() + 7) % 7));
+        }
+        return 1 + Math.ceil((firstThursday - target) / 604800000);
+      };
+
+      // $(document).ready(function() {
+      //   $(window).scroll(function() {
+      //     if ($(this).scrollTop() > 50) {
+      //       $("#back-to-top").fadeIn();
+      //     } else {
+      //       $("#back-to-top").fadeOut();
+      //     }
+      //   });
+      //   // scroll body to 0px on click
+      //   $("#back-to-top").click(function() {
+      //     $("#back-to-top").tooltip("hide");
+      //     $("body,html").animate(
+      //       {
+      //         scrollTop: 0
+      //       },
+      //       800
+      //     );
+      //     return false;
+      //   });
+
+      //   $("#back-to-top").tooltip("show");
+      // });
+    </script>
+  </head>
+
+  <body>
+    <app-root></app-root>
+    <script>
+      (function($) {
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 50) {
+            $("#back-to-top").fadeIn();
+          } else {
+            $("#back-to-top").fadeOut();
+          }
+        });
+        // scroll body to 0px on click
+        $("#back-to-top").click(function() {
+          $("#back-to-top").tooltip("hide");
+          $("body,html").animate(
+            {
+              scrollTop: 0
+            },
+            800
+          );
+          return false;
+        });
+
+        $("#back-to-top").tooltip("show");
+      })(jQuery);
+    </script>
+
+    <script type="text/javascript">
+      $(".flipper").click(function() {
+        var target = $(event.target);
+        if (target.is("a")) {
+          //follow that link
+          return true;
+        } else {
+          $(this).toggleClass("flip");
+        }
+        return false;
+      });
+    </script>
+  </body>
+</html>

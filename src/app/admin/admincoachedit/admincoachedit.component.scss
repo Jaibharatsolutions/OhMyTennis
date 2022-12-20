@@ -1,0 +1,28 @@
+input[type][readonly] {
+    cursor: not-allowed;
+}
+
+input[type="checkbox"][readonly] {
+    pointer-events: none;
+    margin-top: 4px;
+}
+
+input[type="select"][readonly] {
+    pointer-events: none;
+}
+
+input[type="option"][readonly] {
+    pointer-events: none;
+}
+.checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline {
+    margin-top: 0;
+    margin-left: 5px!important;
+}
+.fields.alert_field,
+.alert_field {
+    border: 1px solid red;
+}
+
+#resume{
+    cursor: default;
+}

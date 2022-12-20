@@ -1,0 +1,210 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+  <!-- Banner starts --> 
+  <div class="innerbanner" style="background-color:#000">
+    <img src="../assets/images/cours-particuliers-de-tennis.jpg" style="width:100%;opacity:0.8" alt="Los Angeles">
+    <div class="inner_carousel">
+        <h3>RECRUTEMENT COURS DE TENNIS</h3>
+    </div>
+</div>
+<!-- Banner ends --> 
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+    <div class="banner_container">
+        <h3>Réservez un cours avec un coach</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input class="form-control" id="" maxlength="6" placeholder="Code Postal" [(ngModel)]="Ville"
+                            type="text" />
+                        <label><img src="./assets/images/ville_icon.png" /></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input type="text" style="text-align:left!important;" [min]="min" class="form-control" id=""
+                            placeholder="Date" [(ngModel)]="Date" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" />
+                        <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+                        <label><img src="./assets/images/date_icon.png" /> </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+                <button (click)="handleClick($event)" class="btn black_btn">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inner Search area ends --> 
+
+<!-- section1 starts -->
+<div class="sec_news section1 des_concept_list haspadd">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="page_title_div">            
+                    <h1 class="page_title">CONTACT TENNIS</h1>				
+                    <img src="../assets/images/title_border.png" alt="title_border" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Vous avez une remarque , une demande  ou une suggestion à nous faire parvenir concernant notre site internet ohmytennis.com  n’hésitez pas</h3>	
+                    <p>J’ai une question concernant les professeurs de tennis (menu déroulant contact)</p>
+                    <p>Je souhaite avoir des détails sur les stages de tennis  (menu déroulant contact)</p>
+                    <p>J’aimerais avoir plus de précisions sur le team building tennis en entreprise    etc …</p>
+                    <p>Comment participer à une animation tennis?</p>
+                    <p>Comment fonctionne le e-learning sur votre site ?</p>
+                    <p>Je voudrais participer à un tournoi amical </p>
+                    <p>Je recherche un sparring pour jouer au tennis</p>
+                    <p>Je cherche à acheter des billets pour un tournoi de tennis</p>
+                    <p>Je veux parier sur des matchs de tennis</p>
+                    <p>Comment regarder des matchs de tennis en direct de façon légale ?</p>
+                    <p>J’ai une autre question</p>     
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Vous devez remplir tous les champs du formulaire Ohmytennis</h3> 
+                    <form autocomplete="off" (ngSubmit)="onSubmit(res)" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label>Nom<span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" [(ngModel)]="res.court_name" #court_name="ngModel" [ngClass]="{'alert_field': (court_name.errors && (court_name.touched || court_name.dirty))}" name="court_name" class="form-control" placeholder="" required>
+                                            <ng-container *ngIf="court_name.errors && (court_name.touched || court_name.dirty)">
+                                                <span class="alert_text" *ngIf="court_name.errors.required">Entrez votre nom</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label>Prénom<span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" [(ngModel)]="res.incharge_name" #incharge_name="ngModel" [ngClass]="{'alert_field': (incharge_name.errors && (incharge_name.touched || incharge_name.dirty))}" name="incharge_name" class="form-control" placeholder="" required>
+                                            <ng-container *ngIf="incharge_name.errors && (incharge_name.touched || incharge_name.dirty)">
+                                                <span class="alert_text" *ngIf="incharge_name.errors.required">Entrez votre prénom
+                                                </span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label>téléhone<span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="court_email" [(ngModel)]="res.court_email" name="court_email" placeholder="court@court.com" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label>Adresse e-mail <span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" [(ngModel)]="res.court_phone" pattern="^[1-9]\d{9}$" #Coach_Phone="ngModel" [ngClass]="{'alert_field': (Coach_Phone.errors && (Coach_Phone.touched || Coach_Phone.dirty))}" name="Coach_Phone" placeholder="téléhone"
+                                                required>
+                                            <!-- <ng-container *ngIf="court_phone.errors && (court_phone.touched || court_phone.dirty)">
+                                                <span class="alert_text" *ngIf="court_phone.errors.required">Indiquez
+                                                    votre téléhone.</span>
+                                                <span class="alert_text" *ngIf="court_phone.errors.pattern">Indiquez
+                                                    votre téléhone.</span>
+                                            </ng-container> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label>Société <span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" [(ngModel)]="res.court_postal_code" pattern="^[1-9]\d{6}$" #court_postal_code="ngModel" [ngClass]="{'alert_field': (court_postal_code.errors && (court_postal_code.touched || court_postal_code.dirty))}" name="court_postal_code" placeholder="Code Postal"
+                                                required>
+                                            <ng-container *ngIf="court_postal_code.errors && (court_postal_code.touched || court_postal_code.dirty)">
+                                                <span class="alert_text" *ngIf="court_postal_code.errors.required">Indiquez
+                                                    votre Société.</span>
+                                                <span class="alert_text" *ngIf="court_postal_code.errors.pattern">Indiquez
+                                                    votre Société.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label>commentaires <span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <textarea rows="3" [(ngModel)]="res.court_address" #court_address="ngModel" [ngClass]="{'alert_field': (court_address.errors && (court_address.touched || court_address.dirty))}" name="court_address" class="form-control" placeholder="" required></textarea>
+                                            <ng-container *ngIf="court_address.errors && (court_address.touched || court_address.dirty)">
+                                                <span class="alert_text" *ngIf="court_address.errors.required">champs obligatoire.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                                              
+                                <!-- <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Photo de profil<span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                                <div class="upload-btn-wrapper">
+                                                    <button class="btn" style="font-size: 10px;">Upload a file</button>
+                                                    <input type="file" name="myfile" (change)="changeListener($event)" />
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                               
+                                   <!-- <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label><span class="red">*</span>Champs
+                                                obligatoires</label>
+                                        </div>
+                                    </div> 
+                                </div>-->
+                            </div>
+                            
+                        </div>
+                    </form> 
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+
+    </div>
+</div>   
+<app-footer></app-footer>
+

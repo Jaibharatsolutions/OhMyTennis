@@ -1,0 +1,292 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Hydratation du joueur de tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >Conseils d’hydratation pour le joueur de tennis chez
+            ohmytennis:</strong
+          >
+        </h2>
+        <ul style="padding-bottom:2px;">
+          <li>
+            Boire avant le cours de tennis avec le professeur, cela va permettre
+            une bonne préparation à l’effort. De plus, il est important de boire
+            aussi pendant la durée de l’effort c’est à dire pendant le match ou
+            le cours de tennis, cela va permettre d’éviter les crampes, coups de
+            chaleur , huiler les articulations (éviter tendinites) /après
+            l’effort (favoriser la récupération).
+          </li>
+          <li>
+            La température idéale de consommation se situe entre 10 et 15°C.
+            Boire par petites gorgées pour être en forme tout au long du match
+            de tennis.
+          </li>
+        </ul>
+        <h6><strong>Avant l’effort du match ou du cours de tennis</strong></h6>
+        <ul style="padding-bottom:2px;">
+          <li>
+            Eau plate ou eau plate mélangé avec du jus de fruits (50 cl) afin de
+            créer une réserve de sucre pour préparer le corps à l‘effort.
+          </li>
+        </ul>
+        <h6>
+          <strong>Pendant l’effort du match ou du cours de tennis</strong>
+        </h6>
+        <ul style="margin-bottom:0px;">
+          <li style="margin-bottom:0px;">
+            Eau plate doit être la boisson de base pendant l’effort avec Eau
+            énergétique (énergisante ?) en complément pendant l’effort
+            (forcément plus sucrée, plus difficile à évacuer après l’effort). A
+            chaque changement de côté même si vous n’avez pas spécialement soif
+            ! (Peu mais souvent).
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/aliments-tennis.jpg"
+          class="center-block"
+          style="margin-bottom:0px;"
+          alt="concept_image1"
+        />
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h6><strong>Après l’effort du match ou du cours de tennis</strong></h6>
+        <ul>
+          <li>
+            Eau gazeuse, eau salée ou bière après l’effort (eau riche en sel et
+            en bicarbonate) pour éliminer l’acide lactique du corps. (Environ 50
+            cl)
+          </li>
+        </ul>
+        <h2>
+          <strong
+            >Les possibles aprioris sur l’hydratation dans le tennis et dans le
+            sport de manière général:</strong
+          >
+        </h2>
+        <ul>
+          <li>
+            Les sodas type coca c’est bon pendant l’effort (uniquement si vous
+            êtes en hypoglycémie).
+          </li>
+          <li>
+            L’alcool fort me permettra de me décomplexer : vous aurez surement
+            des problèmes de coordination et de perception pendant le match de
+            tennis!
+          </li>
+        </ul>
+        <h2><strong>Petite astuce ohmytennis:</strong></h2>
+        <ul>
+          <li>
+            Avoir un garde chaleur bouteille ainsi même lorsqu’il fera très
+            chaud la température de votre bouteille restera constante tout au
+            long de votre match (la mettre à l’ombre sous le banc).
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row middle_contents split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/tennis-dietetique.jpg"
+          class="center-block"
+          alt="concept_image2"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="mid_contentdiv">
+          <h1><strong>Alimentation du joueur de tennis</strong></h1>
+          <h2>
+            <strong
+              >Conseils d’alimentation pour le joueur de tennis chez
+              ohmytennis:</strong
+            >
+          </h2>
+          <h6>
+            <strong>Avant l’effort du match ou du cours de tennis</strong>
+          </h6>
+          <ul>
+            <li>
+              Repas avec féculents comme le riz complet ou les pâtes complètes
+              la veille afin de se constituer des réserves complexes de
+              glucides. Il est nécessaire d’éviter les lipides et les protéines
+              animales.
+            </li>
+          </ul>
+          <h6>
+            <strong>Pendant l’effort du match ou du cours de tennis</strong>
+          </h6>
+          <ul>
+            <li>
+              Il est évident qu’il faut apporter dans son sac des aliments qui
+              ne prennent pas trop de places mais avec une grosse teneur
+              énergétiques : fruits secs , banane , pâte d’amande (de fruits) ,
+              barres énergétiques … sont de véritables coups fouets pour vous
+              dynamiser pendant votre match.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <h6><strong>Après l’effort du match ou du cours de tennis</strong></h6>
+        <ul>
+          <li>Aliments avec des propriétés d’anti oxydation.</li>
+          <li>
+            Fruits et légumes avec Vitamine C très rapidement dans la demi
+            heure.
+          </li>
+        </ul>
+        <ul>
+          <li>Poisson gras, avocat avec Vitamine E.</li>
+          <li>Tomates, fuits rouges ou Pamplemousse, le miel, les noix.</li>
+          <li>Refaire un repas complet avec viande blanche.</li>
+        </ul>
+        <h2>
+          <strong
+            >Les possibles aprioris sur l’alimentation dans le tennis et le
+            sport de manière général:</strong
+          >
+        </h2>
+        <ul>
+          <li>
+            Fast Food/Junk food type Mcdo’ n’est pas bon pour le sportif : utile
+            parfois pour faire des réserves de graisse dans le corps (une fois
+            par semaine grand maximum). On a le droit de se faire plaisir de
+            temps en temps.
+          </li>
+          <li>
+            La viande rouge est un élément essentiel dans l’alimenttation du
+            sportif.
+          </li>
+        </ul>
+        <h2><strong>Petites astuces ohmytennis:</strong></h2>
+        <ul>
+          <li>
+            Ne jamais laisser sa banane dans votre sac après votre partie !
+          </li>
+          <li>
+            Manger léger juste avant de jouer si possible riche en protéine.
+          </li>
+          <li>
+            Eviter de boire des boissons à base de lait juste avant de jouer.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/boisson-tennis2.jpg"
+          class="center-block"
+          alt="concept_image2"
+        />
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

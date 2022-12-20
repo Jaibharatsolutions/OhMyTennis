@@ -1,0 +1,258 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Premier tournoi de tennis officiel</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5>
+          <strong
+            >Conseils pour débuter votre premier tournoi de tennis
+            officiel</strong
+          >
+        </h5>
+        <ul class="para_nomargin">
+          <li>
+            Se présenter au
+            <span>juge arbitre avec licence et certificat médical</span> (si
+            vous êtes en retard il faut absolument téléhoner , 10 minutes grand
+            maximum tolérés sinon vous êtes disqualifiés du tournoi de tennis).
+          </li>
+          <li>
+            <span>Environnement connu : </span>meilleure solution c’est sur des
+            terrains de tennis que vous connaissez où vous avez déjà joué
+            (surface connue, rebond appréhendé).
+          </li>
+          <li>
+            Faire ce match de tennis durant une
+            <span>bonne période de votre vie</span> (vacances de préférence),
+            moment de calme.
+          </li>
+          <li>
+            Plutôt pendant en <span>période estivale</span> : plus de tournois,
+            c’est sympa de jouer quand il fait beau !
+          </li>
+          <li>
+            <span>Echauffement</span> préférable 30 minutes avant votre match de
+            tennis pour éviter des blessures .
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/calendrier-tournoi-tennis.jpg"
+          class="center-block"
+          alt="concept_image1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <ul class="para_nomargin" style="margin-top:0px;">
+          <li>
+            <span class="text_underline"
+              >Gestion des moments clés et du stress prépondérant.</span
+            >
+          </li>
+          <li>
+            Mise en place <span class="text_underline">tactique</span> d’un plan
+            (ou plusieurs) vu pendant vos cours de tennis avec un professeur
+          </li>
+          <li>
+            Prendre cette
+            <span class="text_underline"
+              >expérience comme une situation sérieuse</span
+            >
+            (car la ça compte) et faire tout pour gagner votre match de tennis
+            pour ensuite gagner le tournoi!
+          </li>
+          <li>
+            <span class="text_underline"
+              >Ne pas dramatiser si vous perdez votre match de tennis</span
+            >, tant pis ce sera pour la prochaine fois !
+          </li>
+          <li>
+            Donner le
+            <span class="text_underline">résultat au juge arbitre</span>, les
+            balles sont parfois gardées par le vaincu.
+          </li>
+          <li>
+            <span class="text_underline">Étirez vous</span> après votre match de
+            tennis tout en buvant pour récupérer et éviter des crampes ou
+            blessures.
+          </li>
+          <li>
+            <span class="text_underline"
+              >Le vainqueur offre un coup à boire</span
+            >
+            au vaincu.
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/fft-recherche-tournoi.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5>
+          <strong
+            >Les possibles aprioris sur un tournoi de tennis officiel</strong
+          >
+        </h5>
+        <ul class="para_nomargin">
+          <li>
+            Il y a un &nbsp;<span class="text_underline">arbitre</span>sur le
+            terrain de tennis comme à Roland Garros : faux il y a un juge
+            arbitre qui chapote le tournoi de tennis. Mais personne sur le
+            terrain (auto arbitrage).
+          </li>
+          <li>
+            Il y a des&nbsp;<span class="text_underline"
+              >ramasseurs de balles</span
+            >sur le terrain de tennis pendant que je joue, faux : je le fais
+            moi-même avec le joueur de tennis adverse et ça me permet aussi de
+            me concentrer entre les points.
+          </li>
+          <li>
+            Je peux faire un match de tennis contre
+            <span class="text_underline"
+              >quelqu’un de très fort au premier tour:</span
+            >
+            faux les tournois en France sont progressifs donc vous jouerez des
+            personnes de début de classement ou comme vous « non classé »
+          </li>
+          <li>
+            Mon&nbsp;<span class="text_underline"
+              >adversaire est habillé comme un professionnel du tennis, </span
+            >il a plein de raquette de tennis, il doit être fort: faux l’habit
+            ne fait pas le moine vous devez rester concentrer sur votre jeu, ne
+            soyez pas déstabiliser dès les présentations !
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2><strong>Petites astuces ohmytennis</strong></h2>
+        <ul class="para_nomargin">
+          <li>Avoir une deuxième raquette de tennis(si corde cassée).</li>
+          <li>
+            Echauffez vous si possible au mur 15 minutes avant donc prenez de la
+            marge afin de ne pas stresser d’arriver en retard.
+          </li>
+          <li>
+            Boisson/aliments/serviette/casquette sont vos éléments
+            indispensables pour faire un bon match de tennis.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/liste-des-tournois-de-tennis.jpg"
+          class="img-responsive"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

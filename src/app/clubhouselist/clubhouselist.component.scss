@@ -1,0 +1,49 @@
+.map {
+    height: 100%;
+    width: 100%;
+  }
+
+  .session-list .row {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    margin: 0 0 19px;
+    vertical-align: middle;
+    background: #fff;
+}
+.table_outersp {
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    width: 100%;
+    border-right: 1px solid #e5e5e5;
+}
+.table_outersp .cell_content {
+    font-weight: 700;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+}
+.session-list .table_outersp:first-child {
+    border-left: 4px solid #e75b00;;
+}
+.session-list .row:hover .table_outersp {
+    background-color: #f2f2f2;
+    box-shadow: 0 0 2px #ccc;
+    border-bottom: 1px solid #e75b00;
+}
+.orange_btns {
+    background: #e75b00;
+    padding: 9px 21px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+.orange_btns:hover {
+    background: #fff;
+    border: 1px solid #e75b00;
+    color: #e75b00;
+}

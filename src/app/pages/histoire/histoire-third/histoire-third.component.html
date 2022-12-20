@@ -1,0 +1,241 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">HISTOIRE DU TENNIS 1950-1973</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div
+              class="panel-group"
+              id="accordion"
+              role="tablist"
+              aria-multiselectable="true"
+            >
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Harry Hopman , l’éleveur de champions de tennis
+                    </a>
+                  </h4>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="panel-collapse collapse in"
+                  role="tabpanel"
+                  aria-labelledby="headingOne"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Pendant les années 50 , une vériatble guere oppose les
+                      défenseur du circuit amateur (IFLT) et ceux qui souhaitent
+                      ouvrir le tennis à tous (notamment le All England Club
+                      (organisateur de Wimbledon). Pendanr cette période un
+                      nouveau tennis émerge beaucoup plus évolutif et explosif.
+                      Un coach est à l’origine de cette nouvelle façon de
+                      jouer : Harry Hopman. Il va former beaucoup de champions
+                      comme Roy Emerson, Rod Laver , Fred Stole et le jumeaux
+                      sorciers « Ken Roswall et Lewis Hoad ». Chez les femmes
+                      c’est la joueuse australienne Margaret Court qui remporte
+                      beaucoup de succès.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Années 60-70 , la reconnaissance des femmes dans le tennis
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingTwo"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Considérée comme la meilleure joueuse de tous les temps
+                      avec 24 titres du grand chelem en simple, 19 en double
+                      dames et 21 en double mixte , Margaret Court va permettre
+                      aux femmes d’être reconnues par les organisateurs des
+                      tournois durant les années 60-70. Les femmes ont
+                      véritablement leur place au sein de cette pratique depuis
+                      cette période. Notons également que la française Françoise
+                      Durr gagne Roland Garros en 1967. Certains hommes se
+                      démarquent également comme Arthur Ashe , premier noir
+                      américain à gagner un tournoi du grand chelem.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      1968 : première revolution dans le tennis , l’ère open
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingThree"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Depuis 1877 , les tournois étant uniquement réservés aux
+                      amateurs , les joueurs qui devenaient professionnels
+                      faisaient des matchs exhibition sponsorisés pour gagner
+                      quelques milliers de dollars et participaient de moins en
+                      moins aux compétitions officilelles qui n’offraient rien.
+                      Malgré les réticences de l’IFTL , le All England Club
+                      décide en 1968 d’ouvrir son tournoi aux profesisonnels et
+                      devient donc Open (ouvert à tous). Les autres tournois
+                      emboiteront leurs pas par la suite..
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Début des années 1970 , fin de la domination australienne
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingThree"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Le debut des années 70 va marquer l’avénement du tennis
+                      américain (Connors puis Mc Enroe) , du tennis roumain
+                      (Nastase et Tiriac) , et du tennis suédois avec Borg. A
+                      contrario la le régne australien sur le tennis mondial
+                      semble s’effriter surement à cause d’une concurrence
+                      accrue sur le circuit. En 1972, L’A.T.P (l’association
+                      professionnelle du tennis) est crée et permet de mieux
+                      organiser le circuit professisonnel des tournois de
+                      tennis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

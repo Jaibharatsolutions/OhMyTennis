@@ -1,0 +1,201 @@
+<header>
+  <!-- Header Top area starts -->
+  <div class="header_top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 social_icons">
+          <ul>
+            <li>
+              <a class="twitter" href="https://twitter.com/JulienMilgram" target="_blank"><i
+                  class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a class="linked" target="_blank"
+                href="https://www.linkedin.com/in/julien-milgram-4461823a/?locale=en_US"><i
+                  class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a class="facebook" target="_blank" href="https://www.facebook.com/julienmilgram" target="_blank"><i
+                  class="fa fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a class="insta" target="_blank" href="https://www.instagram.com/julien_milgram"><i
+                  class="fa fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-9 top_menu">
+          <ul>
+            <ng-container *ngIf="!_getSession()">
+              <li>
+                <a [ngClass]="
+                    this._activeRoutePath() ===
+                    this._const('PATH.COACH_REGISTER')
+                      ? 'active'
+                      : ''
+                  " href="javascript:;" routerLink="{{ '/' + this._const('PATH.COACH_REGISTER') }}"><img
+                    src="./assets/images/coach_icon.png" />&nbsp;
+                  <span>DEVENIR COACH</span></a>
+              </li>
+              <li>
+                <a [ngClass]="
+                    this._activeRoutePath() === this._const('PATH.LOGIN')
+                      ? 'active'
+                      : ''
+                  " href="javascript:;" routerLink="{{ '/' + this._const('PATH.LOGIN') }}"><img
+                    src="./assets/images/login_icon.png" />&nbsp;
+                  <span>CONNEXION</span></a>
+              </li>
+              <li>
+                <a [ngClass]="
+                    this._activeRoutePath() ===
+                    this._const('PATH.USER_REGISTER')
+                      ? 'active'
+                      : ''
+                  " href="javascript:;" routerLink="{{ '/' + this._const('PATH.USER_REGISTER') }}"><img
+                    src="./assets/images/register_icon.png" />&nbsp;
+                  <span>INSCRIVEZ-VOUS</span></a>
+              </li>
+            </ng-container>
+            <ng-container *ngIf="_getSession()">
+              <li class="dropdown">
+
+                <a *ngIf="roleid == 1" href="#" class="dropdown-toggle notification" data-toggle="dropdown">
+                  <img width="45" style="border-radius: 50%;margin-right:5px;height: 45px;" src="{{ image }}" />
+                  {{ username }}
+                  <span class="badge" *ngIf="count_id">{{count_id}}</span>
+                </a>
+
+                <a *ngIf="roleid == 2" href="#" class="dropdown-toggle notification" data-toggle="dropdown">
+                  <img width="45" style="border-radius: 50%;margin-right:5px;height: 45px;" src="{{ image }}" />
+                  {{ username }}
+                  <span class="badge" *ngIf="count_coach_id">{{count_coach_id}}</span>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li *ngIf="roleid == 1" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../user/dashboard"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-th-large"></i>Tableau de bord</a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/dashboard"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-th-large"></i>Tableau de bord</a>
+                  </li>
+                  <li *ngIf="roleid == 1" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../user/profile"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-user-o"></i>Mon compte</a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/profile"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-user-o"></i>Mon Compte</a>
+                  </li>
+                  <li *ngIf="roleid == 1" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../user/reservation"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#" class="notification1"
+                      (click)="bookingCount()"><i class="fa fa-ticket"></i>MES RÉSERVATIONSs
+                      <span class="badge1" *ngIf="count_id">{{count_id}}</span>
+                    </a>
+
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/calendar"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-calendar"></i>Mon calendrier</a>
+                  </li>
+
+                  <!-- <li *ngIf="roleid == 1" style="width: 100%;">
+                    <a
+                      href="javascript:;"
+                      routerLink="../user/notification"
+                      style="width: 100%;line-height: 40px;text-decoration: none;"
+                      href="#"><i class="fa fa-bell"></i>Notifications</a>
+                  </li> -->
+
+                  <li *ngIf="roleid == 1" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../user/reviews"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-comments-o"></i>Avis et commentaires </a>
+                  </li>
+
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/reservation"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#" class="notification1"
+                      (click)="bookingCount()"><i class="fa fa-ticket"></i>MES RÉSERVATIONSs
+                      <span class="badge1" *ngIf="count_coach_id">{{count_coach_id}}</span>
+                    </a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/individual-course"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-graduation-cap"></i>Cours particuliers</a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/CourseonDeman"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-pencil-square-o"></i>Cours collectifs à la demande</a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/CourseOnClub"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-building-o"></i>Cours collectifs en club</a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/Stage"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-clock-o"></i>Stages</a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/team-building"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-user"></i>Team building</a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/Animation"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-cog"></i>Animations</a>
+                  </li>
+                  <li *ngIf="roleid == 2" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../coach/Tounament"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-trophy"></i>Tournoi</a>
+                  </li>
+                  <!-- <li *ngIf="roleid == 1" style="width: 100%;color: black;">
+                    <a
+                      href="javascript:;"
+                      routerLink="../user/reviews"
+                      style="color: black;width: 100%;line-height: 40px;text-decoration: none;"
+                      href="#"
+                      >AVIS ET COMMENTAIRES</a
+                    >
+                  </li> -->
+                  <li *ngIf="roleid == 1" style="width: 100%;">
+                    <a href="javascript:;" routerLink="../user/chnagepassword"
+                      style="width: 100%;line-height: 40px;text-decoration: none;" href="#"><i
+                        class="fa fa-key"></i>Changer le mot de passe</a>
+                  </li>
+
+                  <li style="color: black;" class="divider"></li>
+                  <li style="width: 100%;">
+                    <a style="width: 100%;line-height: 40px;text-decoration: none;" href="javascript:;"
+                      (click)="_logout()"><i class="fa fa-sign-out"></i>Se déconnecter</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" (click)="_logout()"><img
+                                src="./assets/images/register_icon.png">&nbsp; <span class="username">LOGOUT</span></a> -->
+            </ng-container>
+            <li class="search_div">
+              <input class="search_btn" placeholder="Recherche" type="text" /><a href="#"><i
+                  class="fa fa-search"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header Top area ends -->
+</header>

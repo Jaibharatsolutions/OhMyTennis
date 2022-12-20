@@ -1,0 +1,177 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+  <!-- Banner starts --> 
+  <div class="innerbanner" style="background-color:#000">
+    <img src="../assets/images/cours-particuliers-de-tennis.jpg" style="width:100%;opacity:0.8" alt="Los Angeles">
+    <div class="inner_carousel">
+        <h3>NEWSLETTER ACTUALITÉ TENNIS</h3>
+    </div>
+</div>
+<!-- Banner ends --> 
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+    <div class="banner_container">
+        <h3>Réservez un cours avec un coach</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input class="form-control" id="" maxlength="6" placeholder="Code Postal" [(ngModel)]="Ville"
+                            type="text" />
+                        <label><img src="./assets/images/ville_icon.png" /></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input type="text" style="text-align:left!important;" [min]="min" class="form-control" id=""
+                            placeholder="Date" [(ngModel)]="Date" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" />
+                        <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+                        <label><img src="./assets/images/date_icon.png" /> </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+                <button (click)="handleClick($event)" class="btn black_btn">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inner Search area ends --> 
+
+<!-- section1 starts -->
+<div class="sec_news section1 des_concept_list haspadd">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="page_title_div">            
+                    <h1 class="page_title">NEWSLETTER ACTUALITÉ TENNIS</h1>				
+                    <img src="../assets/images/title_border.png" alt="title_border" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Témoignages des élèves qui ont pris des cours de tennis</h3>	
+                    <p>Découvrez des retours d’expériences vécues par les abonnés de notre site internet.  Eux seuls sont capables de vous décrire avec précisions leurs ressentis , leurs émotions sur le terrain de tennis. Ce sont souvent des réactions à chaud vous permettant de mieux comprendre les tenants et les aboutissants de leur démarche. Un avant goût de votre venue prochaine…</p>
+                    <p><strong><a class="content_link" href="">Découvrez notre offre concernant les cours de tennis particuliers et collectifs</a></strong></p>
+                    <p><strong><a class="content_link" href="">Découvrez notre offre concernant les stages de tennis </a></strong></p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Offre gratuite limitée dans le temps pour les cours de tennis en ligne</h3>	
+                    <p>Vous pouvez découvrir sur certaines périodes des services payants sur notre site web. Il est toujours agréable de pouvoir tester des services avant de savoir si ils nous conviennent vraiment. Ce sera l’occasion de tenter notre offre de cours de tennis en ligne  pour mieux apprendre le tennis. </p>
+                    <p><strong><a class="content_link" href="">Découvrez notre offre concernant les cours de tennis en ligne</a></strong></p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Les secrets de .. (professionnel du tennis)</h3>	
+                    <p>Découvrez les coulisses de l’univers du tennis avec une immersion auprès des différents acteurs qui font vivre et qui animent toute l’année notre sport.
+                        Cela vous permettra peut être de mieux comprendre certains métiers ou fonction qui gravitent autour de la balle jaune et d’en découvrir de nouveaux. </p>
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Buzz du moment sur l’actualité tennis</h3>	
+                    <p>La saison de tennis est riche en événements que cela soit sur le circuit international ou même à un niveau local. Notre sport se joue toute l’année , tous les jours et tous les pratiquants concurrents à y véhiculer des sensations fortes qu’il est toujours sympathique de partager.</p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>FAQ concernant Ohmytennis</h3>	
+                    <p>Des questions récurrentes reviennent quand à l’utilisation du site internet. Dans un souci de partage de l’information,  nous vous apporteront les réponses nécessaires au bon fonctionnement de celui-ci. Nous avons un formulaire de contact à disposition pour toute interrogation. </p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Surprises sur Ohmytennis</h3>	
+                    <p>Le contre-pied ca se passe sur le terrain de tennis mais aussi en dehors c’est pourquoi nous vous concoctons de l’inédit pour toujours vous étonner de mois en mois. 
+                        Laissez-vous guider par notre connaissance du milieu du tennis afin de apporter pleins d’émotions.</p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>A venir sur Ohmytennis</h3>	
+                    <p>Nous vous tenons informés des nouveautés sur notre plateforme web afin de pouvoir vous faire bénéficier, en premier , des nouvelles offres. Ce privilège vous permettra d’être à la pointe de l’information en continu et ainsi ne rien rater de ce qui se passe sur la planète tennis.</p>
+              </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>La vidéo tennis à voir</h3>	
+                    <p>Que cela soit pour un support pédagogique ou pour du fun , ne manquez pas la vidéo du moment. Si vous n’avez pas eu le temps durant ces derniers temps de regarder une vidéo de tennis, cette petite parenthèse sera l’occasion  de progresser ou de vivre un moment incroyable qui s’est déroulé sur le terrain</p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Les bons plans pour jouer au tennis</h3>	
+                    <p>Nous vous dénichons les meilleurs plans grâce à notre expertise et notre connaissance des produits et webservices liés au tennis. Notre réseau de partenaires de confiance vous proposent les meilleurs services afin de pouvoir vous satisfaire tout au long de l’année. Ils sont sélectionnés spécialement par nos soins pour rendre votre expérience liée au tennis mémorable.</p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Conseils d’experts pour apprendre le tennis</h3>	
+                    <p>La plate forme Ohmytennis se veut être un réel guide pour les néophytes qui désirent découvrir cette pratique et qui ne la connaisse pas du tout . Au programme , best practices, points essentiels , idées reçues , tutoriels , correctifs , éducatifs , exercices pédagogiques pour progresser, apprendre et comprendre notre univers.</p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+
+    </div>
+</div>
+   
+    <app-footer></app-footer>
+

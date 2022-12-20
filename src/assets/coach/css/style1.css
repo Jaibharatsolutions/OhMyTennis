@@ -1,0 +1,358 @@
+@font-face {
+    font-family: 'MontserratSemiBold';
+    src: url('../fonts/MontserratSemiBold.eot');
+    src: url('../fonts/MontserratSemiBold.eot') format('embedded-opentype'),
+         url('../fonts/MontserratSemiBold.woff2') format('woff2'),
+         url('../fonts/MontserratSemiBold.woff') format('woff'),
+         url('../fonts/MontserratSemiBold.ttf') format('truetype'),
+         url('../fonts/MontserratSemiBold.svg#MontserratSemiBold') format('svg');
+}
+@font-face {
+    font-family: 'ComfortaaBold';
+    src: url('../fonts/ComfortaaBold.eot');
+    src: url('../fonts/ComfortaaBold.eot') format('embedded-opentype'),
+         url('../fonts/ComfortaaBold.woff2') format('woff2'),
+         url('../fonts/ComfortaaBold.woff') format('woff'),
+         url('../fonts/ComfortaaBold.ttf') format('truetype'),
+         url('../fonts/ComfortaaBold.svg#ComfortaaBold') format('svg');
+}
+@font-face {
+    font-family: 'MontserratMedium';
+    src: url('../fonts/MontserratMedium.eot');
+    src: url('../fonts/MontserratMedium.eot') format('embedded-opentype'),
+         url('../fonts/MontserratMedium.woff2') format('woff2'),
+         url('../fonts/MontserratMedium.woff') format('woff'),
+         url('../fonts/MontserratMedium.ttf') format('truetype'),
+         url('../fonts/MontserratMedium.svg#MontserratMedium') format('svg');
+}
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../fonts/MontserratRegular.eot');
+    src: url('../fonts/MontserratRegular.eot') format('embedded-opentype'),
+         url('../fonts/MontserratRegular.woff2') format('woff2'),
+         url('../fonts/MontserratRegular.woff') format('woff'),
+         url('../fonts/MontserratRegular.ttf') format('truetype'),
+         url('../fonts/MontserratRegular.svg#MontserratRegular') format('svg');
+}
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('../fonts/MontserratBold.eot');
+    src: url('../fonts/MontserratBold.eot') format('embedded-opentype'),
+         url('../fonts/MontserratBold.woff2') format('woff2'),
+         url('../fonts/MontserratBold.woff') format('woff'),
+         url('../fonts/MontserratBold.ttf') format('truetype'),
+         url('../fonts/MontserratBold.svg#MontserratBold') format('svg');
+}
+
+
+.dashboard_boldtitle {
+	text-align: center;
+    font-size: 23px;
+    color: #e75b00;
+    font-weight: bold;
+    margin-bottom: 23px;
+    text-decoration: underline;
+}
+
+.main-header{
+background-color:#eeeeee;
+}
+.content-wrapper{
+	padding:29px 25px 0px;
+}
+.wrapper{
+	overflow-y:hidden;
+}
+.des_page_heading{
+	padding:15px 10px;
+	color:#555;
+	font-family:'Montserrat';
+	font-size:16px;
+	float:left;
+	text-transform:uppercase;
+	margin-left: 37px;
+    font-weight: bold;
+	display:inline;
+}
+.main-header .navbar .nav>li>a> i{
+	color:#000!important;
+	font-size:16px;
+}
+.search_dashboard:focus, .search_dashboard:hover{
+	background-color:#fff;
+		-webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+	border: 1px solid #e75a00;
+	border-bottom: 1px solid #e75a00;
+}
+.search_dashboard{
+	margin-top:10px;
+	    border: transparent;
+	border: 1px solid transparent;
+	border-bottom: 1px solid #a9a9a9;
+	border-radius:20px;
+    background-color: transparent;
+}
+.main-sidebar{
+	/* margin-top:10px; */
+}
+.logo_dashboard{
+	padding:12px 0px;
+	max-width:180px;
+}
+.sidebar-menu>li {
+	font-family:'Montserrat';
+	font-size:14px;
+	font-weight: bold;
+}
+/* dashboard */
+
+.circle-tile {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.circle-tile-heading {
+    color: #FFFFFF;
+    height: 80px;
+    margin: 0 15px -40px;
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+    width: 80px;
+}
+.circle-tile-heading .fa {
+    line-height: 80px;
+}
+.circle-tile-content {
+    padding-top: 50px;
+}
+.circle-tile-number {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 5px 0 15px;
+}
+.circle-tile-description {
+	width:75%;
+	margin:0px auto;
+	padding-top:20px;
+	font-family:'MontserratRegular ';
+	font-size:16px;
+	color:#555;
+}
+.circle-tile-footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    padding: 5px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.circle-tile-footer:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+.circle-tile-heading.dark-blue:hover {
+    background-color: #2E4154;
+}
+.circle-tile-heading.green:hover {
+    background-color: #138F77;
+}
+.circle-tile-heading.orange:hover {
+    background-color: #DA8C10;
+}
+.circle-tile-heading.blue:hover {
+    background-color: #2473A6;
+}
+.circle-tile-heading.red:hover {
+    background-color: #CF4435;
+}
+.circle-tile-heading.purple:hover {
+    background-color: #7F3D9B;
+}
+.tile-img {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.dark-blue_1 {
+	display: table;
+   background: #FF9001;
+background: -webkit-linear-gradient(top, #FF9001, #FEA01D);
+background: -moz-linear-gradient(top, #FF9001, #FEA01D);
+background: linear-gradient(to bottom, #FF9001, #FEA01D);
+}
+.dark-blue_1 p{
+	font-size:24px;
+	font-weight:bold;
+	display:table-cell;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.dark-blue_2 {
+	display: table;
+background: #438F46;
+background: -webkit-linear-gradient(top right, #438F46, #60B665);
+background: -moz-linear-gradient(top right, #438F46, #60B665);
+background: linear-gradient(to bottom left, #438F46, #60B665);
+}
+.dark-blue_2 p{
+	cursor:pointer;
+	font-size:24px;
+	font-weight:bold;
+	display:table-cell;
+	vertical-align:middle;
+}
+.dark-blue_3 {
+	
+	display: table;
+background: #DB3B35;
+background: -webkit-linear-gradient(top right, #DB3B35, #EB4E4B);
+background: -moz-linear-gradient(top right, #DB3B35, #EB4E4B);
+background: linear-gradient(to bottom left, #DB3B35, #EB4E4B);
+}
+.dark-blue_3 p{
+	cursor:pointer;
+	font-size:24px;
+	font-weight:bold;
+	display:table-cell;
+	vertical-align:middle;
+}
+.dark-blue_4 {
+	display: table;
+background: #09B4C8;
+background: -webkit-linear-gradient(top right, #09B4C8, #1EC2D4);
+background: -moz-linear-gradient(top right, #09B4C8, #1EC2D4);
+background: linear-gradient(to bottom left, #09B4C8, #1EC2D4);
+}
+.dark-blue_4 p{
+	cursor:pointer;
+	font-size:24px;
+	font-weight:bold;
+	display:table-cell;
+	vertical-align:middle;
+}
+.dark-blue {
+	display:table;
+    background-color: #34495E;
+}
+.dark-blue p{
+	cursor:pointer;
+	font-size:24px;
+	font-weight:bold;
+	display:table-cell;
+	vertical-align:middle;
+}
+.dark-blue1 {
+	
+	min-height:215px;
+    background-color: #fff;
+}
+.snippet{
+	padding:40px 0px;
+}
+.bootstrap.snippet{
+	padding:20px 0px;
+}
+/* dashboard */
+/****************************************************** course form **************************************************/
+.des_form_section_coach{
+-webkit-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.75);
+	padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0px auto;
+}
+    .select_drop_custom1{
+		width: 100%;
+    /* border-radius: 20px; */
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    background: url(../images/down_arrow1.png) no-repeat right #f3f3f3;
+    -webkit-appearance: none;
+    background-position-x: 97%;
+    background-position-x: 97%;
+	}
+	.coach_form_input_bg:hover,.coach_form_input_bg:focus{
+		border-color:#e75a00;
+	}
+	.coach_form_input_bg{
+		background-color:#ffffff;
+	}
+	.form-group{
+		margin-bottom:15px!important;
+	}
+	.form_buttons a{
+		margin-left:8px;
+		padding:4px 30px;
+	}
+	.des_cancel_btn{
+		background-color:#fff!important;
+		color:#000
+	}
+	.box-body label{
+		font-size: 15px;
+
+	}
+	.des_form_section_coach  input[type="checkbox"]{
+		/* margin-top:0px; */
+		width: 16px; /*Desired width*/
+		height: 16px; /*Desired height*/
+	}
+.box-body span.input-group-addon {
+	right: 18px;
+    top: 3px;
+}
+.checkbox_txt{
+	
+}
+/****************************************************** course form **************************************************/
+
+
+
+/****************************************************** account form **************************************************/
+.btn-bs-file{
+	width:100%;
+	text-align:initial;
+	border-color:#d2d6de;
+    position:relative;
+}
+.des_icon_btn{
+		float:right;
+}
+.btn-bs-file input[type="file"]{
+    position: absolute;
+    top: -9999999;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width:0;
+    height:0;
+    outline: none;
+    cursor: inherit;
+}
+
+/****************************************************** account form **************************************************/
+/****************************************************** common admin **************************************************/
+    label{
+		font-family: Montserrat;
+		font-size:14px;
+		font-weight:bold;
+	}
+	.main-footer{
+		background-color:#080808;
+		color:#fff;
+		margin-left:0px;
+		
+	}
+	.main-footer a{
+		color:#fff;
+		
+	}
+	.login_btns:active,.login_btns:hover,.login_btns:focus{
+		background-color:#d44c00;
+		color:#fff;
+	}
+/****************************************************** common admin **************************************************/

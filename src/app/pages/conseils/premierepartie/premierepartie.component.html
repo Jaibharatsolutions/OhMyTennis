@@ -1,0 +1,210 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 content_secs des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Première partie de tennis pour un débutant</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2><strong>Conseils pour débuter dans le tennis</strong></h2>
+        <ul>
+          <li>
+            <span class="text_underline">Chaussures de tennis</span>semelle
+            plate (important pour les appuis et éviter de se blesser).
+          </li>
+          <li>
+            <span class="text_underline">Short</span>avec des poches (important
+            pour servir : 2 balles sont nécessaires pour servir lors d’un match
+            de tennis, 2 balles dans la main = lancer de balle imprécis).
+          </li>
+          <li>
+            <span class="text_underline">Accessoires indispensables:</span
+            >Serviette, casquette (si soleil) pour garder un certain confort et
+            avoir tous le matériel nécessaire pour faire une bonne partie de
+            tennis.
+          </li>
+          <li>
+            <span class="text_underline">Hydratation:</span>Bouteille d’eau
+            obligatoire pour rester en forme.
+          </li>
+          <li>
+            <span class="text_underline">Alimentation:</span>Barre énergétique,
+            banane etc
+          </li>
+          <li>
+            <span class="text_underline">Balles</span>intermédiaires ou balles
+            dures déjà utilisées pour commencer une partie de tennis sans que la
+            balle soit trop dure et donc compliquer à jouer.
+          </li>
+          <li>
+            <span class="text_underline">Raquette de tennis</span> légère (femme
+            260 g / homme 280 g) moyenne gamme prix , poids en tête.
+          </li>
+          <li>
+            <span class="text_underline">Réserver un terrain</span> de tennis à
+            l’avance le plus tôt possible (terrain de tennis couvert en hiver)
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/stage-de-tennis-vacances.jpg"
+          class="center-block"
+          alt="concept_image1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/stage-tennis-avril.jpg"
+          class="center-block"
+          alt="concept_image2"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >Les possibles aprioris sur le tennis quand on est débutant</strong
+          >
+        </h2>
+        <ul>
+          <li>
+            Pas chaussure de running (aucun appuis , dangereux pour les
+            chevilles quand changement de direction)
+          </li>
+          <li>
+            Pas de short de foot/basket/running ou legging car pas de poche
+          </li>
+          <li>
+            Jogging quand on a froid, fausse les sensations lors de
+            l’échauffement avant un match de tennis , impossible de développer
+            son jeu de jambes correctement.
+          </li>
+          <li>Le coca c’est bon pour jouer (uniquement si hypoglycémie)</li>
+          <li>
+            Jouer direct avec des balles de tennis neuves (rebond haut, aucun
+            échange avec le joueur de tennis en face).
+          </li>
+          <li>
+            Acheter une raquette de tennis de professionnel (Federer, Nadal),
+            impossible à contrôler, lourde , risque de blessure , considérer
+            comme un achat plaisir
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2><strong>Petite astuce ohmytennis</strong></h2>
+        <ul>
+          <li>
+            <span>Réserver un terrain de tennis</span>à l’avance le plus tôt
+            possible pour bénéficier d’une bonne horaire (plutôt couvert en
+            hiver).
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/stage-tennis-toussaint.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

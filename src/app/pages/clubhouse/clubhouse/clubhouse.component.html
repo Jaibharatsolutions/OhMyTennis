@@ -1,0 +1,219 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/club-house-tennis_bg.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>Oh My Club House</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section3 starts -->
+<div class="section3 section1 left_sidebarmenu haspadd">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-3 col-md-4 col-sm-4 sm_noleftpadd col-xs-12 left_sidebarmenu"
+      >
+        <div class="black_sidemenu">
+          <h2 class="left_menutitle">CHALLENGE OHMYTENNIS</h2>
+          <ul>
+            <li>
+              <a href="#"
+                >Points tournois<span>
+                  <!-- <i class="fa fa-angle-right"></i> --></span
+                ></a
+              >
+              <!-- <ul class="black_sidesubmenu">
+									<li><a href="#">1880 - 1930</a></li>
+									<li><a href="#">1930 - 1950</a></li>
+									<li><a href="#">1950 - 1973</a></li>
+									<li><a href="#">1973 - auj</a></li>
+								</ul> -->
+            </li>
+            <li><a href="#">Points é-learning</a></li>
+            <li><a href="#">Points médias</a></li>
+            <li><a href="#">Points résa cours</a></li>
+            <li><a href="#">Points de progression</a></li>
+            <li><a href="#">Points contrib/avis</a></li>
+          </ul>
+        </div>
+        <div class="black_sidemenu">
+          <h2 class="left_menutitle">CHALLENGE OHMYTENNIS</h2>
+          <ul>
+            <li><a href="#">Recherche sparring</a></li>
+            <li><a href="#">Parrainage</a></li>
+            <li><a href="#">Petites annonces</a></li>
+            <li><a href="#">Jeux concours</a></li>
+            <li><a href="#">Quizz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="col-lg-9 col-md-8 col-sm-8 col-xs-12 sm_norightpadd right_sidecontent"
+      >
+        <div class="page_title_div">
+          <h1 class="page_title">OHMYCLUBHOUSE</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="col-md-6 col-md-12 md_noleftpadd padd_botspace col-xs-12">
+          <h5><strong>Défi sur Ohmytennis</strong></h5>
+          <p>
+            Accumulez des points en étant actif sur notre site internet et vous
+            bénéficierez de réductions, de gratuités ainsi que de cadeaux. Si
+            vous réservez un cours de tennis ou parrainez un ami vous serez
+            récompensez mais vous pouvez aussi être le premier à donner un avis
+            ou remplir entièrement votre profil. Rendez-vous dès maintenant sur
+            la page défi pour savoir comment gagner des points.
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Découvrez notre explicatif concernant vos futurs défis.</a
+              ></strong
+            >
+          </p>
+        </div>
+        <div class="col-md-6 col-md-12 padd_botspace md_norightpadd col-xs-12">
+          <img
+            src="./assets/images/promotion-tennis-achat.jpg"
+            style="width:100%;"
+          />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-6 col-md-12 padd_botspace md_noleftpadd col-xs-12">
+          <img
+            src="./assets/images/reduc-tennis-achat.jpg"
+            style="width:100%;"
+          />
+        </div>
+        <div class="col-md-6 col-md-12 md_norightpadd padd_botspace col-xs-12">
+          <h5><strong>Challenge avec Ohmytennis</strong></h5>
+          <p>
+            Dans cette rubrique, vous avez la possibilité de rechercher un
+            sparring partner tennis (personne qui vient pour jouer avec vous
+            sous forme de match, de points ou de d’échanges sans aborder de
+            pédagogie). Il est également possible de parrainer un proche afin de
+            bénéficier d’avantages sur notre site internet. Vous pouvez
+            également déposer des petites annonces pour revendre du matériel
+            d’occasion.
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Trouver un sparring partner tennis dès maintenant.</a
+              ></strong
+            >
+          </p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-6 col-md-12 padd_botspace md_noleftpadd col-xs-12">
+          <h5><strong>Le forum sur Ohmytennis</strong></h5>
+          <p>
+            Lieu d’interaction entre les membres, le forum vous permet de vous
+            exprimer sur différents sujets liés au tennis. Que cela concerne le
+            matériel, les règles, le classement, les joueurs professionnels
+            etc... n’hésitez pas à lancer des sujets (topic) afin de faire
+            participer à notre communauté. Les règles de conduite sont citées
+            dans la charte d’utilisation qu’il est impératif de respecter sous
+            peine d’exclusion par notre modérateur.
+          </p>
+        </div>
+        <div class="col-md-6 col-md-12 padd_botspace md_nolrightpadd col-xs-12">
+          <img src="./assets/images/solde-tennis.jpg" style="width:100%;" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-6 col-md-12 padd_botspace md_noleftpadd col-xs-12">
+          <img
+            src="./assets/images/club-house-tennis.jpg"
+            style="width:100%;"
+          />
+        </div>
+        <div class="col-md-6 col-md-12 padd_botspace md_norightpadd col-xs-12">
+          <h5><strong>Jeux concours/quizz avec Ohmytennis</strong></h5>
+          <p>
+            Les jeu-concours tennis désigneront les gagnants en fonction des
+            performances des participants, puis par la voie du hasard à l'aide
+            d'un tirage au sort. Différentes formes vous seront proposées telles
+            que des photos, des vidéos, des jeux ou encore un nom de joueur à
+            trouver.
+          </p>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="col-xs-12 no_padding">
+          <p>
+            Les quiz tennis (questionnaires) vous permettront de vous tester sur
+            des connaissances spécifiques. Différents sujets sur le tennis
+            seront abordés comme l’histoire du tennis, les joueurs, les joueuses
+            ou encore le matériel. Les gagnants seront également désignés en
+            fonction des performances des participants, puis par la voie du
+            hasard à l'aide d'un tirage au sort.
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href="#"
+                >Souhaitez-vous comprendre le tennis et ses règles avant de
+                commencer ?</a
+              ></strong
+            >
+          </p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section3 ends -->
+<app-footer></app-footer>

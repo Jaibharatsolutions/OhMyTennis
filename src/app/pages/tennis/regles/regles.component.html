@@ -1,0 +1,213 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_titre_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Regles</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row two_equalsides">
+      <div class="col-lg-9 col-sm-8 col-xs-12">
+        <h5>Les dimensions d’un terrain de tennis</h5>
+        <p>
+          Le terrain sur lequel on peut jouer au tennis est nommé court (de
+          tennis) qui étymologiquement signifie endroit fermé.Il est constitué
+          d'une surface de jeu, d'un filet et de grillages le délimitant.
+        </p>
+        <div>
+          <a
+            href="javascript:;"
+            routerLink="{{ '/' + this._const('PATH.TENNIS.DIMENSIONS.SELF') }}"
+            class="btn btn-primary lex_btn"
+            >EN SAVOIR PLUS</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-4 col-xs-12">
+        <img
+          src="./assets/images/regle_dimension.jpg"
+          class="center-block"
+          alt="tennis_compimg2"
+        />
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row two_equalsides">
+      <div class="col-lg-3 col-sm-4 col-xs-12">
+        <img
+          src="./assets/images/regle_element.jpg"
+          class="center-block"
+          alt="tennis_compimg3"
+        />
+      </div>
+      <div class="col-lg-9 col-sm-8 col-xs-12">
+        <h5>Regle Eléments du tennis</h5>
+        <p class="license_txt">
+          <b
+            >Le filet d’un terrain de tennis est constitué de plusieurs éléments
+            comme :</b
+          >
+        </p>
+        <p class="license_txt">
+          <b>La bande du filet de tennis :</b> située dans la partie supérieure
+          du filet , c’est un câble en acier recouvert de polyester qui permet
+          le fameux « let » durant un point (balle qui heurte le filet).
+        </p>
+        <div>
+          <a
+            href="javascript:;"
+            routerLink="{{ '/' + this._const('PATH.TENNIS.ELEMENTS.SELF') }}"
+            class="btn btn-primary lex_btn"
+            >EN SAVOIR PLUS</a
+          >
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row two_equalsides">
+      <div class="col-lg-9 col-sm-8 col-xs-12">
+        <h5>Historique des règles au tennis</h5>
+        <p>
+          Les premières règles du tennis sont bien sûr celles du Lawn-tennis du
+          major Wingfield (1874). Elles étaient confuses et incomplètes.
+          Néanmoins, on comptait de la même façon que le Jeu de Paume extérieur
+          (Longue Paume) : 15 - 30 - 45 - Jeu (origine des points au tennis).
+        </p>
+        <div>
+          <a
+            href="javascript:;"
+            routerLink="{{ '/' + this._const('PATH.TENNIS.COMPTER.SELF') }}"
+            class="btn btn-primary lex_btn"
+            >EN SAVOIR PLUS</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-4 col-xs-12">
+        <img
+          src="./assets/images/regle_compter.jpg"
+          class="center-block"
+          alt="tennis_compimg4"
+        />
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row two_equalsides">
+      <div class="col-lg-3 col-sm-4 col-xs-12">
+        <img
+          src="./assets/images/reglement_principle.jpg"
+          class="center-block"
+          alt="tennis_compimg4"
+        />
+      </div>
+      <div class="col-lg-9 col-sm-8 col-xs-12">
+        <h5>Règlementation du matériel de tennis</h5>
+        <p>
+          Un cadre de raquette de tennis est composé de trois parties : le
+          manche où on la tient, le tamis surface de frappe qui doit être plat
+          et le cœur qui relie les deux parties précédentes. Le cordage (une ou
+          plusieurs cordes qui se croisent et s'entrelacent grâce aux trous dans
+          le cadre) est attaché par des nœuds sur le tamis , il doit être
+          homogène.
+        </p>
+        <div>
+          <a
+            href="javascript:;"
+            routerLink="{{ '/' + this._const('PATH.TENNIS.PRINCIPLE.SELF') }}"
+            class="btn btn-primary lex_btn"
+            >EN SAVOIR PLUS</a
+          >
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_titre_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Nous proposons aux passionnés de tennis d'avoir un univers
+            spécialement créé pour eux.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+
+<app-footer></app-footer>

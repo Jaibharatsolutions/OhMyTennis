@@ -1,0 +1,263 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="../assets/images/coach_banner.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h2>OH MY EVENTS</h2>
+  </div>
+</div>
+<!-- Banner ends -->
+<div class="section1 des_coach_content" style="margin:12px 0px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h1 class="page_title" style="font-size: 27px;">
+          Ohmytennis: Offre de service coach tennis :
+        </h1>
+        <img style="margin: 5px 0px 15px;" alt="title_border" src="./assets/images/title_border.png" />
+        <p>
+          Qu’est ce qu’un cours particuliers de tennis ? c’est un cours de
+          tennis avec un élève sur le terrain . Vous avez la possibilité d’avoir
+          un discours personnalisé et de jouer avec le professeur pendant toute
+          l’heure.
+        </p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h1 class="page_title" style="font-size: 27px;">
+          Qu’est ce qu’un cours collectif de tennis ?
+        </h1>
+        <img style="margin: 5px 0px 15px;" alt="title_border" src="./assets/images/title_border.png" />
+        <p>
+          c’est un cours de tennis avec au moins 2 personnes. L’intérêt
+          principal de ce genre de cours est la mutualisation des coûts
+          (location et cours) Lien contextualisé : Savez-vous comment vous
+          préparez pour être en forme physique pour jouer au tennis ?
+        </p>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 12px;">
+        <a href="javascript:;" routerLink="{{ '/' + this._const('PATH.OFFREDESERVICE') }}" class="darkorange_btn">en
+          savoir plus</a>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<div class="newcoachlist">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12"></div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left: 0px;">
+              <h1 class="page_title" style="font-size: 27px;">
+                Recherchez vos événements
+              </h1>
+              <img alt="title_border" src="./assets/images/title_border.png" style="margin: 10px 0px 20px;" />
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!-- <input
+                type="search"
+                [(ngModel)]="rechercher"
+                (blur)="rechercherfun()"
+                placeholder="Rechercher"
+                style="outline:none;width: 220px;border-radius: 20px;padding: 8px 20px; border: 1px solid #9b9797;    font-size: 15px;
+            font-weight: bold;float: right;margin-right: -15px;"
+              /> -->
+
+              <input
+                style="outline:none;width: 220px;border-radius: 20px;padding: 8px 20px; border: 1px solid #9b9797; font-size: 15px; font-weight: bold; float: right; margin-right: -15px;"
+                type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Rechercher" />
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12 px-30">
+          <!-- <button class="viewmap_btn section_btn" (click)="showMyMap=!showMyMap">Voir la carte</button> -->
+          <!-- <button class="viewmap_btn section_btn" (click)="toogleData()">Voir la carte </button> -->
+          <form (ngSubmit)="searchByEvent(search)">
+            <div class="select_drop" style="margin-bottom: 10px;">
+              <h2>Option de filtrage</h2>
+              <h3 style="margin-top: 14px;">Code Postal</h3>
+              <img alt="title_border" src="./assets/images/title_border.png" style="margin: 15px 0px 15px;" />
+              <div class="search search1">
+                <i class="fa fa-search"></i>
+                <input type="number" [(ngModel)]="search.ville" placeholder="Code postal" name="search.ville" id="ville"
+                  pattern="^[0-9]{5}$" maxlength="5" required className="form-control" />
+              </div>
+            </div>
+            <!-- SDKAT START -->
+            <div class="select_drop">
+              <!-- <h3>Rayon <small>(till 20 miles)</small></h3> -->
+              <h3>Rayon</h3>
+              <img alt="title_border" src="./assets/images/title_border.png" style="margin: 15px 0px 15px;" />
+              <div class="search search1">
+                <select [(ngModel)]="search.rayon" name="rayon" className="form-control" id="rayon" placeholder="KM">
+                  <option value="">KM</option>
+                  <option *ngFor="let number of numbers; index as i" [selected]="search.rayon === 0">{{ number }} KM
+                  </option>
+                </select>
+              </div>
+            </div>
+            <!-- SDKAT END -->
+            <div class="cours">
+              <h3>Sélectionnez vos événements</h3>
+              <img alt="title_border" src="./assets/images/title_border.png" style="margin: -5px 0px 20px;" /><br />
+              <div class="chech_box_services1" style="margin-top: 0px;">
+                <div class="~form-group get getservices">
+                  <span class="chech_box_services" style="color:#000000 !important; padding-bottom: 0px;">
+                    <input [(ngModel)]="course.Stage" type="checkbox" (change)="selectedOneCheckbox('Stage')"
+                      id="check_Stage" class="service" name="course" value="Stage" />
+                    Stage</span>
+                  <span class="chech_box_services" style="color:#000000 !important; padding-bottom: 0px;">
+                    <input type="checkbox" [(ngModel)]="course.Animation" class="service"
+                      (change)="selectedOneCheckbox('Animation')" id="check_Animations" name="course"
+                      value="Animation" />
+                    Animation</span>
+                  <span class="chech_box_services" style="color:#000000 !important; padding-bottom: 0px;">
+                    <input type="checkbox" [(ngModel)]="course.Teambuilding"
+                      (change)="selectedOneCheckbox('TeamBuilding')" id="check_TeamBuilding" class="service"
+                      name="course" value="Teambuilding" />
+                    TeamBuilding</span>
+                  <span class="chech_box_services" style="color:#000000 !important; padding-bottom: 0px;">
+                    <input type="checkbox" [(ngModel)]="course.Tournament" (change)="selectedOneCheckbox('Tournament')"
+                      id="check_Tournament" class="service" name="course" value="Tournament" />
+                    Tournament</span>
+                </div>
+              </div>
+            </div>
+            <div class="select_drop">
+              <h3>sélectionner la date</h3>
+              <img alt="title_border" src="./assets/images/title_border.png" style="margin: 15px 0px 15px;" />
+              <div class="search">
+                <i class="fa fa-calendar"></i>
+                <input [(ngModel)]="search.date" name="search.date" [min]="min" [owlDateTime]="dt1"
+                  [owlDateTimeTrigger]="dt1" placeholder="Date" readonly />
+                <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+              </div>
+              <button href="#" class="submit button">ENREGISTRER</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12" *ngIf="pager.totalPages > 0; else nocoachesdata">
+          <div class="row ng-star-inserted" *ngFor="let res of pagedItems | filter: searchText; let i = index"
+            style="cursor: pointer;" (click)="goToEvent(res, search.course)">
+            <div class="set">
+              <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 px-0">
+                <!-- <img
+                  style="cursor: pointer;"
+                  src="../assets/images/coach_searchimg.png"
+                  alt="header"
+                  (click)="goToCouchDetail(res.Coach_ID)"
+                /> -->
+
+                <img style="cursor: pointer;" src="{{ res.Photo }}" #img (error)="
+                    img.src = '../../assets/images/profile_blackwhite.png'
+                  " (click)="goToEvent(res, search.course)" />
+
+
+
+              </div>
+              <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 ml-2 pl-0">
+                <div class="~mx-minus10">
+                  <h3 style="cursor: pointer;color: #000;" (click)="goToEvent(res, search.course)">
+                    {{ res.Eventname }} {{ res.Tournamentname }}
+                  </h3>
+                  <div class="star-rating">
+                    <input type="radio" id="5-stars" name="rating" value="5" />
+                    <label for="5-stars" class="star">&#9733;</label>
+                    <input type="radio" id="4-stars" name="rating" value="4" />
+                    <label for="4-stars" class="star">&#9733;</label>
+                    <input type="radio" id="3-stars" name="rating" value="3" />
+                    <label for="3-stars" class="star">&#9733;</label>
+                    <input type="radio" id="2-stars" name="rating" value="2" />
+                    <label for="2-stars" class="star">&#9733;</label>
+                    <input type="radio" id="1-star" name="rating" value="1" />
+                    <label for="1-star" class="star">&#9733;</label>
+                  </div>
+
+                  <div style="margin-bottom:6px;font-weight: bold; font-size: 18px; color: #000;"
+                    *ngIf="res.Price > '0'">
+                    {{ res.Price | currency: "EUR":"symbol":"2.2-2":"fr" }}
+                  </div>
+                  <p style="max-height: 39px;overflow: hidden;font-size: 13px;line-height: 20px;">
+                    {{ res.Description }}
+                  </p>
+                  <p style="max-height: 39px;overflow: hidden;font-size: 13px;line-height: 20px;">
+                    {{ res.Location }}
+                  </p>
+                  <div class="tag social_tags">
+                    <span *ngIf="res.isFromDate == 'Yes'">{{ res.from_date | date: "mediumDate":"+0530":"fr" }} au
+                      {{ res.to_date | date: "mediumDate":"+0530":"fr" }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <ul *ngIf="pager.pages && pager.pages.length > 0" class="pager"
+            style="text-align: right;margin: 13px -15px 20px 0px; ">
+            <li class="previou" [ngClass]="{ disabled: pager.currentPage === 1 }">
+              <a style="padding: 10px 34px; margin-right: 10px;" class="darkorange_btn btn"
+                (click)="setPage(pager.currentPage - 1)">Précédente</a>
+            </li>
+            <li class="nex" [ngClass]="{ disabled: pager.currentPage === pager.totalPages }">
+              <a style="padding: 10px 34px;" class="darkgrey_btn btn"
+                (click)="setPage(pager.currentPage + 1)">Suivante</a>
+            </li>
+          </ul>
+          <!-- <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                      <li [ngClass]="{ disabled: pager.currentPage === 1 }">
+                        <a (click)="setPage(1)">First</a>
+                      </li>
+                      <li [ngClass]="{ disabled: pager.currentPage === 1 }">
+                        <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+                      </li>
+                      <li
+                        *ngFor="let page of pager.pages"
+                        [ngClass]="{ active: pager.currentPage === page }"
+                      >
+                        <a (click)="setPage(page)">{{ page }}</a>
+                      </li>
+                      <li
+                        [ngClass]="{ disabled: pager.currentPage === pager.totalPages }"
+                      >
+                        <a (click)="setPage(pager.currentPage + 1)">Next</a>
+                      </li>
+                      <li
+                        [ngClass]="{ disabled: pager.currentPage === pager.totalPages }"
+                      >
+                        <a (click)="setPage(pager.totalPages)">Last</a>
+                      </li>
+                    </ul> -->
+        </div>
+
+        <ng-template #nocoachesdata>
+          <div class="col-md-8 col-sm-4 col-xs-12 px-30">
+            <div class="row_box">
+              <div class="set_data">
+                <div class="col-md-12 col-sm-4 col-xs-12 px-0">
+                  <h2>Pas de liste d'entraîneurs</h2>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

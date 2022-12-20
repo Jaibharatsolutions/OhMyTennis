@@ -1,0 +1,256 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Premier match amical de tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >Conseils pour pratiquer un match amical de tennis chez
+            ohmytennis</strong
+          >
+        </h2>
+        <ul class="para_nomargin">
+          <li>
+            Connaître les <span class="text_underline">règle</span>pour jouer
+            tennis.
+          </li>
+          <li>
+            Il faut être capable de savoir<span>compter</span>les points /jeu
+            /sets pour faire correctement un match de tennis
+          </li>
+          <li>
+            Si <span>litige</span>entre les deux joueurs de tennis sur le
+            terrain( désaccord sur un jugement de balle), le point est rejoué
+            (l’expression pour un tennisman est « on remet 2 balles »). Il n’y a
+            pas de réel enjeu lors d’un match amical de tennis, c’est pour cela
+            qu’il est important de rejouer le point si y a un doute.
+          </li>
+          <li>
+            Pour <span>l’échauffemen</span>avant votre match de tennis, il est
+            préférable de vous échauffer pendant au moins 10 minutes pour éviter
+            les blessures, et n’oubliez pas de boire de l’eau ou des boissons
+            énergisantes.
+          </li>
+          <li>
+            Bien sur, le but d’un match amical de tennis est de
+            <span>mettre en place</span> les techniques de tennis déjà évoquées
+            pendant les cours de tennis avec votre professeur de ohmytennis.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/stage-tennis-noel.jpg"
+          class="center-block"
+          alt="concept_image1"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <ul>
+          <li>
+            Maîtriser son <span>service</span> au tennis est très important(pas
+            trop de double fautes = maximum 1 par jeu joué)
+          </li>
+          <li>
+            <span>Longue concentration</span>(2 heures voir 3 heures des fois
+            c’est à dire le temps d’un match de tennis) , on réfléchit plus
+            qu’on ne joue ! , vous pouvez aussi faire 1 set pour commencer ,
+            éteignez vos portables pour garantir une concentration pendant le
+            match de tennis !
+          </li>
+          <li>
+            <span>Gestion du stress pendant le match de tennis:</span>(éviter de
+            jouer petit bras au moment important)
+          </li>
+
+          <li>
+            Prenez du <span>plaisir</span> à jouer au tennis tout en restant
+            fair play !
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <ul>
+          <li>
+            <span>Gérer un effort long</span>avec des pauses plus longues après
+            chaque set (25 secondes entre les points , 1min 30 de pause à chaque
+            changement de côté), respectez les temps d’arrêt et buvez à chaque
+            fois pour bien récupérer des efforts pendant le match de tennis
+          </li>
+          <li>
+            <span>Gestion des moments clés:</span>(jouer juste au bon moment)
+          </li>
+          <li>
+            Prendre cette situation <span>comme une experience</span>bénéfique
+            pour mieux connaître l’adversaire du match de tennis.
+          </li>
+          <li>
+            <span>Etirez </span>vous après votre match tout en buvant pour
+            récupérer et éviter les courbatures !
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/premier-match-tennis.jpg"
+          class="center-block"
+          alt="concept_image2"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>
+          <strong
+            >Les possibles aprioris sur un match de tennis et le sport de
+            manière général</strong
+          >
+        </h2>
+        <ul>
+          <li>
+            Beaucoup de personnes parle du tennis en disant que seules
+            <span class="text_underline"
+              >les personnes qui jouent bien peuvent faire des matchs: </span
+            >c’est faux, il n’y a pas besoin d’un bon niveau pour se faire
+            plaisir en faisant une petite partie de tennis. Et il y a une
+            possibilité en jouant au tennis d’avoir une forte progression.
+          </li>
+          <li>
+            Je ne peux pas faire un &nbsp;<span class="text_underline"
+              >match de tennis contre quelqu’un de plus fort que moi</span
+            >(faux : principe du hancicap de score pour niveler les niveaux).
+          </li>
+          <li>
+            Si &nbsp;<span class="text_underline">service faible</span>se donner
+            3 chances ou faire la deuxième balle de service à la cueillère (par
+            en dessous).
+          </li>
+          <li>
+            Mon adversaire va être
+            <span class="text_underline">gentil</span>avec moi pendant le match:
+            Faux tout le monde veut gagner même en match amical !
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2><strong>Petites astuces ohmytennis</strong></h2>
+        <ul>
+          <li>
+            Faites une autocritique de votre prestation à la fin du match de
+            tennis(ce qui a marché, ce qui est à améliorer).
+          </li>
+          <li>Allez aux toilettes avant de jouer au tennis.</li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/stage-tennis-intensif.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

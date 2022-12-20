@@ -1,0 +1,312 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 regle_content">
+  <div class="container">
+    <div class="row">
+      <div class="license">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Historique des règles au tennis</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="license_section">
+          <div class="col-xs-12">
+            <h5>1. Evolution des règles du tennis</h5>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <p class="license_txt">
+              Les premières règles du tennis sont bien sûr celles du Lawn-tennis
+              du major Wingfield (1874). Elles étaient confuses et incomplètes.
+              Néanmoins, on comptait de la même façon que le Jeu de Paume
+              extérieur (Longue Paume) : 15 - 30 - 45 - Jeu (origine des points
+              au tennis). En cas d’égalité à 45, il fallait gagner 2 points de
+              suite pour remporter le jeu (Avantage - Jeu). Le match se gagnait
+              en 6 jeux (un set) avec deux jeux d’écart. Le service s’effectuait
+              à partir d’une zone en forme de losange tracée au milieu d’un des
+              côtés du terrain. La balle devait rebondir dans un rectangle
+              délimité au fond de l’autre coté. Le nombre de joueurs pouvait
+              aller de 2 à 8. Le major Wingfield décida aussi qu’il fallait
+              frapper la balle soit à la volée, soit après un rebond. Le terrain
+              était asymétrique et obligeait les équipes à changer de côté pour
+              servir. Il mesurait en longueur 18,29 mètres et en largeur : 6, 40
+              mètres au filet et 9, 20 mètres sur la ligne de fond. Le filet
+              s’élevait à 1, 42 mètres.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img
+              src="./assets/images/comment compter les points au tennis.jpg"
+              class="center-block"
+              alt="titre_img1"
+            />
+          </div>
+          <div class="clearfix"></div>
+          <br />
+          <!-- 
+						<div class="col-md-5 col-sm-5 col-xs-12">
+							<img src="images/compter-points-tennis.jpg" class="img-responsive">
+						</div> -->
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <p class="license_txt">
+              Le 24 mai 1875, le M.C.C. (Marylebone Cricket Club) et le major
+              Wingfield se réunissent afin de codifier 25 règles du Lawn-Tennis.
+              Désormais, le service s’effectue à partir de la ligne de fond et
+              dans une zone allant jusqu’au filet. Quant aux dimensions, on
+              allonge le terrain jusqu'à atteindre 23, 77 mètres en longueur.
+            </p>
+            <p class="license_txt">
+              En 1877, avant le premier Wimbledon, le All England Club et son
+              directeur Henry Jones décident d’améliorer en profondeur les
+              règles du Lawn-Tennis. A partir de cette année, le Lawn-tennis va
+              enfin avoir un règlement officiel, claire et fixe.
+            </p>
+
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h4 style="margin-top:17px;">
+            <b
+              >Depuis 1877, les règles du Tennis ont peu changé. Toutefois,
+              quelques améliorations ont été apportées dans les années 70 et 90.
+              En voici, les principales :</b
+            >
+          </h4>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <ul class="regles_points">
+              <li>
+                Les points se comptent maintenant de la façon suivante : 15 - 30
+                - 40 - Jeu. En cas d’égalité à 40, il faut gagner deux points de
+                suite : avantage - Jeu. Le chiffre 40 remplace ainsi 45. Ce
+                changement vient probablement du fait que durant un match,
+                "forty" (40 en anglais) était plus facile à dire que "forty
+                five".
+              </li>
+              <li>La hauteur du filet passe de 1,52 mètres à 0,915 mètre.</li>
+              <li>On a 2 balles au service.</li>
+              <li>
+                La ligne de service mesure désormais 7,92 mètres (puis ramenée à
+                6,40 mètres) à partir du filet.
+              </li>
+              <li>
+                Le terrain devient rectangulaire (cf. image ci-après). Il n’est
+                plus la peine de changer de côté pour servir. Le terrain est
+                délimité, pour un simple, à 23,77 mètres en longueur et à 8,33
+                mètres en largueur.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img
+              src="./assets/images/compter-points-tennis.jpg"
+              class="img-responsive"
+            />
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h4 style="margin-top:17px;">
+            <b
+              >Depuis 1877, les règles du Tennis ont peu changé. Toutefois,
+              quelques améliorations ont été apportées dans les années 70 et 90.
+              En voici, les principales :</b
+            >
+          </h4>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <ul class="regles_points">
+              <li>
+                <b>1958 :</b> Le serveur peut sauter, y compris, au-dessus de la
+                ligne de fond lorsqu'il sert. Avant, le joueur au service devait
+                garder les pieds en contact avec le sol.
+              </li>
+              <li>
+                <b>1970 :</b> Apparition du jeu décisif. Il est joué à 8 jeux
+                partout sauf au dernier set du match où la règle des 2 jeux
+                d’écart reste en vigueur.
+              </li>
+              <li><b>1973 :</b> Le jeu décisif sera joué à 6 jeux.</li>
+              <li><b>1989 :</b> Apparition du jeu décisif en Coupe Davis.</li>
+              <li>
+                <b>1994 :</b> Le repos de 10 minutes à la fin du 3e set est
+                aboli en Coupe Davis.
+              </li>
+              <li>
+                <b>1999-2000 :</b> La FFT (Fédération Française de Tennis) tente
+                d’instaurer en France les sets en 4 jeux (les shorts-set) et la
+                suppression de l’avantage et du let.
+              </li>
+              <li>
+                <b>2000 :</b> Le repos après le premier jeu de chaque set est
+                supprimé (les joueurs se contentent de changer de côté). En
+                revanche, le repos de 2 minutes intervient à la fin de chaque
+                set, même si le nombre de jeux est pair.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img
+              src="./assets/images/tennis-comptage-des-points.jpg"
+              class="img-responsive"
+            />
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <ul></ul>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Retrouver également la reglémentation du matériel de tennis</a
+              ></strong
+            >
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Découvrez toutes les dimensions d’un terrain de tennis.</a
+              ></strong
+            >
+          </p>
+          <br />
+
+          <h5>2. Origine du comptage des points au tennis</h5>
+          <p class="license_txt">
+            La façon de compter au tennis (15/30/40/Jeu) vient, naturellement,
+            du jeu de Paume où l'on comptait les points de la manière suivante :
+            15/30/45/Jeu. Mais pour expliquer l’origine de ce système de
+            comptage, on met en avant 4 hypothèses.
+          </p>
+
+          <h4><b>2.1 Hypothèse 1</b></h4>
+          <p class="license_txt">
+            En 1579, Jean GOSELIN, libraire du roi de France, aurait expliqué
+            cette façon de compter en se remportant à l'astronomie. Un signe
+            physique (sixième partie du cercle) est divisé par imagination en 60
+            degrés, chaque degré en 60 minutes, chaque minute en 60 secondes, si
+            bien que 15 degrés pris 4 fois (15-30-45-60) valent un signe
+            physique.
+          </p>
+
+          <h4><b>2.2 Hypothèse 2</b></h4>
+
+          <p class="license_txt">
+            Un célèbre Paumier du XIX°siècle, Charles Delahaye, aurait raconté
+            que le nombre 15 représentait une mesure de longueur. Dans sa
+            jeunesse, Charles Delahaye aurait assisté à un match de longue Paume
+            où l'on ne comptait pas de points, mais où le serveur avançait (pour
+            servir de nouveau) de 15 pieds vers le filet lorsqu’il remportait un
+            coup. S'il gagnait le coup suivant, il continuait d'avancer de 15
+            pieds et ainsi de suite jusqu'ayant remporté 4 coups, il arrivait au
+            filet. L'adversaire faisait de même. Lorsque les deux joueurs
+            avaient avancé chacun de 45 pieds, ils devaient gagner deux points
+            de suite.
+          </p>
+
+          <h4><b>2.3 Hypothèse 3 </b></h4>
+
+          <p class="license_txt">
+            Pendant longtemps, les paris d'argent étaient très fréquents lors
+            des rencontres de jeu de Paume. A l'époque, en France, la monnaie
+            dérivait du système sexagésimal (c'est-à-dire, relatif au nombre
+            60). Il y avait le "double d'or" qui valait 60 sous et le "denier
+            d'or" qui valait 15 sous. Lors des rencontres, les parieurs auraient
+            pris l'habitude de compter les points en valeur monétaire,
+            c'est-à-dire en multiple de 15.
+          </p>
+          <h4><b>2.4 Hypothèse 4 : </b></h4>
+          <p class="license_txt">
+            En 2001, le Français Jacques Thédié, trésorier du club de Paume de
+            Fontainebleau, a suggéré une nouvelle hypothèse. Selon lui, la façon
+            de compter les points au tennis ou au Jeu de Paume (15-30-40-Jeu)
+            vient tout simplement du système d'unité de l'époque. Au Moyen-âge -
+            période où est né le Jeu de Paume - nos ancêtres avaient l'habitude
+            de compter ou de mesurer par paquets de 60. Ils baignaient dans les
+            soixantaines comme nous baignons aujourd'hui dans les dizaines, les
+            centaines et les milliers. Notre système est décimal et certains
+            jeux se basent la-dessus. Exemples : le bridge (une manche se joue
+            en 100 points), le patinage artistique et la gymnastique où la
+            notation se fait sur 10, les 10 meilleurs sportifs d'une course ou
+            d'un classement, etc. A l'époque du Jeu de Paume, 60 était donc la
+            base. C'est ainsi que les points au Jeu de Paume se comptaient
+            jusqu'à 60, qui est devenu au fil du temps "jeu". Mais Jacques
+            Thédié n'explique pas pourquoi le jeu devait se marquer en 4 points
+            : 15-30-45-60. Quant au "45", il s'est transformé au fur à mesure en
+            "40". "Ce semble un raccourci verbal" explique Thédié. Aujourd'hui,
+            aucune de ces hypothèses n’ont été vérifiées. Seules la troisième et
+            la quatrième semblent être les plus séduisantes. Les débuts du jeu
+            de Paume rythmés beaucoup avec argent.
+          </p>
+          <p>
+            <strong
+              ><a class="content_link" href=""
+                >Découvrez les origines du tennis et son histoire.</a
+              ></strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<app-footer></app-footer>

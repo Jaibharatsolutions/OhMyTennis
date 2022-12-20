@@ -1,0 +1,177 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Recherche
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section3 starts -->
+<div class="section3 haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="page_title_div col-xs-12">
+        <h1 class="page_title">Histoire</h1>
+        <img src="./assets/images/title_border.png" alt="title_border" />
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="lexique_detail_sec">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img
+            src="./assets/images/histoire-tennis-1880_1930.jpg"
+            class="img-responsive center-block"
+          />
+          <p class="lexique_section_title">1880 - 1930</p>
+          <p class="events_section_para">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+          <p class="lexique_section_title">
+            <a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.TENNIS.HISTOIREFIRST.SELF')
+              }}"
+              class="btn btn-primary lex_btn"
+              >EN SAVOIR PLUS</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="lexique_detail_sec">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img
+            src="./assets/images/origine-tennis-1930-1950.jpg"
+            class="img-responsive center-block"
+          />
+          <p class="lexique_section_title">1930 - 1950</p>
+          <p class="events_section_para">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+          <p class="lexique_section_title">
+            <a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.TENNIS.HISTOIRE1SECOND.SELF')
+              }}"
+              class="btn btn-primary lex_btn"
+              >EN SAVOIR PLUS</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="lexique_detail_sec">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img
+            src="./assets/images/histoire-tennis-1950-1973.jpg"
+            class="img-responsive center-block"
+          />
+          <p class="lexique_section_title">1950 - 1973</p>
+          <p class="events_section_para">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+          <p class="lexique_section_title">
+            <a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.TENNIS.HISTOIRETHIRD.SELF')
+              }}"
+              class="btn btn-primary lex_btn"
+              >EN SAVOIR PLUS</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="lexique_detail_sec">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img
+            src="./assets/images/histoire-tennis-1973-aujourdhui.jpg"
+            class="img-responsive center-block"
+          />
+          <p class="lexique_section_title">1973 - Aujourd’hui</p>
+          <p class="events_section_para">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+          <p class="lexique_section_title">
+            <a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.TENNIS.HISTOIREFOUR.SELF')
+              }}"
+              class="btn btn-primary lex_btn"
+              >EN SAVOIR PLUS</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<!-- section3 ends -->
+
+<app-footer></app-footer>

@@ -1,0 +1,312 @@
+<div class="content cours_individualsec">
+    <div class="container-fluid">
+        <div class="btn btn-defauly" style="float: left;">
+            <!-- <input type="checkbox" style="background-color:#539654;margin-top: 15px;" onclick="return false;" value="green">
+            <span style="margin-top: 15px;">Disponible</span>
+            <input type="checkbox" style="background-color:#e75b00;margin-top: 15px;margin-left: 10px" onclick="return false;"
+                value="green">
+            <span style="margin-top: 15px;">Demande de réservation</span>
+            <input type="checkbox" style="background-color:#e06363;margin-top: 15px;margin-left: 10px" onclick="return false;"
+                value="green">
+            <span style="margin-top: 15px;">Réservé</span> -->
+            <span style="margin-top: 15px;"><i class="fa fa-circle" style="font-size:36px;color:green"></i> &nbsp;Disponible</span> &nbsp;
+            <span style="margin-top: 15px;"><i class="fa fa-circle" style="font-size:36px;color:#e75b00;"></i> &nbsp;Demande de réservation</span> &nbsp;
+            <span style="margin-top: 15px;"><i class="fa fa-circle" style="font-size:36px;color:red"></i> &nbsp;Réservé</span>
+            
+        </div>
+        <a id="avBtn" class="btn btn-defauly" (click)="clearcheck()" style="background-color:#e75b00;color:#fff;margin-top: 15px;
+            float: right;" data-toggle="modal" data-target="#available">Ajouter la disponibilite</a>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="form_devarea" style="margin-top: 26px">
+                    <full-calendar (dateClick)="handleDateClick($event)" eventOrder="allDay" locale="fr"
+                        eventLimit="true" [events]="calender" [plugins]="calendarPlugins"></full-calendar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="available" class="modal fade ng-scope right" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #e75b00">
+                <button type="button" (click)="ngOnInit()" class="close" data-dismiss="modal">×</button>
+                <h3 class="modal-title" style="text-align: center;font-weight: bold;color: #fff;">Disponibilité</h3>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="padding:30px 25px 20px;">
+                <div class="form-group" style="padding:10px;background-color: #fff6f1;text-align: center;">
+                    <label class="radio-inline" style="padding-left: 0px;padding-right: 20px;"><b>Sélectionner le
+                            genre</b></label>
+                    <label class="radio">
+                        <input id="inlineradio1" name="sampleinlineradio" value="option1" type="radio" checked=""
+                            (click)="inlineradio1()">
+                        Hebdomadaire
+                        <span class="checkround"></span>
+                    </label>
+                    <label class="radio">
+                        <input id="inlineradio2" name="sampleinlineradio" value="option2" type="radio"
+                            (click)="inlineradio2()">
+                        Quotidien
+                        <span class="checkround"></span>
+                    </label>
+                </div>
+                <div class="row col-md-12" id="dateRangeDiv" style="display: none">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <label>De</label>
+                        <div class="input-group input-append date" id="datePicker1">
+                            <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
+                            <input [(ngModel)]="availabilityObj.StartDate" [min]="frommindate" type="text"
+                                id="StartDate" class="form-control ng-pristine ng-untouched ng-valid ng-empty" readonly
+                                name="date" placeholder="De" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1">
+                            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <label>A</label>
+                        <div class="input-group input-append date" id="datePicker2">
+                            <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
+                            <input [(ngModel)]="availabilityObj.EndDate" [min]="availabilityObj.StartDate" type="text"
+                                id="EndDate" class="form-control ng-pristine ng-untouched ng-valid ng-empty" readonly
+                                name="date" placeholder="A" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2">
+                            <owl-date-time #dt2 [pickerType]="'calendar'"></owl-date-time>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group" style="margin-bottom:30px!important;">
+                    <label id="lblweek" style="padding:7px" class="control-label col-sm-4" for="company">Sélectionnez la
+                        semaine</label>
+                    <div class="col-sm-6 col-md-6" id="weekDiv">
+                        <select id="weekNum" [(ngModel)]="availabilityObj.weekNumber"
+                            class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" (change)="getWeek()">
+
+                            <option value="default" selected="selected" >Sélectionner</option>
+                            <option *ngFor='let weekNumberObj of weeklist;' [value]="weekNumberObj.Semaine" class="ng-binding ng-scope">
+                                    Semaine {{weekNumberObj.Semaine}} ({{weekNumberObj.Dates}})
+                            </option>                        
+                        </select>
+                    </div>
+                    <div class="clearfix"></div>
+                    <p style="color: red" id="showWeekErrMeg"></p>
+                    <p style="color: red" id="showDateErrMeg"></p>
+                </div>
+                <table class="available_table" style="width:100%;font-size: 14px">
+                    <tbody>
+                        <tr style="background-color: darkcyan;color: #fff;">
+                            <th>Journée</th>
+                            <th style="text-align:center">8h - 9h</th>
+                            <th style="text-align:center">9h - 10h</th>
+                            <th style="text-align:center">10h -11h</th>
+                            <th style="text-align:center">11h - 12h</th>
+                            <th style="text-align:center">12h - 13h</th>
+                            <th style="text-align:center">13h - 14h</th>
+                            <th style="text-align:center">14h - 15h</th>
+                            <th style="text-align:center">15h - 16h</th>
+                            <th style="text-align:center">16h - 17h</th>
+                            <th style="text-align:center">17h - 18h</th>
+                            <th style="text-align:center">18h - 19h</th>
+                            <th style="text-align:center">19h - 20h</th>
+                            <th style="text-align:center">20h - 21h</th>
+                            <th style="text-align:center">21h - 22h</th>
+                            <th style="text-align:center">Toute</th>
+                            <th *ngIf="IsShow" style="text-align:center;width:25px;">Prix<br />(Indiquer le prix en euros)</th>
+                        </tr>
+                        <tr>
+                            <td><b>Lundi<br><span id="Lundi" style="font-size:11px;color:#5d5d5d"
+                                        class="ng-binding"></span></b></td>
+                            <td style="text-align:center"> <input id="8h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="9h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="10h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="11h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="12h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="13h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="14h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="15h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="16h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="17h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="18h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="19h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="20h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="21h_1" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input [(ngModel)]="chkAllLundi"
+                                    (change)="CheckAll(this.chkAllLundi,'chkAllLundi')" id="chkAllLundi"
+                                    type="checkbox"></td>
+                            <td *ngIf="IsShow" style="text-align:center;width:25px;"> <input
+                                    [(ngModel)]="saveVailabilityFormData.Sun_Amt" style="width:80px" id="Sun_Amt"
+                                    type="number"></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Mardi<br><span id="Mardi" style="font-size:11px;color:#5d5d5d"
+                                        class="ng-binding"></span></b></td>
+                            <td style="text-align:center"> <input id="8h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="9h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="10h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="11h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="12h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="13h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="14h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="15h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="16h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="17h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="18h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="19h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="20h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="21h_2" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input [(ngModel)]="chkAllMardi"
+                                    (change)="CheckAll(this.chkAllMardi,'chkAllMardi')" id="chkAllMardi"
+                                    type="checkbox"></td>
+                            <td *ngIf="IsShow" style="text-align:center;width:25px;"> <input
+                                    [(ngModel)]="saveVailabilityFormData.Sun_Amt" style="width:80px" id="Sun_Amt"
+                                    type="number"></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Mercredi<br><span id="Mercredi" style="font-size:11px;color:#5d5d5d"
+                                        class="ng-binding"></span></b></td>
+                            <td style="text-align:center"> <input id="8h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="9h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="10h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="11h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="12h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="13h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="14h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="15h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="16h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="17h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="18h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="19h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="20h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="21h_3" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input [(ngModel)]="chkAllMercredi"
+                                    (change)="CheckAll(this.chkAllMercredi,'chkAllMercredi')" id="chkAllMercredi"
+                                    type="checkbox"></td>
+                            <td *ngIf="IsShow" style="text-align:center;width:25px;"> <input
+                                    [(ngModel)]="saveVailabilityFormData.Sun_Amt" style="width:80px" id="Sun_Amt"
+                                    type="number"></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Jeudi<br><span id="Jeudi" style="font-size:11px;color:#5d5d5d"
+                                        class="ng-binding"></span></b></td>
+                            <td style="text-align:center"> <input id="8h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="9h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="10h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="11h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="12h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="13h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="14h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="15h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="16h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="17h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="18h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="19h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="20h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="21h_4" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input [(ngModel)]="chkAllJeudi"
+                                    (change)="CheckAll(this.chkAllJeudi,'chkAllJeudi')" id="chkAllJeudi"
+                                    type="checkbox"></td>
+                            <td *ngIf="IsShow" style="text-align:center;width:25px;"> <input
+                                    [(ngModel)]="saveVailabilityFormData.Sun_Amt" style="width:80px" id="Sun_Amt"
+                                    type="number"></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Vendredi<br><span id="Vendredi" style="font-size:11px;color:#5d5d5d"
+                                        class="ng-binding"></span></b></td>
+                            <td style="text-align:center"> <input id="8h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="9h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="10h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="11h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="12h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="13h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="14h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="15h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="16h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="17h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="18h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="19h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="20h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="21h_5" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input [(ngModel)]="chkAllVendredi"
+                                    (change)="CheckAll(this.chkAllVendredi,'chkAllVendredi')" id="chkAllVendredi"
+                                    type="checkbox"></td>
+                            <td *ngIf="IsShow" style="text-align:center;width:25px;"> <input
+                                    [(ngModel)]="saveVailabilityFormData.Sun_Amt" style="width:80px" id="Sun_Amt"
+                                    type="number"></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Samedi<br><span id="Samedi" style="font-size:11px;color:#5d5d5d"
+                                        class="ng-binding"></span></b></td>
+                            <td style="text-align:center"> <input id="8h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="9h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="10h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="11h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="12h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="13h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="14h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="15h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="16h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="17h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="18h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="19h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="20h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="21h_6" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input [(ngModel)]="chkAllSamedis"
+                                    (change)="CheckAll(this.chkAllSamedis,'chkAllSamedis')" id="chkAllSamedis"
+                                    type="checkbox"></td>
+                            <td *ngIf="IsShow" style="text-align:center;width:25px;"> <input
+                                    [(ngModel)]="saveVailabilityFormData.Sun_Amt" style="width:80px" id="Sun_Amt"
+                                    type="number"></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Dimanche<br><span id="Dimanche" style="font-size:11px;color:#5d5d5d"
+                                        class="ng-binding"></span></b></td>
+                            <td style="text-align:center"> <input id="8h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="9h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="10h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="11h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="12h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="13h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="14h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="15h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="16h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="17h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="18h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="19h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="20h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input id="21h_7" class="Dimanche" type="checkbox"></td>
+                            <td style="text-align:center"> <input [(ngModel)]="chkAllDimanche"
+                                    (change)="CheckAll(this.chkAllDimanche,'chkAllDimanche')" id="chkAllDimanche"
+                                    type="checkbox"></td>
+                            <td *ngIf="IsShow" style="text-align:center;width:25px;"> <input
+                                    [(ngModel)]="saveVailabilityFormData.Sun_Amt" style="width:80px" id="Sun_Amt"
+                                    type="number"></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-content">
+                <br>
+                <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+                    <button type="button" (click)="_closeAlertMessage($event)"
+                        class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                </div>
+                <div class="modal-footer">
+                    <p style="color: red" id="selectSessionErr"></p>
+                    <button type="button" class="btn btn-success" (click)="saveAvailability()">Oui</button>
+                    <button type="button" (click)="clearcheck()" class="btn btn-default"
+                        data-dismiss="modal">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

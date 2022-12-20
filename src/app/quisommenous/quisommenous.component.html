@@ -1,0 +1,131 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+  <!-- Banner starts --> 
+  <div class="innerbanner" style="background-color:#000">
+    <img src="../assets/images/cours-particuliers-de-tennis.jpg" style="width:100%;opacity:0.8" alt="Los Angeles">
+    <div class="inner_carousel">
+        <h3>PRÉSENTATION DES PROFESSEURS DE TENNIS</h3>
+    </div>
+</div>
+<!-- Banner ends --> 
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+    <div class="banner_container">
+        <h3>Réservez un cours avec un coach</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input class="form-control" id="" maxlength="6" placeholder="Code Postal" [(ngModel)]="Ville"
+                            type="text" />
+                        <label><img src="./assets/images/ville_icon.png" /></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group">
+                    <div class="addon-lg">
+                        <input type="text" style="text-align:left!important;" [min]="min" class="form-control" id=""
+                            placeholder="Date" [(ngModel)]="Date" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" />
+                        <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+                        <label><img src="./assets/images/date_icon.png" /> </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+                <button (click)="handleClick($event)" class="btn black_btn">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inner Search area ends --> 
+
+<!-- section1 starts -->
+<div class="section1 des_concept_list haspadd">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="page_title_div">            
+                    <h1 class="page_title">PRÉSENTATION DES PROFESSEURS DE TENNIS</h1>				
+                    <img src="../assets/images/title_border.png" alt="title_border" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Les professeurs de tennis de notre plateforme</h3>	
+                    <p>Une équipe d’experts à votre service : tous les enseignants liés a ohmytennis.com sont diplomés d’etat et sont actuellement en activité dans des clubs de tennis en Ile de France. Leur expérience est un gage de qualité leur permettant d’exercer avec professionnalisme auprès des élèves. Nos partenaires sont des professionnels avec qui nous entretenons au quotidien des relations étroites pour vous offrir les meilleurs services sur les courts.</p>
+                    <p>Notre métier consiste à vous apporter des conseils pédagogiques ainsi que des services liés au tennis pour vous faire progresser et découvrir notre milieu sous toutes ses formes.  Nous sommes en quelque sorte votre guide quelque soit votre questionnement sur votre activité.</p>
+                    <p><strong><a class="content_link" href="">Découvrez notre offre de professeurs de tennis</a></strong></p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Prendre un cours de tennis</h3>	
+                    <p>La plupart de nos enseignants de tennis sont disponibles en journée sur les terrains durant toute l’année plutôt en semaine car ils travaillent dans les clubs de tennis le soir et le samedi notamment. N’hésitez pas cependant à demander d’autres créneaux, certaines exceptions seront parfois envisageables. Notre plateforme web communautaire dédiée au pratiquant tennis est disponible 24h sur 24 afin de répondre à toutes vos interrogations.</p>
+                   <p>Vous avez la possibilité de prendre des cours de tennis particuliers ou collectifs aux endroits où l’enseignement est habilité. En effet certains règlement intérieurs interdisent la dispense de ce type de cours donc il est nécessaire de se renseigner avant.  Vous avez cependant le choix de jouer avec un partenaire où vous le souhaitez à condition bien sûr de trouver et réserver un terrain (c’est toujours plus facile de la sorte).</p>
+                    <p><strong><a class="content_link" href="">Préparez votre premier cours de tennis</a></strong></p>
+              </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Les services liés aux leçons individuelles et collectives de tennis</h3>	
+                    <p>Notre équipe de professeurs de tennis vous proposera le meilleur service possible lors de son enseignement. Il vous permettra de progresser grâce au suivi personnalisé tout en prenant en compte des demandes des élèves (écoute), vous proposera les meilleurs tarifs (terrain+prof) en fonction de votre pratique (budget optimisé) et confirmera la réservation du terrain et du cours dans les 24H  (disponibilité). La ponctualité, le respect de l’élève durant l’heure de cours , la disponibilité des échanges (email, textos) entre les cours sont autant de confiance qu’il est nécessaire d’entretenir. Enfin la livraison de raquette cordée sur le terrain pour votre prochain cours et la possible prise en charge en voiture si l’accès en transport en commun est compliqué nous permettent d’avoir un service de proximité très sérieux vis à vis de nos élèves.</p>
+                    <p><strong><a class="content_link" href="">Quel matériel de tennis choisir pour jouer</a></strong></p>
+
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Progresser au tennis tout au long de l’année</h3>	
+                    <p>Plus qu’une simple mise en relation avec les élèves qui veulent s’initier, notre plate forme web permet de baliser étape par étape l’accompagnement du nouveau pratiquant tennis. En effet le but est de vous accompagner dans le temps vers votre première compétition officielle : un tournoi de tennis pour devenir enfin classé ! Le cheminement est long et semé d’embûches mais plus belle sera la victoire au bout de cette expérience où vous apprendrez certainement sur vous même. Et peut être attraperez vous le virus de la compétition qui sait ?</p>
+         
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Cadrage/Montage vidéos sur le tennis</h3>	
+                    <p>Nous recherchons des cadreurs et monteurs vidéos pour nous aider sur notre contenu e-learning. Si vous êtes passionné par le tennis et désireux d’avoir une première expérience grâce à nous n’hésitez pas , nous serons heureux de travailler avec vous pour développer notre offre.</p>
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	
+        
+        <div class="row middle_contents">
+            <div class="col-md-12 col-sm-12 col-xs-12">        
+                <div class="mid_contentdiv">
+                    <h3>Modérateurs sur le forum tennis</h3>	
+                    <p>Vous aimez animer , être actif sur les forums et aussi faire respecter la charte éditée alors cette fonction est faite pour vous.  En effet il faut être impliqué , diplomate , ouvert à la discussion pour permettre à la communauté de s’exprimer librement sur différents sujets. Vos fonctions vous permettront de déplacer des discussions , supprimer ou modifier des sujets ou des messages</p>
+     
+                </div>
+            </div>        
+            <div class="clearfix"></div>
+        </div>	   
+    </div>
+</div>   
+<app-footer></app-footer>
+

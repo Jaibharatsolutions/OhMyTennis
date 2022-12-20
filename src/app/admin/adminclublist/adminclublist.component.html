@@ -1,0 +1,220 @@
+<div class="content clublist_content">
+    <div class="container-fluid"><br><br> 
+      
+               <div class="row">
+                    <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+                            <button type="button" (click)="_closeAlertMessage($event)"
+                                class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                        </div>  
+                    <div class="col-md-12">
+                        <div class="form_devarea">
+                          <h4>CLUBLIST</h4>
+                            <div class="box-body">
+                                
+                                <div class="text-right">
+                                    <a data-target="#addcoach" data-toggle="modal" id="avBtn"><i class="fa fa-plus-circle color-green"></i></a>
+                                </div>
+                                </div>
+                          <br>
+                                  <table class="coach_listable table table-striped table-bordered table-sm row-border hover" id="datatable">
+                                          <thead>
+                                            <tr>
+                                              <th>Sl.no</th>
+                                              <th>Tennis Court</th>
+                                              <th>Email</th>
+                                              <th>Phone no</th>
+                                              <th style="width: 280px !important;">Address</th>
+                                              <th>Postal code</th>
+                                              <th>Edit</th>
+                                              <th>status</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                             
+                                           <tr *ngFor="let group of datas; let i=index">
+                                                  <td>{{i +1}}</td>
+                                                 <td>{{group.court_name}}</td>
+                                                 <td>{{group.court_email}}</td>
+                                                 <td>{{group.court_phone}}</td>
+                                                 <td>{{group.court_address}}</td>
+                                                 <td>{{group.court_postal_code}}</td>
+                                                 <td><a (click)="getcourt(group.court_id)"><i class="fa fa-edit color-green"></i></a><a href=""></a></td>
+                                                 <td *ngIf="group.status=='1'; else falseprint"><a (click)="changecourtstatus(group.court_id)"><input class="btn btn-success" type="button" value="Active"></a></td>
+                                                 <ng-template #falseprint><td><a (click)="changecourtstatus1(group.court_id)"><input class="btn btn-danger" type="button" value="InActive"></a></td></ng-template>
+                                             </tr> 
+                                          
+                                          </tbody>
+                                        </table>
+                               
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div></div>
+
+<div id="addcoach" class="modal fade ng-scope" role="dialog">
+    <div class="modal-dialog" style="max-width: 600px;">
+      Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #e75b00; margin: 0px 5px;">
+                <button type="button" (click)="clearcheck()" class="close" data-dismiss="modal" style="position: absolute; right: 25px; top: 15px;">×</button>
+                <h3 class="modal-title" style="text-align: center;font-weight: bold;color: #fff;">ajouter Un Nouvel Tribunal
+                </h3>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="padding: 10px 15px 20px !important;border: 1px solid #cec7c7;margin: 0px 5px;"><br/><br/>
+                    <form autocomplete="off" (ngSubmit)="onSubmit(res)" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Name of Court <span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" [(ngModel)]="res.court_name" #court_name="ngModel" [ngClass]="{'alert_field': (court_name.errors && (court_name.touched || court_name.dirty))}" name="court_name" class="form-control" placeholder="" required>
+                                            <ng-container *ngIf="court_name.errors && (court_name.touched || court_name.dirty)">
+                                                <span class="alert_text" *ngIf="court_name.errors.required">Indiquez
+                                                    votre
+                                                    Tennis Court.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Contact Name<span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" [(ngModel)]="res.incharge_name" #incharge_name="ngModel" [ngClass]="{'alert_field': (incharge_name.errors && (incharge_name.touched || incharge_name.dirty))}" name="incharge_name" class="form-control" placeholder="" required>
+                                            <ng-container *ngIf="incharge_name.errors && (incharge_name.touched || incharge_name.dirty)">
+                                                <span class="alert_text" *ngIf="incharge_name.errors.required">Indiquez le nom du contact sur le court de tennis.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>E-mail <span class="red">*</span></label>
+                                        </div>
+                                        
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="court_email" [(ngModel)]="res.court_email" name="court_email" placeholder="court@court.com" required>
+                    
+                                            </div>
+                       
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>téléhone <span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" [(ngModel)]="res.court_phone" pattern="^[1-9]\d{9}$" #Coach_Phone="ngModel" [ngClass]="{'alert_field': (Coach_Phone.errors && (Coach_Phone.touched || Coach_Phone.dirty))}" name="Coach_Phone" placeholder="téléhone"
+                                                required>
+                                            <!-- <ng-container *ngIf="court_phone.errors && (court_phone.touched || court_phone.dirty)">
+                                                <span class="alert_text" *ngIf="court_phone.errors.required">Indiquez
+                                                    votre téléhone.</span>
+                                                <span class="alert_text" *ngIf="court_phone.errors.pattern">Indiquez
+                                                    votre téléhone.</span>
+                                            </ng-container> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Postal Code <span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" [(ngModel)]="res.court_postal_code" pattern="^[1-9]\d{6}$" #court_postal_code="ngModel" [ngClass]="{'alert_field': (court_postal_code.errors && (court_postal_code.touched || court_postal_code.dirty))}" name="court_postal_code" placeholder="Code Postal"
+                                                required>
+                                            <ng-container *ngIf="court_postal_code.errors && (court_postal_code.touched || court_postal_code.dirty)">
+                                                <span class="alert_text" *ngIf="court_postal_code.errors.required">Indiquez
+                                                    votre code postal.</span>
+                                                <span class="alert_text" *ngIf="court_postal_code.errors.pattern">Indiquez
+                                                    votre code postal.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Court Image <span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="file" name="courtfile"  (change)="changeListener($event)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Address <span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <textarea rows="3" [(ngModel)]="res.court_address" #court_address="ngModel" [ngClass]="{'alert_field': (court_address.errors && (court_address.touched || court_address.dirty))}" name="court_address" class="form-control" placeholder="" required></textarea>
+                                            <ng-container *ngIf="court_address.errors && (court_address.touched || court_address.dirty)">
+                                                <span class="alert_text" *ngIf="court_address.errors.required">champs obligatoire.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="~form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="submit" class="btn btn-success" value="Oui">
+                
+                                                <button type="button" (click)="clearcheck()" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                       
+            
+                                                <p style="color: red" id="selectSessionErr"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Photo de profil<span class="red">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                                <div class="upload-btn-wrapper">
+                                                    <button class="btn" style="font-size: 10px;">Upload a file</button>
+                                                    <input type="file" name="myfile" (change)="changeListener($event)" />
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                               
+                                   <!-- <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label><span class="red">*</span>Champs
+                                                obligatoires</label>
+                                        </div>
+                                    </div> 
+                                </div>-->
+                            </div>
+                            
+                        </div>
+                    </form>
+            </div>
+            <!-- <div class="tab-content">
+                <div class="modal-footer">
+                
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

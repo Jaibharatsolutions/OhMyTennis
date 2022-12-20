@@ -1,0 +1,357 @@
+<div class="content cours_individualsec">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">  
+                <div class="form_devarea">
+                    <form #club="ngForm" (ngSubmit)="onSubmit(res)">              
+                        <div style="text-align:right; margin-bottom: 10px;">
+                            <a data-toggle="modal" id="enableBtn" data-target="#myModal_edit_course"
+                            class="btn btn-info des_save_btn course_edit_btn ng-binding">Modifier</a>                     
+                        </div>
+                        <div class="form_section">
+                            <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                <button type="button" (click)="_closeAlertMessage($event)"
+                                    class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                            </div>
+                         
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Nom du Club<span class="red"> *</span></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" [(ngModel)]="res.Club_Name"
+                                            name="res.Club_Name" readyonly required #Club_Name="ngModel"
+                                            [ngClass]="{'alert_field': (Club_Name.errors && (Club_Name.touched || Club_Name.dirty))}"
+                                            placeholder="">
+                                        <ng-container
+                                            *ngIf="Club_Name.errors && (Club_Name.touched || Club_Name.dirty)">
+                                            <span class="alert_text" *ngIf="Club_Name.errors.required">Indiquez votre
+                                                Club Nom.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Description <span class="red"> *</span></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <textarea maxlength="300" class="form-control" [(ngModel)]="res.Description"
+                                            name="res.Description" readyonly required #Description="ngModel"
+                                            [ngClass]="{'alert_field': (Description.errors && (Description.touched || Description.dirty))}"
+                                            id="exampleFormControlTextarea1" rows="5" placeholder=""></textarea>
+                                        <ng-container
+                                            *ngIf="Description.errors && (Description.touched || Description.dirty)">
+                                            <span class="alert_text" *ngIf="Description.errors.required">Indiquez votre
+                                                Description.</span>
+                                            <span class="alert_text" *ngIf="Description.errors.maxlength">Seuls
+                                                300 caractères sont autorisés.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Prix <span class="red"> *</span></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="number" class="form-control" [(ngModel)]="res.Price" name="res.Price" pattern="^[0-9]*$" readyonly required #Price="ngModel" [ngClass]="{'alert_field': (Price.errors && (Price.touched || Price.dirty))}" placeholder="">
+                                        <ng-container *ngIf="Price.errors && (Price.touched || Price.dirty)">
+                                            <span class="alert_text" *ngIf="Price.errors.required">Indiquez votre Prix.</span>
+                                            <span class="alert_text" *ngIf="Price.errors.pattern">Indiquez votre Prix.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="form-group bmd-form-group">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label>Nombre de personnes <span class="red"> *</span></label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="number" class="form-control" [(ngModel)]="res.MaxCount" name="res.MaxCount" pattern="^[0-9]*$" readyonly required #MaxCount="ngModel" [ngClass]="{'alert_field': (MaxCount.errors && (MaxCount.touched || MaxCount.dirty))}" placeholder="">
+                                                <ng-container *ngIf="MaxCount.errors && (MaxCount.touched || MaxCount.dirty)">
+                                                    <span class="alert_text" *ngIf="MaxCount.errors.required">Indiquez votre Prix.</span>
+                                                    <span class="alert_text" *ngIf="MaxCount.errors.pattern">Indiquez votre Prix.</span>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                            <div class="form-group bmd-form-group">
+                          
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Ville <span class="red"> *</span></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" [(ngModel)]="res.Place" name="res.Place"
+                                            readyonly required #Place="ngModel"
+                                            [ngClass]="{'alert_field': (Place.errors && (Place.touched || Place.dirty))}"
+                                            placeholder="">
+                                        <ng-container *ngIf="Place.errors && (Place.touched || Place.dirty)">
+                                            <span class="alert_text" *ngIf="Place.errors.required">Indiquez votre
+                                                Ville.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Code postal<span class="red"> *</span></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="number" class="form-control" [(ngModel)]="res.Postalcode"
+                                            name="res.Postalcode" readyonly required #Pincode="ngModel"
+                                            [ngClass]="{'alert_field': (Pincode.errors && (Pincode.touched || Pincode.dirty))}"
+                                            placeholder="">
+                                        <ng-container *ngIf="Pincode.errors && (Pincode.touched || Pincode.dirty)">
+                                            <span class="alert_text" *ngIf="Pincode.errors.required">Indiquez votre
+                                                Code postal.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Photo <span class="red"> *</span></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <form class="form_uploadfile">
+                                            <div class="file-upload-wrapper" data-text="Sélectionnez votre photo!">
+                                                <input name="file-upload-field form-control" type="file"
+                                                    class="file-upload-field" (change)="changeListener($event)" value=""
+                                                    required>
+                                                    
+                                            </div>
+                                           
+                                        </form>
+                                        <span class="alert_text" id="photo_error">Sélectionnez votre fichier.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Mode de transport<span class="red"> *</span></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" name="Voiture" value="Voiture">
+                                                Voiture
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" value="bus">
+                                                bus
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" value="métro">
+                                                métro
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" value="RER" >
+                                                RER
+                                            </label>
+                                        </div> 
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" value="tram">
+                                                tram
+                                            </label>
+                                        </div> 
+                                        <br>
+                                        <span class="alert_text" id="trans_error">Choisissez
+                                            votre Mode de transport.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Technique fournie</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" [(ngModel)]="res.Technical_Provided"
+                                            name="res.Technical_Provided" readyonly
+                                            #Technical_Provided="ngModel"
+                                            placeholder="Entrer technique fournie">
+                                        <!-- <ng-container
+                                            *ngIf="Technical_Provided.errors && (Technical_Provided.touched || Technical_Provided.dirty)">
+                                            <span class="alert_text" *ngIf="Technical_Provided.errors.required">Indiquez
+                                                votre Technique fournie.</span>
+                                        </ng-container> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Vidéo</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" [(ngModel)]="res.Video" name="res.Video"
+                                            readyonly
+                                            pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$"
+                                            #Video="ngModel"
+                                            placeholder="EmbedURL incorporée">
+                                        <!-- <ng-container *ngIf="Video.errors && (Video.touched || Video.dirty)">
+                                            <span class="alert_text" *ngIf="Video.errors.required">Indiquez votre Vidéo
+                                                URL.</span>
+                                            <span class="alert_text" *ngIf="Video.errors.pattern">Entrez l'URL de
+                                                vaild.</span>
+                                        </ng-container> -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Sélectionnez le plan <span class="red"> *</span></label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-5">
+                                                <label class="radio">
+                                                    <input id="inlineradio3" name="sampleinlineradio1"
+                                                        value="Commission" type="radio">
+                                                    <p class="radio_texts">Commission</p> <i class="fa fa-info-circle"
+                                                        data-toggle="tooltip" title="" style="color:#e75b00"
+                                                        aria-hidden="true" data-original-title="Lorem "></i>
+                                                    <span class="checkround"></span>
+                                                </label>
+                                            </div>
+                                            <!-- <div class="col-xs-12 col-md-7"><label class="radio">
+                                                    <input id="inlineradio4" name="sampleinlineradio1"
+                                                        value="Abonnement" type="radio">
+                                                    <p class="radio_texts">Abonnement</p><i class="fa fa-info-circle"
+                                                        data-toggle="tooltip" title="" style="color:#e75b00"
+                                                        aria-hidden="true" data-original-title="Lorem"></i>
+                                                    <span class="checkround"></span>
+                                                </label>
+                                            </div> -->
+                                            <span class="alert_text" id="plan_error">Choisissez
+                                                votre le plan.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group bmd-form-group" style="margin-top:-10px;">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <span style="color:red"> *</span><span
+                                            style="text-transform: inherit;color:#aaa;">Champs
+                                            obligatoires</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="overflow: scroll;margin-bottom: 5px;">
+                                <table class="table mytable">
+                                    <thead>
+                                        <tr>
+                                            <th><strong>Cours</strong></th>
+                                            <th><strong>Jour</strong></th>
+                                            <th><strong>Heure de début</strong></th>
+                                            <th><strong>Heure de fin</strong></th>
+                                            <th><strong>Maximum de personnes
+</strong></th>
+                                            <th><strong>Prix <br />(Indiquer le prix en euros)</strong></th>
+                                            <th><strong>Action</strong></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let rowData of availablity; let idx = index">
+                                            <td>
+                                                <input type="text" [(ngModel)]="availablity[idx].Course"
+                                                    name="Course-{{idx}}" class="form-control">
+                                            </td>
+                                            <td>
+                                                <input type="text" [(ngModel)]="availablity[idx].Weekday"
+                                                    name="Weekday-{{idx}}" class="form-control">
+                                            </td>
+                                            <td align="left">
+                                                <input type="time" [(ngModel)]="availablity[idx].StartTime"
+                                                    name="StartTime-{{idx}}" class="form-control">
+                                            </td>
+                                            <td align="left">
+                                                <input type="time" [(ngModel)]="availablity[idx].EndTime"
+                                                    name="EndTime-{{idx}}" class="form-control">
+                                            </td>
+                                            <td align="left">
+                                                <input type="text" [(ngModel)]="availablity[idx].MaxCount"
+                                                    name="MaxCount-{{idx}}" class="form-control">
+                                            </td>
+                                            <td align="left">
+                                                <input type="text" [(ngModel)]="availablity[idx].Price"
+                                                    name="Price-{{idx}}" class="form-control">
+                                            </td>
+                                            <td>
+                                                <a><i class="fa fa-plus" (click)="addDay()" aria-hidden="true"></i></a>
+                                                &nbsp;&nbsp;
+                                                <a><i class="fa fa-minus" *ngIf="availablity.length >1"
+                                                        (click)="removeDay(availablity[idx].Id,idx)"
+                                                        aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center">
+                                <div class="form_buttons">
+                                    <button data-toggle="modal" [disabled]="!club.valid " type="submit" id="Enregistrer"
+                                        style="display: none;" class="btn btn-success des_save_btn">SOUMETTRE</button>
+                                    <a id="cancel" (click)="ngOnInit()" class="btn btn-default des_cancel_btn"
+                                        style="display: none;" data-dismiss="modal">Annuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div id="myModal_edit_course" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmer le prestation de service</h4>
+            </div>
+            <div class="modal-body" style="padding: 15px!important;">
+                <p>Êtes-vous sûr de vouloir créer cette prestation de service</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" (click)="enableForm()" class="btn btn-success" data-dismiss="modal">Oui</button>
+                <button type="button" class="btn btn-default" (click)="ngOnInit()" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+
+    </div>
+</div>

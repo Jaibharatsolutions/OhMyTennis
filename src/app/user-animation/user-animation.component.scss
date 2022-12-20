@@ -1,0 +1,21 @@
+.des_events{
+	background-color:#f1f1f1;
+	padding:0px 0px;
+	margin:0px 0px;
+}
+
+@media (min-width: 320px) {
+    .haspadd {
+      padding: 0px 0px;
+    }
+  }
+  @media (min-width: 768px) {
+    .haspadd {
+      padding: 35px 0px;
+    }
+  }
+  @media (min-width: 992px) {
+    .haspadd {
+      padding: 55px 0px;
+    }
+  }

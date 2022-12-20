@@ -1,0 +1,114 @@
+<div class="content clublist_content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form_devarea">
+          <h4>{{ this._const("PATH.ADMIN.CMS.TITLE") }}</h4>
+          <div class="~box-body">
+            <div class="text-right">
+              <a
+                id="avBtn"
+                href="javascript:;"
+                routerLink="{{
+                  '/' +
+                    this._const('PATH.ADMIN.SELF') +
+                    '/' +
+                    this._const('PATH.ADMIN.CMSFORM.SELF')
+                }}"
+                ><i class="fa fa-plus-circle color-green"></i
+              ></a>
+            </div>
+          </div>
+          <br />
+          <div class="tab-content">
+            <div
+              class="form_section"
+              id="availabilityDiv"
+              style="max-width: 100%;"
+            >
+              <div
+                *ngIf="alertMsg.show"
+                class="alert {{ alertMsg.type }} alert-dismissible text-center"
+              >
+                <button
+                  type="button"
+                  (click)="_closeAlertMessage($event)"
+                  class="close"
+                >
+                  <span>&times;</span>
+                </button>
+                {{ alertMsg.msg }}
+              </div>
+              <div class="book_coursetab" style="overflow-x: auto;">
+                <table class="table book_coursetable">
+                  <thead>
+                    <tr>
+                      <th>Sl.no</th>
+                      <th>Menu</th>
+                      <th>Title</th>
+
+                      <th>Position</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      class="btn_blocksec"
+                      *ngFor="
+                        let group of datanew
+                          | paginate: { itemsPerPage: 10, currentPage: p };
+                        let i = index
+                      "
+                    >
+                      <td>{{ i + 1 }}</td>
+                      <td>
+                        {{ group.menu }}
+                      </td>
+                      <td>
+                        {{ group.title }}
+                      </td>
+
+                      <td>
+                        {{ group.position }}
+                      </td>
+                      <td>
+                        <button
+                          id="approveBtn"
+                          class="btn btn-block btn-success"
+                          (click)="getCmsIndividualData(group.id)"
+                        >
+                          Vue
+                        </button>
+                        <button
+                          id="approveBtn"
+                          class="btn btn-block btn-danger"
+                          (click)="deleteCmsIndividualData(group.id)"
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="btn_blocksec" *ngIf="datanew.length == '0'">
+                      <td colspan="5">No Content</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <pagination-controls
+                  (pageChange)="p = $event"
+                  previousLabel="Précédent"
+                  style="float: right; padding: 11px;"
+                  nextLabel="Prochain"
+                  directionLinks="true"
+                  autoHide="true"
+                  responsive="true"
+                >
+                </pagination-controls>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,141 @@
+<div class="content">
+    <div class="container-fluid"><br><br>
+
+        <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+            <button type="button" (click)="_closeAlertMessage($event)" class="close"><span>&times;</span></button>
+            {{alertMsg.msg}}
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form_devarea admin_profform">
+                    <div class="pull-right" style="text-align: left; padding: 22px 20px 0px;">
+                        <button class="btn orange_btn" style="cursor: pointer;" (click)="goBack()">
+                            Retour
+                        </button>
+                    </div>
+                    <div class="box-body">
+                        <br>
+                        <form #admin="ngForm" (ngSubmit)="onSubmit(res)">
+                            <h4>ADMIN FORM</h4>
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3">
+                                        <label>Prénom <span class="red">*</span></label>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" [(ngModel)]="res.first_name" #firstName="ngModel"
+                                            [ngClass]="{'alert_field': (firstName.errors && (firstName.touched || firstName.dirty))}"
+                                            name="firstName" class="form-control" placeholder="Prénom" required>
+                                        <ng-container
+                                            *ngIf="firstName.errors && (firstName.touched || firstName.dirty)">
+                                            <span class="alert_text" *ngIf="firstName.errors.required">Indiquez
+                                                votre
+                                                Prénom.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3">
+                                        <label>Nom <span class="red">*</span></label>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" [(ngModel)]="res.last_name" #lastName="ngModel"
+                                            [ngClass]="{'alert_field': (lastName.errors && (lastName.touched || lastName.dirty))}"
+                                            name="lastName" class="form-control" placeholder="Nom" required>
+                                        <ng-container *ngIf="lastName.errors && (lastName.touched || lastName.dirty)">
+                                            <span class="alert_text" *ngIf="lastName.errors.required">Indiquez
+                                                votre Nom.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3">
+                                        <label>E-mail <span class="red">*</span></label>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" class="form-control" id="email" [(ngModel)]="res.admin_email"
+                                            name="email" placeholder="admin@admin.com" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3">
+                                        <label>téléhone <span class="red">*</span></label>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="res.mobile"
+                                            pattern="^[0-9]\d{9}$" #mobile="ngModel"
+                                            [ngClass]="{'alert_field': (mobile.errors && (mobile.touched || mobile.dirty))}"
+                                            name="mobile" placeholder="téléhone" required>
+                                        <ng-container *ngIf="mobile.errors && (mobile.touched || mobile.dirty)">
+                                            <span class="alert_text" *ngIf="mobile.errors.required">Indiquez
+                                                votre téléhone.</span>
+                                            <span class="alert_text" *ngIf="mobile.errors.pattern">Indiquez
+                                                votre téléhone.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3">
+                                        <label>Adresse <span class="red">*</span></label>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <textarea class="form-control" id="address" style="height:110px;" required
+                                            [(ngModel)]="res.address" name="res.address" #address="ngModel"
+                                            [ngClass]="{'alert_field': (address.errors && (address.touched || address.dirty))}">
+                            </textarea>
+                                        <ng-container *ngIf="address.errors && (address.touched || address.dirty)">
+                                            <span class="alert_text" *ngIf="address.errors.required">Indiquez
+                                                votre adresse.</span>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3">
+                                        <label>Admin role<span class="red">*</span></label>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <select class="form-control" id="role" name="role" [(ngModel)]="res.role"
+                                            name="res.role" #role="ngModel" required>
+                                            <option>Select One Option</option>
+                                            <option>Admin</option>
+                                            <option>Super Admin</option>
+                                        </select>
+
+                                        <!-- <select class="form-control" ng-model="selectedValue1" ng-options="opt for opt in ['','Super Admin','Admin']" required>
+                                                        <option></option>
+                                                      </select>
+                                                      <select ng-model="selectedValue2" required >
+                                                            <option></option>
+                                                            <option>Super Admin</option>
+                                                            <option>Admin</option>
+                                                          </select> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-10 text-center" style="margin-left: -80px;">
+                                <button type="submit" id="submit" class="btn btn-primary">SAUVEGARDER</button>
+
+                                <!-- <a (click)="makeEnable()"
+                                        style="margin-left:20px; color: #ffffff;"
+                                        class="btn btn-info"><i class="fa fa-edit"></i>MODIFIER</a> -->
+                            </div>
+                            <br><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

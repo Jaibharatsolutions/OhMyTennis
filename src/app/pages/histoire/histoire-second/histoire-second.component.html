@@ -1,0 +1,249 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="./assets/images/jouer-tennis.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my Tennis</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section3 starts -->
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">HISTOIRE DU TENNIS 1930-1950</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div
+              class="panel-group"
+              id="accordion"
+              role="tablist"
+              aria-multiselectable="true"
+            >
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Le tennis durant les années 30
+                    </a>
+                  </h4>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="panel-collapse collapse in"
+                  role="tabpanel"
+                  aria-labelledby="headingOne"
+                >
+                  <div class="panel-body">
+                    <p>
+                      L’hégémonie française fini en 1932 avec une dernière
+                      victoire d’Henri Cochet au tournoi de Roland Garros.
+                      Durant les années 30, ce sont les Américains qui raflent
+                      les trophées avec Helen Wils , Donald Budge et Fred Perry.
+                      La seconde Guerre Mondiale ne permet pas le développement
+                      su tennis pendant 5 ans.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      L’expression « Grand Chelem »
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingTwo"
+                >
+                  <div class="panel-body">
+                    <p>
+                      En 1933 lorsque l'Australien Jack Crawford qui a remporté
+                      les Internationaux amateurs d'Australie, de France à
+                      Roland Garros, de Grande-Bretagne à Wimbledon, joue aussi
+                      la finale des Internationaux amateurs des États-Unis à
+                      Forest Hills,. John Kieran et Allison Danzig prononcent
+                      pour la première fois les mots « Grand Slam » (tirée du
+                      brigde et aussi du golf) en anticpant une possible
+                      victoire de l'Australien dans les 4 tournois la même
+                      année. Ces championnats commencent à prendre du poids car
+                      les quatre pays organisateurs sont les seuls nations de
+                      l'époque qui ont gagné la Coupe Davis qui est la plus
+                      grande compétition amateur internationale pendant au moins
+                      40 ans, de 1920 à 1960 (elle désigne souvent le numéro 1
+                      mondial amateur et a bien plus d'importance que d’autres
+                      tournois comme Wimbledon ou Forest Hills). Cette
+                      compétition est mise en place par Dwight Davis en 1900 et
+                      oppose au tout début les Îles Britanniques aux États-Unis.
+                      En 1901, cette édition n’a pas lieu.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Tentative du grand chelem par un joueur de tennis
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingThree"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Ensuite d'autres pays veulent participer et jusqu'en 1973
+                      seuls les 4 pays nommés gagnent cette compétition par
+                      équipes. En 1938 Donald Budge veut gagner les championnats
+                      des 4 pays vainqueurs de la Coupe : il est donc le tout
+                      premier joueur à vouloir tenter le Grand Chelem (Crawford
+                      ne voulait pas aller aux États-Unis car il ne suopportait
+                      pas le climat new-yorkais) et à le réussir. Cet exploit
+                      devient la véritable référence individuelle du tennis
+                      amateur dans les années 1950, plus précisément
+                      en 1956 lorsque Lew Hoad est à deux doigts (deux sets
+                      précisément) d'accomplir cet exploit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Le tennis se professionnalise durant cette période
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingThree"
+                >
+                  <div class="panel-body">
+                    <p>
+                      il semble qu'à partir de 1948 le meilleur joueur du monde
+                      fut probablement toujours un joueur professionnel.
+                      Depuis 1931 tous les plus grands champions de l'ère
+                      pré-« open » sont passés professionnels et, si on
+                      excepte Henri Cochet, ils ont tous atteint leur apogée
+                      dans le circuit pro : Bill Tilden, Henri Cochet, Ellsworth
+                      Vines, Fred Perry, Donald Budge, Bobby Riggs, Jack
+                      Kramer, Pancho Segura, Pancho Gonzales, Frank
+                      Sedgman, Tony Trabert, Ken Rosewall, Lew Hoad, Rod Laver.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section3 ends -->
+
+<app-footer></app-footer>

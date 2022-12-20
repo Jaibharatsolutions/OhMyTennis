@@ -1,0 +1,175 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img src="../../assets/images/coach_banner.jpg" alt="Los Angeles" />
+  <div class="inner_carousel">
+    <h3>oh my events</h3>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_coach_about">
+  <div class="container">
+    <div class="search">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <img
+            src="../../assets/images/coach_bgimg.png"
+            class="img-responsive abt_img"
+          />
+          <div class="des_coachform_bg banner_container" style="height: 45%;">
+            <div class="row">
+              <h4 class="blackbold_title">Recherchez vos events</h4>
+              <div
+                class="col-md-12 no_paddleft no_paddright col-sm-6 col-xs-12"
+              >
+                <div class="col-md-6 no_paddleft addon-lg">
+                  <input
+                      type="type"
+                      [(ngModel)]="search.ville"
+                      name="search.ville"
+                      class="form-control datepicker_ch coach_datepicker"
+                      name="ville"
+                      placeholder="Code Postal"
+                    />
+                    <!-- <label><img src="./assets/images/ville_icon.png"/></label> -->
+                </div>
+                <div class="col-md-6 no_paddleft">
+                  <div class="form-group addon-lg">
+                    <div class="col-md-12 col-sm-12 col-xs-12 date no_padding">
+                      <div
+                        class="input-group input-append date d-block"
+                        id="datePickerstart1"
+                      >
+                        <span class="input-group-addon add-on"
+                          ><i class="fa fa-calendar"></i
+                        ></span>
+                        <input
+                          [(ngModel)]="date"
+                          name="date"
+                          [min]="min"
+                          [owlDateTime]="dt1"
+                          [owlDateTimeTrigger]="dt1"
+                          placeholder="Date"
+                          class="form-control datepicker_ch coach_datepicker"
+                          placeholder="date"
+                        />
+                        <owl-date-time
+                          #dt1
+                          [pickerType]="'calendar'"
+                        ></owl-date-time>
+                        <!-- <label><img src="./assets/images/date_icon.png" /> </label> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 text-left" style="margin-top:20px;">
+                <button
+                  (click)="findCoach(search)"
+                  class="btn darkgrey_btn pull-right"
+                >
+                  Recherche
+                </button>
+              </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div
+    *ngFor="let res of respon"
+    class="des_coach_reldetail col-lg-6 col-sm-12 col-xs-12"
+  >
+    <div class="des_coach_bg">
+      <div class="no_padding col-lg-4 col-sm-3 col-xs-4">
+        <img
+          src="{{
+            res.Coach_Image ||
+              'https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png'
+          }}"
+          #img
+          (error)="
+            img.src =
+              'https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png'
+          "
+          class="mdimage"
+          alt="{{ res.Coach_Fname }}"
+        />
+      </div>
+      <div class="col-lg-8 col-sm-9 col-xs-12 text-center">
+        <div class="des_coach_rescontent">
+          <h5>{{ res.Coach_Fname }} {{ res.Coach_Lname }}</h5>
+          <div class="star-rating">
+            <ul class="list-inline" style="display:inline-block;">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+            <span class="grey_mild">(22 avis)</span>
+          </div>
+          <div class="des_price_text">{{ res.Coach_Price }}</div>
+          &nbsp; &nbsp;<span class="grey_mild strike_out">{{
+            res.Coach_PriceX10
+          }}</span>
+          <h6>Brevet d'Etat 1er degré</h6>
+        </div>
+        <p class="max-lines">{{ res.Coach_Description }}</p>
+      </div>
+      <div class="clearfix"></div>
+      <div class="des_grey_overlay">
+        <div class="des_overlay_content">
+          <div class="padding_top">
+            <ul style="list-style-type: lower-greek;">
+              <li
+                style="display: list-item;margin:10px;border-radius: 30px;"
+                *ngFor="let ser of res.Coach_Services"
+              >
+                <a
+                  *ngIf="ser == 'CoursIndividuel'"
+                  (click)="gotoCouch(ser, res)"
+                  class="btn white_border white_text"
+                  >Cours Individuel</a
+                >
+                <a
+                  *ngIf="ser == 'CoursCollectifOndemand'"
+                  (click)="gotoCouch(ser, res)"
+                  class="btn white_border white_text"
+                  >Cours Collectif Ondemand</a
+                >
+                <a
+                  *ngIf="ser == 'CoursCollectifClub'"
+                  (click)="gotoCouch(ser, res)"
+                  class="btn white_border white_text"
+                  >Cours Collectif Club</a
+                >
+              </li>
+              <br />
+            </ul>
+            <!-- <a (click)="gotoCouch(res)" class="btn white_border white_text">EN SAVOIR
+                                PLUS</a> -->
+          </div>
+        </div>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>sélectionner les cours</p>
+          <ul>
+            <li>{{ res.Coach_Services }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<app-footer></app-footer>

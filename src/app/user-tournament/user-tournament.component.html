@@ -1,0 +1,274 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<div class="innerbanner">
+  <img src="../../assets/images/coach_banner.jpg" alt="Los Angeles" />
+  <div class="inner_carousel1">
+    <h3>oh my tournoi</h3>
+  </div>
+</div>
+
+<div class="banner">
+  <div class="search_area">
+    <div class="banner_container">
+      <h3>Réservez un cours avec un event</h3>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <div class="form-group">
+            <div class="addon-lg">
+              <input
+                class="form-control"
+                id=""
+                maxlength="6"
+                placeholder="Code Postal"
+                [(ngModel)]="Ville"
+                type="text"
+              />
+              <label><img src="./assets/images/ville_icon.png"/></label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+          <div class="form-group">
+            <div class="addon-lg">
+              <input
+                class="form-control"
+                placeholder="Date"
+                [(ngModel)]="Date"
+                type="text"
+                [owlDateTime]="dt1"
+                [owlDateTimeTrigger]="dt1"
+              />
+              <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+              <label><img src="./assets/images/date_icon.png"/></label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+          <button (click)="searchEvent()" class="btn black_btn">
+            Recherche
+          </button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Search area ends -->
+</div>
+
+<!-----------------------------------------Text Area----------------------------->
+<div class="lexique_content haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="lexique">
+        <div class="page_title_div col-xs-12">
+          <h1 class="page_title">Ohmytennis : Tournoi de tennis amical</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="wrapper1 center-block">
+            <div
+              class="panel-group"
+              id="accordion"
+              role="tablist"
+              aria-multiselectable="true"
+            >
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Etapes après avoir joué avec quelques partenaires : le
+                      tournoi amical de tennis
+                    </a>
+                  </h4>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingOne"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Le tournoi amical de tennis constitue une répétition à
+                      petite échelle du tournoi officiel. Après vous être testé
+                      avec votre partenaire que vous connaissez , il est
+                      important d’être un peu plus formel avec un organisateur
+                      qui va vous attribuer des adversaires avec des formats de
+                      jeu suivant le nombre de participants et le temps imparti.
+                      Le référent du tournoi de tennis est souvent un professeur
+                      , qui avec ses élèves souhaite prolonger l’expérience en
+                      dehors du cours particulier. Notons que cela reste un
+                      moment de convivialité pour partager des émotions , vous
+                      pourrez apporter quelques réconforts (nourritures,
+                      boissons) pour la fin du tournoi de tennis amical.
+                      Quelques invités supplémentaires pourront se joindre à cet
+                      événement même s’ils ne sont pas des élèves du professeur
+                      organisateur , plus on est de fou plus on rit ! <br />
+
+                      <b>Lien contextualisé :</b> Préparer son premier match
+                      amical (conseil)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Gérer son autonomie durant le match de tennis
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingTwo"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Que cela soit pour faire un tie break ou un set , il faut
+                      être capable de gérer le score du match de tennis avec
+                      votre adversaire. Il est conseillé d’ailleurs de
+                      l’annoncer à chaque début de point pour éviter toute
+                      confusion. Ce genre de situation vous permettra également
+                      de vérifier si vous connaissez toutes les règles lors d’un
+                      match de tennis . Une autre notion très importante est
+                      celle de l’auto-arbitrage : en effet il n’y a pas de juge
+                      de ligne ni d’arbitre de chaise pour vous aider dans vos
+                      jugements de balles (on est pas à Roland Garros !) et vous
+                      devrez gérer les litiges avec votre adversaires afin de
+                      respecter le fair play. <br />
+                      <b>Lien contextualisé :</b> Vous souhaitez d’abord trouver
+                      un partenaire pour préparer votre futur tournoi de tennis
+                      amical
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a
+                      class="collapsed"
+                      role="button"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      La compétition de tennis et ses inconnus
+                    </a>
+                  </h4>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="panel-collapse collapse"
+                  role="tabpanel"
+                  aria-labelledby="headingThree"
+                >
+                  <div class="panel-body">
+                    <p>
+                      Qui n’a jamais eu peur avant de rentrer sur le terrain de
+                      tennis ? Nous vous rassurons c’est arrivé à tout le monde
+                      et c’est en cela que le tournoi de tennis amical peut vous
+                      aider à vous rassurer sur des situations jamais vécues.
+                      Jouer contre des adversaires inconnus avec des profils de
+                      jeu différents est un excellent test pour savoir si vous
+                      êtes capable de mettre en place votre technique ou
+                      tactique. Se retrouver dans un environnement différent
+                      vous permettra de développer vos facultés d’adaptation
+                      lors de votre match. Ceci peut être un bonne façon de
+                      savoir si vous êtes faits pour ça : la notion d’adversité
+                      et de match implique l’acceptation de la défaite , la
+                      notion de victoire et tous les flux émotionnels qui
+                      peuvent aller avec … attention que l’on dise il n’y jamais
+                      de vrai match amical car tout le monde veut gagner c’est
+                      humain.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button
+      data-toggle="modal"
+      class="btn btn-primary des_event_btn"
+      id="btnbooking"
+      style="margin-top: 15px;"
+    >
+      <a href="#">EN SAVOIR PLUS </a>
+    </button>
+    <br /><br />
+  </div>
+</div>
+<!-------------------------------------------------ENds---------------------------------->
+<!-------------------------------------------------Button-------------------------------->
+
+<!-------------------------------------------------ENds---------------------------------->
+
+<div class="col-sm-12">
+  <div class="des_events des_events_rev">
+    <div class="container">
+      <div class="column" *ngFor="let res of response">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="des_events_bg des_events_bg_rev">
+            <img
+              src="{{ res.Photo }}"
+              class="img-responsive center-block"
+              style="height: 250px;"
+            />
+            <div class="">
+              <p class="des_date_sec">
+                <span>{{ res.Date }}</span
+                >{{ res.Month_Year }}
+              </p>
+              <p class="des_event_sub_title">{{ res.Tournamentname }}</p>
+              <p class="des_event_para max-lines">{{ res.Description }}</p>
+            </div>
+            <div class="text-center">
+              <a
+                class="btn btn-primary des_event_btn"
+                (click)="gotoCoach(res)"
+                style="margin-top: 15px;"
+                >Reserve maintenant</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="response.length == 0">
+        <h2 style="color:red;">Aucun enregistrement trouvé</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<app-footer></app-footer>

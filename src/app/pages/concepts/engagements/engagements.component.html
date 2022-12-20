@@ -1,0 +1,312 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/cours-particuliers-de-tennis.jpg"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>Oh My Concept</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_titre_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Ohmytennis: la charte d’engagement</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h2>
+          1. Un encadrement formé et diplômé pour donner un cours de tennis
+        </h2>
+        <p>
+          Tous les éducateurs sportifs et professeur de tennis donnant des cours
+          de dans le cadre de ohmytennis sont obligatoirement titulaires d’un
+          diplôme leurs permettants d’exercer contre rémunération. Conformément
+          à L’article L 212-1 du code du sport
+        </p>
+        <p>
+          <i
+            >"Seuls peuvent, contre rémunération, enseigner, animer ou encadrer
+            une activité physique ou sportive ou entraîner ses pratiquants, à
+            titre d'occupation principale ou secondaire, de façon habituelle,
+            saisonnière ou occasionnelle, les titulaires d'un diplôme, titre à
+            finalité professionnelle ou certificat de qualification :</i
+          >
+        </p>
+        <ul>
+          <li>
+            <i
+              >garantissant les compétences de l'éducateur en matière de
+              sécurité des pratiquants et des tiers dans l'activité
+              considérée.</i
+            >
+          </li>
+          <li>
+            <i
+              >enregistré au répertoire national des certifications
+              professionnelles (RNCP)".</i
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/concept1.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+    <div class="row split_marginbot">
+      <div class="col-lg-12 col-sm-12 col-xs-12">
+        <p class="para_nomargin">
+          A la lecture de cet article fondamental, il est important de souligner
+          que ce n'est pas la seule activité d'enseignement ou d'entraînement
+          qui est réglementé mais bien, au sens le plus large, l'encadrement et
+          l'animation d'un activité physique ou sportive à partir de l'instant
+          où il y a rémunération – autant de compétences transversales
+          concernant le tennis et le sport au cœur du projet de ohmytennis.
+        </p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/club-tennis.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h2>2. Le joueur qui pratique le tennis est au cœur de notre projet</h2>
+        <p>
+          L’épanouissement humain et tennistique du pratiquant est au cœur du
+          projet de ohmytennis. Pour cela, il est important de vous proposer un
+          cadre de pratique du tennis sur mesure, répondant à vos besoins et à
+          vos envies. Qu’il s’agisse d’une pratique de tennis pour le loisir,
+          d’une pratique de tennis récréative ou d’une volonté de progression
+          technique et compétitive… Les éducateurs sportifs ohmytennis sauront
+          déterminer le cadre qui vous est le plus adapté pour vous faire
+          progresser le joueur de tennis et lui donner le plaisir de jouer.
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h2>3. Exigence et valorisation du joueur de tennis</h2>
+        <p>
+          Pour ohmytennis, l’exigence est un principe valorisant pour le
+          pratiquant. Qu’il s’agisse d’une pratique de tennis pour le loisir ou
+          la compétition, ohmytennis s’engage à maintenir un niveau d’exigence
+          constant auprès de ses professeurs de tennis. Celle-ci se traduit par
+          une recherche permanente des meilleures conditions de pratiques et par
+          une adaptation et une évaluation constante de notre enseignement et de
+          notre pédagogie…
+        </p>
+        <h2>
+          4. Professionnalisme pendant le cours de tennis (ponctualité, respect,
+          etc.)
+        </h2>
+        <p>
+          Ponctualité, assiduité, prévenance, écoute, adaptation, respect des
+          règles, du cadre et du matériel… ohmytennis attache une importance
+          cruciale au professionnalisme des professeurs de tennis employés par
+          ohmytennis et qui sont au services de votre cours de tennis.
+        </p>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/cours-collectifs-enfants.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/cours-collectifs-adultes.jpg"
+          class="center-block"
+          alt="titre_img1"
+        />
+      </div>
+      <div class="col-lg-6 col-sm-12 col-xs-12">
+        <h2>5. Un projet sportif et éducatif</h2>
+        <p>
+          Les coachs de ohmytennis sont des professionnels formés au service de
+          la progression des joueurs prenant des cours de tennis. Mais ce sont
+          aussi des partenaires éducatifs, notamment dans l’enseignement qu’ils
+          apportent aux plus jeunes pratiquants. Nos professeurs de tennis sont
+          ainsi sélectionnés en fonction de leurs compétences techniques, mais
+          aussi d’une pédagogique qui entraînera la progression des joueurs de
+          tennis. L’ensemble de nos coachs adhèrent à cette mission de
+          transmission de valeurs, à leurs responsabilités éducatives et à un
+          nécessaire devoir d’exemplarité.
+        </p>
+        <h2>
+          6. Une offre de service toujours optimisée pour le joueur de tennis
+        </h2>
+        <p>
+          Entraînement de tennis, conseils techniques, diététiques, conseils
+          relatifs aux choix du matériel de tennis, informations relatives aux
+          tournois de tennis, accompagnement dans la formalisation de plans
+          d’entrainement… cherche à anticiper vos besoins de manière à vous
+          proposer une offre de service optimisée. En ce sens, nous vous
+          invitons à faire remonter vos propositions.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_titre_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Nous proposons aux passionnés de tennis d'avoir un univers
+            spécialement créé pour eux.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<div class="section3 des_concept_circletext haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon1.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.PRESENTATION.SELF')
+              }}"
+              >Présentation <br />Générale</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon2.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{ '/' + this._const('PATH.CONCEPTS.CHARTE.SELF') }}"
+              >La charte <br />de Qualité</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon3.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.ENGAGEMENTS.SELF')
+              }}"
+              >Nos <br />Engagements</a
+            ></strong
+          >
+        </h5>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="des_orange_circle">
+          <img src="./assets/images/concept_icon4.png" alt="concept_icon1" />
+        </div>
+        <h5>
+          <strong
+            ><a
+              href="javascript:;"
+              routerLink="{{
+                '/' + this._const('PATH.CONCEPTS.INFORMATIONS.SELF')
+              }}"
+              >Informations<br />
+              Réglementaires</a
+            ></strong
+          >
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

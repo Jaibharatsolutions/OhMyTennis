@@ -1,0 +1,63 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+
+<!-- Banner starts -->
+<div class="innerbanner">
+    <img src="../../assets/images/coach_banner.jpg" alt="Los Angeles">
+    <div class="inner_carousel1">
+        <h3>oh my club house</h3>
+    </div>
+</div>
+
+<div class="banner">
+    <div class="search_area">
+        <div class="banner_container">
+            <h3>Réservez un cours avec un event</h3>
+            <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-lg-2">
+                            
+                        </div>
+                <div class="col-xs-12 col-sm-4 col-lg-4">
+                    <div class="form-group">
+                        <div class="addon-lg">
+                            <input class="form-control" id="" maxlength="6" placeholder="Code Postal"
+                                [(ngModel)]="Ville" type="text">
+                            <label><img src="./assets/images/ville_icon.png"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+                    <button (click)="searchEvent()" class="btn black_btn">Rechercher</button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Search area ends -->
+</div>
+
+<div class="col-sm-12 cloubhouse">
+    <div class="des_events des_events_rev">
+        <div class="container">
+            <div class="column" *ngFor="let res of response">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding: 0px 10px;">
+                    <div class="des_events_bg des_events_bg_rev">
+                        <img src="{{res.courtfile}}" class="img-responsive center-block">
+                        <div class="club_contdiv">
+                           
+                            <p class="des_event_sub_title">{{res.court_name}}</p>
+                           <p class="des_event_para max-lines">{{res.court_address}} </p>
+                        </div>
+                        <div class="text-center">
+                            <a (click)="getClub(res)" class="btn btn-primary des_event_btn" style="margin-top: 5px;">VUE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="response.length == 0"><h2 style="color:red;">Aucun enregistrement trouvé</h2></div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<app-footer></app-footer>

@@ -1,0 +1,446 @@
+<app-header></app-header>
+<app-top-menu></app-top-menu>
+<!-- Banner starts -->
+<div class="innerbanner">
+  <img
+    src="./assets/images/abonnement-cours-de-tennis.jpg"
+    style="width:100%;"
+    alt="Los Angeles"
+  />
+  <div class="inner_carousel">
+    <h3>oh my conseils</h3>
+  </div>
+</div>
+<!-- Banner ends -->
+
+<!-- Inner Search area starts -->
+<div class="inner_searcharea">
+  <div class="banner_container">
+    <h3>Réservez un cours avec un coach</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              class="form-control"
+              id=""
+              maxlength="6"
+              placeholder="Code Postal"
+              [(ngModel)]="Ville"
+              type="text"
+            />
+            <label><img src="./assets/images/ville_icon.png"/></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4">
+        <div class="form-group">
+          <div class="addon-lg">
+            <input
+              type="text"
+              style="text-align:left!important;"
+              [min]="min"
+              class="form-control"
+              id=""
+              placeholder="Date"
+              [(ngModel)]="Date"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
+            />
+            <owl-date-time #dt1 [pickerType]="'calendar'"></owl-date-time>
+            <label><img src="./assets/images/date_icon.png" /> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-lg-4 text-left">
+        <button (click)="handleClick($event)" class="btn black_btn">
+          Rechercher
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner Search area ends -->
+
+<!-- section1 starts -->
+<div class="section1 des_conseils_list haspadd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="page_title_div">
+          <h1 class="page_title">Choix de votre matériel</h1>
+          <img src="./assets/images/title_border.png" alt="title_border" />
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2><strong>La raquette de tennis:</strong></h2>
+        <h2><strong>La raquette pour enfants:</strong></h2>
+        <p>
+          Pour connaître la taille est adéquate d’une raquette pour un enfant ,
+          il suffit de tenir la raquette en bout de manche le long du corps et
+          voir si elle touche terre. Une raquette trop longue tapera souvent le
+          sol, sera souvent trop lourde pour l’enfant et une blessure au poignet
+          ou au bras peut arriver. Le prix d’une raquette enfant est
+          généralement compris entre 14 et 50 euros.
+        </p>
+        <h6>SCHÉMA TENUE DE RAQUETTE LE LONG DU CORPS</h6>
+        <p>
+          Rappel de taille avec correspondance de l’age : (prix entre 14 et 50
+          euros)<br />
+
+          Référentiel de taille pour la raquette de tennis enfant, à choisir
+          selon sa taille.
+        </p>
+
+        <ul class="des_bulletlist">
+          <li>26 pouces = junior (à partir de 9 ans) (1.35m et 1.45m.).</li>
+          <li>25 pouces = 68 cm (à partir de 8 /9 ans) (1.28m et 1.35m).</li>
+          <li>23 pouces = 58 cm (à partir de 7 ans) (1.20m et 1.28m).</li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/choisir-cordage-de-tennis.jpg"
+          class="center-block"
+          alt="concept_image1"
+        />
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-xs-12 col-sm-6" style="padding-bottom:0px;">
+        <ul class="des_bulletlist para_nomargin">
+          <li>24 pouces = 61 cm (à partir de 7/8 ans) (1.20m et 1.28m).</li>
+          <li>21 pouces = 53 cm (à partir de 5/6 ans) (1.10m et 1.20m).</li>
+          <li>19 pouces = 48 cm (à partir de 5/6 ans) (1.10m et 1.20m).</li>
+          <li>17 pouces = 43 cm (à partir de 5 ans) (1m et 1.10m).</li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/achat-balle-de-tennis.jpg"
+          class="center-block"
+          alt="concept_image2"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5>
+          <strong
+            >Pour les adultes, les tailles de raquettes sont uniques</strong
+          >
+        </h5>
+        <h6><strong>La femme :</strong></h6>
+        <p>
+          Il est conseillé de prendre du matériel léger (environ 260 g) avec le
+          poids réparti en tête, cela permet d’avoir du balancier et augmente la
+          synergie du mouvement. La taille du manche conseillé est 0 ou 1.
+        </p>
+        <h6><strong>L’homme :</strong></h6>
+        <p>
+          Pour canaliser sa puissance il est conseillé d’avoir un poids réparti
+          en manche. (raquette lourde supérieure à 310 g). Cependant si vous
+          êtes un joueur de toucher mais en manque de puissance, vous pouvez
+          opter pour une raquette d’un poids moyen (environ 290 g) avec le poids
+          réparti en tête. La taille de manche conseillée varie entre 2 et 4
+          selon la taille de votre main. Il existe différentes tailles de cadre
+          selon votre capacité à centrer la balle (90 square inch = 600 cm2, 95
+          square inch = 630 cm2, 102 square inch = 645 cm2). La taille des
+          manches pour les hommes est plutot situé entre 2 et 4 selon la
+          grosseur de votre main.
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <p style="margin:0px 0px 25px;">
+          <strong
+            >Correspondance de la taille des manches entre la FRANCE et les
+            ETATS UNIS, visible avec le logo de la raquette (bout de
+            manche).</strong
+          >
+        </p>
+        <table class="conseils_table" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>FRANCE</td>
+              <td>0</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>ETATS UNIS</td>
+              <td>4</td>
+              <td>4 1/8</td>
+              <td>4 1/4</td>
+              <td>4 3/8</td>
+              <td>4 1/2</td>
+              <td>4 5/8</td>
+            </tr>
+          </tbody>
+        </table>
+        <table
+          class="~conseils_table"
+          width="100%"
+          style="margin:5px 0px;"
+          cellspacing="0"
+          border="0"
+        >
+          <tbody>
+            <tr>
+              <td align="right">FEMME</td>
+              <td align="center">HOMME</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin:20px 0px 20px;">
+          <strong
+            >Correspondance des taille de tamis entre la France (cm2) et les
+            ETATS UNIS (square inch), visible souvent sur le cœur de la
+            raquette.</strong
+          >
+        </p>
+        <table
+          class="conseils_table"
+          style="margin:20px 0px 20px;"
+          cellspacing="0"
+        >
+          <tbody>
+            <tr>
+              <td>FRANCE</td>
+              <td>585</td>
+              <td>600</td>
+              <td>613</td>
+              <td>630</td>
+              <td>645</td>
+              <td>660</td>
+            </tr>
+            <tr>
+              <td>ETATS UNIS</td>
+              <td>85</td>
+              <td>90</td>
+              <td>95</td>
+              <td>97</td>
+              <td>100</td>
+              <td>105</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Standard (85-98 sq in) pour les joueurs haut niveau/très
+          confirmés (classé ATP jusqu'à joueur de seconde série):  raquette
+          nerveuse, pas tolerante sur le centrage de la balle, pour les joueurs
+          très techniques (très précis) car la moindre faute est sanctionnée.
+        </p>
+        <p class="para_nomargin">
+          Midplus (99-105 sq in) pour les joueurs confirmé (troisième
+          serie/quatrième serie): raquette permettant des erreurs techniques
+          (beaucoup plus tolérante) sur le centrage de balles, augmentant la
+          puissance du joueur Oversized (106-135 sq inch) pour les joueur
+          loisir: raquette super tolérante sur le centrage et restituant
+          beaucoup de puissance (moins de contrôle).
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/vetement-tennis-homme.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5><strong>La composition d’une raquette de tennis</strong></h5>
+        <p>
+          Le milieur de gamme est souvent composé de matériaux basiques 100%
+          graphite ou avec aluminium et composite. (prix entre 40 et 80 euros)
+          Le haut de gamme permet d’avoir du matériel léger, performant, stable
+          avec du graphite et l’intégration de carbone/titane/graphen/kinetic.
+          (prix entre 100 et 250 euros).
+        </p>
+        <h5>
+          <strong
+            >Chaussures des joueurs de tennis : (prix entre 40 et 130 euros pour
+            adultes et entre 40 et 130 euros pour enfants)</strong
+          >
+        </h5>
+        <p>
+          La qualité d’amorti est lié au système de la chaussure avec des
+          brevets déposés. La résistance notamment avec des renforts latéraux et
+          devant permet de tenir plus longtemps. La semelle (plate) dans le
+          temps deviendra de plus en plus lisse (glissade assurée) ce sera signe
+          de changement. Il existe des chaussures plus souples que d’autres qui
+          tiennent énormément le pied.
+        </p>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5><strong>Cordage des raquettes de tennis</strong></h5>
+        <ul>
+          <li>
+            Le monofilament (prix entre 21 et 35 euros) est un cordage rigide
+            pour les gros casseurs. La tension est entre 21 et 26 kg.
+          </li>
+          <li>
+            Le multifilament est un cordage souple avec moins de vibration qui a
+            une meilleure durée de tension. (prix entre 23 et 40 euros). La
+            tension est entre 21 et 26 kg.
+          </li>
+          <li>
+            Le boyau naturel (roll royce des cordages au prix moyen de 50 euros)
+            permet une qualité de jeu améliorée tant sur la puissance que sur le
+            contrôle.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/achat-balle-de-tennis.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/choisir-cordage-de-tennis.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <ul></ul>
+        <h5>
+          <strong>La tension d’un cordage pour une raquette de tennis</strong>
+        </h5>
+        <ul>
+          <li>
+            Tension peu élévée (exemple 20 kg): votre cordage vous permettra
+            d’avoir de la puissance (effet trampoline de la corde) sans pour
+            autant avoir du contrôle. L’intérêt de ce type de tension est
+            l’abscence de vibration à l’impact de balle avec la raquette.
+          </li>
+          <li>
+            Tension élevée (plus de 30kg): votre cordage vous permettra d’avoir
+            du contrôle et de bien sentir l’impact de balle. Il faut avoir un
+            avant bras assez solide pour supporter les impacts repétitifs sinon
+            c’est la tendinite assurée.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5><strong>Les balles de tennis</strong></h5>
+        <ul>
+          <li>
+            Les balles  avec pression (se décapsulent) sont souples avec une
+            durée de vie moyenne (prix moyen 7 euros la boite de 4).
+          </li>
+          <li>
+            Les balles avec pression (vendu même en sachet) sont assez dures et
+            ont une durée de vie plus longues (prix moyen 8 euros la boite de
+            4).
+          </li>
+          <li>
+            Les balles intermédiaires ont une rebond moins haut sont plus
+            souples que les balles avec pression et sont parfaites pour débuter
+            le tennis (prix moyen la boite de 4 balles 6 euros).
+          </li>
+        </ul>
+        <h5><strong>Le Textile</strong></h5>
+        <ul>
+          <li>
+            Les éléments (t shirt ou jogging) en coton sont souvent moins cher
+            mais assez lourd à porter, ils osnt donc a utiliser plutot l’hiver.
+            A contrario les textiles en matière synthétiques sont souvent plus
+            chers mais plus respirants et plus légers et soont à porter en été.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/choisir-raquette-de-tennis.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+    </div>
+
+    <div class="row split_marginbot">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img
+          src="./assets/images/vetement-tennis-homme.jpg"
+          class="center-block"
+          alt="concept_image3"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h5><strong>Accessoires</strong></h5>
+        <ul>
+          <li>
+            <span class="text_underline">Le surgrip:</span>C’est élement fin,
+            aggripant, pour le confort de la main et al différenciation des
+            prises (prix moyen 3 euros).
+          </li>
+          <li>
+            <span class="text_underline">L’ antvibrateur:</span>Permet de capter
+            les vibrations, d’avoir un bruit sec à la frappe et sert de
+            décoration à votre raquette (prix moyen 3 euros).
+          </li>
+          <li>
+            <span class="text_underline">Les poignets éponge:</span>Permet de
+            s’essuyer les tempes du front sur le terrains sans avoir à allez
+            chercher sa serviette.
+          </li>
+          <li>
+            <span class="text_underline">Le clip ball:</span>Souvent utiliser
+            chez les femmes il remplace la poche et s’attache autour de la
+            taille.
+          </li>
+          <li>
+            <span class="text_underline">Barette/chouchous/élastiques:</span
+            >Permet de vous attachez les cheveux lorsque vous jouer car il est
+            difficile de se recoiffer tout en jouant.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section1 ends -->
+
+<!-- section2 starts -->
+<div class="section2 des_conseils_backtext">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="des_back_content">
+          <h4>
+            Tous ce que vous avez toujours voulu savoir sur le tennis. Oh my
+            tennis répond à toutes vos questions.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section2 ends -->
+<app-footer-first></app-footer-first>
+<app-footer></app-footer>

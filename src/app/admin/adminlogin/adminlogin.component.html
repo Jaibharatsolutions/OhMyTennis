@@ -1,0 +1,118 @@
+<div class="login_page">
+  <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <div class="user_card">
+        <div class="d-flex justify-content-center">
+          <div class="brand_logo_container">
+            <img
+              src="../assets/admin/img/favicon.png"
+              class="brand_logo"
+              alt="Logo"
+            />
+          </div>
+        </div>
+
+        <div class="~d-flex justify-content-center form_container">
+          <div
+            style="padding: 10px 30px; margin: 0px 30px 12px;"
+            *ngIf="alertMsg.show"
+            class="alert {{ alertMsg.type }} alert-dismissible text-center"
+          >
+            <button
+              type="button"
+              (click)="_closeAlertMessage($event)"
+              class="close"
+            >
+              <span>&times;</span>
+            </button>
+            {{ alertMsg.msg }}
+          </div>
+          <form
+            class="login_form"
+            #newAdminForm="ngForm"
+            (ngSubmit)="onSubmitAdmin(newAdminForm)"
+            autocomplete="off"
+          >
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+              </div>
+              <input
+                type="text"
+                class="form-control input_user"
+                required
+                [(ngModel)]="newAdmin.admin_email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                #Email="ngModel"
+                [ngClass]="{
+                  alert_field: Email.errors && (Email.touched || Email.dirty)
+                }"
+                name="admin_email"
+                placeholder="E-mail"
+              />
+            </div>
+            <div>
+              <ng-container
+                *ngIf="Email.errors && (Email.touched || Email.dirty)"
+              >
+                <span class="alert_text" *ngIf="Email.errors.required"
+                  >Indiquez votre e-mail.</span
+                >
+                <span class="alert_text" *ngIf="Email.errors.pattern"
+                  >Indiquez votre e-mail.</span
+                >
+              </ng-container>
+            </div>
+            <div class="input-group mb-2">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-key"></i></span>
+              </div>
+              <input
+                type="password"
+                required
+                #Password="ngModel"
+                [ngClass]="{
+                  alert_field:
+                    Password.errors && (Password.touched || Password.dirty)
+                }"
+                [(ngModel)]="newAdmin.password"
+                name="password"
+                class="form-control input_pass"
+                placeholder="Mot de passe"
+              />
+            </div>
+
+            <div>
+              <ng-container
+                *ngIf="Password.errors && (Password.touched || Password.dirty)"
+              >
+                <span class="alert_text" *ngIf="Password.errors.required"
+                  >Indiquez votre mot de passe.</span
+                >
+              </ng-container>
+            </div>
+            <!--<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customControlInline">
+								<label class="custom-control-label" for="customControlInline">Remember me</label>
+							</div>
+						</div>--><br />
+            <div class="d-flex justify-content-center mt-3 login_container">
+              <input type="submit" value="ME CONNECTER" class="btn login_btn" />
+            </div>
+          </form>
+        </div>
+
+        <div class="mt-4">
+          <div class="d-flex justify-content-center links">
+            <a
+              routerLink="{{ '/' + this._const('PATH.ADMINS.FORGOT.SELF') }}"
+              routerlinkactive="active"
+              >Mot de passe oublié?</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

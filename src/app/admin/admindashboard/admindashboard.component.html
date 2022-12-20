@@ -1,0 +1,213 @@
+<div class="content">
+    <div class="container-fluid"><br><br>
+          <div class="row">
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                      <span class="info-box-icon bg-aqua white_text"><i class="fa fa-users" aria-hidden="true"></i></span>
+          
+                      <div class="info-box-content">
+                        <span class="info-box-text">Nombre d'entra�neurs</span>
+                        <span class="info-box-number">{{coachcount}}</span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                      <span class="info-box-icon bg-red white_text"><i class="fa fa-users" aria-hidden="true"></i></span>
+          
+                      <div class="info-box-content">
+                        <span class="info-box-text">Nombre de prospects</span>
+                        <span class="info-box-number">{{usercount}}</span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+  
+  
+  
+                  <!-- /.col -->
+          
+                  <!-- fix for small devices only -->
+                  <div class="clearfix visible-sm-block"></div>
+          
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                      <span class="info-box-icon bg-green white_text"><i class="fa fa-building" aria-hidden="true"></i></span>
+          
+                      <div class="info-box-content">
+                        <span class="info-box-text">Nombre de tribunaux</span>
+                        <span class="info-box-number">{{courtcount}}</span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                      <span class="info-box-icon bg-yellow white_text"><i class="fa fa-money" aria-hidden="true"></i></span>
+          
+                      <div class="info-box-content">
+                        <span class="info-box-text">revenu total</span>
+                        <span class="info-box-number">320 </span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form_devarea">
+                          <h4>COACH PAYMENT STATUS</h4>
+                            <div class="box-body">
+                        
+                          <br>
+                                  <table class="coach_listable table table-striped table-bordered table-sm row-border hover" id="datatable">
+                                          <thead>
+                                            <tr>
+                                              <th>Sl.no</th>
+                                              <th>Coach Name</th>
+                                              <th>Montant</th>
+                                              <th>Type of Service</th>
+                                              <th>Payment Status</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                           <tr class="btn_blocksec" *ngFor="let group of datanew; let i=index">
+                                                  <td>{{i +1}}</td>
+                                                 <td>{{group.name}}</td>
+                                                 <td>{{group.location}}</td>
+                                                 <td>{{group.servicetype}}</td>
+                                              
+                                                 <td *ngIf="group.paymentstatus=='B'; else falseprint"><input class="btn btn-block btn-sm btn-success" type="button" value="Success"></td>
+                                                   <ng-template #falseprint><td *ngIf="group.paymentstatus=='A'; else second"><input class="btn btn-block btn-sm btn-primary" type="button" value="Approved"></td></ng-template>
+                                                   <ng-template #second><td *ngIf="group.paymentstatus=='C'; else third"><input class="btn btn-block btn-sm btn-danger" type="button" value="Cancel"></td></ng-template>
+                                                    <ng-template #third>
+                                                        <td *ngIf="group.paymentstatus=='R'; else fourth"><input class="btn btn-block btn-sm btn-info" type="button"
+                                                                value="Reserved"></td>
+                                                    </ng-template>
+                                                    <ng-template #fourth>
+                                                        <td *ngIf="group.paymentstatus=='UC'; else fifth"><input class="btn btn-block btn-sm btn-info" type="button"
+                                                                value="User Cancel"></td>
+                                                    </ng-template>
+                                                    <ng-template #fifth>
+                                                        <td *ngIf="group.paymentstatus=='S'"><input class="btn btn-block btn-sm btn-primary" type="button" value="Status">
+                                                        </td>
+                                                    </ng-template>
+                                          
+                                             </tr>
+                                          </tbody>
+                                        </table>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="myModal_edit_course" class="modal fade" role="dialog" [ngStyle]="{'display' : dialogStatus ? 'block':'none', 'opacity':1}">
+                <div class="modal-dialog">
+        
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" (click)="modalclose()" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Formulaire d'approbation des utilisateurs</h4>
+                        </div>
+                        <div class="modal-body">
+                            <br>
+                            <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                <button type="button" (click)="_closeAlertMessage($event)" class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                            </div>
+                            <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Nom</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input id="userName" class="form-control" type="text" value="prabhakaran" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group bmd-form-grou bmd-form-group is-filled">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Cours</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input id="userCourseType" class="form-control" type="text" value="Individuel" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Date</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input id="userDate" type="text" class="form-control" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="course =='CoursCollectifClub'" class="form-group bmd-form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Course Name</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input id="Remarks" [(ngModel)]="Remarks" name="Remarks" readonly type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="course =='CoursCollectifClub'" class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Prix (€)<br/>(Indiquer le prix en euros)</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input id="discount" [(ngModel)]="discount" name="discount" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            <div align="center" *ngIf="course == 'CoursCollectifOndemand' && booked_users.length>1" >
+                                <table width="100%"  class="available_table">
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">Booked Users</th>
+                                        </tr>
+                                        <tr *ngFor="let user of booked_users">
+                                            <td>{{user.firstName}} {{user.lastName}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="modal-footer">
+                            <div class="text-center">
+                                <div class="row">
+        
+                                    <div class="col-md-12">
+                                        <div class="form_buttons" style="text-align: center; padding: 0px 20px;">
+                                            <button *ngIf="book_status=='R'" id="approveBtn" class="btn btn-success des_save_btn" (click)="approvedData()">Demande
+                                                acceptée</button>
+                                            <!-- <a data-toggle="modal"  data-target="#myModal_save_course"  class="btn btn-success des_save_btn">Enregistrer</a> -->
+                                            <button *ngIf="book_status=='R'" type="button" class="btn btn-danger" (click)="cancelreq()" data-dismiss="modal">Annuler</button>
+                                            <button *ngIf="book_status=='B'" type="button" class="btn btn-danger" (click)="reschedule()" data-dismiss="modal">Replanifier</button>
+                                            <button type="button" class="btn btn-default"  data-dismiss="modal">Proche</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+      </div>
+    </div>

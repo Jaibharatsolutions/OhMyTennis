@@ -1,0 +1,178 @@
+<div class="content">
+    <div class="container-fluid"><br><br>         
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form_devarea admin_profform">
+                    
+                    <div class="box-body">
+                            <div *ngIf="alertMsg.show" class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                    <button type="button" (click)="_closeAlertMessage($event)"
+                                        class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                                </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 no_paddleft" style="padding-right: 5px;">
+                                    <div class="serviceBox green">
+                                            <div class="service-icon">
+                                                <a (click)="makeEnable()" id="individuel_edit" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="individuel_icon" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                            </div>
+                                            <h3 class="title">COURS INDIVIDUEL</h3>
+                                            <form autocomplete="off" (ngSubmit)="onSubmit(res)">
+                                             <input type="submit" id="individuel_submit" class="submit_click_btn btn-1 btn-1a" value="SUBMIT">
+                                             <input type="submit" id="individuel_update" class="submit_click_btn btn-1 btn-1a" value="UPDATE">
+                                             <!-- <input class="input_textboxy" type="hidden" [(ngModel)]="res.commission_type" #commission_type="ngModel" name="commission_type" value="{{res.commission_type}}"> -->
+                                            <div class="description">
+                                                    <div class="field" style="margin-bottom: 5px;"><p><b>SUBSCRIPTION</b></p>
+                                                    <p><label>If coach earn &nbsp;<span style="font-weight: bold;"><</span> </label> <span> <input class="input_textboxy indiv_box" type="number" [(ngModel)]="res.sub_min_amount" #sub_min_amount="ngModel" name="sub_min_amount" placeholder="" readonly required><span style="font-weight: bold;">€&nbsp;&nbsp;</span><span>no commission can be added</span>
+                                                       </span>                                                       
+                                                         </p>
+                                                    <p><label>If coach earn &nbsp;<span style="font-weight: bold;">></span></label> <span> <input class="input_textboxy indiv_box" type="number" [(ngModel)]="res.sub_max_amount" readonly #sub_max_amount="ngModel" name="sub_max_amount" placeholder="" required><span style="font-weight: bold;">€&nbsp;</span>
+                                                    </span>
+                                                    <span><input class="input_textboxy indiv_box" type="number" [(ngModel)]="res.sub_max_percent" #sub_max_percent="ngModel" name="sub_max_percent" placeholder="" readonly required>% &nbsp; can be add</span>
+                                                    </p>
+                                                    </div>
+                                                    <div class="field"><p><b>COMMISION</b> &nbsp;&nbsp;
+                                                        <span> <input class="input_textboxy indiv_box" type="number" [(ngModel)]="res.commission_percent" #commission_percent="ngModel" name="commission_percent" placeholder="" readonly required>%</span>
+                                                        <span> /MONTH</span>
+                                                    </div>
+                                                </div>   
+                                            </form>           
+                                        </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 no_paddright" style="padding-left: 5px;">
+                                <div class="serviceBox blue">
+                                    <div class="service-icon">
+                                            <a (click)="collectiveEnable()" id="collective_edit" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="collective_icon" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                    </div>
+                                    <h3 class="title">COLLECTIVE ON DEMAND</h3>
+                                    <form autocomplete="off" (ngSubmit)="onSubmit(res1)">
+                                            <input type="submit" id="collective_submit" class="submit_click_btn btn-1 btn-1a" value="SUBMIT">
+                                            <input type="submit" id="collective_update" class="submit_click_btn btn-1 btn-1a" value="UPDATE">
+                                            <!-- <input class="input_textboxy" type="hidden" [(ngModel)]="res1.commission_type" #commission_type="ngModel" name="commission_type" value="{{res1.commission_type}}"> -->
+                                        <div class="description">
+                                                <div class="field" style="margin-bottom: 5px;"><p><b>SUBSCRIPTION</b></p>
+                                                <p><label>If coach earn &nbsp;<span style="font-weight: bold;"><</span> </label> <span> <input class="input_textboxy collect_box" type="number" [(ngModel)]="res1.sub_min_amount" #sub_min_amount="ngModel" name="sub_min_amount" placeholder="" readonly required><span style="font-weight: bold;">€&nbsp;&nbsp;</span><span>no commission can be added</span>
+                                                </span>                                               
+                                                    </p>
+                                                <p><label>If coach earn &nbsp;<span style="font-weight: bold;">></span></label> <span> <input class="input_textboxy collect_box" type="number" [(ngModel)]="res1.sub_max_amount" #sub_max_amount="ngModel" name="sub_max_amount" placeholder="" readonly required><span style="font-weight: bold;">€&nbsp;</span>
+                                                </span>
+                                                <span><input class="input_textboxy collect_box" type="number" [(ngModel)]="res1.sub_max_percent" #sub_max_percent="ngModel" name="sub_max_percent" placeholder="" readonly required>% &nbsp; can be add</span>
+                                                </p>
+                                                </div>
+                                                <div class="field"><p><b>COMMISION</b> &nbsp;&nbsp;
+                                                    <span> <input class="input_textboxy collect_box" type="number" [(ngModel)]="res1.commission_percent" #commission_percent="ngModel" name="commission_percent" placeholder="" readonly required> % </span>
+                                                    <span> /MONTH</span>
+                                                </div>
+                                        </div>   
+                                    </form>           
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 no_paddleft" style="padding-right: 5px;">
+                                    <div class="serviceBox pink">
+                                        <div class="service-icon">
+                                                <a (click)="courtEnable()" id="court_edit" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="court_icon" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                        </div>
+                                        <h3 class="title">COURS COLLECTIF CLUB</h3>
+                                        <form autocomplete="off" (ngSubmit)="onSubmit(res2)">
+                                        <input type="submit" id="court_submit" class="submit_click_btn btn-1 btn-1a" value="SUBMIT">
+                                            <input type="submit" id="court_update" class="submit_click_btn btn-1 btn-1a" value="UPDATE">
+                                            <!-- <input class="input_textboxy" type="hidden" [(ngModel)]="res2.commission_type" #commission_type="ngModel" name="commission_type" value="{{res2.commission_type}}"> -->
+                                        <div class="description">                                            
+                                            <div class="field"><p><b>COMMISION</b> &nbsp;&nbsp;
+                                                <span> <input class="input_textboxy court_box" type="number" [(ngModel)]="res2.commission_percent" #commission_percent="ngModel" name="commission_percent" placeholder="" readonly required> % </span>
+                                                <span> /MONTH</span>
+                                            </div>
+                                        </div> 
+                                    </form>                                 
+                                    </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 no_paddright" style="padding-left: 5px;">
+                                    <div class="serviceBox">
+                                        <div class="service-icon">
+                                                <a (click)="stageEnable()" id="stage_edit" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="stage_icon" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                        </div>
+                                        <h3 class="title">STAGE</h3>
+                                        <form autocomplete="off" (ngSubmit)="onSubmit(res3)">
+                                                <input type="submit" id="stage_submit" class="submit_click_btn btn-1 btn-1a" value="SUBMIT">
+                                                <input type="submit" id="stage_update" class="submit_click_btn btn-1 btn-1a" value="UPDATE">
+                                                <!-- <input class="input_textboxy" type="hidden" [(ngModel)]="res3.commission_type" #commission_type="ngModel" name="commission_type" value="{{res3.commission_type}}"> -->
+                                            <div class="description">
+                                                <div class="field"><p><b>COMMISION</b> &nbsp;&nbsp;
+                                                    <span> <input class="input_textboxy stage_box" type="number" [(ngModel)]="res3.commission_percent" #commission_percent="ngModel" name="commission_percent" placeholder="" readonly required> % </span>
+                                                    <span> /MONTH</span>
+                                                </div>
+                                            </div>  
+                                        </form>                                
+                                    </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 no_paddleft" style="padding-right: 5px;">
+                                    <div class="serviceBox green">
+                                        <div class="service-icon">
+                                                <a (click)="teamEnable()" id="team_edit" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="team_icon" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                        </div>
+                                        <h3 class="title">TEAM BUILDING</h3>
+                                        <form autocomplete="off" (ngSubmit)="onSubmit(res4)">
+                                                <input type="submit" id="team_submit" class="submit_click_btn btn-1 btn-1a" value="SUBMIT">
+                                                <input type="submit" id="team_update" class="submit_click_btn btn-1 btn-1a" value="UPDATE">
+                                                <!-- <input class="input_textboxy" type="hidden" [(ngModel)]="res4.commission_type" #commission_type="ngModel" name="commission_type" value="{{res4.commission_type}}"> -->
+                                            <div class="description">
+                                                <div class="field"><p><b>COMMISION</b> &nbsp;&nbsp;
+                                                    <span> <input class="input_textboxy team_box" type="number" [(ngModel)]="res4.commission_percent" #commission_percent="ngModel" name="commission_percent" placeholder="" readonly required> % </span>
+                                                    <span> /MONTH</span>
+                                                </div>
+                                            </div> 
+                                        </form>                                 
+                                    </div>                            
+                            </div>
+                            <div class="col-md-6 col-sm-6 no_paddright" style="padding-left: 5px;">
+                                    <div class="serviceBox blue">
+                                        <div class="service-icon">
+                                                <a (click)="animationEnable()" id="animation_edit" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="animation_icon" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                        </div>
+                                        <h3 class="title">ANIMATIONS</h3>
+                                        <form autocomplete="off" (ngSubmit)="onSubmit(res5)">
+                                                <input type="submit" id="animation_submit" class="submit_click_btn btn-1 btn-1a" value="SUBMIT">
+                                                <input type="submit" id="animation_update" class="submit_click_btn btn-1 btn-1a" value="UPDATE">
+                                                <!-- <input class="input_textboxy" type="hidden" [(ngModel)]="res5.commission_type" #commission_type="ngModel" name="commission_type" value="{{res5.commission_type}}"> -->
+                                            <div class="description">
+                                                <div class="field"><p><b>COMMISION</b> &nbsp;&nbsp;
+                                                    <span> <input class="input_textboxy animation_box" type="number" [(ngModel)]="res5.commission_percent" #commission_percent="ngModel" name="commission_percent" placeholder="" readonly required> % </span>
+                                                    <span> /MONTH</span>
+                                                </div>
+                                            </div>
+                                        </form>                                  
+                                    </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 no_paddleft" style="padding-right: 5px;">
+                                    <div class="serviceBox pink">
+                                        <div class="service-icon">
+                                                <a (click)="tournoiEnable()" id="tournoi_edit" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                                <a id="tournoi_icon" class="edit_click"><i class="fa fa-pencil-square-o"></i></a>
+                                        </div>
+                                        <h3 class="title">TOURNOI</h3>
+                                        <form autocomplete="off" (ngSubmit)="onSubmit(res6)">
+                                                <input type="submit" id="tournoi_submit" class="submit_click_btn btn-1 btn-1a" value="SUBMIT">
+                                                <input type="submit" id="tournoi_update" class="submit_click_btn btn-1 btn-1a" value="UPDATE">
+                                                <!-- <input class="input_textboxy" type="hidden" [(ngModel)]="res6.commission_type" #commission_type="ngModel" name="commission_type" value="{{res6.commission_type}}"> -->
+                                            <div class="description">
+                                                <div class="field"><p><b>COMMISION</b> &nbsp;&nbsp;
+                                                    <span> <input class="input_textboxy tournoi_box" type="number" [(ngModel)]="res6.commission_percent" #commission_percent="ngModel" name="commission_percent" placeholder="" readonly required> % </span>
+                                                    <span> /MONTH</span>
+                                                </div>
+                                            </div>
+                                        </form>                                  
+                                    </div>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

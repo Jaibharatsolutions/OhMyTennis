@@ -1,0 +1,320 @@
+<div class="content cours_individualsec">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form_devarea">
+                    <div class="text-right">
+                        <div class="form_buttons">
+                            <a data-toggle="modal" id="enableBtn" data-target="#myModal_edit_course"
+                                class="btn btn-info des_save_btn course_edit_btn ng-binding">CRÉER</a>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="form_section" id="availabilityDiv">
+                            <form #stage="ngForm" (ngSubmit)="onSubmit(res)">
+                                <div *ngIf="alertMsg.show"
+                                    class="alert {{alertMsg.type}} alert-dismissible text-center">
+                                    <button type="button" (click)="_closeAlertMessage($event)"
+                                        class="close"><span>&times;</span></button> {{alertMsg.msg}}
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Mode de transport<span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" id="Voiture" name="Voiture" value="Voiture"
+                                                        disabled="">
+                                                    Voiture
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" id="Moto" value="Vélo" disabled="">
+                                                    bus
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" id="Train" value="Train" disabled="">
+                                                    métro
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" id="Bus" value="Bus" disabled="">
+                                                    RER
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" id="Bus" value="Bus" disabled="">
+                                                    tram
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Nom de l'événement<span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" [(ngModel)]="res.Eventname"
+                                                name="res.Eventname" readonly required #Eventname="ngModel"
+                                                [ngClass]="{'alert_field': (Eventname.errors && (Eventname.touched || Eventname.dirty))}"
+                                                placeholder="Nom de l'événement">
+                                            <ng-container
+                                                *ngIf="Eventname.errors && (Eventname.touched || Eventname.dirty)">
+                                                <span class="alert_text" *ngIf="Eventname.errors.required">Indiquez
+                                                    votre
+                                                    nom de l'événement.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Description <span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <textarea maxlength="4000" class="form-control" readonly required
+                                                [(ngModel)]="res.Description" name="res.Description"
+                                                #Description="ngModel"
+                                                [ngClass]="{'alert_field': (Description.errors && (Description.touched || Description.dirty))}"
+                                                id="exampleFormControlTextarea1" rows="5"
+                                                placeholder="Description"></textarea>
+                                            <ng-container
+                                                *ngIf="Description.errors && (Description.touched || Description.dirty)">
+                                                <span class="alert_text" *ngIf="Description.errors.required">Indiquez
+                                                    votre description.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Ville <span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" [(ngModel)]="res.Location"
+                                                name="res.Location" readonly required #Place="ngModel"
+                                                [ngClass]="{'alert_field': (Place.errors && (Place.touched || Place.dirty))}"
+                                                placeholder="Ville">
+                                            <ng-container *ngIf="Place.errors && (Place.touched || Place.dirty)">
+                                                <span class="alert_text" *ngIf="Place.errors.required">Indiquez votre
+                                                    ville.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Code Postal <span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="number" class="form-control" [(ngModel)]="res.Postalcode"
+                                                name="res.Postalcode" readonly required #Pincode="ngModel"
+                                                [ngClass]="{'alert_field': (Pincode.errors && (Pincode.touched || Pincode.dirty))}"
+                                                placeholder="Code Postal">
+                                            <ng-container *ngIf="Pincode.errors && (Pincode.touched || Pincode.dirty)">
+                                                <span class="alert_text" *ngIf="Pincode.errors.required">Indiquez votre
+                                                    code postal.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Date <span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row">
+                                                <div class="col-md-6"><input id="fromdate" type="text"
+                                                        #fromDate="ngModel" [(ngModel)]="res.from_date"
+                                                        name="res.from_date" [owlDateTime]="fromdate"
+                                                        [owlDateTimeTrigger]="fromdate"
+                                                        [ngClass]="{'alert_field': (fromDate.errors && (fromDate.touched || fromDate.dirty))}"
+                                                        class="form-control" placeholder="Date de début" readonly
+                                                        required>
+                                                    <owl-date-time #fromdate [pickerType]="'calendar'"></owl-date-time>
+                                                    <ng-container
+                                                        *ngIf="fromDate.errors && (fromDate.touched || fromDate.dirty)">
+                                                        <span class="alert_text"
+                                                            *ngIf="fromDate.errors.required">Indiquez
+                                                            votre date.</span>
+                                                        <span class="alert_text"
+                                                            *ngIf="fromDate.errors.pattern">Indiquez
+                                                            votre fromDate.</span>
+                                                    </ng-container>
+                                                </div>
+                                                <div class="col-md-6"><input id="todate" type="text" #toDate="ngModel"
+                                                        [(ngModel)]="res.to_date" name="res.to_date"
+                                                        [ngClass]="{'alert_field': (toDate.errors && (toDate.touched || toDate.dirty))}"
+                                                        class="form-control" placeholder="Date de fin"
+                                                        [owlDateTime]="todate" [owlDateTimeTrigger]="todate" readonly
+                                                        required>
+                                                    <owl-date-time #todate [pickerType]="'calendar'"></owl-date-time>
+                                                    <ng-container
+                                                        *ngIf="toDate.errors && (toDate.touched || toDate.dirty)">
+                                                        <span class="alert_text" *ngIf="toDate.errors.required">Indiquez
+                                                            votre date.</span>
+                                                        <span class="alert_text" *ngIf="toDate.errors.pattern">Indiquez
+                                                            votre date.</span>
+                                                    </ng-container>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Prix<span class="red"> *</span><br />(Indiquer le prix en
+                                                euros)</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input id="Prix" type="text" class="form-control" #Prix="ngModel"
+                                                [(ngModel)]="res.Price" name="res.Price" placeholder="Prix" readonly
+                                                name="technique">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Photo <span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <form class="form_uploadfile">
+                                                <div class="file-upload-wrapper" data-text="Sélectionnez votre photo!">
+                                                    <input name="file-upload-field form-control" type="file"
+                                                        class="file-upload-field" (change)="changeListener($event)"
+                                                        value="" required>
+                                                </div>
+                                                <a id="photo" (click)="download()"
+                                                    style="margin-top:5px;cursor:pointer;text-decoration:underline;">{{res.filename}}</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Détail de l'événement <span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <angular-editor [(ngModel)]="res.Eventdetails" required
+                                                #myckeditor="ngModel" name="myckeditor" [config]="editorConfig"
+                                                debounce="500"></angular-editor>
+                                            <ng-container
+                                                *ngIf="myckeditor.errors && (myckeditor.touched || myckeditor.dirty)">
+                                                <span class="alert_text" *ngIf="myckeditor.errors.required">Indiquez
+                                                    votre détail de l'événement.</span>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group bmd-form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Sélectionnez le plan <span class="red"> *</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-md-5">
+                                                    <label class="radio">
+                                                        <input id="inlineradio3" name="sampleinlineradio1"
+                                                            value="Commission" type="radio" checked readonly required>
+                                                        <p class="radio_texts">Commission</p> <i
+                                                            class="fa fa-info-circle" data-toggle="tooltip" title=""
+                                                            style="color:#e75b00" aria-hidden="true"
+                                                            data-original-title="Lorem "></i>
+                                                        <span class="checkround"></span>
+                                                    </label>
+                                                </div>
+                                                <!-- <div class="col-xs-12 col-md-7"><label class="radio">
+                                                        <input id="inlineradio4" name="sampleinlineradio1"
+                                                            value="Abonnement" type="radio" readonly required>
+                                                        <p class="radio_texts">Abonnement</p><i
+                                                            class="fa fa-info-circle" data-toggle="tooltip" title=""
+                                                            style="color:#e75b00" aria-hidden="true"
+                                                            data-original-title="Lorem"></i>
+                                                        <span class="checkround"></span>
+                                                    </label>
+                                                </div> -->
+                                                <span class="alert_text" id="plan_error">Choisissez
+                                                    votre le plan.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group bmd-form-group" style="margin-top:-10px;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <span style="color:red"> *</span><span
+                                                style="text-transform: inherit;color:#aaa;">Champs
+                                                obligatoires</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="form_buttons">
+                                        <!-- <a data-toggle="modal" id="enableBtn" data-target="#myModal_edit_course"
+                                            class="btn btn-info des_save_btn course_edit_btn ng-binding">Modifier</a> -->
+                                        <button data-toggle="modal" [disabled]="!stage.valid " type="submit"
+                                            id="Enregistrer" style="display: none;"
+                                            class="btn btn-success des_save_btn">SOUMETTRE</button>
+                                        <a id="cancel" (click)="ngOnInit()" class="btn btn-default des_cancel_btn"
+                                            style="display: none;">Annuler</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal_edit_course" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmer la création</h4>
+            </div>
+            <div class="modal-body" style="padding: 15px!important;">
+                <p>Êtes-vous sûr de vouloir une création d'événement</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" (click)="enableForm()" class="btn btn-success" data-dismiss="modal">Oui</button>
+                <button type="button" class="btn btn-default" (click)="ngOnInit()" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+
+    </div>
+</div>
